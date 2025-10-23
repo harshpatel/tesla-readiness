@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { createBrowserClient } from '@supabase/ssr';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function LoginForm() {
   const [email, setEmail] = useState('');
@@ -55,17 +54,16 @@ export default function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-md">
-      <CardContent className="p-8">
-        {isSuccess ? (
-          <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
-            <p className="font-medium">Check your email!</p>
-            <p className="mt-1 text-sm">
-              We've sent a magic link to <strong>{email}</strong>. Click the link to sign in.
-            </p>
-          </div>
-        ) : (
-          <form onSubmit={handleLogin} className="space-y-4">
+    <div className="w-full max-w-md">
+      {isSuccess ? (
+        <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
+          <p className="font-medium">Check your email!</p>
+          <p className="mt-1 text-sm">
+            We've sent a magic link to <strong>{email}</strong>. Click the link to sign in.
+          </p>
+        </div>
+      ) : (
+        <form onSubmit={handleLogin} className="space-y-4">
             <Input
               id="email"
               type="email"
@@ -114,8 +112,7 @@ export default function LoginForm() {
             </Button>
           </form>
         )}
-      </CardContent>
-    </Card>
+    </div>
   );
 }
 
