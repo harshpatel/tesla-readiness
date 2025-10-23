@@ -115,8 +115,112 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    -webkit-tap-highlight-color: transparent;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+    background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fa 50%, #fafbfc 100%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* TeslaMR Design System - Primary Button */
+  .primary-btn {
+    @apply px-12 py-4 rounded-xl text-lg font-bold text-white border-none cursor-pointer;
+    background: linear-gradient(135deg, #0A84FF 0%, #0077ED 100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 16px rgba(10, 132, 255, 0.3);
+  }
+  
+  .primary-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #0077ED 0%, #0066CC 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(10, 132, 255, 0.4);
+  }
+  
+  .primary-btn:active {
+    transform: translateY(0) scale(0.98);
+  }
+  
+  .primary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+  
+  /* TeslaMR Header */
+  .top-header {
+    background: linear-gradient(to bottom, #ffffff 0%, #fafbfc 100%);
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  }
+  
+  /* TeslaMR Container */
+  .quiz-container {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+    transition: all 0.3s ease;
+  }
+  
+  .quiz-container:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+}
+
+/* Animations from TeslaMR Design System */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.2) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
