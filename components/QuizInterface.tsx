@@ -12,6 +12,7 @@ interface QuizInterfaceProps {
   sectionIcon: string;
   questions: QuizQuestion[];
   userId: string;
+  userEmail?: string;
 }
 
 export default function QuizInterface({
@@ -20,6 +21,7 @@ export default function QuizInterface({
   sectionIcon,
   questions,
   userId,
+  userEmail,
 }: QuizInterfaceProps) {
   const router = useRouter();
   
@@ -189,7 +191,7 @@ export default function QuizInterface({
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title={`${sectionIcon} ${sectionTitle}`} showAuth showBackButton />
+      <Header title={`${sectionIcon} ${sectionTitle}`} showAuth showBackButton userEmail={userEmail} />
       
       <main className="flex-1 p-4 md:p-8">
         <div className="max-w-3xl mx-auto">

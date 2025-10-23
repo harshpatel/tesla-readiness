@@ -56,6 +56,7 @@ export default async function QuizPage({ params }: PageProps) {
       }
       questions={questions}
       userId={user.id}
+      userEmail={user.email}
     />
   );
 }
