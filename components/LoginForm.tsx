@@ -56,7 +56,7 @@ export default function LoginForm() {
 
   return (
     <Card className="w-full max-w-md">
-      <CardContent className="pt-6">
+      <CardContent className="p-6">
         {isSuccess ? (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
             <p className="font-medium">Check your email!</p>
