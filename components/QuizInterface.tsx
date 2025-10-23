@@ -160,10 +160,10 @@ export default function QuizInterface({
   // Check if quiz is complete
   useEffect(() => {
     if (questionQueue.length === 0 && !isLoading) {
-      // Quiz complete!
-      router.push(`/quiz/${sectionKey}/results`);
+      // Quiz complete! Return to dashboard with updated progress
+      router.push('/dashboard');
     }
-  }, [questionQueue.length, isLoading, router, sectionKey]);
+  }, [questionQueue.length, isLoading, router]);
 
   if (isLoading) {
     return (
