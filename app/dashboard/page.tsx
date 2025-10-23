@@ -107,30 +107,6 @@ export default async function DashboardPage() {
               </div>
             ))}
           </div>
-          
-          {/* Quick Start Section */}
-          <div className="text-center py-12 px-4 rounded-xl border border-gray-200" style={{
-            background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)'
-          }}>
-            <div className="text-6xl mb-4">🎯</div>
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-3">
-              Ready to Practice?
-            </h2>
-            <p className="text-gray-600 max-w-md mx-auto mb-6">
-              Choose a section from the left sidebar to start practicing medical terminology with spaced repetition.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              {sectionsWithProgress.slice(0, 3).map((section) => (
-                <a
-                  key={section.key}
-                  href={`/quiz/${section.key}`}
-                  className="px-6 py-3 bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:-translate-y-1"
-                >
-                  {section.icon} {section.title}
-                </a>
-              ))}
-            </div>
-          </div>
           </div>
         </main>
       </div>
