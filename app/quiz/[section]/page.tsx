@@ -31,7 +31,7 @@ export default async function QuizPage({ params }: PageProps) {
   }
 
   // Transform questions to match our format
-  const questions = sectionData.questions.map((q, idx) => ({
+  const questions = sectionData.questions.map((q: any, idx: number) => ({
     id: `${section}-${idx}`,
     section_key: section,
     question_id: q.id,

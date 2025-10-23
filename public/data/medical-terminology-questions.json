@@ -16,7 +16,9 @@
             "B": "Swelling",
             "C": "Inflammation",
             "D": "Infection"
-          }
+          },
+          "hint": "Think of when you get a mosquito bite - it's red, hot, and irritated!",
+          "explanation": "**-itis** means **inflammation** 🔥\n\n💡 **Remember it:** Picture something that's 'IT IS' on fire and red! Appendicitis = your appendix IS inflamed. Tonsillitis = your tonsils are inflamed (red, swollen, painful). Arthritis = your joints are inflamed. Whenever you see -ITIS, think 'IT IS red and angry!'"
         },
         {
           "id": "suf-2",
@@ -29,7 +31,9 @@
             "B": "Removal",
             "C": "Inflammation",
             "D": "Repair"
-          }
+          },
+          "hint": "Think 'EXIT, TAKE ME OUT!' - something's being taken out!",
+          "explanation": "**-ectomy** means **surgical removal** ✂️\n\n💡 **Remember it:** -ECTOMY sounds like 'EXIT ME' - something's being REMOVED, taken OUT! Appendectomy = removal of appendix. Tonsillectomy = removal of tonsils. Mastectomy = removal of breast. If you see -ECTOMY, something's getting CUT OUT and leaving the body!"
         },
         {
           "id": "suf-3",
@@ -42,7 +46,9 @@
             "B": "Growth",
             "C": "Nerve",
             "D": "Infection"
-          }
+          },
+          "hint": "Think 'ALL-GEE-AH!' - what you yell when something hurts!",
+          "explanation": "**-algia** means **pain** 😣\n\n💡 **Remember it:** -ALGIA sounds like 'ALL-GEE-AH!' or 'OUCH-AH!' - what you scream when you're in PAIN! Neuralgia = nerve pain. Myalgia = muscle pain. Arthralgia = joint pain. Whenever you see -ALGIA, something HURTS and you're saying 'AH!'"
         },
         {
           "id": "suf-4",
@@ -55,7 +61,9 @@
             "B": "Study of",
             "C": "Surgical repair",
             "D": "Inflammation"
-          }
+          },
+          "hint": "Think of PLASTIC surgery - reshaping and fixing things!",
+          "explanation": "**-plasty** means **surgical repair** or **reconstruction** 🔧\n\n💡 **Remember it:** -PLASTY sounds like PLASTIC! Think of PLASTIC surgery - molding, reshaping, REPAIRING! Rhinoplasty = nose job (repairing/reshaping nose). Angioplasty = repairing blood vessels. Like working with Play-Doh or PLASTIC - you're SCULPTING and FIXING something!"
         },
         {
           "id": "suf-5",
@@ -68,7 +76,9 @@
             "B": "Disease",
             "C": "Pain",
             "D": "Surgery"
-          }
+          },
+          "hint": "Think of SYMPATHY - feeling bad because someone is sick!",
+          "explanation": "**-pathy** means **disease** or **disorder** 🤒\n\n💡 **Remember it:** Think of having SYMPATHY for someone who's sick - you feel bad about their DISEASE! Neuropathy = nerve disease. Cardiomyopathy = heart muscle disease. Whenever you see -PATHY, something is WRONG, something's DISEASED or not functioning right!"
         },
         {
           "id": "suf-6",
@@ -81,7 +91,9 @@
             "B": "Treatment of",
             "C": "Fear of",
             "D": "Disease of"
-          }
+          },
+          "hint": "Think of biology, psychology, geology - what are all these?",
+          "explanation": "**-ology** means **study of** 📚\n\n💡 **Remember it:** -OLOGY = 'OH! LOGIC!' - the STUDY and LOGIC of something! Biology = study of life. Cardiology = study of the heart. Psychology = study of the mind. Whenever you see -OLOGY, someone's studying and learning about that thing!"
         },
         {
           "id": "suf-7",
@@ -94,7 +106,9 @@
             "B": "Repair",
             "C": "Incision or cutting into",
             "D": "Disease"
-          }
+          },
+          "hint": "Think of a surgeon making a CUT to look inside - not removing, just opening!",
+          "explanation": "**-otomy** means **incision** or **cutting into** ✂️\n\n💡 **Remember it:** -OTOMY sounds like 'OH-TO-ME!' - like saying 'cut INTO me!' Tracheotomy = cutting INTO the trachea (to help breathing). Lobotomy = cutting INTO the brain. Different from -ECTOMY (removal) - this is just CUTTING IN to look or access something, like slicing open a present!"
         },
         {
           "id": "suf-8",
@@ -107,7 +121,9 @@
             "B": "Inflammation",
             "C": "Disease",
             "D": "Enlargement"
-          }
+          },
+          "hint": "Think MEGA - like mega-size, mega-big!",
+          "explanation": "**-megaly** means **enlargement** or **abnormally large** 📏\n\n💡 **Remember it:** -MEGALY starts with MEGA - like MEGA-SIZE at McDonald's, or MEGA-blocks - it means BIG! Cardiomegaly = enlarged heart. Hepatomegaly = enlarged liver. Splenomegaly = enlarged spleen. Whenever you see -MEGALY, something grew too BIG, like it got MEGA-SIZED!"
         },
         {
           "id": "suf-9",
@@ -120,7 +136,9 @@
             "B": "Pain",
             "C": "Inflammation",
             "D": "Swelling"
-          }
+          },
+          "hint": "Think of diarrhea - something flowing that shouldn't be!",
+          "explanation": "**-rrhea** means **flow** or **discharge** 💧\n\n💡 **Remember it:** -RRHEA sounds like 'RHEA' (runs away)! Think of diaRRHEA - everything's FLOWING out! Rhinorrhea = runny nose (discharge FLOWING from nose). Menorrhea = menstrual flow. Whenever you see -RRHEA, something's RUNNING, FLOWING, or LEAKING out!"
         },
         {
           "id": "suf-10",
@@ -133,7 +151,9 @@
             "B": "Blood pressure",
             "C": "Breathing",
             "D": "Pain"
-          }
+          },
+          "hint": "Think of PNEUMONIA - a breathing problem!",
+          "explanation": "**-pnea** means **breathing** 🫁\n\n💡 **Remember it:** -PNEA sounds like PNEUMONIA - a BREATHING disease! Apnea = without breathing (sleep apnea - you STOP breathing!). Dyspnea = difficult breathing. Tachypnea = fast breathing. Whenever you see -PNEA, think LUNGS and BREATHING!"
         },
         {
           "id": "suf-11",
@@ -146,7 +166,9 @@
             "B": "Surgical removal",
             "C": "Disease",
             "D": "Study of"
-          }
+          },
+          "hint": "Think of a telescope or microscope - tools for LOOKING at things!",
+          "explanation": "**-scopy** means **visual examination** or **looking at** 👁️\n\n💡 **Remember it:** -SCOPY = SCOPE IT OUT! Like a telesCOPE or microSCOPE - you're LOOKING at something! Colonoscopy = looking inside your colon with a camera. Endoscopy = looking inside your body. Whenever you see -SCOPY, someone's taking a PEEK inside with a camera!"
         },
         {
           "id": "suf-12",
@@ -159,7 +181,9 @@
             "B": "Muscle",
             "C": "Nerve",
             "D": "Blood condition"
-          }
+          },
+          "hint": "Think of ANEMIA - a blood problem!",
+          "explanation": "**-emia** means **blood condition** 🩸\n\n💡 **Remember it:** -EMIA sounds like 'IN MY BLOOD!' Anemia = not enough red blood cells IN the blood. Leukemia = cancer of white BLOOD cells. Hyperglycemia = high blood sugar IN the blood. Whenever you see -EMIA, it's about what's IN YOUR BLOOD!"
         },
         {
           "id": "suf-13",
@@ -172,7 +196,9 @@
             "B": "Abnormal condition",
             "C": "Removal",
             "D": "Pain"
-          }
+          },
+          "hint": "Think of OSIS as 'OH SIS, something's wrong!'",
+          "explanation": "**-osis** means **abnormal condition** or **disease process** ⚠️\n\n💡 **Remember it:** -OSIS = 'OH SIS, something's not right!' Cirrhosis = abnormal liver condition. Necrosis = tissue death (abnormal condition). Psychosis = abnormal mental state. Stenosis = abnormal narrowing. Whenever you see -OSIS, something's WRONG or ABNORMAL!"
         },
         {
           "id": "suf-14",
@@ -185,7 +211,9 @@
             "B": "Disease",
             "C": "Inflammation",
             "D": "Record or image"
-          }
+          },
+          "hint": "Think of Instagram - pictures and images!",
+          "explanation": "**-gram** means **record** or **image** 📸\n\n💡 **Remember it:** -GRAM = InstaGRAM! You're taking a PICTURE or making a RECORD! Electrocardiogram (ECG) = recording of heart's electrical activity. Mammogram = image/x-ray of breast. Angiogram = image of blood vessels. Whenever you see -GRAM, you're getting a PICTURE or RECORDING!"
         },
         {
           "id": "suf-15",
@@ -198,7 +226,9 @@
             "B": "Pain",
             "C": "Swelling",
             "D": "Inflammation"
-          }
+          },
+          "hint": "Think of HEMORRHAGE - massive blood loss!",
+          "explanation": "**-rrhage/-rrhagia** means **excessive bleeding** or **bursting forth** 🩸\n\n💡 **Remember it:** -RRHAGE sounds like 'RAGE!' - blood RAGING out! Hemorrhage = severe bleeding. Menorrhagia = heavy menstrual bleeding. Think of blood RAGING and GUSHING out uncontrollably - like a broken fire hydrant! Whenever you see -RRHAGE, there's TOO MUCH bleeding!"
         },
         {
           "id": "suf-16",
@@ -211,7 +241,9 @@
             "B": "Narrowing",
             "C": "Rupture",
             "D": "Inflammation"
-          }
+          },
+          "hint": "Think of a STENO pad - narrow lines squeezed together!",
+          "explanation": "**-stenosis** means **narrowing** or **tightening** 🔒\n\n💡 **Remember it:** STENOSIS sounds like STENO (stenographer) - writing in NARROW, TIGHT little lines! Or think 'SQUEEZE-IT-CLOSE!' Aortic stenosis = narrowing of aorta. Mitral stenosis = narrowing of heart valve. Whenever you see -STENOSIS, something's getting SQUEEZED and NARROWED like a tight collar!"
         },
         {
           "id": "suf-17",
@@ -222,7 +254,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of Listerine dissolving plaque - breaking things DOWN!",
+          "explanation": "**FALSE!** ❌ **-lysis** means **breakdown** or **destruction**, NOT hardening!\n\n💡 **Remember it:** -LYSIS sounds like 'LIES-IS' (falling apart)! Think of things DISSOLVING, BREAKING DOWN, LOOSENING! Hemolysis = breakdown of red blood cells. Dialysis = breaking down/filtering waste from blood. Paralysis = breakdown of muscle function. The opposite of hardening - it's about things FALLING APART or being DESTROYED!"
         },
         {
           "id": "suf-18",
@@ -233,7 +267,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of a needle POKING IN to drain something out!",
+          "explanation": "**TRUE!** ✅ **-centesis** means **surgical puncture** to remove fluid 💉\n\n💡 **Remember it:** -CENTESIS sounds like 'SENT-A-NEEDLE-IN!' You're POKING through to drain fluid! Amniocentesis = puncture to remove amniotic fluid. Thoracentesis = puncture to remove fluid from chest. Paracentesis = puncture to remove abdominal fluid. Whenever you see -CENTESIS, someone's getting a NEEDLE POKE to drain something!"
         },
         {
           "id": "suf-19",
@@ -244,7 +280,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of a TROPHY - you grew your skills and developed into a winner!",
+          "explanation": "**TRUE!** ✅ **-trophy** means **growth**, **development**, or **nourishment** 🏆\n\n💡 **Remember it:** -TROPHY like a sports TROPHY - you GREW and DEVELOPED your skills! Hypertrophy = excessive growth (muscles get BIGGER). Atrophy = wasting away (muscles SHRINK from lack of use). Dystrophy = abnormal development. Think of winning a TROPHY for GROWING stronger!"
         }
       ]
     },
@@ -411,7 +449,9 @@
             "B": "Nerve",
             "C": "Bone",
             "D": "Muscle"
-          }
+          },
+          "hint": "Think of a 'neurotic' person - their NERVES are all worked up!",
+          "explanation": "**neuro-** means **nerve** or **nervous system** 🧠⚡\n\n💡 **Remember it:** NEURO sounds like 'NEW-ROW' of nerves! Think of someone NEURotic - their NERVES are frayed! Neurology = study of nerves. Neuron = nerve cell. Neuropathy = nerve disease. Whenever you see NEURO-, it's about NERVES sending signals!"
         },
         {
           "id": "root-2",
@@ -424,7 +464,9 @@
             "B": "Stomach",
             "C": "Bones",
             "D": "Skin"
-          }
+          },
+          "hint": "Think of GAS in your tummy - that's where it builds up!",
+          "explanation": "**gastro-** means **stomach** 🍽️\n\n💡 **Remember it:** GASTRO- sounds like GAS! Where does GAS build up? Your STOMACH! Gastritis = stomach inflammation. Gastroenterology = study of stomach and intestines. Gastric juice = stomach acid. Whenever you see GASTRO-, think of your BELLY and STOMACH!"
         },
         {
           "id": "root-3",
@@ -437,7 +479,9 @@
             "B": "Muscle",
             "C": "Bone",
             "D": "Blood"
-          }
+          },
+          "hint": "Think of a DERMatologist - what do they treat?",
+          "explanation": "**derm-** or **dermato-** means **skin** 🧴\n\n💡 **Remember it:** DERM- sounds like 'DERM-IS!' - your skin IS your covering! Dermatology = study of skin. Dermatitis = skin inflammation. Epidermis = outer layer of skin. Think of a DERMatologist checking your SKIN for problems!"
         },
         {
           "id": "root-4",
@@ -450,7 +494,9 @@
             "B": "Brain",
             "C": "Blood",
             "D": "Muscle"
-          }
+          },
+          "hint": "Think of a HEMOphiliac - someone with a BLOOD clotting disorder!",
+          "explanation": "**hemo-** or **hema-** means **blood** 🩸\n\n💡 **Remember it:** HEMO- sounds like 'HE-MOW' down enemies with BLOOD! Hemoglobin = protein in red BLOOD cells. Hemorrhage = excessive bleeding. Hematology = study of blood. Whenever you see HEMO- or HEMA-, it's all about BLOOD!"
         },
         {
           "id": "root-5",
@@ -463,7 +509,9 @@
             "B": "Bone",
             "C": "Joint",
             "D": "Skin"
-          }
+          },
+          "hint": "Think of ARTHritis - where does it hurt? Your JOINTS!",
+          "explanation": "**arthro-** means **joint** 🦴\n\n💡 **Remember it:** ARTHRO- sounds like 'ARTHUR!' - Picture King Arthur's rusty armor JOINTS squeaking! Arthritis = joint inflammation. Arthroscopy = looking inside a joint. Arthroplasty = joint replacement surgery. Whenever you see ARTHRO-, think of where bones MEET and MOVE - your JOINTS!"
         },
         {
           "id": "root-6",
@@ -476,7 +524,9 @@
             "B": "Kidney",
             "C": "Heart",
             "D": "Lung"
-          }
+          },
+          "hint": "Think of your NEPHEW - he needs his KIDNEYS to filter out the juice he drinks!",
+          "explanation": "**nephro-** means **kidney** 🫘\n\n💡 **Remember it:** NEPHRO- sounds like NEPHEW! Your NEPHEW needs his KIDNEYS to filter all that soda! Nephrology = study of kidneys. Nephritis = kidney inflammation. Nephrectomy = kidney removal. Whenever you see NEPHRO-, think of those bean-shaped KIDNEY filters!"
         },
         {
           "id": "root-7",
@@ -489,7 +539,9 @@
             "B": "Lungs",
             "C": "Stomach",
             "D": "Blood"
-          }
+          },
+          "hint": "Think of PULMonary - that's your breathing system!",
+          "explanation": "**pulmo-** or **pulmon-** means **lung** 🫁\n\n💡 **Remember it:** PULMO- sounds like 'PULL-MORE' air! You PULL air into your LUNGS! Pulmonary = relating to lungs. Pulmonologist = lung doctor. Think of your lungs PULLING and PUMPING air with every breath!"
         },
         {
           "id": "root-8",
@@ -502,7 +554,9 @@
             "B": "Muscle",
             "C": "Blood",
             "D": "Nerve"
-          }
+          },
+          "hint": "Think 'MY-OH!' - flexing YOUR muscles!",
+          "explanation": "**myo-** means **muscle** 💪\n\n💡 **Remember it:** MYO- sounds like 'MY-OH!' - flex YOUR muscles! Myocardium = heart MUSCLE. Myalgia = MUSCLE pain. Myopathy = MUSCLE disease. Whenever you see MYO-, think of MUSCLES flexing and contracting!"
         },
         {
           "id": "root-9",
@@ -515,7 +569,9 @@
             "B": "Liver",
             "C": "Blood",
             "D": "Cells"
-          }
+          },
+          "hint": "Think of CYTOplasm - the gooey stuff inside CELLS!",
+          "explanation": "**cyto-** means **cell** 🔬\n\n💡 **Remember it:** CYTO- sounds like 'SIGHT-OH' - you need a microscope to SIGHT cells! Cytology = study of cells. Cytoplasm = cell contents. Leukocyte = white blood CELL. Whenever you see CYTO-, think of the tiny building blocks - CELLS!"
         },
         {
           "id": "root-10",
@@ -528,7 +584,9 @@
             "B": "Lung",
             "C": "Blood",
             "D": "Vein"
-          }
+          },
+          "hint": "Think of CARDIO workout - gets your HEART pumping!",
+          "explanation": "**cardio-** means **heart** ❤️\n\n💡 **Remember it:** CARDIO exercise gets your HEART racing! Cardiology = study of the heart. Cardiomyopathy = heart muscle disease. Tachycardia = fast heart rate. Whenever you see CARDIO-, think of that pump in your chest beating - your HEART!"
         },
         {
           "id": "root-11",
@@ -541,7 +599,9 @@
             "B": "Throat",
             "C": "Nose",
             "D": "Eye"
-          }
+          },
+          "hint": "Think of a RHINO - what's the most obvious feature on its face?",
+          "explanation": "**rhino-** means **nose** 👃\n\n💡 **Remember it:** Think of a RHINOCEROS - that big HORN coming out of its NOSE! Rhinitis = nose inflammation (stuffy nose). Rhinoplasty = nose job. Rhinorrhea = runny nose. Whenever you see RHINO-, picture that rhino's giant NOSE horn!"
         },
         {
           "id": "root-12",
@@ -554,7 +614,9 @@
             "B": "Skull",
             "C": "Spine",
             "D": "Nerve"
-          }
+          },
+          "hint": "Think of it as 'EN-CEPHALO' - IN your head is your BRAIN!",
+          "explanation": "**encephalo-** means **brain** 🧠\n\n💡 **Remember it:** ENCEPHALO- = 'IN-CEPHALON' (IN your head)! Encephalitis = brain inflammation. Encephalopathy = brain disease. EEG (electroENCEPHALOgram) = recording brain waves. Whenever you see ENCEPHALO-, think of what's INSIDE your skull - your BRAIN!"
         },
         {
           "id": "root-13",
@@ -567,7 +629,9 @@
             "B": "Kidney",
             "C": "Bile",
             "D": "Liver"
-          }
+          },
+          "hint": "Think of CHOLEsterol - that fatty stuff in your BILE!",
+          "explanation": "**chole-** or **cholo-** means **bile** or **gall** 💛\n\n💡 **Remember it:** CHOLE- sounds like CHOLESTEROL - found in BILE! Cholecystitis = gallbladder inflammation (stores bile). Cholesterol = fatty substance in bile. Bile is that greenish-yellow digestive fluid your liver makes!"
         },
         {
           "id": "root-14",
@@ -580,7 +644,9 @@
             "B": "Intestines",
             "C": "Liver",
             "D": "Pancreas"
-          }
+          },
+          "hint": "Think of ENTERING food - it goes through your long, winding intestines!",
+          "explanation": "**entero-** means **intestines** or **small intestine** 🌀\n\n💡 **Remember it:** ENTERO- sounds like ENTER! Food ENTERS and travels through those long, twisty INTESTINES! Gastroenterology = study of stomach and intestines. Enteritis = intestine inflammation. Think of that long tube where food ENTERS and gets digested!"
         },
         {
           "id": "root-15",
@@ -593,7 +659,9 @@
             "B": "Nose",
             "C": "Mouth",
             "D": "Eye"
-          }
+          },
+          "hint": "Think of OCULAR vision or an OPHTHALMOlogist - the EYE doctor!",
+          "explanation": "**ocul-** or **ophthalmo-** means **eye** 👁️\n\n💡 **Remember it:** OCULAR sounds like 'OH-COOL-ARE' your eyes! Or think of binoculars - for your EYES! Ophthalmologist = eye doctor. Intraocular = inside the eye. Whenever you see OCUL- or OPHTHALMO-, think of those peepers - your EYES!"
         },
         {
           "id": "root-16",
@@ -606,7 +674,9 @@
             "B": "Skull",
             "C": "Spine",
             "D": "Neck"
-          }
+          },
+          "hint": "Think of CRANIUM - your hard SKULL protecting your brain!",
+          "explanation": "**crani-** or **cranio-** means **skull** 💀\n\n💡 **Remember it:** CRANI- = CRANIUM! That hard SKULL bone protecting your brain! Craniotomy = cutting into the skull. Craniofacial = relating to skull and face. Think of CRANIberries - hard like your SKULL!"
         },
         {
           "id": "root-17",
@@ -619,7 +689,9 @@
             "B": "Pelvis",
             "C": "Chest",
             "D": "Back"
-          }
+          },
+          "hint": "Think of THOR - the superhero with the mighty CHEST!",
+          "explanation": "**thoraco-** or **thorax** means **chest** 🫁\n\n💡 **Remember it:** THORACO- sounds like THOR! Picture THOR puffing out his mighty CHEST! Thoracic cavity = chest cavity (contains heart and lungs). Thoracotomy = chest surgery. Whenever you see THORACO-, think of that barrel CHEST!"
         },
         {
           "id": "root-18",
@@ -632,7 +704,9 @@
             "B": "Blood",
             "C": "Heart",
             "D": "Liver"
-          }
+          },
+          "hint": "Think of PNEUMONIA - a LUNG infection!",
+          "explanation": "**pneumo-** or **pneumon-** means **lung** or **air** 🫁\n\n💡 **Remember it:** PNEUMO- = PNEUMONIA (LUNG disease)! Pneumothorax = air in chest cavity (collapsed lung). Pneumonia = lung infection. Think of BREATHING air into your LUNGS - that's PNEUMO!"
         },
         {
           "id": "root-19",
@@ -645,7 +719,9 @@
             "B": "Heart",
             "C": "Kidney",
             "D": "Spleen"
-          }
+          },
+          "hint": "RENO sounds like RENAL - your KIDNEY system!",
+          "explanation": "**reno-** means **kidney** 🫘\n\n💡 **Remember it:** RENO- sounds like RENAL (kidney)! Think of the city RENO - you need your KIDNEYS to filter out the casino drinks! Renal failure = kidney failure. Renovascular = relating to kidney blood vessels. Just another word for KIDNEY (like nephro-)!"
         },
         {
           "id": "root-20",
@@ -658,7 +734,9 @@
             "B": "Uterus",
             "C": "Fallopian tube",
             "D": "Cervix"
-          }
+          },
+          "hint": "Think of a HYSTERectomy - removing the UTERUS!",
+          "explanation": "**hystero-** or **utero-** means **uterus** or **womb** 🤰\n\n💡 **Remember it:** HYSTERO- in HYSTERectomy = removal of UTERUS! UTERO- literally has 'UTER-US' in it! The uterus is where babies grow. Hysterectomy = uterus removal. Intrauterine = inside the uterus. Think of the baby's first home - the UTERUS!"
         },
         {
           "id": "root-21",
@@ -671,7 +749,9 @@
             "B": "Uterus",
             "C": "Vagina",
             "D": "Bladder"
-          }
+          },
+          "hint": "Don't confuse with COLON! Think of a COLPOscopy exam.",
+          "explanation": "**colpo-** means **vagina** 🔬\n\n💡 **Remember it:** COLPO- sounds like COAL-POT (a passageway)! Colposcopy = visual exam of vagina and cervix. Colpotomy = incision into vaginal wall. Don't confuse with COLO- (colon) - this is specifically the VAGINAL canal!"
         },
         {
           "id": "root-22",
@@ -684,7 +764,9 @@
             "B": "Muscle",
             "C": "Nerve",
             "D": "Blood vessel"
-          }
+          },
+          "hint": "Think of an ANGIOgram - imaging of BLOOD VESSELS!",
+          "explanation": "**angio-** means **blood vessel** or **vessel** 🩸\n\n💡 **Remember it:** ANGIO- sounds like 'ANGLE-OF' tubes! Your blood vessels ANGLE all through your body! Angiogram = x-ray of blood vessels. Angioplasty = repair of blood vessel. Angiology = study of blood vessels. Think of those tubes carrying blood - VESSELS!"
         },
         {
           "id": "root-23",
@@ -697,7 +779,9 @@
             "B": "Cervix",
             "C": "Ovary",
             "D": "Fallopian tube"
-          }
+          },
+          "hint": "Think 'OOH-FOR' eggs - where do eggs come from? OVARIES!",
+          "explanation": "**oophor-** means **ovary** 🥚\n\n💡 **Remember it:** OOPHOR- sounds like 'OOH-FOR' eggs! OVARIES make eggs! Oophorectomy = ovary removal. Oophoritis = ovary inflammation. Think of those egg-producing organs - the OVARIES!"
         },
         {
           "id": "root-24",
@@ -708,7 +792,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of HEPAtitis - LIVER inflammation!",
+          "explanation": "**TRUE!** ✅ **hepato-** means **liver** 🫀\n\n💡 **Remember it:** HEPATO- = HEP-A! Hepatitis A = LIVER inflammation! Hepatology = study of liver. Hepatomegaly = enlarged liver. Think of the liver as your body's FILTER - and HEPATO- is the word for it!"
         },
         {
           "id": "root-25",
@@ -719,7 +805,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of OSTEOporosis - weak, brittle BONES!",
+          "explanation": "**TRUE!** ✅ **osteo-** means **bone** 🦴\n\n💡 **Remember it:** OSTEO- = OH-STEE-OH (bones)! Osteoporosis = porous, weak bones. Osteopathy = bone disease. Osteology = study of bones. Think of your skeleton - that's all OSTEO!"
         },
         {
           "id": "root-26",
@@ -730,7 +818,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of a PATHOgen - something that causes DISEASE!",
+          "explanation": "**TRUE!** ✅ **path-** or **patho-** means **disease** or **suffering** 🤒\n\n💡 **Remember it:** PATHO- = PATHOGEN (disease-causing germ)! Pathology = study of disease. Pathologist = doctor who studies diseases. Neuropathy = nerve disease. Whenever you see PATHO-, something's SICK or DISEASED!"
         },
         {
           "id": "root-27",
@@ -741,7 +831,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of a CARDIologist - the HEART doctor!",
+          "explanation": "**TRUE!** ✅ Both **cardi-** and **cardio-** mean **heart** ❤️\n\n💡 **Remember it:** CARDI/CARDIO = that CARD-shaped pump in your chest! Cardiologist = heart doctor. Cardiac arrest = heart stops. Pericardium = sac around the heart. Same meaning, just slightly different spelling!"
         },
         {
           "id": "root-28",
@@ -752,7 +844,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of your SPINE - those stacked vertebrae!",
+          "explanation": "**FALSE!** ❌ **spondyl-** means **vertebrae** or **spine**, NOT ribs!\n\n💡 **Remember it:** SPONDYL- sounds like 'SPONDY-LONG' - your LONG SPINE! Spondylitis = vertebrae inflammation. Spondylolisthesis = vertebra slipping. Think of those stacked bones running down your back - your SPINE/VERTEBRAE, not your ribs!"
         }
       ]
     },
@@ -771,7 +865,9 @@
             "B": "Blood Pressure",
             "C": "Body Part",
             "D": "Breathing Pattern"
-          }
+          },
+          "hint": "Think of a BP cuff squeezing your arm to measure something!",
+          "explanation": "**BP** = **Blood Pressure** 🩺\n\n💡 **Remember it:** BP = the pressure in your BLOOD vessels! That cuff on your arm measures how hard your blood is pushing against artery walls. Normal BP is around 120/80. Too high (hypertension) or too low (hypotension) can be dangerous!"
         },
         {
           "id": "abbr-2",
@@ -784,7 +880,9 @@
             "B": "Hospital Record",
             "C": "Health Report",
             "D": "Human Resources"
-          }
+          },
+          "hint": "Think of checking your pulse - counting how fast something beats!",
+          "explanation": "**HR** = **Heart Rate** ❤️\n\n💡 **Remember it:** HR = how fast your HEART is RACING! Measured in beats per minute (bpm). Normal resting HR is 60-100 bpm. Feel your pulse on your wrist - that's your HR!"
         },
         {
           "id": "abbr-3",
@@ -797,7 +895,9 @@
             "B": "Central Tissue",
             "C": "Computed Tomography",
             "D": "Cardiac Therapy"
-          }
+          },
+          "hint": "Think of a CAT scan - uses a COMPUTER to create cross-section images!",
+          "explanation": "**CT** = **Computed Tomography** (also called CAT scan) 🖥️\n\n💡 **Remember it:** CT = COMPUTER + TOMO (slices)! A CT scan uses x-rays and a COMPUTER to create detailed slice-by-slice images of your body. Like taking photos of bread slices to see what's inside the loaf!"
         },
         {
           "id": "abbr-4",
@@ -810,7 +910,9 @@
             "B": "Muscle Resonance Image",
             "C": "Multiple Radio Images",
             "D": "Magnetic Resonance Imaging"
-          }
+          },
+          "hint": "Think of powerful MAGNETS creating detailed images!",
+          "explanation": "**MRI** = **Magnetic Resonance Imaging** 🧲\n\n💡 **Remember it:** MRI = MAGNETS Resonating Inside! Uses powerful magnets (not radiation!) to create super detailed images of soft tissues. No metal allowed - those magnets are STRONG! Great for seeing brain, muscles, and organs!"
         },
         {
           "id": "abbr-5",
@@ -823,7 +925,9 @@
             "B": "Nothing by mouth",
             "C": "Normal Patient Order",
             "D": "No Pain Observed"
-          }
+          },
+          "hint": "From Latin 'nil per os' - no food or drink before surgery!",
+          "explanation": "**NPO** = **Nothing by mouth** (from Latin: nil per os) 🚫\n\n💡 **Remember it:** NPO = NO PIZZA OR anything! Can't eat or drink - usually before surgery or procedures. Empty stomach prevents choking/aspiration during anesthesia. If you see NPO, the patient is FASTING!"
         },
         {
           "id": "abbr-6",
@@ -836,7 +940,9 @@
             "B": "Prior to night",
             "C": "Patient requires nurse",
             "D": "Prescription renewal needed"
-          }
+          },
+          "hint": "From Latin 'pro re nata' - take medicine when you need it, not on a schedule!",
+          "explanation": "**PRN** = **As needed** (from Latin: pro re nata) 💊\n\n💡 **Remember it:** PRN = PAIN? RELIEF NOW! Take the medicine AS NEEDED, not on a set schedule. Like taking Tylenol when your head hurts, not every 4 hours automatically. It's 'as-needed' medicine!"
         },
         {
           "id": "abbr-7",
@@ -849,7 +955,9 @@
             "B": "Stop All Treatment",
             "C": "Immediately",
             "D": "Statistical Analysis"
-          }
+          },
+          "hint": "From Latin 'statim' - think of medical emergency TV shows: 'We need that STAT!'",
+          "explanation": "**STAT** = **Immediately** or **right now** (from Latin: statim) ⚡\n\n💡 **Remember it:** STAT = START-AT-TOP priority! When doctors yell 'I need that blood work STAT!' they mean RIGHT NOW, drop everything else! It's URGENT, EMERGENCY, no delays! Like when you're 'standing' (stat) still waiting - except you CAN'T wait!"
         },
         {
           "id": "abbr-8",
@@ -862,7 +970,9 @@
             "B": "Internal Ventilation",
             "C": "Intensive Visit",
             "D": "Invasive Valve"
-          }
+          },
+          "hint": "Think of a needle in your VEIN delivering fluids directly into your blood!",
+          "explanation": "**IV** = **Intravenous** (within the vein) 💉\n\n💡 **Remember it:** IV = IN VEIN! INTRA = inside, VENOUS = vein. That IV drip puts medicine/fluids directly INTO your VEIN! Fast delivery straight to your bloodstream. Think of it like an express highway directly into your blood!"
         },
         {
           "id": "abbr-9",
@@ -875,7 +985,9 @@
             "B": "Intensive Care Unit",
             "C": "Immediate Clinical Unit",
             "D": "Inpatient Cardiac Unit"
-          }
+          },
+          "hint": "The most serious patients go here for INTENSIVE monitoring!",
+          "explanation": "**ICU** = **Intensive Care Unit** 🏥\n\n💡 **Remember it:** ICU = I SEE YOU constantly! INTENSIVE monitoring 24/7 for the sickest patients. Constant nurse attention, lots of machines, critical care. If someone's in the ICU, they need INTENSE medical attention!"
         },
         {
           "id": "abbr-10",
@@ -886,7 +998,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "A patient's choice about CPR and life-saving measures.",
+          "explanation": "**TRUE!** ✅ **DNR** = **Do Not Resuscitate** 🕊️\n\n💡 **Remember it:** DNR = DON'T NEED REVIVAL! A patient's legal choice to NOT receive CPR or other life-saving measures if their heart stops. It's a serious medical order respecting end-of-life wishes. DNR means 'let nature take its course.'"
         },
         {
           "id": "abbr-11",
@@ -897,7 +1011,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Where do surgeons perform operations?",
+          "explanation": "**TRUE!** ✅ **OR** = **Operating Room** 🏥\n\n💡 **Remember it:** OR = where they OPERATE! The sterile room where surgeries happen. Bright lights, surgical tools, anesthesiologist, surgical team. When someone says 'patient's in the OR,' they're having surgery right now!"
         }
       ]
     },
@@ -916,7 +1032,9 @@
             "B": "Back",
             "C": "Side",
             "D": "Center"
-          }
+          },
+          "hint": "Think of an ANTeater's FRONT snout sticking out ahead!",
+          "explanation": "**anterior** means **front** or **toward the front** ➡️\n\n💡 **Remember it:** ANTERIOR = ANT crawling on the FRONT of you! Your chest, face, and belly are ANTERIOR (front) surfaces. Opposite of POSTERIOR (back). Think of being 'in front' of (ANTERIOR to) someone in line!"
         },
         {
           "id": "pos-2",
@@ -929,7 +1047,9 @@
             "B": "Back",
             "C": "Above",
             "D": "Below"
-          }
+          },
+          "hint": "Think of your POSTERIOR - your backside, your butt!",
+          "explanation": "**posterior** means **back** or **toward the back** ⬅️\n\n💡 **Remember it:** POSTERIOR = POSTE-REAR! Your butt is your POSTERIOR! Your back, spine, and heels are POSTERIOR surfaces. Opposite of ANTERIOR (front). Like a POSTER on the wall BEHIND you!"
         },
         {
           "id": "pos-3",
@@ -942,7 +1062,9 @@
             "B": "Front",
             "C": "Above or directed upward",
             "D": "Side"
-          }
+          },
+          "hint": "Think of a SUPERIOR officer - they're ABOVE you in rank!",
+          "explanation": "**superior** means **above** or **upper** ⬆️\n\n💡 **Remember it:** SUPERIOR = SUPER-UP! Like Superman flying ABOVE! Your head is SUPERIOR to your feet. Think of a SUPERIOR boss - they're ABOVE you! Opposite of INFERIOR (below)."
         },
         {
           "id": "pos-4",
@@ -955,7 +1077,9 @@
             "B": "Front",
             "C": "Side",
             "D": "Below or directed downward"
-          }
+          },
+          "hint": "Think of feeling INFERIOR - looking DOWN on yourself, BELOW others!",
+          "explanation": "**inferior** means **below** or **lower** ⬇️\n\n💡 **Remember it:** INFERIOR = IN-FEAR-OF heights because you're DOWN! Your feet are INFERIOR to your head. Like feeling 'inferior' - you're DOWN, BELOW. Opposite of SUPERIOR (above)."
         },
         {
           "id": "pos-5",
@@ -968,7 +1092,9 @@
             "B": "Side, away from the middle",
             "C": "Front",
             "D": "Back"
-          }
+          },
+          "hint": "Think of a LATERAL pass in football - throwing to the SIDE!",
+          "explanation": "**lateral** means **side** or **away from midline** ↔️\n\n💡 **Remember it:** LATERAL = LATER-ALL (to the side)! Like a LATERAL pass in football - throwing to the SIDE! Your ears are LATERAL to your nose. Think of moving SIDE-TO-SIDE. Opposite of MEDIAL (toward middle)."
         },
         {
           "id": "pos-6",
@@ -981,7 +1107,9 @@
             "B": "Side",
             "C": "Above",
             "D": "Below"
-          }
+          },
+          "hint": "Think of the MEDIAN strip in the MIDDLE of the highway!",
+          "explanation": "**medial** means **midline** or **toward the middle** ⬅️➡️\n\n💡 **Remember it:** MEDIAL = MIDDLE! Like the MEDIAN strip in the MIDDLE of a highway! Your nose is MEDIAL to your ears. Think of MED-MIDDLE. Opposite of LATERAL (away from middle/to the side)."
         },
         {
           "id": "pos-7",
@@ -994,7 +1122,9 @@
             "B": "Outside",
             "C": "Toward the center or at the point of attachment",
             "D": "Inside"
-          }
+          },
+          "hint": "Think 'PROXIMITY' - CLOSE to the body's center!",
+          "explanation": "**proximal** means **closer to the center** or **point of attachment** 🔗\n\n💡 **Remember it:** PROXIMAL = PROXIMITY (closeness)! Your shoulder is PROXIMAL to your hand (closer to body center). Like being in 'close PROXIMITY' - you're NEAR the center/attachment point! Opposite of DISTAL (far from center)."
         },
         {
           "id": "pos-8",
@@ -1007,7 +1137,9 @@
             "B": "Away from",
             "C": "Inside",
             "D": "Outside"
-          }
+          },
+          "hint": "Think 'DISTANCE' - FAR from the body's center!",
+          "explanation": "**distal** means **farther from the center** or **point of attachment** 🚀\n\n💡 **Remember it:** DISTAL = DISTANCE! Your fingers are DISTAL to your shoulder (farther from body center). Think of the DISTANT end, FAR AWAY from attachment. Like being at a DISTANCE! Opposite of PROXIMAL (close to center)."
         },
         {
           "id": "pos-9",
@@ -1020,7 +1152,9 @@
             "B": "Sitting",
             "C": "Lying on the abdomen",
             "D": "Lying on the back"
-          }
+          },
+          "hint": "Think 'SOUP-INE' - lying on your BACK like holding a bowl of soup on your belly!",
+          "explanation": "**supine** means **lying on your back** (face up) 🛌\n\n💡 **Remember it:** SUPINE = SOUP-ON-SPINE! Lying on your BACK like you could balance a bowl of SOUP on your belly! Face pointing UP to the sky. Opposite of PRONE (face down)."
         },
         {
           "id": "pos-10",
@@ -1033,7 +1167,9 @@
             "B": "Standing",
             "C": "Lying on the abdomen",
             "D": "Sitting"
-          }
+          },
+          "hint": "Think 'PRONE to fall' - face DOWN on the ground!",
+          "explanation": "**prone** means **lying on your stomach/abdomen** (face down) 🤸\n\n💡 **Remember it:** PRONE = PRONE to fall FACE-DOWN! Like doing a plank or push-up position - face pointing DOWN to the floor. Opposite of SUPINE (face up/on back)."
         },
         {
           "id": "pos-11",
@@ -1046,7 +1182,9 @@
             "B": "Head elevated",
             "C": "Lying on side",
             "D": "Standing straight"
-          }
+          },
+          "hint": "Think 'TREND-DOWN' - head trending DOWN below your feet!",
+          "explanation": "**Trendelenburg** position means **head lower than feet** (tilted upside down) 🙃\n\n💡 **Remember it:** TRENDE-DOWN-BURG! Your HEAD is DOWN, legs are UP! Used to improve blood flow to the brain or for certain surgeries. Picture sliding down a slide - head going DOWN first!"
         },
         {
           "id": "pos-12",
@@ -1059,7 +1197,9 @@
             "B": "Pertaining to both sides",
             "C": "Front only",
             "D": "Back only"
-          }
+          },
+          "hint": "Think 'BI' (two) + 'LATERAL' (sides) = BOTH SIDES!",
+          "explanation": "**bilateral** means **both sides** or **affecting both sides** ↔️\n\n💡 **Remember it:** BI-LATERAL = BI (two) + LATERAL (sides) = BOTH SIDES! Like BIcycle (two wheels), BIlateral = TWO sides! Bilateral knee pain = BOTH knees hurt. Opposite of UNI-lateral (one side only)."
         },
         {
           "id": "pos-13",
@@ -1072,7 +1212,9 @@
             "B": "Abdomen",
             "C": "Feet",
             "D": "Head"
-          }
+          },
+          "hint": "Think of ENCEPHALO (brain) - CEPHALIC is toward the HEAD!",
+          "explanation": "**cephalic** means **head** or **toward the head** 🧠\n\n💡 **Remember it:** CEPHALIC = sounds like 'SELF-LICK' - you'd need a HEAD to lick yourself! Or remember enCEPHALO means brain - CEPHALIC relates to HEAD! A cephalic presentation in birth means baby's HEAD is down. Opposite of caudal (toward feet/tail)."
         },
         {
           "id": "pos-14",
@@ -1085,7 +1227,9 @@
             "B": "Inside",
             "C": "Above",
             "D": "Below"
-          }
+          },
+          "hint": "EXTERNAL - like EXTERior of a house, the OUTSIDE!",
+          "explanation": "**external** means **outside** or **outer surface** 🏠\n\n💡 **Remember it:** EXTERNAL = EXTERior! Like the OUTSIDE of a building! Your skin is EXTERNAL (outside surface). External bleeding = bleeding you can SEE on the outside. Opposite of INTERNAL (inside)."
         },
         {
           "id": "pos-15",
@@ -1098,7 +1242,9 @@
             "B": "Inside",
             "C": "Front",
             "D": "Back"
-          }
+          },
+          "hint": "INTERNAL - like INTERior of a house, the INSIDE!",
+          "explanation": "**internal** means **inside** or **within** 🫀\n\n💡 **Remember it:** INTERNAL = INTERior! Like the INSIDE of a building! Your organs are INTERNAL (inside your body). Internal bleeding = bleeding you CAN'T see (inside). Opposite of EXTERNAL (outside)."
         },
         {
           "id": "pos-16",
@@ -1111,7 +1257,9 @@
             "B": "Rotation",
             "C": "Bending limb or body part at the joint",
             "D": "Stretching"
-          }
+          },
+          "hint": "Think 'FLEX your muscles' - you're BENDING your arm!",
+          "explanation": "**flexion** means **bending** or **decreasing the angle** at a joint 💪\n\n💡 **Remember it:** FLEXION = FLEX! When you FLEX your bicep, you're BENDING your elbow! Flexion DECREASES the angle between bones. Like doing a bicep curl - that's arm FLEXION! Opposite of EXTENSION (straightening)."
         },
         {
           "id": "pos-17",
@@ -1124,7 +1272,9 @@
             "B": "Bending",
             "C": "Rotation",
             "D": "Turning"
-          }
+          },
+          "hint": "Think 'EXTEND your arm' - you're STRAIGHTENING it out!",
+          "explanation": "**extension** means **straightening** or **increasing the angle** at a joint ➡️\n\n💡 **Remember it:** EXTENSION = EXTEND! When you EXTEND your arm out straight, you're STRAIGHTENING your elbow! Extension INCREASES the angle between bones. Like reaching for something - you EXTEND your arm straight! Opposite of FLEXION (bending)."
         },
         {
           "id": "pos-18",
@@ -1135,7 +1285,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of PERIPHERAL vision - what you see on the OUTER edges, not in the center!",
+          "explanation": "**TRUE!** ✅ **peripheral** means **outside** or **away from the center** 🔄\n\n💡 **Remember it:** PERIPHERAL = OUTER PERIMETER! Like PERIPHERAL vision (side vision) - you're seeing the EDGES, not the CENTER! Peripheral nerves = nerves in your arms/legs (away from spine/brain center). Peripheral devices = stuff OUTSIDE your computer (keyboard, mouse). Think PERIMETER - the OUTER boundary!"
         },
         {
           "id": "pos-19",
@@ -1146,7 +1298,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of ROTATING a doorknob - TURNING it in a circle!",
+          "explanation": "**TRUE!** ✅ **rotation** means **turning** or **revolving around an axis** 🔄\n\n💡 **Remember it:** ROTATION = like ROTATING tires on a car - you're TURNING them! Or Earth's ROTATION - spinning around its axis! When you turn your head side to side ('no'), that's ROTATION of your neck. Think of SPINNING, TWISTING, TURNING in a circle!"
         },
         {
           "id": "pos-20",
@@ -1157,7 +1311,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of an OBLIQUE angle - it's SLANTED, not straight!",
+          "explanation": "**FALSE!** ❌ **oblique** means **slanted** or **at an angle**, NOT straight!\n\n💡 **Remember it:** OBLIQUE = OH-BLEAK (leaning over sadly)! It's SLANTED, DIAGONAL, at an ANGLE - not straight up/down or perfectly horizontal! Like the Leaning Tower of Pisa - that's OBLIQUE! Oblique muscles run at an angle across your abdomen. Think TILTED, not straight!"
         }
       ]
     }
