@@ -1,6 +1,7 @@
 import { notFound, redirect } from 'next/navigation';
 import { getCurrentUser } from '@/lib/auth';
 import QuizInterface from '@/components/QuizInterface';
+import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import quizData from '@/public/data/medical-terminology-questions.json';
 import type { Metadata } from 'next';
 
@@ -64,20 +65,23 @@ export default async function QuizPage({ params }: PageProps) {
   }));
 
   return (
-    <QuizInterface
-      sectionKey={section}
-      sectionTitle={sectionData.title}
-      sectionIcon={
-        section === 'prefixes' ? '🔤' :
-        section === 'suffixes' ? '📝' :
-        section === 'roots' ? '🌿' :
-        section === 'abbreviations' ? '📋' :
-        '🧍'
-      }
-      questions={questions}
-      userId={user.id}
-      userEmail={user.email}
-    />
+    <>
+      <QuizInterface
+        sectionKey={section}
+        sectionTitle={sectionData.title}
+        sectionIcon={
+          section === 'prefixes' ? '🔤' :
+          section === 'suffixes' ? '📝' :
+          section === 'roots' ? '🌿' :
+          section === 'abbreviations' ? '📋' :
+          '🧍'
+        }
+        questions={questions}
+        userId={user.id}
+        userEmail={user.email}
+      />
+      <ElevenLabsWidget />
+    </>
   );
 }
 
