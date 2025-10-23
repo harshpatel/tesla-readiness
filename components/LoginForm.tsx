@@ -56,7 +56,18 @@ export default function LoginForm() {
 
   return (
     <Card className="w-full max-w-md">
-      <CardContent className="p-6">
+      <CardContent className="p-8">
+        {!isSuccess && (
+          <div className="mb-6 text-center">
+            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-2">
+              Ready to ace your clinicals?
+            </h2>
+            <p className="text-sm text-gray-600">
+              Join hundreds of students mastering medical terminology
+            </p>
+          </div>
+        )}
+        
         {isSuccess ? (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
             <p className="font-medium">Check your email!</p>
