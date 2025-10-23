@@ -1,8 +1,10 @@
 import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import { getCurrentUser } from '@/lib/auth';
 
 export default async function AdminPage() {
+  const user = await getCurrentUser();
   const cookieStore = await cookies();
   
   const supabase = createServerClient(
@@ -33,7 +35,7 @@ export default async function AdminPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title="Admin Dashboard" showAuth={true} showBackButton={true} />
+      <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} />
       
       <main className="flex-1 p-8">
         <div className="max-w-7xl mx-auto">

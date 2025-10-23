@@ -1,4 +1,4 @@
-import { requireMasterAdmin } from '@/lib/auth';
+import { requireMasterAdmin, getCurrentUser } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import Header from '@/components/Header';
 import UserRoleManager from '@/components/UserRoleManager';
@@ -10,9 +10,11 @@ export default async function MasterAdminPage() {
     redirect('/dashboard');
   }
 
+  const user = await getCurrentUser();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      <Header showAuth showBack />
+      <Header showAuth showBackButton userEmail={user?.email} />
       
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">

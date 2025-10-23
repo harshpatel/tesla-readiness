@@ -6,7 +6,7 @@ export default async function DashboardPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title="Clinical Readiness Checks" showAuth={true} />
+      <Header title="Clinical Readiness Checks" showAuth={true} userEmail={user?.email} />
       
       <main className="flex-1 flex items-center justify-center p-8">
         <div className="quiz-container max-w-4xl w-full p-8">
