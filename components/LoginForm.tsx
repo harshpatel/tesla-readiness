@@ -38,6 +38,7 @@ export default function LoginForm() {
         email,
         options: {
           emailRedirectTo: redirectUrl,
+          shouldCreateUser: true,
         },
       });
 

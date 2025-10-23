@@ -10,6 +10,16 @@ export async function GET(request: NextRequest) {
   const code = requestUrl.searchParams.get('code');
   const redirectTo = requestUrl.searchParams.get('redirectTo') || '/dashboard';
 
+  // Debug logging
+  console.log('Callback URL:', requestUrl.href);
+  console.log('Parameters:', {
+    token_hash,
+    type,
+    code,
+    redirectTo,
+    allParams: Object.fromEntries(requestUrl.searchParams.entries()),
+  });
+
   const cookieStore = await cookies();
   
   const supabase = createServerClient(
