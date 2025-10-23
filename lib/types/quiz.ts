@@ -8,6 +8,8 @@ export interface QuizQuestion {
   correct_answer: string;
   points: number;
   order_index: number;
+  hint?: string; // Shown after first wrong answer
+  explanation?: string; // Detailed explanation with mnemonics
 }
 
 export interface UserQuizProgress {

@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { getCurrentUser } from '@/lib/auth';
+import ClickableUserRow from '@/components/ClickableUserRow';
 
 export default async function AdminPage() {
   const user = await getCurrentUser();
@@ -26,12 +27,36 @@ export default async function AdminPage() {
     }
   );
   
-  // Fetch all student profiles
-  const { data: students, error } = await supabase
+  // Fetch ALL user profiles (students, admins, master admins)
+  const { data: allUsers, error } = await supabase
     .from('profiles')
     .select('*')
-    .eq('role', 'student')
     .order('created_at', { ascending: false });
+  
+  // Fetch progress for all users
+  const { data: allProgress } = await supabase
+    .from('user_section_progress')
+    .select('*');
+  
+  // Calculate total questions across all sections
+  const { data: allQuestions } = await supabase
+    .from('quiz_questions')
+    .select('id', { count: 'exact', head: true });
+  
+  const totalQuestions = allQuestions?.length || 88; // Fallback to known count
+  
+  // Map progress to users
+  const usersWithProgress = allUsers?.map(user => {
+    const userProgress = allProgress?.filter(p => p.user_id === user.id) || [];
+    const totalMastered = userProgress.reduce((sum, p) => sum + p.mastered_questions, 0);
+    const progressPercentage = totalQuestions > 0 ? Math.round((totalMastered / totalQuestions) * 100) : 0;
+    
+    return {
+      ...user,
+      totalMastered,
+      progressPercentage,
+    };
+  }) || [];
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -42,20 +67,20 @@ export default async function AdminPage() {
           {/* Header Section */}
           <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
             <h1 className="text-4xl font-bold text-[#1a1a1a] mb-3 tracking-tight">
-              Student Management
+              User Progress Dashboard
             </h1>
             <p className="text-lg text-gray-600">
-              View and manage all student progress
+              View progress for all users (students, admins, and master admins)
             </p>
           </div>
           
           {/* Stats Overview */}
           <div className="grid md:grid-cols-4 gap-4 mb-8">
             {[
-              { label: 'Total Students', value: students?.length || 0, emoji: '👥', color: '#0A84FF' },
-              { label: 'Active Quizzes', value: '0', emoji: '📚', color: '#34C759' },
-              { label: 'Avg. Completion', value: '0%', emoji: '📊', color: '#FF9500' },
-              { label: 'Total Questions', value: '0', emoji: '❓', color: '#5856D6' }
+              { label: 'Total Users', value: usersWithProgress?.length || 0, emoji: '👥', color: '#0A84FF' },
+              { label: 'Students', value: usersWithProgress?.filter(u => u.role === 'student').length || 0, emoji: '👨‍🎓', color: '#34C759' },
+              { label: 'Avg. Progress', value: `${Math.round(usersWithProgress.reduce((sum, u) => sum + u.progressPercentage, 0) / (usersWithProgress.length || 1))}%`, emoji: '📊', color: '#FF9500' },
+              { label: 'Total Questions', value: totalQuestions, emoji: '❓', color: '#5856D6' }
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -75,22 +100,22 @@ export default async function AdminPage() {
             ))}
           </div>
           
-          {/* Students Table */}
+          {/* Users Table */}
           <div className="quiz-container p-0 overflow-hidden">
             <div className="p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-[#1a1a1a]">All Students</h2>
+              <h2 className="text-2xl font-bold text-[#1a1a1a]">All Users</h2>
             </div>
             
             {error && (
               <div className="p-6 text-red-600">
-                Error loading students: {error.message}
+                Error loading users: {error.message}
               </div>
             )}
             
-            {!error && (!students || students.length === 0) ? (
+            {!error && (!usersWithProgress || usersWithProgress.length === 0) ? (
               <div className="p-12 text-center">
                 <div className="text-5xl mb-4">👥</div>
-                <p className="text-gray-600">No students registered yet</p>
+                <p className="text-gray-600">No users registered yet</p>
               </div>
             ) : (
               <div className="overflow-x-auto">
@@ -98,10 +123,13 @@ export default async function AdminPage() {
                   <thead className="bg-gray-50 border-b border-gray-200">
                     <tr>
                       <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
-                        Student
+                        User
                       </th>
                       <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
                         Email
+                      </th>
+                      <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                        Role
                       </th>
                       <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
                         Joined
@@ -110,60 +138,34 @@ export default async function AdminPage() {
                         Progress
                       </th>
                       <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
-                        Actions
+                        Questions Mastered
                       </th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-200">
-                    {students?.map((student) => (
-                      <tr 
-                        key={student.id}
-                        className="hover:bg-gray-50 transition-colors"
-                      >
-                        <td className="px-6 py-4">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-bold">
-                              {student.full_name?.charAt(0) || student.email.charAt(0).toUpperCase()}
-                            </div>
-                            <div>
-                              <div className="font-semibold text-[#1a1a1a]">
-                                {student.full_name || 'Anonymous'}
-                              </div>
-                              <div className="text-xs text-gray-500">
-                                ID: {student.id.slice(0, 8)}...
-                              </div>
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">
-                          {student.email}
-                        </td>
-                        <td className="px-6 py-4 text-sm text-gray-600">
-                          {new Date(student.created_at).toLocaleDateString()}
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="flex items-center gap-2">
-                            <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden max-w-[120px]">
-                              <div 
-                                className="h-full rounded-full"
-                                style={{
-                                  width: '0%',
-                                  background: 'linear-gradient(135deg, #0A84FF 0%, #0077ED 100%)'
-                                }}
-                              />
-                            </div>
-                            <span className="text-xs font-semibold text-gray-600">
-                              0%
-                            </span>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <button className="px-4 py-2 text-sm font-medium text-[#0A84FF] hover:text-[#0077ED] transition-colors">
-                            View Details →
-                          </button>
-                        </td>
-                      </tr>
-                    ))}
+                    {usersWithProgress?.map((userWithProgress) => {
+                      // Determine badge color based on role
+                      const roleColors = {
+                        master_admin: { bg: 'bg-purple-100', text: 'text-purple-800', label: 'Master Admin' },
+                        admin: { bg: 'bg-blue-100', text: 'text-blue-800', label: 'Admin' },
+                        student: { bg: 'bg-green-100', text: 'text-green-800', label: 'Student' },
+                      };
+                      const roleStyle = roleColors[userWithProgress.role as keyof typeof roleColors];
+                      
+                      return (
+                        <ClickableUserRow
+                          key={userWithProgress.id}
+                          userId={userWithProgress.id}
+                          fullName={userWithProgress.full_name}
+                          email={userWithProgress.email}
+                          role={roleStyle}
+                          createdAt={userWithProgress.created_at}
+                          progressPercentage={userWithProgress.progressPercentage}
+                          totalMastered={userWithProgress.totalMastered}
+                          totalQuestions={totalQuestions}
+                        />
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>

@@ -27,9 +27,9 @@ export default function Header({ title, showAuth = false, showBackButton = false
           <Image
             src="/logo.png"
             alt="TeslaMR"
-            width={192}
-            height={48}
-            className="h-12 w-auto transition-transform hover:scale-105"
+            width={144}
+            height={36}
+            style={{ height: 'auto', width: 'auto', maxHeight: '36px' }}
             priority
           />
         </Link>

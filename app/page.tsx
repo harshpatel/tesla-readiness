@@ -21,7 +21,7 @@ export default async function Home() {
           alt="TeslaMR"
           width={192}
           height={48}
-          className="h-12 w-auto"
+          style={{ height: '48px', width: 'auto' }}
           priority
         />
       </div>

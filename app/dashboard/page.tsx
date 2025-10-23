@@ -56,10 +56,25 @@ export default async function DashboardPage() {
     };
   });
 
+  // Get total questions from quiz_questions table (actual count, not sum of progress)
+  const { count: totalQuestionsCount } = await supabase
+    .from('quiz_questions')
+    .select('id', { count: 'exact', head: true });
+  
+  const totalQuestions = totalQuestionsCount || 88;
+  
   // Calculate overall stats
-  const totalQuestions = sectionProgress?.reduce((sum, p) => sum + p.total_questions, 0) || 0;
   const masteredQuestions = sectionProgress?.reduce((sum, p) => sum + p.mastered_questions, 0) || 0;
   const completedSections = sectionProgress?.filter((p) => p.completed).length || 0;
+  
+  // Get user's current streak
+  const { data: profileData } = await supabase
+    .from('profiles')
+    .select('current_streak, last_activity_date')
+    .eq('id', user?.id)
+    .single();
+  
+  const currentStreak = profileData?.current_streak || 0;
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -85,8 +100,8 @@ export default async function DashboardPage() {
           {/* Stats Section */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {[
-              { label: 'Questions Mastered', value: masteredQuestions.toString(), emoji: '✓' },
-              { label: 'Study Streak', value: '0 days', emoji: '🔥' },
+              { label: 'Questions Mastered', value: `${masteredQuestions}/${totalQuestions}`, emoji: '✓' },
+              { label: 'Study Streak', value: `${currentStreak} ${currentStreak === 1 ? 'day' : 'days'}`, emoji: '🔥' },
               { label: 'Sections Completed', value: `${completedSections}/${QUIZ_SECTIONS.length}`, emoji: '📚' }
             ].map((stat, index) => (
               <div

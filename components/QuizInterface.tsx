@@ -74,14 +74,6 @@ export default function QuizInterface({
         
         // Save progress to Supabase
         await saveProgress(currentQuestion, true, true);
-        
-        // Remove from queue after small delay
-        setTimeout(() => {
-          setQuestionQueue(prev => prev.filter((_, idx) => idx !== currentQuestionIndex));
-          setSelectedAnswer(null);
-          setIsAnswered(false);
-          setShowFeedback(false);
-        }, 2000);
       } else {
         // Wrong on first attempt - show hint and allow retry
         setIsSecondAttempt(true);
@@ -95,21 +87,6 @@ export default function QuizInterface({
       
       // Save progress as incorrect
       await saveProgress(currentQuestion, false, false);
-      
-      // Move to end of queue for spaced repetition
-      setTimeout(() => {
-        setQuestionQueue(prev => {
-          const newQueue = [...prev];
-          const question = newQueue.splice(currentQuestionIndex, 1)[0];
-          newQueue.push(question);
-          return newQueue;
-        });
-        setSelectedAnswer(null);
-        setIsAnswered(false);
-        setIsSecondAttempt(false);
-        setShowFeedback(false);
-        setCurrentQuestionIndex(0);
-      }, 3000);
     }
   }, [currentQuestion, isAnswered, isSecondAttempt, currentQuestionIndex]);
 
@@ -120,12 +97,13 @@ export default function QuizInterface({
       const quality = isCorrect && isFirstAttempt ? 5 : isCorrect ? 3 : 0;
       
       // Calculate next review using SM-2
-      const nextReview = calculateNextReview({
-        quality,
-        previousEaseFactor: 2.5,
-        previousRepetitions: 0,
-        previousIntervalDays: 0,
+      const nextReview = calculateNextReview(quality, {
+        repetitions: 0,
+        easeFactor: 2.5,
+        intervalDays: 0,
       });
+      
+      console.log('📊 Calculated next review:', nextReview);
 
       const response = await fetch('/api/quiz/progress', {
         method: 'POST',
@@ -142,7 +120,23 @@ export default function QuizInterface({
       });
 
       if (!response.ok) {
-        console.error('Failed to save progress');
+        const responseText = await response.text();
+        console.error('Failed to save progress:', {
+          status: response.status,
+          statusText: response.statusText,
+          responseBody: responseText,
+          questionId: question.question_id,
+        });
+        
+        // Try to parse as JSON
+        try {
+          const errorData = JSON.parse(responseText);
+          console.error('Parsed error:', errorData);
+        } catch (e) {
+          console.error('Response was not valid JSON');
+        }
+      } else {
+        console.log('✅ Progress saved successfully for question:', question.question_id);
       }
     } catch (error) {
       console.error('Error saving progress:', error);
@@ -153,6 +147,20 @@ export default function QuizInterface({
 
   // Handle next question
   const handleNext = () => {
+    if (isCorrect && !isSecondAttempt) {
+      // Correct on first try - remove from queue (mastered)
+      setQuestionQueue(prev => prev.filter((_, idx) => idx !== currentQuestionIndex));
+    } else if (isSecondAttempt) {
+      // Second attempt (correct or incorrect) - move to end of queue
+      setQuestionQueue(prev => {
+        const newQueue = [...prev];
+        const question = newQueue.splice(currentQuestionIndex, 1)[0];
+        newQueue.push(question);
+        return newQueue;
+      });
+      setCurrentQuestionIndex(0);
+    }
+    
     setShowFeedback(false);
     setSelectedAnswer(null);
     setIsAnswered(false);
@@ -166,6 +174,23 @@ export default function QuizInterface({
       router.push('/dashboard');
     }
   }, [questionQueue.length, isLoading, router]);
+
+  // Keyboard shortcuts for answer selection
+  useEffect(() => {
+    if (showFeedback) return; // Don't listen when feedback is showing
+
+    const handleKeyPress = (e: KeyboardEvent) => {
+      const key = e.key.toUpperCase();
+      const availableAnswers = Object.keys(currentQuestion.answers);
+      
+      if (availableAnswers.includes(key)) {
+        handleAnswerSelect(key);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [currentQuestion, showFeedback, handleAnswerSelect]);
 
   if (isLoading) {
     return (
@@ -227,7 +252,7 @@ export default function QuizInterface({
           </div>
 
           {/* Question Card */}
-          <div className="quiz-container p-6 md:p-8 mb-6">
+          <div className="quiz-container p-6 md:p-8 mb-6 relative">
             {/* Question Type Badge */}
             <div className="mb-4">
               <span className="inline-block px-3 py-1 bg-blue-50 text-[#0A84FF] text-xs font-semibold uppercase tracking-wide rounded">
@@ -240,89 +265,127 @@ export default function QuizInterface({
               {currentQuestion.question_text}
             </h2>
 
-            {/* Answer Options */}
-            <div className="space-y-3 mb-6">
-              {Object.entries(currentQuestion.answers).map(([letter, text]) => {
-                const isSelected = selectedAnswer === letter;
-                const isCorrectAnswer = letter === currentQuestion.correct_answer;
-                const showCorrect = isAnswered && isCorrectAnswer;
-                const showIncorrect = isAnswered && isSelected && !isCorrect;
+            {/* Answer Options OR Feedback */}
+            {!showFeedback ? (
+              <div className="space-y-3 mb-6">
+                {Object.entries(currentQuestion.answers).map(([letter, text]) => {
+                  const isSelected = selectedAnswer === letter;
 
-                let buttonClass = 'w-full p-4 rounded-xl border-2 transition-all text-left flex items-center gap-3 ';
-                
-                if (showCorrect) {
-                  buttonClass += 'bg-gradient-to-r from-green-50 to-green-100 border-[#34C759] shadow-lg';
-                } else if (showIncorrect) {
-                  buttonClass += 'bg-gradient-to-r from-red-50 to-red-100 border-[#FF3B30] shadow-lg';
-                } else if (isSelected) {
-                  buttonClass += 'bg-gradient-to-r from-blue-50 to-blue-100 border-[#0A84FF]';
-                } else {
-                  buttonClass += 'bg-white border-gray-300 hover:border-[#0A84FF] hover:bg-blue-50';
-                }
+                  let buttonClass = 'w-full p-4 rounded-xl border-2 transition-all text-left flex items-center gap-3 ';
+                  
+                  if (isSelected) {
+                    buttonClass += 'bg-gradient-to-r from-blue-50 to-blue-100 border-[#0A84FF]';
+                  } else {
+                    buttonClass += 'bg-white border-gray-300 hover:border-[#0A84FF] hover:bg-blue-50';
+                  }
 
-                return (
-                  <button
-                    key={letter}
-                    onClick={() => !isAnswered && handleAnswerSelect(letter)}
-                    disabled={isAnswered && isSecondAttempt}
-                    className={buttonClass}
+                  return (
+                    <button
+                      key={letter}
+                      onClick={() => handleAnswerSelect(letter)}
+                      className={buttonClass}
+                    >
+                      {/* Keyboard Key Style */}
+                      <div className={`
+                        px-3 py-2 rounded-lg font-bold text-sm flex-shrink-0 shadow-sm
+                        ${isSelected 
+                          ? 'bg-[#0A84FF] text-white border-2 border-[#0077ED] shadow-md' 
+                          : 'bg-gradient-to-b from-gray-50 to-gray-100 text-gray-700 border border-gray-300 shadow-[0_2px_0_0_rgba(0,0,0,0.1)]'}
+                      `}>
+                        {letter}
+                      </div>
+                      <span className="flex-1 font-medium text-[#1a1a1a]">{text}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            ) : (
+              <div className="mb-6 animate-[fadeIn_0.3s_ease-out]">
+                  <div 
+                    className={`rounded-2xl p-6 ${
+                      isCorrect && !isSecondAttempt
+                        ? 'bg-gradient-to-br from-green-50 to-green-100 border-2 border-[#34C759]'
+                        : 'bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-[#FF9500]'
+                    }`}
                   >
-                    <div className={`
-                      w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0
-                      ${showCorrect ? 'bg-[#34C759] text-white' : 
-                        showIncorrect ? 'bg-[#FF3B30] text-white' :
-                        isSelected ? 'bg-[#0A84FF] text-white' :
-                        'bg-gray-200 text-gray-700'}
-                    `}>
-                      {letter}
-                    </div>
-                    <span className="flex-1 font-medium text-[#1a1a1a]">{text}</span>
-                    {showCorrect && <span className="text-[#34C759] text-xl">✓</span>}
-                    {showIncorrect && <span className="text-[#FF3B30] text-xl">✗</span>}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Feedback */}
-            {showFeedback && (
-              <div className={`p-4 rounded-xl border-2 ${
-                isCorrect && !isSecondAttempt
-                  ? 'bg-green-50 border-[#34C759]'
-                  : 'bg-orange-50 border-[#FF9500]'
-              }`}>
-                {isCorrect && !isSecondAttempt ? (
-                  <>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl">🎉</span>
-                      <h3 className="text-lg font-bold text-[#34C759]">Correct!</h3>
-                    </div>
-                    <p className="text-sm text-gray-700">Great job! Moving to next question...</p>
-                  </>
-                ) : !isSecondAttempt ? (
-                  <>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl">💡</span>
-                      <h3 className="text-lg font-bold text-[#FF9500]">Try Again!</h3>
-                    </div>
-                    <p className="text-sm text-gray-700 mb-2">
-                      <strong>Hint:</strong> Think about the meaning of the word parts. Take another look at the options.
-                    </p>
-                  </>
-                ) : (
-                  <>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="text-2xl">📚</span>
-                      <h3 className="text-lg font-bold text-[#FF9500]">
-                        {isCorrect ? 'Correct (2nd attempt)' : 'Incorrect'}
-                      </h3>
-                    </div>
-                    <p className="text-sm text-gray-700">
-                      <strong>Answer:</strong> {currentQuestion.correct_answer}: {currentQuestion.answers[currentQuestion.correct_answer]}
-                    </p>
-                    <p className="text-xs text-gray-600 mt-2">This question will appear again later for review.</p>
-                  </>
-                )}
+                    {isCorrect && !isSecondAttempt ? (
+                      <>
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-4xl">🎉</span>
+                          <h3 className="text-2xl font-bold text-[#34C759]">Correct!</h3>
+                        </div>
+                        {currentQuestion.explanation && (
+                          <div 
+                            className="text-base text-gray-800 leading-relaxed mb-6"
+                            dangerouslySetInnerHTML={{
+                              __html: currentQuestion.explanation
+                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                .replace(/\n/g, '<br/>')
+                            }}
+                          />
+                        )}
+                        {!currentQuestion.explanation && (
+                          <p className="text-base text-gray-800 mb-6">Great job! Moving to next question...</p>
+                        )}
+                        <button
+                          onClick={handleNext}
+                          disabled={isSaving}
+                          className="w-full py-3 px-6 bg-gradient-to-r from-[#34C759] to-[#30B350] text-white rounded-xl font-semibold text-lg hover:shadow-lg transition-all"
+                        >
+                          {isSaving ? 'Saving...' : 'Got it! →'}
+                        </button>
+                      </>
+                    ) : !isSecondAttempt ? (
+                      <>
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-4xl">💡</span>
+                          <h3 className="text-2xl font-bold text-[#FF9500]">Not quite - try again!</h3>
+                        </div>
+                        {currentQuestion.hint ? (
+                          <div className="text-base text-gray-800 bg-white p-4 rounded-xl border-2 border-orange-300 mb-6">
+                            <strong className="text-[#FF9500]">💡 Hint:</strong> {currentQuestion.hint}
+                          </div>
+                        ) : (
+                          <p className="text-base text-gray-800 mb-6">
+                            Think about the meaning of the word parts. Take another look at the options.
+                          </p>
+                        )}
+                        <button
+                          onClick={() => setShowFeedback(false)}
+                          className="w-full py-3 px-6 bg-gradient-to-r from-[#FF9500] to-[#FF8500] text-white rounded-xl font-semibold text-lg hover:shadow-lg transition-all"
+                        >
+                          Try Again
+                        </button>
+                      </>
+                    ) : (
+                      <>
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="text-4xl">📚</span>
+                          <h3 className="text-2xl font-bold text-[#FF9500]">
+                            {isCorrect ? 'Correct on 2nd attempt!' : 'Incorrect'}
+                          </h3>
+                        </div>
+                        {currentQuestion.explanation && (
+                          <div 
+                            className="text-base text-gray-800 leading-relaxed mb-4"
+                            dangerouslySetInnerHTML={{
+                              __html: currentQuestion.explanation
+                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                .replace(/\n/g, '<br/>')
+                            }}
+                          />
+                        )}
+                        <p className="text-sm text-gray-600 mb-6 italic">This question will appear again later for review.</p>
+                        <button
+                          onClick={handleNext}
+                          disabled={isSaving}
+                          className="w-full py-3 px-6 bg-gradient-to-r from-[#FF9500] to-[#FF8500] text-white rounded-xl font-semibold text-lg hover:shadow-lg transition-all"
+                        >
+                          {isSaving ? 'Saving...' : 'Got it! →'}
+                        </button>
+                      </>
+                    )}
+                  </div>
               </div>
             )}
           </div>

@@ -4,6 +4,7 @@ import type { Profile } from '@/lib/types/database';
 
 /**
  * Get the current user session from server components
+ * Uses getUser() instead of getSession() to validate the session with Supabase server
  */
 export async function getSession() {
   const cookieStore = await cookies();
@@ -31,6 +32,17 @@ export async function getSession() {
     }
   );
   
+  // Use getUser() to validate the session with Supabase Auth server
+  const {
+    data: { user },
+    error,
+  } = await supabase.auth.getUser();
+  
+  if (error || !user) {
+    return null;
+  }
+  
+  // Get the session after validating the user
   const {
     data: { session },
   } = await supabase.auth.getSession();
@@ -40,14 +52,9 @@ export async function getSession() {
 
 /**
  * Get the current user's profile
+ * Uses getUser() to validate the session with Supabase Auth server
  */
 export async function getCurrentUser() {
-  const session = await getSession();
-  
-  if (!session?.user) {
-    return null;
-  }
-  
   const cookieStore = await cookies();
   
   const supabase = createServerClient(
@@ -71,10 +78,20 @@ export async function getCurrentUser() {
     }
   );
   
+  // Use getUser() to validate the session with Supabase Auth server
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
+  
+  if (userError || !user) {
+    return null;
+  }
+  
   const { data: profile, error } = await supabase
     .from('profiles')
     .select('*')
-    .eq('id', session.user.id)
+    .eq('id', user.id)
     .single();
   
   if (error) {

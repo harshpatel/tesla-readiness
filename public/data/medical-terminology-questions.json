@@ -263,7 +263,9 @@
             "B": "Equal",
             "C": "Slow",
             "D": "Above normal"
-          }
+          },
+          "hint": "Think of a hyper kid bouncing off the walls - their energy is way up!",
+          "explanation": "**hyper-** means **above normal** or **excessive** ⬆️\n\n💡 **Remember it:** Think of a HYPER kid bouncing off the walls - their energy is ABOVE normal, EXCESSIVELY high! HYPERtension = blood pressure ABOVE normal. HYPER means you're going UP and OVER the top!"
         },
         {
           "id": "pre-2",
@@ -276,7 +278,9 @@
             "B": "Below normal",
             "C": "Fast",
             "D": "Inflammation"
-          }
+          },
+          "hint": "HYPO sounds like 'low' - think of going down under!",
+          "explanation": "**hypo-** means **below normal** or **deficient** ⬇️\n\n💡 **Remember it:** HYPO sounds like 'HI, go LOW!' You're going DOWN, UNDER normal levels. HYPOthermia = body temp BELOW normal (you're too cold!). HYPOglycemia = blood sugar BELOW normal. Think of a HYPOdermic needle going UNDER your skin!"
         },
         {
           "id": "pre-3",
@@ -289,7 +293,9 @@
             "B": "Brady-",
             "C": "Hyper-",
             "D": "Hypo-"
-          }
+          },
+          "hint": "Think of a famous quarterback taking his sweet time in the pocket...",
+          "explanation": "**brady-** means **slow** 🐢\n\n💡 **Remember it:** Think of Tom BRADY slowly backing up in the pocket before throwing - taking his time! BRADYcardia = SLOW heart rate (your heart is being a 'Brady' - playing it slow and steady). The opposite is TACHY- (fast, like a TACHOmeter showing high RPMs!)"
         },
         {
           "id": "pre-4",
@@ -302,7 +308,9 @@
             "B": "Fast heart rate",
             "C": "High blood sugar",
             "D": "Joint pain"
-          }
+          },
+          "hint": "TACHY- sounds like tachometer (that RPM gauge in your car!)",
+          "explanation": "**tachycardia** means **fast heart rate** 🏃‍♂️💨\n\n💡 **Remember it:** TACHY- means FAST (like a TACHOmeter showing high RPMs in a race car!). CARDIA = heart. So TACHYcardia = your heart is racing FAST! Think of getting TACKY (sticky) because you're running so fast you're sweating. Opposite of BRADYcardia (slow heart rate)."
         },
         {
           "id": "pre-5",
@@ -315,7 +323,9 @@
             "B": "White",
             "C": "Blue",
             "D": "Yellow"
-          }
+          },
+          "hint": "Think of Luke Skywalker in his white Jedi robes!",
+          "explanation": "**leuko-** means **white** 🤍\n\n💡 **Remember it:** Think of LUKE Skywalker in WHITE Jedi robes! Or LEUKemia - a disease of WHITE blood cells. LEUKO sounds like 'LOOK-OH' - look at those white clouds! White blood cells are called LEUKOcytes."
         },
         {
           "id": "pre-6",
@@ -328,7 +338,9 @@
             "B": "White",
             "C": "Yellow",
             "D": "Blue"
-          }
+          },
+          "hint": "Think of someone's face turning red when they're embarrassed!",
+          "explanation": "**erythro-** means **red** ❤️\n\n💡 **Remember it:** Think 'ERR-I-THROW up RED' - like when you're embarrassed (ERR) and your face turns RED! ERYTHROcytes = RED blood cells. ERYTHROmycin (antibiotic) has a reddish color. Picture someone BLUSHING red - that's erythro!"
         },
         {
           "id": "pre-7",
@@ -339,7 +351,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think about DYSfunctional - something not working right!",
+          "explanation": "**dys-** means **difficult**, **painful**, or **abnormal** 😣\n\n💡 **Remember it:** DYS = 'THIS is difficult!' Think of a DYSfunctional family - things aren't working normally. DYSpnea = DIFFICULT or PAINFUL breathing (like you're gasping 'THIS is hard!'). DYSpepsia = DIFFICULT digestion. Whenever you see DYS-, something is going WRONG or is HARD to do!"
         },
         {
           "id": "pre-8",
@@ -350,7 +364,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of Monopoly vs. Polygamy - how many are involved?",
+          "explanation": "**FALSE!** ❌ **poly-** means **many** or **multiple**, NOT one!\n\n💡 **Remember it:** POLY = PLENTY! Think POLYgamy (MANY spouses), POLYgon (MANY sides), or a talking PARROT that says 'POLLY want a cracker' - and POLLY wants MANY crackers! POLYuria = urinating MANY times. POLYdipsia = drinking MANY fluids. The opposite is MONO- (one), like MONOpoly - ONE person controlling everything!"
         },
         {
           "id": "pre-9",
@@ -361,7 +377,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of McDonald's Big Mac - is it small or large?",
+          "explanation": "**FALSE!** ❌ **macro-** means **large** or **big**, NOT small!\n\n💡 **Remember it:** MACRO = MASSIVE! Think of McDonald's Big MAC - it's LARGE! Or MACROeconomics - studying the BIG picture of the economy. MACROcephaly = abnormally LARGE head. The opposite is MICRO- (small), like a MICROscope for seeing TINY things. MACRO sounds like 'MACHO' - big and strong!"
         },
         {
           "id": "pre-10",
@@ -372,7 +390,9 @@
           "answers": {
             "A": "True",
             "B": "False"
-          }
+          },
+          "hint": "Think of atheists - people WITHOUT belief in gods!",
+          "explanation": "**TRUE!** ✅ **a-** or **an-** means **without** or **absence of** 🚫\n\n💡 **Remember it:** Think 'AH, there's NONE!' - the 'A' means ABSENT! Atheist = WITHOUT belief in god. Anemia = WITHOUT enough red blood cells. Apnea = WITHOUT breathing (sleep apnea - you STOP breathing!). Asymptomatic = WITHOUT symptoms. When you see A- or AN-, something is MISSING!"
         }
       ]
     },

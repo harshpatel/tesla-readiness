@@ -41,6 +41,8 @@ export default async function QuizPage({ params }: PageProps) {
     correct_answer: q.correctAnswer,
     points: q.points,
     order_index: idx,
+    hint: q.hint,
+    explanation: q.explanation,
   }));
 
   return (

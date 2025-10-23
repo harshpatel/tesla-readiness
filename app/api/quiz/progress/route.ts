@@ -3,17 +3,30 @@ import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(request: NextRequest) {
+  console.log('📝 Progress API called');
   try {
     const body = await request.json();
+    console.log('📦 Raw body:', body);
+    
     const {
       questionId,
       sectionKey,
       isCorrect,
       isFirstAttempt,
+      easinessFactor = 2.5, // Default value
+      repetitions = 0, // Default value
+      intervalDays = 0, // Default value
+    } = body;
+    
+    console.log('📊 Progress data:', { 
+      questionId, 
+      sectionKey, 
+      isCorrect, 
+      isFirstAttempt,
       easinessFactor,
       repetitions,
-      intervalDays,
-    } = body;
+      intervalDays
+    });
 
     // Create Supabase client
     const cookieStore = await cookies();
@@ -40,10 +53,12 @@ export async function POST(request: NextRequest) {
     } = await supabase.auth.getSession();
 
     if (!session) {
+      console.log('❌ No session found');
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     const userId = session.user.id;
+    console.log('✅ User authenticated:', userId);
 
     // Calculate next review date
     const nextReviewDate = new Date();
@@ -75,9 +90,11 @@ export async function POST(request: NextRequest) {
         .eq('id', existing.id);
 
       if (error) {
-        console.error('Error updating progress:', error);
+        console.error('❌ Error updating progress:', error);
         return NextResponse.json({ error: error.message }, { status: 500 });
       }
+      
+      console.log('✅ Progress updated successfully');
     } else {
       // Insert new progress
       const { error } = await supabase.from('user_quiz_progress').insert({
@@ -95,14 +112,16 @@ export async function POST(request: NextRequest) {
       });
 
       if (error) {
-        console.error('Error inserting progress:', error);
+        console.error('❌ Error inserting progress:', error);
         return NextResponse.json({ error: error.message }, { status: 500 });
       }
+      
+      console.log('✅ Progress inserted successfully');
     }
 
     return NextResponse.json({ success: true });
   } catch (error: any) {
-    console.error('Error in progress API:', error);
+    console.error('❌ Error in progress API:', error);
     return NextResponse.json(
       { error: error.message || 'Internal server error' },
       { status: 500 }
