@@ -85,9 +85,9 @@ export default async function DashboardPage() {
           {/* Stats Section */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {[
-              { label: 'Sections Available', value: QUIZ_SECTIONS.length.toString(), emoji: '📚' },
               { label: 'Questions Mastered', value: masteredQuestions.toString(), emoji: '✓' },
-              { label: 'Sections Completed', value: `${completedSections}/${QUIZ_SECTIONS.length}`, emoji: '🔥' }
+              { label: 'Study Streak', value: '0 days', emoji: '🔥' },
+              { label: 'Sections Completed', value: `${completedSections}/${QUIZ_SECTIONS.length}`, emoji: '📚' }
             ].map((stat, index) => (
               <div
                 key={stat.label}
