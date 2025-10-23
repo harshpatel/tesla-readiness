@@ -19,8 +19,17 @@ interface QuizSidebarProps {
   sections: Section[];
 }
 
+const OTHER_SECTIONS = [
+  { key: 'onboarding', title: 'Onboarding', icon: '👋', disabled: true },
+  { key: 'phase1', title: 'Phase 1', icon: '1️⃣', disabled: true },
+  { key: 'phase2', title: 'Phase 2', icon: '2️⃣', disabled: true },
+  { key: 'clinical', title: 'Clinical Site Readiness', icon: '🏥', disabled: true },
+  { key: 'registry', title: 'Registry Prep', icon: '📜', disabled: true },
+];
+
 export default function QuizSidebar({ sections }: QuizSidebarProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
   const pathname = usePathname();
 
   return (
@@ -46,26 +55,58 @@ export default function QuizSidebar({ sections }: QuizSidebarProps) {
       <aside
         className={`
           fixed lg:static inset-y-0 left-0 z-40
-          w-72 bg-white border-r border-gray-200
+          w-80 bg-white border-r border-gray-200
           transform transition-transform duration-300 ease-in-out
           lg:transform-none
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           flex flex-col
         `}
       >
-        {/* Sidebar Header */}
-        <div className="p-6 border-b border-gray-200">
-          <h2 className="text-xl font-bold text-[#1a1a1a] mb-1">
-            📚 Medical Terminology
-          </h2>
-          <p className="text-sm text-gray-600">
-            Choose a section to practice
-          </p>
+        {/* Other Sections (Non-collapsible) */}
+        <div className="px-4 pt-4 space-y-2">
+          {OTHER_SECTIONS.map((section) => (
+            <div
+              key={section.key}
+              className="px-3 py-2.5 rounded-lg border border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed"
+            >
+              <div className="flex items-center gap-2.5">
+                <span className="text-lg flex-shrink-0">{section.icon}</span>
+                <span className="font-medium text-sm text-gray-600 flex-1">
+                  {section.title}
+                </span>
+                <span className="text-xs text-gray-400">Coming Soon</span>
+              </div>
+            </div>
+          ))}
         </div>
 
-        {/* Sections List */}
-        <nav className="flex-1 overflow-y-auto p-4">
-          <ul className="space-y-2">
+        {/* Medical Terminology Header - Clickable to collapse/expand */}
+        <button
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="mx-4 mt-4 mb-2 p-4 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 w-[calc(100%-2rem)] text-left hover:shadow-md transition-all"
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-2xl">📚</span>
+                <h2 className="text-lg font-bold text-[#1a1a1a]">
+                  Medical Terminology
+                </h2>
+              </div>
+              <p className="text-xs text-gray-600 ml-8">
+                {sections.filter(s => s.progress?.completed).length} of {sections.length} sections completed
+              </p>
+            </div>
+            <span className="text-gray-400 text-lg ml-2 transition-transform duration-200" style={{ transform: isExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}>
+              ▼
+            </span>
+          </div>
+        </button>
+
+        {/* Sections List - Collapsible */}
+        <nav className={`flex-1 overflow-y-auto px-4 pb-4 transition-all duration-300 ${isExpanded ? 'opacity-100 max-h-full' : 'opacity-0 max-h-0 overflow-hidden'}`}>
+          <div className="pl-3 border-l-2 border-blue-200">
+            <ul className="space-y-2 ml-3">
             {sections.map((section) => {
               const isActive = pathname === `/quiz/${section.key}`;
               const progress = section.progress;
@@ -79,19 +120,19 @@ export default function QuizSidebar({ sections }: QuizSidebarProps) {
                     href={`/quiz/${section.key}`}
                     onClick={() => setIsOpen(false)}
                     className={`
-                      block px-4 py-3 rounded-lg transition-all
+                      block px-3 py-2.5 rounded-lg transition-all border
                       ${
                         isActive
-                          ? 'bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white shadow-md'
-                          : 'hover:bg-gray-50 text-gray-700'
+                          ? 'bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white shadow-md border-[#0077ED]'
+                          : 'hover:bg-blue-50 text-gray-700 border-transparent hover:border-blue-200 bg-white'
                       }
                     `}
                   >
-                    <div className="flex items-center gap-3 mb-2">
-                      <span className="text-xl flex-shrink-0">
+                    <div className="flex items-center gap-2.5 mb-2">
+                      <span className="text-lg flex-shrink-0">
                         {section.icon}
                       </span>
-                      <span className="font-semibold text-sm flex-1">
+                      <span className="font-medium text-sm flex-1">
                         {section.title}
                       </span>
                       {progress && progress.completed && (
@@ -101,7 +142,7 @@ export default function QuizSidebar({ sections }: QuizSidebarProps) {
 
                     {/* Progress Bar */}
                     {progress && progress.total > 0 && (
-                      <div className="ml-8">
+                      <div className="ml-7">
                         <div className="flex items-center justify-between text-xs mb-1">
                           <span className={isActive ? 'text-white/90' : 'text-gray-600'}>
                             {progress.mastered} / {progress.total}
@@ -128,7 +169,8 @@ export default function QuizSidebar({ sections }: QuizSidebarProps) {
                 </li>
               );
             })}
-          </ul>
+            </ul>
+          </div>
         </nav>
 
         {/* Sidebar Footer */}
