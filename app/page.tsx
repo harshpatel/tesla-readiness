@@ -32,10 +32,22 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Marketing Content */}
             <div className="text-center lg:text-left">
-              <h1 className="text-5xl sm:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-tight animate-[fadeIn_0.6s_ease-out]">
+              {/* Hero Image */}
+              <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
+                <Image
+                  src="/student-at-console.png"
+                  alt="MRI Technologist at console"
+                  width={600}
+                  height={400}
+                  className="rounded-2xl shadow-lg w-full"
+                  priority
+                />
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-tight animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
                 Show Up Ready.<br/>Sound Like a Pro.
               </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
+              <p className="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.2s_backwards]">
                 Master medical terminology before your first clinical day
               </p>
               
@@ -51,7 +63,7 @@ export default async function Home() {
                     key={feature.text}
                     className="flex items-center gap-3 text-left"
                     style={{
-                      animation: `fadeIn 0.6s ease-out ${0.2 + index * 0.1}s backwards`
+                      animation: `fadeIn 0.6s ease-out ${0.3 + index * 0.1}s backwards`
                     }}
                   >
                     <span className="text-3xl">{feature.emoji}</span>
