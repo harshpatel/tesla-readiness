@@ -59,10 +59,14 @@ export async function GET(request: NextRequest) {
   
   // Handle PKCE code exchange
   if (code) {
+    console.log('Attempting to exchange code for session...');
+    console.log('Available cookies:', cookieStore.getAll().map(c => c.name));
+    
     const { data, error } = await supabase.auth.exchangeCodeForSession(code);
 
     if (error) {
       console.error('Error exchanging code for session:', error);
+      console.error('This likely means the code_verifier is missing from cookies');
       return NextResponse.redirect(new URL('/login?error=auth_failed', siteUrl));
     }
 
