@@ -2,11 +2,29 @@ import { notFound, redirect } from 'next/navigation';
 import { getCurrentUser } from '@/lib/auth';
 import QuizInterface from '@/components/QuizInterface';
 import quizData from '@/public/data/medical-terminology-questions.json';
+import type { Metadata } from 'next';
 
 const VALID_SECTIONS = ['prefixes', 'suffixes', 'roots', 'abbreviations', 'positioning'];
 
 interface PageProps {
   params: Promise<{ section: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { section } = await params;
+  
+  if (!VALID_SECTIONS.includes(section)) {
+    return {
+      title: 'Quiz Not Found',
+    };
+  }
+
+  const sectionData = quizData.sections[section as keyof typeof quizData.sections];
+  
+  return {
+    title: `${sectionData.title} Quiz`,
+    description: `Master ${sectionData.title.toLowerCase()} with interactive quizzes. ${sectionData.description}`,
+  };
 }
 
 export default async function QuizPage({ params }: PageProps) {

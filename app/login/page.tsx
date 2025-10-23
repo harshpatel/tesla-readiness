@@ -1,6 +1,12 @@
 import LoginForm from '@/components/LoginForm';
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Login',
+  description: 'Sign in to TeslaMR to access your medical terminology quizzes and track your progress.',
+};
 
 export default function LoginPage() {
   return (

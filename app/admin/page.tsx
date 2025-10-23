@@ -3,6 +3,12 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { getCurrentUser } from '@/lib/auth';
 import ClickableUserRow from '@/components/ClickableUserRow';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Admin Dashboard',
+  description: 'Manage users and monitor quiz progress across the TeslaMR platform.',
+};
 
 export default async function AdminPage() {
   const user = await getCurrentUser();

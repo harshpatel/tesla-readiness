@@ -2,6 +2,12 @@ import { redirect } from 'next/navigation';
 import { getSession } from '@/lib/auth';
 import Image from 'next/image';
 import LoginForm from '@/components/LoginForm';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Home',
+  description: 'Master medical terminology before your first clinical day. Show up ready, sound like a pro.',
+};
 
 export default async function Home() {
   const session = await getSession();

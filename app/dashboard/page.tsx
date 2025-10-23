@@ -3,6 +3,12 @@ import QuizSidebar from '@/components/QuizSidebar';
 import { getCurrentUser } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+  description: 'Track your progress and continue learning medical terminology for MRI readiness.',
+};
 
 // Define sections (will later fetch from Supabase)
 const QUIZ_SECTIONS = [
