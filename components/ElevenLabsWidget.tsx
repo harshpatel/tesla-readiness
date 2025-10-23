@@ -1,18 +1,10 @@
 'use client';
 
-import { useEffect } from 'react';
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'elevenlabs-convai': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-        'agent-id': string;
-      };
-    }
-  }
-}
+import { useEffect, useRef } from 'react';
 
 export default function ElevenLabsWidget() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     // Load the ElevenLabs script
     const script = document.createElement('script');
@@ -20,6 +12,13 @@ export default function ElevenLabsWidget() {
     script.async = true;
     script.type = 'text/javascript';
     document.body.appendChild(script);
+
+    // Create the widget element
+    if (containerRef.current) {
+      const widget = document.createElement('elevenlabs-convai');
+      widget.setAttribute('agent-id', 'agent_4001k86e3t32ef9bm924j3ccg9kk');
+      containerRef.current.appendChild(widget);
+    }
 
     return () => {
       // Cleanup script on unmount
@@ -29,8 +28,6 @@ export default function ElevenLabsWidget() {
     };
   }, []);
 
-  return (
-    <elevenlabs-convai agent-id="agent_4001k86e3t32ef9bm924j3ccg9kk"></elevenlabs-convai>
-  );
+  return <div ref={containerRef} />;
 }
 
