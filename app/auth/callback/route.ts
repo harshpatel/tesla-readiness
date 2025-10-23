@@ -12,6 +12,8 @@ export async function GET(request: NextRequest) {
 
   // Debug logging
   console.log('Callback URL:', requestUrl.href);
+  console.log('Request origin:', requestUrl.origin);
+  console.log('Request host:', requestUrl.host);
   console.log('Parameters:', {
     token_hash,
     type,
