@@ -10,10 +10,13 @@ export async function GET(request: NextRequest) {
   const code = requestUrl.searchParams.get('code');
   const redirectTo = requestUrl.searchParams.get('redirectTo') || '/dashboard';
 
+  // Use public site URL for redirects (Render uses localhost:10000 internally)
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || requestUrl.origin;
+
   // Debug logging
   console.log('Callback URL:', requestUrl.href);
   console.log('Request origin:', requestUrl.origin);
-  console.log('Request host:', requestUrl.host);
+  console.log('Site URL for redirects:', siteUrl);
   console.log('Parameters:', {
     token_hash,
     type,
@@ -50,7 +53,7 @@ export async function GET(request: NextRequest) {
 
     if (error) {
       console.error('Error verifying OTP:', error);
-      return NextResponse.redirect(new URL('/login?error=auth_failed', requestUrl.origin));
+      return NextResponse.redirect(new URL('/login?error=auth_failed', siteUrl));
     }
   }
   
@@ -60,7 +63,7 @@ export async function GET(request: NextRequest) {
 
     if (error) {
       console.error('Error exchanging code for session:', error);
-      return NextResponse.redirect(new URL('/login?error=auth_failed', requestUrl.origin));
+      return NextResponse.redirect(new URL('/login?error=auth_failed', siteUrl));
     }
 
     if (data.session) {
@@ -82,7 +85,7 @@ export async function GET(request: NextRequest) {
       }
 
       // Redirect to the intended destination
-      return NextResponse.redirect(new URL(redirectTo, requestUrl.origin));
+      return NextResponse.redirect(new URL(redirectTo, siteUrl));
     }
   }
 
@@ -110,11 +113,11 @@ export async function GET(request: NextRequest) {
     }
 
     // Redirect to the intended destination
-    return NextResponse.redirect(new URL(redirectTo, requestUrl.origin));
+    return NextResponse.redirect(new URL(redirectTo, siteUrl));
   }
 
   // If no valid auth, redirect to login
-  return NextResponse.redirect(new URL('/login?error=no_auth', requestUrl.origin));
+  return NextResponse.redirect(new URL('/login?error=no_auth', siteUrl));
 }
 
 
