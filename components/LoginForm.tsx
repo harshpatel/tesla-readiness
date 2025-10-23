@@ -64,16 +64,16 @@ export default function LoginForm() {
         </div>
       ) : (
         <form onSubmit={handleLogin} className="space-y-4">
-            <Input
-              id="email"
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={isLoading}
-              className="w-full h-12 text-base"
-            />
+          <Input
+            id="email"
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            disabled={isLoading}
+            className="w-full h-12 text-base bg-white"
+          />
 
             {error && (
               <div className="rounded-lg bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-400">
