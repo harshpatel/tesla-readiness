@@ -6,8 +6,7 @@ import type { Profile } from '@/lib/types/database';
  * Get the current user session from server components
  */
 export async function getSession() {
-  const cookieStore = await cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createServerComponentClient({ cookies });
   
   const {
     data: { session },
@@ -26,8 +25,7 @@ export async function getCurrentUser() {
     return null;
   }
   
-  const cookieStore = await cookies();
-  const supabase = createServerComponentClient({ cookies: () => cookieStore });
+  const supabase = createServerComponentClient({ cookies });
   
   const { data: profile, error } = await supabase
     .from('profiles')
