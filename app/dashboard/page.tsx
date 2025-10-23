@@ -1,15 +1,77 @@
 import Header from '@/components/Header';
+import QuizSidebar from '@/components/QuizSidebar';
 import { getCurrentUser } from '@/lib/auth';
+import { createServerClient } from '@supabase/ssr';
+import { cookies } from 'next/headers';
+
+// Define sections (will later fetch from Supabase)
+const QUIZ_SECTIONS = [
+  { key: 'prefixes', title: 'Prefixes', icon: '🔤' },
+  { key: 'suffixes', title: 'Suffixes', icon: '📝' },
+  { key: 'roots', title: 'Root Words', icon: '🌿' },
+  { key: 'abbreviations', title: 'Abbreviations', icon: '📋' },
+  { key: 'positioning', title: 'Patient Positioning', icon: '🧍' },
+];
 
 export default async function DashboardPage() {
   const user = await getCurrentUser();
+  
+  // Fetch user's progress for each section
+  const cookieStore = await cookies();
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) =>
+            cookieStore.set(name, value, options)
+          );
+        },
+      },
+    }
+  );
+
+  // Fetch section progress
+  const { data: sectionProgress } = await supabase
+    .from('user_section_progress')
+    .select('*')
+    .eq('user_id', user?.id);
+
+  // Map progress to sections
+  const sectionsWithProgress = QUIZ_SECTIONS.map((section) => {
+    const progress = sectionProgress?.find((p) => p.section_key === section.key);
+    return {
+      ...section,
+      progress: progress
+        ? {
+            mastered: progress.mastered_questions,
+            total: progress.total_questions,
+            completed: progress.completed,
+          }
+        : undefined,
+    };
+  });
+
+  // Calculate overall stats
+  const totalQuestions = sectionProgress?.reduce((sum, p) => sum + p.total_questions, 0) || 0;
+  const masteredQuestions = sectionProgress?.reduce((sum, p) => sum + p.mastered_questions, 0) || 0;
+  const completedSections = sectionProgress?.filter((p) => p.completed).length || 0;
   
   return (
     <div className="min-h-screen flex flex-col">
       <Header title="Clinical Readiness Checks" showAuth={true} userEmail={user?.email} />
       
-      <main className="flex-1 flex items-center justify-center p-8">
-        <div className="quiz-container max-w-4xl w-full p-8">
+      <div className="flex flex-1">
+        {/* Sidebar */}
+        <QuizSidebar sections={sectionsWithProgress} />
+        
+        {/* Main Content */}
+        <main className="flex-1 p-8 lg:ml-0">
+          <div className="max-w-4xl mx-auto">
           {/* Welcome Section */}
           <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
             <h1 className="text-4xl font-bold text-[#1a1a1a] mb-3 tracking-tight">
@@ -23,9 +85,9 @@ export default async function DashboardPage() {
           {/* Stats Section */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {[
-              { label: 'Quizzes Available', value: '0', emoji: '📚' },
-              { label: 'Questions Mastered', value: '0', emoji: '✓' },
-              { label: 'Study Streak', value: '0 days', emoji: '🔥' }
+              { label: 'Sections Available', value: QUIZ_SECTIONS.length.toString(), emoji: '📚' },
+              { label: 'Questions Mastered', value: masteredQuestions.toString(), emoji: '✓' },
+              { label: 'Sections Completed', value: `${completedSections}/${QUIZ_SECTIONS.length}`, emoji: '🔥' }
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -46,20 +108,32 @@ export default async function DashboardPage() {
             ))}
           </div>
           
-          {/* Placeholder Content */}
+          {/* Quick Start Section */}
           <div className="text-center py-12 px-4 rounded-xl border border-gray-200" style={{
             background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)'
           }}>
-            <div className="text-6xl mb-4">🚀</div>
+            <div className="text-6xl mb-4">🎯</div>
             <h2 className="text-2xl font-bold text-[#1a1a1a] mb-3">
-              Coming Soon
+              Ready to Practice?
             </h2>
-            <p className="text-gray-600 max-w-md mx-auto">
-              Your personalized quiz dashboard will appear here. You'll be able to see available quizzes, track your progress, and continue where you left off.
+            <p className="text-gray-600 max-w-md mx-auto mb-6">
+              Choose a section from the left sidebar to start practicing medical terminology with spaced repetition.
             </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              {sectionsWithProgress.slice(0, 3).map((section) => (
+                <a
+                  key={section.key}
+                  href={`/quiz/${section.key}`}
+                  className="px-6 py-3 bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:-translate-y-1"
+                >
+                  {section.icon} {section.title}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
+          </div>
+        </main>
+      </div>
     </div>
   );
 }

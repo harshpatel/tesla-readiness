@@ -1,0 +1,1145 @@
+{
+  "title": "Medical Terminology Practice",
+  "sections": {
+    "suffixes": {
+      "title": "Suffixes",
+      "description": "Word endings that modify the meaning of medical terms",
+      "questions": [
+        {
+          "id": "suf-1",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-itis\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Tumor",
+            "B": "Swelling",
+            "C": "Inflammation",
+            "D": "Infection"
+          }
+        },
+        {
+          "id": "suf-2",
+          "type": "multiplechoice",
+          "question": "The suffix \"-ectomy\" means:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Enlargement",
+            "B": "Removal",
+            "C": "Inflammation",
+            "D": "Repair"
+          }
+        },
+        {
+          "id": "suf-3",
+          "type": "multiplechoice",
+          "question": "The suffix \"-algia\" refers to:",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Pain",
+            "B": "Growth",
+            "C": "Nerve",
+            "D": "Infection"
+          }
+        },
+        {
+          "id": "suf-4",
+          "type": "multiplechoice",
+          "question": "The suffix \"-plasty\" means:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Removal",
+            "B": "Study of",
+            "C": "Surgical repair",
+            "D": "Inflammation"
+          }
+        },
+        {
+          "id": "suf-5",
+          "type": "multiplechoice",
+          "question": "The suffix \"-pathy\" means:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Treatment",
+            "B": "Disease",
+            "C": "Pain",
+            "D": "Surgery"
+          }
+        },
+        {
+          "id": "suf-6",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-ology\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Study of",
+            "B": "Treatment of",
+            "C": "Fear of",
+            "D": "Disease of"
+          }
+        },
+        {
+          "id": "suf-7",
+          "type": "multiplechoice",
+          "question": "What does \"-otomy\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Removal",
+            "B": "Repair",
+            "C": "Incision or cutting into",
+            "D": "Disease"
+          }
+        },
+        {
+          "id": "suf-8",
+          "type": "multiplechoice",
+          "question": "The suffix \"-megaly\" means:",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Pain",
+            "B": "Inflammation",
+            "C": "Disease",
+            "D": "Enlargement"
+          }
+        },
+        {
+          "id": "suf-9",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-rrhea\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Flow or discharge",
+            "B": "Pain",
+            "C": "Inflammation",
+            "D": "Swelling"
+          }
+        },
+        {
+          "id": "suf-10",
+          "type": "multiplechoice",
+          "question": "What does \"-pnea\" refer to?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Heart rate",
+            "B": "Blood pressure",
+            "C": "Breathing",
+            "D": "Pain"
+          }
+        },
+        {
+          "id": "suf-11",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-scopy\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Visual examination",
+            "B": "Surgical removal",
+            "C": "Disease",
+            "D": "Study of"
+          }
+        },
+        {
+          "id": "suf-12",
+          "type": "multiplechoice",
+          "question": "What does \"-emia\" refer to?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Bone",
+            "B": "Muscle",
+            "C": "Nerve",
+            "D": "Blood condition"
+          }
+        },
+        {
+          "id": "suf-13",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-osis\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Inflammation",
+            "B": "Abnormal condition",
+            "C": "Removal",
+            "D": "Pain"
+          }
+        },
+        {
+          "id": "suf-14",
+          "type": "multiplechoice",
+          "question": "The suffix \"-gram\" means:",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Treatment",
+            "B": "Disease",
+            "C": "Inflammation",
+            "D": "Record or image"
+          }
+        },
+        {
+          "id": "suf-15",
+          "type": "multiplechoice",
+          "question": "What does the suffix \"-rrhage\" or \"-rrhagia\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Excessive bleeding",
+            "B": "Pain",
+            "C": "Swelling",
+            "D": "Inflammation"
+          }
+        },
+        {
+          "id": "suf-16",
+          "type": "multiplechoice",
+          "question": "What does \"-stenosis\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Enlargement",
+            "B": "Narrowing",
+            "C": "Rupture",
+            "D": "Inflammation"
+          }
+        },
+        {
+          "id": "suf-17",
+          "type": "truefalse",
+          "question": "The suffix \"-lysis\" means hardening.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "suf-18",
+          "type": "truefalse",
+          "question": "The suffix \"-centesis\" means surgical puncture to remove fluid.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "suf-19",
+          "type": "truefalse",
+          "question": "The suffix \"-trophy\" refers to growth or development.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        }
+      ]
+    },
+    "prefixes": {
+      "title": "Prefixes",
+      "description": "Word beginnings that modify the meaning of medical terms",
+      "questions": [
+        {
+          "id": "pre-1",
+          "type": "multiplechoice",
+          "question": "What does \"hyper-\" mean?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Below normal",
+            "B": "Equal",
+            "C": "Slow",
+            "D": "Above normal"
+          }
+        },
+        {
+          "id": "pre-2",
+          "type": "multiplechoice",
+          "question": "What does \"hypo-\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Above normal",
+            "B": "Below normal",
+            "C": "Fast",
+            "D": "Inflammation"
+          }
+        },
+        {
+          "id": "pre-3",
+          "type": "multiplechoice",
+          "question": "Which prefix means \"slow\"?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Tachy-",
+            "B": "Brady-",
+            "C": "Hyper-",
+            "D": "Hypo-"
+          }
+        },
+        {
+          "id": "pre-4",
+          "type": "multiplechoice",
+          "question": "What does \"tachycardia\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Slow breathing",
+            "B": "Fast heart rate",
+            "C": "High blood sugar",
+            "D": "Joint pain"
+          }
+        },
+        {
+          "id": "pre-5",
+          "type": "multiplechoice",
+          "question": "The prefix \"leuko-\" refers to:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Red",
+            "B": "White",
+            "C": "Blue",
+            "D": "Yellow"
+          }
+        },
+        {
+          "id": "pre-6",
+          "type": "multiplechoice",
+          "question": "What does \"erythro-\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Red",
+            "B": "White",
+            "C": "Yellow",
+            "D": "Blue"
+          }
+        },
+        {
+          "id": "pre-7",
+          "type": "truefalse",
+          "question": "\"Dys-\" is a prefix that means difficult, painful, or abnormal.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "pre-8",
+          "type": "truefalse",
+          "question": "The prefix \"poly-\" means one or single.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "pre-9",
+          "type": "truefalse",
+          "question": "\"Macro-\" means small.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "pre-10",
+          "type": "truefalse",
+          "question": "The prefix \"a-\" or \"an-\" means without or absence of.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        }
+      ]
+    },
+    "roots": {
+      "title": "Root Words",
+      "description": "Core medical terms that form the basis of medical vocabulary",
+      "questions": [
+        {
+          "id": "root-1",
+          "type": "multiplechoice",
+          "question": "What does the root word \"neuro-\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Blood",
+            "B": "Nerve",
+            "C": "Bone",
+            "D": "Muscle"
+          }
+        },
+        {
+          "id": "root-2",
+          "type": "multiplechoice",
+          "question": "The prefix \"gastro-\" refers to:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Muscles",
+            "B": "Stomach",
+            "C": "Bones",
+            "D": "Skin"
+          }
+        },
+        {
+          "id": "root-3",
+          "type": "multiplechoice",
+          "question": "The prefix \"derm-\" refers to:",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Skin",
+            "B": "Muscle",
+            "C": "Bone",
+            "D": "Blood"
+          }
+        },
+        {
+          "id": "root-4",
+          "type": "multiplechoice",
+          "question": "The prefix \"hemo-\" or \"hema-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Liver",
+            "B": "Brain",
+            "C": "Blood",
+            "D": "Muscle"
+          }
+        },
+        {
+          "id": "root-5",
+          "type": "multiplechoice",
+          "question": "\"Arthro-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Muscle",
+            "B": "Bone",
+            "C": "Joint",
+            "D": "Skin"
+          }
+        },
+        {
+          "id": "root-6",
+          "type": "multiplechoice",
+          "question": "The prefix \"nephro-\" refers to which organ?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Liver",
+            "B": "Kidney",
+            "C": "Heart",
+            "D": "Lung"
+          }
+        },
+        {
+          "id": "root-7",
+          "type": "multiplechoice",
+          "question": "What does the root word \"pulmo-\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Liver",
+            "B": "Lungs",
+            "C": "Stomach",
+            "D": "Blood"
+          }
+        },
+        {
+          "id": "root-8",
+          "type": "multiplechoice",
+          "question": "The prefix \"myo-\" refers to:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Bone",
+            "B": "Muscle",
+            "C": "Blood",
+            "D": "Nerve"
+          }
+        },
+        {
+          "id": "root-9",
+          "type": "multiplechoice",
+          "question": "What does \"cyto-\" refer to?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Skin",
+            "B": "Liver",
+            "C": "Blood",
+            "D": "Cells"
+          }
+        },
+        {
+          "id": "root-10",
+          "type": "multiplechoice",
+          "question": "What does \"cardio-\" refer to?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Heart",
+            "B": "Lung",
+            "C": "Blood",
+            "D": "Vein"
+          }
+        },
+        {
+          "id": "root-11",
+          "type": "multiplechoice",
+          "question": "The prefix \"rhino-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Ear",
+            "B": "Throat",
+            "C": "Nose",
+            "D": "Eye"
+          }
+        },
+        {
+          "id": "root-12",
+          "type": "multiplechoice",
+          "question": "The prefix \"encephalo-\" refers to:",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Brain",
+            "B": "Skull",
+            "C": "Spine",
+            "D": "Nerve"
+          }
+        },
+        {
+          "id": "root-13",
+          "type": "multiplechoice",
+          "question": "What does \"chole-\" or \"cholo-\" refer to?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Blood",
+            "B": "Kidney",
+            "C": "Bile",
+            "D": "Liver"
+          }
+        },
+        {
+          "id": "root-14",
+          "type": "multiplechoice",
+          "question": "The prefix \"entero-\" refers to:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Stomach",
+            "B": "Intestines",
+            "C": "Liver",
+            "D": "Pancreas"
+          }
+        },
+        {
+          "id": "root-15",
+          "type": "multiplechoice",
+          "question": "The prefix \"ocul-\" or \"ophthalmo-\" refers to:",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Ear",
+            "B": "Nose",
+            "C": "Mouth",
+            "D": "Eye"
+          }
+        },
+        {
+          "id": "root-16",
+          "type": "multiplechoice",
+          "question": "The prefix \"crani-\" refers to:",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Brain",
+            "B": "Skull",
+            "C": "Spine",
+            "D": "Neck"
+          }
+        },
+        {
+          "id": "root-17",
+          "type": "multiplechoice",
+          "question": "The prefix \"thoraco-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Abdomen",
+            "B": "Pelvis",
+            "C": "Chest",
+            "D": "Back"
+          }
+        },
+        {
+          "id": "root-18",
+          "type": "multiplechoice",
+          "question": "The prefix \"pneumo-\" refers to:",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Lung or air",
+            "B": "Blood",
+            "C": "Heart",
+            "D": "Liver"
+          }
+        },
+        {
+          "id": "root-19",
+          "type": "multiplechoice",
+          "question": "The prefix \"reno-\" refers to which organ?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Liver",
+            "B": "Heart",
+            "C": "Kidney",
+            "D": "Spleen"
+          }
+        },
+        {
+          "id": "root-20",
+          "type": "multiplechoice",
+          "question": "What does \"hystero-\" or \"utero-\" refer to?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Ovary",
+            "B": "Uterus",
+            "C": "Fallopian tube",
+            "D": "Cervix"
+          }
+        },
+        {
+          "id": "root-21",
+          "type": "multiplechoice",
+          "question": "The prefix \"colpo-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Colon",
+            "B": "Uterus",
+            "C": "Vagina",
+            "D": "Bladder"
+          }
+        },
+        {
+          "id": "root-22",
+          "type": "multiplechoice",
+          "question": "The prefix \"angio-\" refers to:",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Bone",
+            "B": "Muscle",
+            "C": "Nerve",
+            "D": "Blood vessel"
+          }
+        },
+        {
+          "id": "root-23",
+          "type": "multiplechoice",
+          "question": "The prefix \"oophor-\" refers to:",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Uterus",
+            "B": "Cervix",
+            "C": "Ovary",
+            "D": "Fallopian tube"
+          }
+        },
+        {
+          "id": "root-24",
+          "type": "truefalse",
+          "question": "\"Hepato-\" is a prefix related to the liver.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "root-25",
+          "type": "truefalse",
+          "question": "\"Osteo-\" refers to something related to bones.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "root-26",
+          "type": "truefalse",
+          "question": "The prefix \"path-\" or \"patho-\" means disease.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "root-27",
+          "type": "truefalse",
+          "question": "\"Cardi-\" and \"cardio-\" both refer to the heart.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "root-28",
+          "type": "truefalse",
+          "question": "\"Spondyl-\" refers to the ribs.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        }
+      ]
+    },
+    "abbreviations": {
+      "title": "Medical Abbreviations",
+      "description": "Common abbreviations used in medical settings",
+      "questions": [
+        {
+          "id": "abbr-1",
+          "type": "multiplechoice",
+          "question": "What does \"BP\" stand for?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Body Position",
+            "B": "Blood Pressure",
+            "C": "Body Part",
+            "D": "Breathing Pattern"
+          }
+        },
+        {
+          "id": "abbr-2",
+          "type": "multiplechoice",
+          "question": "What does \"HR\" stand for?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Heart Rate",
+            "B": "Hospital Record",
+            "C": "Health Report",
+            "D": "Human Resources"
+          }
+        },
+        {
+          "id": "abbr-3",
+          "type": "multiplechoice",
+          "question": "What does \"CT\" stand for in medical imaging?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Clinical Test",
+            "B": "Central Tissue",
+            "C": "Computed Tomography",
+            "D": "Cardiac Therapy"
+          }
+        },
+        {
+          "id": "abbr-4",
+          "type": "multiplechoice",
+          "question": "What does \"MRI\" stand for?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Medical Radiology Imaging",
+            "B": "Muscle Resonance Image",
+            "C": "Multiple Radio Images",
+            "D": "Magnetic Resonance Imaging"
+          }
+        },
+        {
+          "id": "abbr-5",
+          "type": "multiplechoice",
+          "question": "What does \"NPO\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Not Previously Ordered",
+            "B": "Nothing by mouth",
+            "C": "Normal Patient Order",
+            "D": "No Pain Observed"
+          }
+        },
+        {
+          "id": "abbr-6",
+          "type": "multiplechoice",
+          "question": "What does \"PRN\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "As needed",
+            "B": "Prior to night",
+            "C": "Patient requires nurse",
+            "D": "Prescription renewal needed"
+          }
+        },
+        {
+          "id": "abbr-7",
+          "type": "multiplechoice",
+          "question": "What does \"STAT\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Standard Test",
+            "B": "Stop All Treatment",
+            "C": "Immediately",
+            "D": "Statistical Analysis"
+          }
+        },
+        {
+          "id": "abbr-8",
+          "type": "multiplechoice",
+          "question": "What does \"IV\" stand for?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Intravenous",
+            "B": "Internal Ventilation",
+            "C": "Intensive Visit",
+            "D": "Invasive Valve"
+          }
+        },
+        {
+          "id": "abbr-9",
+          "type": "multiplechoice",
+          "question": "What does \"ICU\" stand for?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Internal Care Unit",
+            "B": "Intensive Care Unit",
+            "C": "Immediate Clinical Unit",
+            "D": "Inpatient Cardiac Unit"
+          }
+        },
+        {
+          "id": "abbr-10",
+          "type": "truefalse",
+          "question": "\"DNR\" stands for Do Not Resuscitate.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "abbr-11",
+          "type": "truefalse",
+          "question": "\"OR\" stands for Operating Room.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        }
+      ]
+    },
+    "positioning": {
+      "title": "Patient Positioning",
+      "description": "Anatomical positions and directional terms used in MRI",
+      "questions": [
+        {
+          "id": "pos-1",
+          "type": "multiplechoice",
+          "question": "What does \"anterior\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Front",
+            "B": "Back",
+            "C": "Side",
+            "D": "Center"
+          }
+        },
+        {
+          "id": "pos-2",
+          "type": "multiplechoice",
+          "question": "What does \"posterior\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Front",
+            "B": "Back",
+            "C": "Above",
+            "D": "Below"
+          }
+        },
+        {
+          "id": "pos-3",
+          "type": "multiplechoice",
+          "question": "What does \"superior\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Below",
+            "B": "Front",
+            "C": "Above or directed upward",
+            "D": "Side"
+          }
+        },
+        {
+          "id": "pos-4",
+          "type": "multiplechoice",
+          "question": "What does \"inferior\" mean?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Above",
+            "B": "Front",
+            "C": "Side",
+            "D": "Below or directed downward"
+          }
+        },
+        {
+          "id": "pos-5",
+          "type": "multiplechoice",
+          "question": "What does \"lateral\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Midline",
+            "B": "Side, away from the middle",
+            "C": "Front",
+            "D": "Back"
+          }
+        },
+        {
+          "id": "pos-6",
+          "type": "multiplechoice",
+          "question": "What does \"medial\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Midline",
+            "B": "Side",
+            "C": "Above",
+            "D": "Below"
+          }
+        },
+        {
+          "id": "pos-7",
+          "type": "multiplechoice",
+          "question": "What does \"proximal\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Away from",
+            "B": "Outside",
+            "C": "Toward the center or at the point of attachment",
+            "D": "Inside"
+          }
+        },
+        {
+          "id": "pos-8",
+          "type": "multiplechoice",
+          "question": "What does \"distal\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Toward the center",
+            "B": "Away from",
+            "C": "Inside",
+            "D": "Outside"
+          }
+        },
+        {
+          "id": "pos-9",
+          "type": "multiplechoice",
+          "question": "What does \"supine\" position mean?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Standing",
+            "B": "Sitting",
+            "C": "Lying on the abdomen",
+            "D": "Lying on the back"
+          }
+        },
+        {
+          "id": "pos-10",
+          "type": "multiplechoice",
+          "question": "What does \"prone\" position mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Lying on the back",
+            "B": "Standing",
+            "C": "Lying on the abdomen",
+            "D": "Sitting"
+          }
+        },
+        {
+          "id": "pos-11",
+          "type": "multiplechoice",
+          "question": "What does \"Trendelenburg\" position mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Head positioned below the legs",
+            "B": "Head elevated",
+            "C": "Lying on side",
+            "D": "Standing straight"
+          }
+        },
+        {
+          "id": "pos-12",
+          "type": "multiplechoice",
+          "question": "What does \"bilateral\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "One side",
+            "B": "Pertaining to both sides",
+            "C": "Front only",
+            "D": "Back only"
+          }
+        },
+        {
+          "id": "pos-13",
+          "type": "multiplechoice",
+          "question": "What does \"cephalic\" mean?",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Chest",
+            "B": "Abdomen",
+            "C": "Feet",
+            "D": "Head"
+          }
+        },
+        {
+          "id": "pos-14",
+          "type": "multiplechoice",
+          "question": "What does \"external\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Outside",
+            "B": "Inside",
+            "C": "Above",
+            "D": "Below"
+          }
+        },
+        {
+          "id": "pos-15",
+          "type": "multiplechoice",
+          "question": "What does \"internal\" mean?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Outside",
+            "B": "Inside",
+            "C": "Front",
+            "D": "Back"
+          }
+        },
+        {
+          "id": "pos-16",
+          "type": "multiplechoice",
+          "question": "What does \"flexion\" mean?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Straightening",
+            "B": "Rotation",
+            "C": "Bending limb or body part at the joint",
+            "D": "Stretching"
+          }
+        },
+        {
+          "id": "pos-17",
+          "type": "multiplechoice",
+          "question": "What does \"extension\" mean?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Bring limb into a straight position",
+            "B": "Bending",
+            "C": "Rotation",
+            "D": "Turning"
+          }
+        },
+        {
+          "id": "pos-18",
+          "type": "truefalse",
+          "question": "\"Peripheral\" means outside the central area.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "pos-19",
+          "type": "truefalse",
+          "question": "\"Rotation\" means turning about the axis.",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        },
+        {
+          "id": "pos-20",
+          "type": "truefalse",
+          "question": "\"Oblique\" means perfectly straight or perpendicular.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          }
+        }
+      ]
+    }
+  }
+}
