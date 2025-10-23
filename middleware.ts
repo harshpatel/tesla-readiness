@@ -27,7 +27,7 @@ export async function middleware(req: NextRequest) {
   } = await supabase.auth.getSession();
 
   // Protected routes that require authentication
-  const protectedRoutes = ['/dashboard', '/quiz', '/results', '/admin'];
+  const protectedRoutes = ['/dashboard', '/quiz', '/results', '/admin', '/masteradmin'];
   const isProtectedRoute = protectedRoutes.some((route) =>
     req.nextUrl.pathname.startsWith(route)
   );
@@ -48,7 +48,7 @@ export async function middleware(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/quiz/:path*', '/results/:path*', '/admin/:path*', '/login'],
+  matcher: ['/dashboard/:path*', '/quiz/:path*', '/results/:path*', '/admin/:path*', '/masteradmin/:path*', '/login'],
 };
 
 

@@ -86,11 +86,19 @@ export async function getCurrentUser() {
 }
 
 /**
- * Check if the current user is an admin
+ * Check if the current user is an admin (regular admin or master admin)
  */
 export async function isAdmin() {
   const user = await getCurrentUser();
-  return user?.role === 'admin';
+  return user?.role === 'admin' || user?.role === 'master_admin';
+}
+
+/**
+ * Check if the current user is a master admin
+ */
+export async function isMasterAdmin() {
+  const user = await getCurrentUser();
+  return user?.role === 'master_admin';
 }
 
 /**
@@ -112,8 +120,21 @@ export async function requireAuth() {
 export async function requireAdmin() {
   const user = await getCurrentUser();
   
-  if (!user || user.role !== 'admin') {
+  if (!user || (user.role !== 'admin' && user.role !== 'master_admin')) {
     throw new Error('Forbidden - Admin access required');
+  }
+  
+  return user;
+}
+
+/**
+ * Require master admin role - throw error if not master admin
+ */
+export async function requireMasterAdmin() {
+  const user = await getCurrentUser();
+  
+  if (!user || user.role !== 'master_admin') {
+    throw new Error('Forbidden - Master Admin access required');
   }
   
   return user;

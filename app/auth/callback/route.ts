@@ -82,12 +82,25 @@ export async function GET(request: NextRequest) {
         .single();
 
       if (!profile && !profileError) {
+        // Determine role based on email
+        const email = data.session.user.email!;
+        let role: 'student' | 'admin' | 'master_admin' = 'student';
+        
+        // Master admins
+        if (email === 'harsh@teslamr.com' || email === 'ricky@teslamr.com') {
+          role = 'master_admin';
+        }
+        // @teslamr.com emails are admins
+        else if (email.endsWith('@teslamr.com')) {
+          role = 'admin';
+        }
+        
         // Create profile for new user
         await supabase.from('profiles').insert({
           id: data.session.user.id,
-          email: data.session.user.email!,
+          email: email,
           full_name: data.session.user.user_metadata?.full_name || null,
-          role: 'student', // Default role
+          role: role,
         });
       }
 
@@ -110,12 +123,25 @@ export async function GET(request: NextRequest) {
       .single();
 
     if (!profile && !profileError) {
+      // Determine role based on email
+      const email = session.user.email!;
+      let role: 'student' | 'admin' | 'master_admin' = 'student';
+      
+      // Master admins
+      if (email === 'harsh@teslamr.com' || email === 'ricky@teslamr.com') {
+        role = 'master_admin';
+      }
+      // @teslamr.com emails are admins
+      else if (email.endsWith('@teslamr.com')) {
+        role = 'admin';
+      }
+      
       // Create profile for new user
       await supabase.from('profiles').insert({
         id: session.user.id,
-        email: session.user.email!,
+        email: email,
         full_name: session.user.user_metadata?.full_name || null,
-        role: 'student', // Default role
+        role: role,
       });
     }
 
