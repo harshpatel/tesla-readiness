@@ -24,12 +24,15 @@ export default function LoginForm() {
     setIsSuccess(false);
 
     try {
-      // Use explicit production URL on production, fallback to window.location.origin for local dev
-      const redirectUrl = process.env.NEXT_PUBLIC_SITE_URL 
-        ? `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`
+      // Always use explicit production URL if set, fallback to window.location.origin for local dev
+      const siteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+      const redirectUrl = siteUrl 
+        ? `${siteUrl}/auth/callback`
         : `${window.location.origin}/auth/callback`;
       
-      console.log('Magic link redirect URL:', redirectUrl);
+      console.log('NEXT_PUBLIC_SITE_URL:', siteUrl);
+      console.log('window.location.origin:', window.location.origin);
+      console.log('Final magic link redirect URL:', redirectUrl);
       
       const { error } = await supabase.auth.signInWithOtp({
         email,
