@@ -31,45 +31,47 @@ export default async function Home() {
         <div className="max-w-6xl mx-auto w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Marketing Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left space-y-8">
               {/* Hero Image */}
-              <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
+              <div className="animate-[fadeIn_0.6s_ease-out]">
                 <Image
                   src="/student-at-console.png"
                   alt="MRI Technologist at console"
-                  width={600}
-                  height={400}
-                  className="rounded-2xl shadow-lg w-full"
+                  width={500}
+                  height={350}
+                  className="rounded-2xl shadow-xl w-full object-cover"
+                  style={{ maxHeight: '350px' }}
                   priority
                 />
               </div>
               
-              <h1 className="text-5xl sm:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-tight animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
-                Show Up Ready.<br/>Sound Like a Pro.
-              </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.2s_backwards]">
-                Master medical terminology before your first clinical day
-              </p>
-              
-              {/* Benefits */}
-              <div className="grid gap-4 mt-8">
-                {[
-                  { emoji: '💪', text: 'Feel confident when you show up on site' },
-                  { emoji: '⭐', text: 'Impress your clinical mentor' },
-                  { emoji: '🎯', text: 'Sound like a real MRI technologist' },
-                  { emoji: '🚀', text: 'Get so good they offer you a job' }
-                ].map((feature, index) => (
-                  <div
-                    key={feature.text}
-                    className="flex items-center gap-3 text-left"
-                    style={{
-                      animation: `fadeIn 0.6s ease-out ${0.3 + index * 0.1}s backwards`
-                    }}
-                  >
-                    <span className="text-3xl">{feature.emoji}</span>
-                    <span className="text-lg text-gray-700">{feature.text}</span>
-                  </div>
-                ))}
+              <div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-4 tracking-tight animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
+                  Show Up Ready.<br/>Sound Like a Pro.
+                </h1>
+                <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.2s_backwards]">
+                  Master medical terminology before your first clinical day
+                </p>
+                
+                {/* Benefits */}
+                <div className="grid gap-3">
+                  {[
+                    { emoji: '💪', text: 'Feel confident when you show up on site' },
+                    { emoji: '⭐', text: 'Impress your clinical mentor' },
+                    { emoji: '🚀', text: 'Get so good they offer you a job' }
+                  ].map((feature, index) => (
+                    <div
+                      key={feature.text}
+                      className="flex items-center gap-3 text-left"
+                      style={{
+                        animation: `fadeIn 0.6s ease-out ${0.3 + index * 0.1}s backwards`
+                      }}
+                    >
+                      <span className="text-2xl">{feature.emoji}</span>
+                      <span className="text-base text-gray-700">{feature.text}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
             
