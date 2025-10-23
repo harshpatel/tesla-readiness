@@ -109,7 +109,7 @@ export default function LoginForm() {
                   Sending...
                 </>
               ) : (
-                'Sign In / Sign Up'
+                'Start Learning'
               )}
             </Button>
           </form>
