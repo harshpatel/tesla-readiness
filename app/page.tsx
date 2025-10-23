@@ -33,18 +33,19 @@ export default async function Home() {
             {/* Left: Marketing Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-5xl sm:text-6xl font-bold text-[#1a1a1a] mb-6 tracking-tight animate-[fadeIn_0.6s_ease-out]">
-                TeslaMR Clinical Readiness Checks
+                Show Up Ready.<br/>Sound Like a Pro.
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 mb-8 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
-                Master clinical readiness through intelligent spaced repetition learning
+                Master medical terminology before your first clinical day
               </p>
               
-              {/* Features */}
+              {/* Benefits */}
               <div className="grid gap-4 mt-8">
                 {[
-                  { emoji: '📚', text: 'Smart spaced repetition algorithm' },
-                  { emoji: '📊', text: 'Track your progress and mastery' },
-                  { emoji: '🎯', text: 'Clinical excellence training' }
+                  { emoji: '💪', text: 'Feel confident when you show up on site' },
+                  { emoji: '⭐', text: 'Impress your clinical mentor' },
+                  { emoji: '🎯', text: 'Sound like a real MRI technologist' },
+                  { emoji: '🚀', text: 'Get so good they offer you a job' }
                 ].map((feature, index) => (
                   <div
                     key={feature.text}
