@@ -56,13 +56,7 @@ export default function LoginForm() {
 
   return (
     <Card className="w-full max-w-md">
-      <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl font-bold">Welcome back</CardTitle>
-        <CardDescription>
-          Enter your email to receive a magic link for sign in
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+      <CardContent className="pt-6">
         {isSuccess ? (
           <div className="rounded-lg bg-green-50 p-4 text-green-800 dark:bg-green-900/20 dark:text-green-400">
             <p className="font-medium">Check your email!</p>
@@ -72,21 +66,16 @@ export default function LoginForm() {
           </div>
         ) : (
           <form onSubmit={handleLogin} className="space-y-4">
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
-                Email
-              </label>
-              <Input
-                id="email"
-                type="email"
-                placeholder="name@example.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                disabled={isLoading}
-                className="w-full"
-              />
-            </div>
+            <Input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isLoading}
+              className="w-full h-12 text-base"
+            />
 
             {error && (
               <div className="rounded-lg bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-400">
@@ -94,7 +83,7 @@ export default function LoginForm() {
               </div>
             )}
 
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full h-12 text-base font-semibold" disabled={isLoading}>
               {isLoading ? (
                 <>
                   <svg
@@ -117,18 +106,14 @@ export default function LoginForm() {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     />
                   </svg>
-                  Sending magic link...
+                  Sending...
                 </>
               ) : (
-                'Send magic link'
+                'Sign In / Sign Up'
               )}
             </Button>
           </form>
         )}
-
-        <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
-          <p>No password required. We'll email you a secure link.</p>
-        </div>
       </CardContent>
     </Card>
   );
