@@ -34,8 +34,12 @@ export default function LoginForm() {
       console.log('window.location.origin:', window.location.origin);
       console.log('Final magic link redirect URL:', redirectUrl);
       
-      // Clear any existing PKCE verifiers to avoid localhost redirect issues
-      localStorage.removeItem('supabase.auth.token');
+      // Clear ALL Supabase storage to force fresh auth flow without PKCE
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('sb-')) {
+          localStorage.removeItem(key);
+        }
+      });
       
       const { error } = await supabase.auth.signInWithOtp({
         email,
