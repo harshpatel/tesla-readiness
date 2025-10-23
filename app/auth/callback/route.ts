@@ -4,6 +4,8 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
+  console.log('========== AUTH CALLBACK HIT ==========');
+  
   const requestUrl = new URL(request.url);
   const token_hash = requestUrl.searchParams.get('token_hash');
   const type = requestUrl.searchParams.get('type');
@@ -24,6 +26,7 @@ export async function GET(request: NextRequest) {
     redirectTo,
     allParams: Object.fromEntries(requestUrl.searchParams.entries()),
   });
+  console.log('==========================================');
 
   const cookieStore = await cookies();
   
