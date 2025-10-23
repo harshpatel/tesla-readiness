@@ -192,6 +192,31 @@ export default function QuizInterface({
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [currentQuestion, showFeedback, handleAnswerSelect]);
 
+  // Keyboard shortcuts for "Got it!" button (Enter or Space)
+  useEffect(() => {
+    if (!showFeedback) return; // Only listen when feedback is showing
+
+    const handleFeedbackKeyPress = (e: KeyboardEvent) => {
+      // Handle "Try Again" button (first attempt incorrect)
+      if (!isCorrect && !isSecondAttempt && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        setShowFeedback(false);
+        return;
+      }
+
+      // Handle "Got it!" button (correct or second attempt)
+      if ((isCorrect || isSecondAttempt) && (e.key === 'Enter' || e.key === ' ')) {
+        e.preventDefault();
+        if (!isSaving) {
+          handleNext();
+        }
+      }
+    };
+
+    window.addEventListener('keydown', handleFeedbackKeyPress);
+    return () => window.removeEventListener('keydown', handleFeedbackKeyPress);
+  }, [showFeedback, isCorrect, isSecondAttempt, isSaving, handleNext]);
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
