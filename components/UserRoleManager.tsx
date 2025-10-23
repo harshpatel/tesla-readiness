@@ -89,47 +89,64 @@ export default function UserRoleManager() {
   }
 
   return (
-    <div className="card">
+    <div className="quiz-container p-0 overflow-hidden">
+      <div className="p-6 border-b border-gray-200">
+        <h2 className="text-2xl font-bold text-[#1a1a1a]">All Users</h2>
+      </div>
+      
       {error && (
-        <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+        <div className="mx-6 mt-4 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
           {error}
         </div>
       )}
 
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead>
-            <tr className="border-b border-slate-200">
-              <th className="text-left py-3 px-4 font-semibold text-slate-700">Email</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-700">Name</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-700">Current Role</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-700">Change Role</th>
-              <th className="text-left py-3 px-4 font-semibold text-slate-700">Joined</th>
+          <thead className="bg-gray-50 border-b border-gray-200">
+            <tr>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                Email
+              </th>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                Name
+              </th>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                Current Role
+              </th>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                Change Role
+              </th>
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                Joined
+              </th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-gray-200">
             {users.map((user) => (
-              <tr key={user.id} className="border-b border-slate-100 hover:bg-slate-50 transition-colors">
-                <td className="py-3 px-4 font-medium text-slate-900">{user.email}</td>
-                <td className="py-3 px-4 text-slate-600">{user.full_name || '-'}</td>
-                <td className="py-3 px-4">
+              <tr 
+                key={user.id}
+                className="hover:bg-gray-50 transition-colors"
+              >
+                <td className="px-6 py-4 font-medium text-[#1a1a1a]">{user.email}</td>
+                <td className="px-6 py-4 text-sm text-gray-600">{user.full_name || '-'}</td>
+                <td className="px-6 py-4">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getRoleBadgeClass(user.role)}`}>
                     {getRoleDisplayName(user.role)}
                   </span>
                 </td>
-                <td className="py-3 px-4">
+                <td className="px-6 py-4">
                   <select
                     value={user.role}
                     onChange={(e) => updateUserRole(user.id, e.target.value as UserRole)}
                     disabled={updating === user.id}
-                    className="px-3 py-1.5 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="px-3 py-1.5 border-2 border-gray-300 rounded-lg text-sm font-medium focus:outline-none focus:border-[#0A84FF] focus:ring-2 focus:ring-[#0A84FF] focus:ring-opacity-20 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
                   >
                     <option value="student">Student</option>
                     <option value="admin">Admin</option>
                     <option value="master_admin">Master Admin</option>
                   </select>
                 </td>
-                <td className="py-3 px-4 text-sm text-slate-500">
+                <td className="px-6 py-4 text-sm text-gray-600">
                   {new Date(user.created_at).toLocaleDateString()}
                 </td>
               </tr>
@@ -138,8 +155,9 @@ export default function UserRoleManager() {
         </table>
 
         {users.length === 0 && (
-          <div className="text-center py-12 text-slate-500">
-            No users found
+          <div className="p-12 text-center">
+            <div className="text-5xl mb-4">👥</div>
+            <p className="text-gray-600">No users found</p>
           </div>
         )}
       </div>

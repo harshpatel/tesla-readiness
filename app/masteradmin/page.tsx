@@ -13,20 +13,23 @@ export default async function MasterAdminPage() {
   const user = await getCurrentUser();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
-      <Header showAuth showBackButton userEmail={user?.email} />
+    <div className="min-h-screen flex flex-col">
+      <Header title="Master Admin Portal" showAuth showBackButton userEmail={user?.email} />
       
-      <main className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">
-            Master Admin Portal
-          </h1>
-          <p className="text-slate-600">
-            Manage user roles and permissions
-          </p>
+      <main className="flex-1 p-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Header Section */}
+          <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
+            <h1 className="text-4xl font-bold text-[#1a1a1a] mb-3 tracking-tight">
+              User Management
+            </h1>
+            <p className="text-lg text-gray-600">
+              Manage user roles and permissions across the platform
+            </p>
+          </div>
+          
+          <UserRoleManager />
         </div>
-
-        <UserRoleManager />
       </main>
     </div>
   );
