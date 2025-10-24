@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
-import { getCurrentUser, requireAdmin } from '@/lib/auth';
+import { getCurrentUser, requireAdmin, isAdmin } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import UserDetailView from '@/components/UserDetailView';
 
@@ -16,6 +16,7 @@ export default async function UserDetailPage({ params }: UserDetailPageProps) {
   await requireAdmin();
   
   const currentUser = await getCurrentUser();
+  const userIsAdmin = await isAdmin();
   const { userId } = await params;
   
   const cookieStore = await cookies();
@@ -88,7 +89,8 @@ export default async function UserDetailPage({ params }: UserDetailPageProps) {
         title="User Details" 
         showAuth={true} 
         showBackButton={true} 
-        userEmail={currentUser?.email} 
+        userEmail={currentUser?.email}
+        isAdmin={userIsAdmin}
       />
       
       <main className="flex-1 p-4">

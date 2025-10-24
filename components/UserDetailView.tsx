@@ -145,6 +145,41 @@ export default function UserDetailView({
     });
   };
 
+  const formatRelativeTime = (dateString: string | null) => {
+    if (!dateString) return '-';
+    
+    const date = new Date(dateString);
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffSecs = Math.floor(diffMs / 1000);
+    const diffMins = Math.floor(diffSecs / 60);
+    const diffHours = Math.floor(diffMins / 60);
+    const diffDays = Math.floor(diffHours / 24);
+    const diffWeeks = Math.floor(diffDays / 7);
+    const diffMonths = Math.floor(diffDays / 30);
+    const diffYears = Math.floor(diffDays / 365);
+
+    // Check if it's today
+    const isToday = date.toDateString() === now.toDateString();
+    const isYesterday = new Date(now.getTime() - 86400000).toDateString() === date.toDateString();
+
+    if (isToday) {
+      const timeStr = date.toLocaleString('en-US', { hour: 'numeric', minute: '2-digit' });
+      return `Today at ${timeStr}`;
+    } else if (isYesterday) {
+      const timeStr = date.toLocaleString('en-US', { hour: 'numeric', minute: '2-digit' });
+      return `Yesterday at ${timeStr}`;
+    } else if (diffDays < 7) {
+      return `${diffDays} ${diffDays === 1 ? 'day' : 'days'} ago`;
+    } else if (diffWeeks < 4) {
+      return `${diffWeeks} ${diffWeeks === 1 ? 'week' : 'weeks'} ago`;
+    } else if (diffMonths < 12) {
+      return `${diffMonths} ${diffMonths === 1 ? 'month' : 'months'} ago`;
+    } else {
+      return `${diffYears} ${diffYears === 1 ? 'year' : 'years'} ago`;
+    }
+  };
+
   const toggleSection = (sectionId: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(sectionId)) {
@@ -301,7 +336,13 @@ export default function UserDetailView({
                       <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{sectionProg?.total_modules || 0}</td>
                       <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
                       <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(sectionProg?.last_accessed_at || null)}</td>
+                      <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                        {sectionProg?.last_accessed_at ? (
+                          <span title={formatDateTime(sectionProg.last_accessed_at)} className="cursor-help">
+                            {formatRelativeTime(sectionProg.last_accessed_at)}
+                          </span>
+                        ) : '-'}
+                      </td>
                       <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
                       <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
                     </tr>
@@ -337,7 +378,13 @@ export default function UserDetailView({
                             <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{moduleProg?.total_items || 0}</td>
                             <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
                             <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(moduleProg?.last_accessed_at || null)}</td>
+                            <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                              {moduleProg?.last_accessed_at ? (
+                                <span title={formatDateTime(moduleProg.last_accessed_at)} className="cursor-help">
+                                  {formatRelativeTime(moduleProg.last_accessed_at)}
+                                </span>
+                              ) : '-'}
+                            </td>
                             <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
                             <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
                           </tr>
@@ -391,10 +438,34 @@ export default function UserDetailView({
                                 <td className="px-3 py-2 text-center text-gray-600 border-r border-gray-300">
                                   {contentProg?.time_spent_seconds ? Math.round(contentProg.time_spent_seconds / 60) : '-'}
                                 </td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(contentProg?.created_at || null)}</td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(contentProg?.last_accessed_at || null)}</td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(contentProg?.completed_at || null)}</td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">{formatDateTime(contentProg?.updated_at || null)}</td>
+                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                  {contentProg?.created_at ? (
+                                    <span title={formatDateTime(contentProg.created_at)} className="cursor-help">
+                                      {formatRelativeTime(contentProg.created_at)}
+                                    </span>
+                                  ) : '-'}
+                                </td>
+                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                  {contentProg?.last_accessed_at ? (
+                                    <span title={formatDateTime(contentProg.last_accessed_at)} className="cursor-help">
+                                      {formatRelativeTime(contentProg.last_accessed_at)}
+                                    </span>
+                                  ) : '-'}
+                                </td>
+                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                  {contentProg?.completed_at ? (
+                                    <span title={formatDateTime(contentProg.completed_at)} className="cursor-help">
+                                      {formatRelativeTime(contentProg.completed_at)}
+                                    </span>
+                                  ) : '-'}
+                                </td>
+                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                  {contentProg?.updated_at ? (
+                                    <span title={formatDateTime(contentProg.updated_at)} className="cursor-help">
+                                      {formatRelativeTime(contentProg.updated_at)}
+                                    </span>
+                                  ) : '-'}
+                                </td>
                               </tr>
                             );
                           })}
