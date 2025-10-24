@@ -18,7 +18,7 @@ envFile.split('\n').forEach(line => {
 });
 
 const supabaseUrl = envVars.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseKey = envVars.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseKey = envVars.SUPABASE_SERVICE_ROLE_KEY || envVars.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseKey) {
   console.error('❌ Missing Supabase credentials');
@@ -30,7 +30,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function seedQuestions() {
   console.log('🌱 Starting quiz questions seed...\n');
 
-  const sections = ['prefixes', 'suffixes', 'roots', 'abbreviations', 'positioning'];
+  const sections = ['fundamentals', 'prefixes', 'suffixes', 'roots', 'abbreviations', 'positioning'];
   
   for (const sectionKey of sections) {
     const sectionData = quizData.sections[sectionKey as keyof typeof quizData.sections];

@@ -1,6 +1,308 @@
 {
   "title": "Medical Terminology Practice",
   "sections": {
+    "fundamentals": {
+      "title": "Medical Terminology Fundamentals",
+      "description": "Core concepts and building blocks of medical terminology",
+      "questions": [
+        {
+          "id": "fund-1",
+          "type": "multiplechoice",
+          "question": "Medical terms are made of 4 parts including, Prefixes, Word Roots, Suffixes, and _____________.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Transitional Forms",
+            "B": "Combining Forms",
+            "C": "Singular Forms",
+            "D": "Plural Forms"
+          },
+          "hint": "Think of the glue that COMBINES word parts together smoothly!",
+          "explanation": "**Combining Forms** are the 4th building block! 🧩\n\n💡 **Remember it:** Medical terms = PREFIX + WORD ROOT + SUFFIX + COMBINING FORM. The combining form is usually a vowel (like 'o' or 'i') that connects word parts to make pronunciation easier. Like 'cardi/o/logy' - the 'o' is the combining form that smoothly connects 'cardi' (heart) to 'logy' (study of)!"
+        },
+        {
+          "id": "fund-2",
+          "type": "multiplechoice",
+          "question": "Which medical word part is described as indicating a body part?",
+          "points": 1,
+          "correctAnswer": "A",
+          "answers": {
+            "A": "Word Root",
+            "B": "Prefix",
+            "C": "Suffix",
+            "D": "None of the above"
+          },
+          "hint": "Think of the ROOT of a tree - it's the FOUNDATION, the main body part!",
+          "explanation": "**Word Root** indicates the body part! 🌳\n\n💡 **Remember it:** The WORD ROOT is the MAIN PART - it tells you WHAT body part you're talking about. Cardi = heart, gastro = stomach, neuro = nerve, derma = skin. Everything else (prefixes, suffixes) just modifies this main body part!"
+        },
+        {
+          "id": "fund-3",
+          "type": "multiplechoice",
+          "question": "Which medical word part is described as coming at the end of the main word part?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Word Root",
+            "B": "Prefix",
+            "C": "Suffix",
+            "D": "None of the above"
+          },
+          "hint": "SUF-FIX = comes at the end, like the FIX-up happens AFTER!",
+          "explanation": "**Suffix** comes at the END! 🎯\n\n💡 **Remember it:** SUFFIX = SUF (sounds like 'stuff') that comes AFTER! It's the ENDING. Like appendic-ITIS (inflammation), tonsill-ECTOMY (removal), cardi-OLOGY (study of). The suffix ALWAYS comes LAST and tells you what's happening to that body part!"
+        },
+        {
+          "id": "fund-4",
+          "type": "multiplechoice",
+          "question": "Which medical word part indicates location, time, number, status?",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Word Root",
+            "B": "Prefix",
+            "C": "Suffix",
+            "D": "Combining Form"
+          },
+          "hint": "PRE-fix = comes BEFORE and tells you WHERE, WHEN, HOW MANY!",
+          "explanation": "**Prefix** indicates location, time, number, status! 📍\n\n💡 **Remember it:** PREFIX = PRE (before) - it comes FIRST and describes WHERE (peri=around, hypo=under), WHEN (post=after, pre=before), HOW MANY (mono=one, poly=many), or STATUS (hyper=too much, hypo=too little). It MODIFIES the word root that comes after it!"
+        },
+        {
+          "id": "fund-5",
+          "type": "multiplechoice",
+          "question": "The word root \"carcin\" refers to:",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Canker",
+            "B": "Cranial",
+            "C": "Carpal",
+            "D": "Cancer"
+          },
+          "hint": "Think carcinoma - the medical term for cancer tumors!",
+          "explanation": "**Carcin** = **Cancer**! 🎗️\n\n💡 **Remember it:** CARCIN-OMA is the medical term for a cancerous tumor. Whenever you see CARCIN, think CANCER cells. Like adenocarcinoma (cancer of glandular tissue) or squamous cell carcinoma (cancer of flat skin cells)!"
+        },
+        {
+          "id": "fund-6",
+          "type": "multiplechoice",
+          "question": "The word part in a medical term that is meant to help with the pronunciation of 2 or more other word parts is called _______________.",
+          "points": 1,
+          "correctAnswer": "D",
+          "answers": {
+            "A": "Suffix",
+            "B": "Prefix",
+            "C": "Word Root",
+            "D": "Combining Form"
+          },
+          "hint": "It's the vowel that makes words flow smoothly - like 'o' in cardi-O-logy!",
+          "explanation": "**Combining Form** helps with pronunciation! 🗣️\n\n💡 **Remember it:** The COMBINING FORM is usually a VOWEL (o, i, a) that acts like GLUE between word parts to make them easier to say. Without it, words would sound clunky! Compare 'cardlogy' (ugh!) vs 'cardi-O-logy' (smooth!). It's the pronunciation helper!"
+        },
+        {
+          "id": "fund-7",
+          "type": "multiplechoice",
+          "question": "True / False: A Combining Form for a prefix and suffix is always a vowel.",
+          "points": 1,
+          "correctAnswer": "False",
+          "answers": {
+            "True": "True",
+            "False": "False"
+          },
+          "hint": "MOST of the time it's a vowel, but not ALWAYS!",
+          "explanation": "**FALSE!** While combining forms are USUALLY vowels (o, i, a), they're not ALWAYS vowels! ⚠️\n\n💡 **Remember it:** MOST combining forms are vowels (like 'o' in gastr-o-logy), but sometimes consonants can be used. The key is that they make pronunciation easier - that's their job! Don't assume 100% vowel - think 'pronunciation helper' instead!"
+        },
+        {
+          "id": "fund-8",
+          "type": "multiplechoice",
+          "question": "Fill in the missing vowel: AEOU",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Y",
+            "B": "C",
+            "C": "I",
+            "D": "L"
+          },
+          "hint": "Think of the 5 vowels you learned in kindergarten!",
+          "explanation": "**I** is the missing vowel! 🔤\n\n💡 **Remember it:** The 5 vowels are A, E, I, O, U (and sometimes Y)! In medical terminology, these vowels are often used as combining forms. So A-E-I-O-U - you were missing the 'I'! Easy once you remember your vowels from grade school!"
+        },
+        {
+          "id": "fund-9",
+          "type": "multiplechoice",
+          "question": "What word part changes a medical term to a noun or an adjective?",
+          "points": 1,
+          "correctAnswer": "C",
+          "answers": {
+            "A": "Word Root",
+            "B": "Prefix",
+            "C": "Suffix",
+            "D": "Combining Form"
+          },
+          "hint": "The ENDING determines if it's a thing (noun) or describing word (adjective)!",
+          "explanation": "**Suffix** changes the part of speech! 📝\n\n💡 **Remember it:** The SUFFIX at the END determines if a word is a NOUN (a thing/person/place) or ADJECTIVE (describing word). Like hepat-IC (adjective: relating to liver) vs hepat-ITIS (noun: inflammation of liver). The suffix transforms the word root into different parts of speech!"
+        },
+        {
+          "id": "fund-10",
+          "type": "multiplechoice",
+          "question": "The suffix \"-ic\", in \"Hepatic\" changes the Word Root to a(n) _____________.",
+          "points": 1,
+          "correctAnswer": "B",
+          "answers": {
+            "A": "Noun",
+            "B": "Adjective",
+            "C": "Adverb",
+            "D": "Conjunction"
+          },
+          "hint": "Hepatic DESCRIBES something - it's a describing word!",
+          "explanation": "**Adjective** - the suffix '-ic' makes it descriptive! ✨\n\n💡 **Remember it:** HEPAT-IC = 'relating to the liver' - it DESCRIBES/MODIFIES something. 'Hepatic artery' = the artery RELATED TO the liver. Whenever you see -IC at the end, it's an ADJECTIVE that describes or relates to the word root. Like 'cardiac' (relating to heart), 'gastric' (relating to stomach)!"
+        },
+        {
+          "id": "fund-11",
+          "type": "multiplechoice",
+          "question": "Pericardium refers to the area:",
+          "points": 1,
+          "correctAnswer": "Around the heart",
+          "answers": {
+            "A": "Above the heart",
+            "B": "Below the heart",
+            "C": "Around the heart",
+            "D": "Inside the heart"
+          },
+          "hint": "PERI = around, like the PERIMETER around a fence!",
+          "explanation": "**Pericardium** = the sac AROUND the heart! 💗\n\n💡 **Remember it:** PERI = AROUND (like PERIMETER is the boundary AROUND something). CARDI = heart. PERICARDIUM is literally the protective membrane that wraps AROUND your heart like a cozy blanket! It's the outer covering!"
+        },
+        {
+          "id": "fund-12",
+          "type": "multiplechoice",
+          "question": "Hypodermic means:",
+          "points": 1,
+          "correctAnswer": "Under the skin",
+          "answers": {
+            "A": "Above the skin",
+            "B": "Under the skin",
+            "C": "Through the skin",
+            "D": "Around the skin"
+          },
+          "hint": "HYPO = below/under, like a HIPPO sinking UNDER water!",
+          "explanation": "**Hypodermic** = UNDER the skin! 💉\n\n💡 **Remember it:** HYPO = UNDER/BELOW. DERM = skin. A HYPODERMIC needle goes UNDER your skin to inject medicine. Think of a HIPPO sinking UNDER water = HYPO means UNDER! Hypodermic, hypoglycemia (low blood sugar UNDER normal), hypothermia (body temp UNDER normal)!"
+        },
+        {
+          "id": "fund-13",
+          "type": "multiplechoice",
+          "question": "A sharp rise or sudden onset is the definition of:",
+          "points": 1,
+          "correctAnswer": "Acute",
+          "answers": {
+            "A": "Fever",
+            "B": "Infection",
+            "C": "Chronic",
+            "D": "Acute"
+          },
+          "hint": "Think of an ACUTE angle - it's SHARP and SUDDEN!",
+          "explanation": "**Acute** = sudden, sharp, severe onset! ⚡\n\n💡 **Remember it:** ACUTE = think of an ACUTE ANGLE in math - it's SHARP! Acute illness comes on SUDDENLY and is SEVERE but SHORT-lived. Like acute appendicitis (sudden, severe pain) or acute heart attack. Opposite of chronic (long-lasting). ACUTE = SHARP + SUDDEN + SHORT!"
+        },
+        {
+          "id": "fund-14",
+          "type": "multiplechoice",
+          "question": "Hepatis-C, a type of inflammation of the liver, is a(n) _____________ condition.",
+          "points": 1,
+          "correctAnswer": "Chronic",
+          "answers": {
+            "A": "Chronic",
+            "B": "Cancerous",
+            "C": "Acute",
+            "D": "Hypodermic"
+          },
+          "hint": "Hepatitis C lasts a LONG time - it's not sudden!",
+          "explanation": "**Chronic** = long-lasting, persistent condition! ⏱️\n\n💡 **Remember it:** CHRONIC = LONG-TERM, ongoing, persisting. Hepatitis C can last YEARS or a LIFETIME. Think CHRONIC = CONTINUOUSLY present over a LONG time. Like chronic pain, chronic disease. Opposite of ACUTE (sudden/short). CHRONIC = LONG + LASTING + PERSISTENT!"
+        },
+        {
+          "id": "fund-15",
+          "type": "multiplechoice",
+          "question": "An immune system response that is marked by redness, pain, and/or swelling is ______________.",
+          "points": 1,
+          "correctAnswer": "Inflammation",
+          "answers": {
+            "A": "An infection",
+            "B": "Inflammation",
+            "C": "Dermatitis",
+            "D": "Acute"
+          },
+          "hint": "Think of something being IN FLAMES - red, hot, swollen!",
+          "explanation": "**Inflammation** = body's immune response with redness, heat, swelling, pain! 🔥\n\n💡 **Remember it:** IN-FLAME-ation = literally IN FLAMES! When your body detects injury or infection, it sends blood and immune cells causing the area to be RED (blood flow), HOT (increased temperature), SWOLLEN (fluid buildup), PAINFUL. It's your body's alarm system! Think of any '-ITIS' word!"
+        },
+        {
+          "id": "fund-16",
+          "type": "multiplechoice",
+          "question": "True or False: A cough, for example, can sometimes be both a sign and a symptom.",
+          "points": 1,
+          "correctAnswer": "True",
+          "answers": {
+            "A": "True",
+            "B": "False"
+          },
+          "hint": "A cough is something YOU feel (symptom) AND something others can observe (sign)!",
+          "explanation": "**TRUE!** A cough can be both! ✅\n\n💡 **Remember it:** SYMPTOM = what the PATIENT feels/reports ('I have a cough'). SIGN = what others can SEE/HEAR/MEASURE ('I hear you coughing'). A COUGH is both - the patient FEELS the urge and reports it (symptom) AND others can HEAR it happening (sign). Some things cross over!"
+        },
+        {
+          "id": "fund-17",
+          "type": "multiplechoice",
+          "question": "In medical terms, the apex of a structure is _________ and the base is _________.",
+          "points": 1,
+          "correctAnswer": "Pointed, wide",
+          "answers": {
+            "A": "Wide, pointed",
+            "B": "Points up, points down",
+            "C": "Pointed, wide",
+            "D": "Points down, points up"
+          },
+          "hint": "Think of a mountain - the APEX is the pointy top, the BASE is the wide bottom!",
+          "explanation": "**Apex = Pointed, Base = Wide** ⛰️\n\n💡 **Remember it:** Think of a MOUNTAIN or CONE! The APEX is the POINTY TIP at the top. The BASE is the WIDE BOTTOM. Like the apex of your heart (pointy tip pointing down-left) and the base of your heart (wide top). APEX = A-PEAK (pointed), BASE = BROAD (wide)!"
+        },
+        {
+          "id": "fund-18",
+          "type": "multiplechoice",
+          "question": "In MRI, the ___________ plane is used for imaging anatomy in the superior/inferior (or inferior/superior) direction.",
+          "points": 1,
+          "correctAnswer": "Axial",
+          "answers": {
+            "A": "Axial",
+            "B": "Sagittal",
+            "C": "Coronal",
+            "D": "Oblique"
+          },
+          "hint": "Think of an AXE chopping you horizontally into top and bottom slices!",
+          "explanation": "**Axial** plane = horizontal slices showing superior/inferior! 🪓\n\n💡 **Remember it:** AXIAL = imagine an AXE chopping you HORIZONTALLY into TOP (superior) and BOTTOM (inferior) slices - like cutting a cake into layers! You're looking UP or DOWN through the body. Also called TRANSVERSE plane. Sagittal = left/right, Coronal = front/back, Axial = top/bottom!"
+        },
+        {
+          "id": "fund-19",
+          "type": "multiplechoice",
+          "question": "The abbreviation \"f/u\" means_____________.",
+          "points": 1,
+          "correctAnswer": "Follow up",
+          "answers": {
+            "A": "Forward and up",
+            "B": "Flu",
+            "C": "Food undigested",
+            "D": "Follow up"
+          },
+          "hint": "Think of checking back with the doctor later!",
+          "explanation": "**f/u** = **Follow up** 📅\n\n💡 **Remember it:** F/U = FOLLOW UP - checking back with the patient later to see how they're doing after treatment. 'Patient needs f/u in 2 weeks' = come back in 2 weeks for a follow-up appointment. Super common abbreviation in medical charts!"
+        },
+        {
+          "id": "fund-20",
+          "type": "multiplechoice",
+          "question": "The wrist is ___________ to the elbow.",
+          "points": 1,
+          "correctAnswer": "Distal",
+          "answers": {
+            "A": "Medial",
+            "B": "Lateral",
+            "C": "Distal",
+            "D": "Proximal"
+          },
+          "hint": "The wrist is DISTANT/farther from the body's center than the elbow!",
+          "explanation": "**Distal** = farther from the body's center! 📏\n\n💡 **Remember it:** DISTAL = DISTance/DISTANT - FARTHER from the center/trunk of the body. Your wrist is FARTHER from your shoulder than your elbow is. PROXIMAL = PROXIMITY - CLOSER to the center. So wrist is DISTAL to elbow, and elbow is PROXIMAL to wrist. Think DISTAL = DISTANT!"
+        }
+      ]
+    },
     "suffixes": {
       "title": "Suffixes",
       "description": "Word endings that modify the meaning of medical terms",

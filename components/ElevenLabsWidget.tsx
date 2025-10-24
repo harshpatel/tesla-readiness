@@ -6,19 +6,29 @@ interface ElevenLabsWidgetProps {
   firstName?: string;
 }
 
+// Track if script has already been loaded globally
+let scriptLoaded = false;
+
 export default function ElevenLabsWidget({ firstName }: ElevenLabsWidgetProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const widgetRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
-    // Load the ElevenLabs script
-    const script = document.createElement('script');
-    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
-    script.async = true;
-    script.type = 'text/javascript';
-    document.body.appendChild(script);
+    // Only load the script once globally
+    if (!scriptLoaded) {
+      const existingScript = document.querySelector('script[src*="elevenlabs"]');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed';
+        script.async = true;
+        script.type = 'text/javascript';
+        document.body.appendChild(script);
+        scriptLoaded = true;
+      }
+    }
 
     // Create the widget element with dynamic variables
-    if (containerRef.current) {
+    if (containerRef.current && !widgetRef.current) {
       const widget = document.createElement('elevenlabs-convai');
       widget.setAttribute('agent-id', 'agent_4001k86e3t32ef9bm924j3ccg9kk');
       
@@ -29,12 +39,14 @@ export default function ElevenLabsWidget({ firstName }: ElevenLabsWidgetProps) {
       }
       
       containerRef.current.appendChild(widget);
+      widgetRef.current = widget;
     }
 
     return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+      // Cleanup widget on unmount
+      if (widgetRef.current && containerRef.current && containerRef.current.contains(widgetRef.current)) {
+        containerRef.current.removeChild(widgetRef.current);
+        widgetRef.current = null;
       }
     };
   }, [firstName]);
