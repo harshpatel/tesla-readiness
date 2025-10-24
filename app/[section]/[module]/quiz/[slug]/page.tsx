@@ -25,6 +25,23 @@ const QUIZ_ICONS: Record<string, string> = {
   'positioning': '🧍',
   'introduction-quiz': '📝',
   'fundamentals': '🫀',
+  'anatomy-fundamentals': '🫀',
+  'neuro-procedures-fundamentals': '🧠',
+  'body-msk-fundamentals': '🦴',
+};
+
+// Mapping of quiz slug to numbered hint file
+const QUIZ_FILE_NUMBERS: Record<string, string> = {
+  'introduction-quiz': '01',
+  'fundamentals': '02',
+  'prefixes': '03',
+  'suffixes': '04',
+  'roots': '05',
+  'abbreviations': '06',
+  'positioning': '07',
+  'anatomy-fundamentals': '08',
+  'neuro-procedures-fundamentals': '09',
+  'body-msk-fundamentals': '10',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -116,9 +133,22 @@ export default async function QuizPage({ params }: PageProps) {
   }
 
   console.log(`✅ [DB SUCCESS] Loaded ${questions.length} questions from DATABASE for quiz: "${contentItem.title}"`);
-  console.log('📊 [DB DATA] First question ID:', questions[0]?.question_id, '| Has hint:', !!questions[0]?.hint, '| Has explanation:', !!questions[0]?.explanation, '| Has image:', !!questions[0]?.image_url);
 
-  // Questions are already in the correct format from the database
+  // Load hints and explanations from numbered JSON file
+  let hints: Record<string, { hint: string; explanation: string }> = {};
+  try {
+    const fileNumber = QUIZ_FILE_NUMBERS[slug];
+    const fileName = fileNumber ? `${fileNumber}-${slug}.json` : `${slug}.json`;
+    const hintsResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/data/quiz-hints/${fileName}`);
+    if (hintsResponse.ok) {
+      hints = await hintsResponse.json();
+      console.log(`✅ [HINTS] Loaded hints from ${fileName}`);
+    }
+  } catch (error) {
+    console.log(`ℹ️ [HINTS] No hints file found for ${slug}, using DB fallback`);
+  }
+
+  // Merge questions from DB with hints from JSON
   const transformedQuestions = questions.map((q) => ({
     id: q.id,
     section_key: q.section_key,
@@ -129,8 +159,8 @@ export default async function QuizPage({ params }: PageProps) {
     correct_answer: q.correct_answer,
     points: q.points || 1,
     order_index: q.order_index,
-    hint: q.hint || undefined,
-    explanation: q.explanation || undefined,
+    hint: hints[q.question_id]?.hint || undefined,
+    explanation: hints[q.question_id]?.explanation || undefined,
     image_url: q.image_url || undefined,
   }));
 

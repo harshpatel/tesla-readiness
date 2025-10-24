@@ -1,0 +1,243 @@
+{
+  "suf-1": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-itis\" mean?",
+    "answers": {
+      "A": "Tumor",
+      "B": "Swelling",
+      "C": "Inflammation",
+      "D": "Infection"
+    },
+    "correct_answer": "C",
+    "hint": "Think of when you get a mosquito bite - it's red, hot, and irritated!",
+    "explanation": "**-itis** means **inflammation** 🔥**\n\n\n---\n\n💡 **Remember it:**\n Picture something that's 'IT IS' on fire and red! Appendicitis = your appendix IS inflamed. Tonsillitis = your tonsils are inflamed (red, swollen, painful). Arthritis = your joints are inflamed. Whenever you see -ITIS, think 'IT IS red and angry!'"
+  },
+  "suf-2": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-ectomy\" means:",
+    "answers": {
+      "A": "Enlargement",
+      "B": "Removal",
+      "C": "Inflammation",
+      "D": "Repair"
+    },
+    "correct_answer": "B",
+    "hint": "Think 'EXIT, TAKE ME OUT!' - something's being taken out!",
+    "explanation": "**-ectomy** means **surgical removal** ✂️**\n\n\n---\n\n💡 **Remember it:**\n -ECTOMY sounds like 'EXIT ME' - something's being REMOVED, taken OUT! Appendectomy = removal of appendix. Tonsillectomy = removal of tonsils. Mastectomy = removal of breast. If you see -ECTOMY, something's getting CUT OUT and leaving the body!"
+  },
+  "suf-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-algia\" refers to:",
+    "answers": {
+      "A": "Pain",
+      "B": "Growth",
+      "C": "Nerve",
+      "D": "Infection"
+    },
+    "correct_answer": "A",
+    "hint": "Think 'ALL-GEE-AH!' - what you yell when something hurts!",
+    "explanation": "**-algia** means **pain** 😣**\n\n\n---\n\n💡 **Remember it:**\n -ALGIA sounds like 'ALL-GEE-AH!' or 'OUCH-AH!' - what you scream when you're in PAIN! Neuralgia = nerve pain. Myalgia = muscle pain. Arthralgia = joint pain. Whenever you see -ALGIA, something HURTS and you're saying 'AH!'"
+  },
+  "suf-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-plasty\" means:",
+    "answers": {
+      "A": "Removal",
+      "B": "Study of",
+      "C": "Surgical repair",
+      "D": "Inflammation"
+    },
+    "correct_answer": "C",
+    "hint": "Think of PLASTIC surgery - reshaping and fixing things!",
+    "explanation": "**-plasty** means **surgical repair** or **reconstruction** 🔧**\n\n\n---\n\n💡 **Remember it:**\n -PLASTY sounds like PLASTIC! Think of PLASTIC surgery - molding, reshaping, REPAIRING! Rhinoplasty = nose job (repairing/reshaping nose). Angioplasty = repairing blood vessels. Like working with Play-Doh or PLASTIC - you're SCULPTING and FIXING something!"
+  },
+  "suf-5": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-pathy\" means:",
+    "answers": {
+      "A": "Treatment",
+      "B": "Disease",
+      "C": "Pain",
+      "D": "Surgery"
+    },
+    "correct_answer": "B",
+    "hint": "Think of SYMPATHY - feeling bad because someone is sick!",
+    "explanation": "**-pathy** means **disease** or **disorder** 🤒**\n\n\n---\n\n💡 **Remember it:**\n Think of having SYMPATHY for someone who's sick - you feel bad about their DISEASE! Neuropathy = nerve disease. Cardiomyopathy = heart muscle disease. Whenever you see -PATHY, something is WRONG, something's DISEASED or not functioning right!"
+  },
+  "suf-6": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-ology\" mean?",
+    "answers": {
+      "A": "Study of",
+      "B": "Treatment of",
+      "C": "Fear of",
+      "D": "Disease of"
+    },
+    "correct_answer": "A",
+    "hint": "Think of biology, psychology, geology - what are all these?",
+    "explanation": "**-ology** means **study of** 📚**\n\n\n---\n\n💡 **Remember it:**\n -OLOGY = 'OH! LOGIC!' - the STUDY and LOGIC of something! Biology = study of life. Cardiology = study of the heart. Psychology = study of the mind. Whenever you see -OLOGY, someone's studying and learning about that thing!"
+  },
+  "suf-7": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"-otomy\" mean?",
+    "answers": {
+      "A": "Removal",
+      "B": "Repair",
+      "C": "Incision or cutting into",
+      "D": "Disease"
+    },
+    "correct_answer": "C",
+    "hint": "Think of a surgeon making a CUT to look inside - not removing, just opening!",
+    "explanation": "**-otomy** means **incision** or **cutting into** ✂️**\n\n\n---\n\n💡 **Remember it:**\n -OTOMY sounds like 'OH-TO-ME!' - like saying 'cut INTO me!' Tracheotomy = cutting INTO the trachea (to help breathing). Lobotomy = cutting INTO the brain. Different from -ECTOMY (removal) - this is just CUTTING IN to look or access something, like slicing open a present!"
+  },
+  "suf-8": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-megaly\" means:",
+    "answers": {
+      "A": "Pain",
+      "B": "Inflammation",
+      "C": "Disease",
+      "D": "Enlargement"
+    },
+    "correct_answer": "D",
+    "hint": "Think MEGA - like mega-size, mega-big!",
+    "explanation": "**-megaly** means **enlargement** or **abnormally large** 📏**\n\n\n---\n\n💡 **Remember it:**\n -MEGALY starts with MEGA - like MEGA-SIZE at McDonald's, or MEGA-blocks - it means BIG! Cardiomegaly = enlarged heart. Hepatomegaly = enlarged liver. Splenomegaly = enlarged spleen. Whenever you see -MEGALY, something grew too BIG, like it got MEGA-SIZED!"
+  },
+  "suf-9": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-rrhea\" mean?",
+    "answers": {
+      "A": "Flow or discharge",
+      "B": "Pain",
+      "C": "Inflammation",
+      "D": "Swelling"
+    },
+    "correct_answer": "A",
+    "hint": "Think of diarrhea - something flowing that shouldn't be!",
+    "explanation": "**-rrhea** means **flow** or **discharge** 💧**\n\n\n---\n\n💡 **Remember it:**\n -RRHEA sounds like 'RHEA' (runs away)! Think of diaRRHEA - everything's FLOWING out! Rhinorrhea = runny nose (discharge FLOWING from nose). Menorrhea = menstrual flow. Whenever you see -RRHEA, something's RUNNING, FLOWING, or LEAKING out!"
+  },
+  "suf-10": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"-pnea\" refer to?",
+    "answers": {
+      "A": "Heart rate",
+      "B": "Blood pressure",
+      "C": "Breathing",
+      "D": "Pain"
+    },
+    "correct_answer": "C",
+    "hint": "Think of PNEUMONIA - a breathing problem!",
+    "explanation": "**-pnea** means **breathing** 🫁**\n\n\n---\n\n💡 **Remember it:**\n -PNEA sounds like PNEUMONIA - a BREATHING disease! Apnea = without breathing (sleep apnea - you STOP breathing!). Dyspnea = difficult breathing. Tachypnea = fast breathing. Whenever you see -PNEA, think LUNGS and BREATHING!"
+  },
+  "suf-11": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-scopy\" mean?",
+    "answers": {
+      "A": "Visual examination",
+      "B": "Surgical removal",
+      "C": "Disease",
+      "D": "Study of"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a telescope or microscope - tools for LOOKING at things!",
+    "explanation": "**-scopy** means **visual examination** or **looking at** 👁️**\n\n\n---\n\n💡 **Remember it:**\n -SCOPY = SCOPE IT OUT! Like a telesCOPE or microSCOPE - you're LOOKING at something! Colonoscopy = looking inside your colon with a camera. Endoscopy = looking inside your body. Whenever you see -SCOPY, someone's taking a PEEK inside with a camera!"
+  },
+  "suf-12": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"-emia\" refer to?",
+    "answers": {
+      "A": "Bone",
+      "B": "Muscle",
+      "C": "Nerve",
+      "D": "Blood condition"
+    },
+    "correct_answer": "D",
+    "hint": "Think of ANEMIA - a blood problem!",
+    "explanation": "**-emia** means **blood condition** 🩸**\n\n\n---\n\n💡 **Remember it:**\n -EMIA sounds like 'IN MY BLOOD!' Anemia = not enough red blood cells IN the blood. Leukemia = cancer of white BLOOD cells. Hyperglycemia = high blood sugar IN the blood. Whenever you see -EMIA, it's about what's IN YOUR BLOOD!"
+  },
+  "suf-13": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-osis\" mean?",
+    "answers": {
+      "A": "Inflammation",
+      "B": "Abnormal condition",
+      "C": "Removal",
+      "D": "Pain"
+    },
+    "correct_answer": "B",
+    "hint": "Think of OSIS as 'OH SIS, something's wrong!'",
+    "explanation": "**-osis** means **abnormal condition** or **disease process** ⚠️**\n\n\n---\n\n💡 **Remember it:**\n -OSIS = 'OH SIS, something's not right!' Cirrhosis = abnormal liver condition. Necrosis = tissue death (abnormal condition). Psychosis = abnormal mental state. Stenosis = abnormal narrowing. Whenever you see -OSIS, something's WRONG or ABNORMAL!"
+  },
+  "suf-14": {
+    "question_type": "multiplechoice",
+    "question_text": "The suffix \"-gram\" means:",
+    "answers": {
+      "A": "Treatment",
+      "B": "Disease",
+      "C": "Inflammation",
+      "D": "Record or image"
+    },
+    "correct_answer": "D",
+    "hint": "Think of Instagram - pictures and images!",
+    "explanation": "**-gram** means **record** or **image** 📸**\n\n\n---\n\n💡 **Remember it:**\n -GRAM = InstaGRAM! You're taking a PICTURE or making a RECORD! Electrocardiogram (ECG) = recording of heart's electrical activity. Mammogram = image/x-ray of breast. Angiogram = image of blood vessels. Whenever you see -GRAM, you're getting a PICTURE or RECORDING!"
+  },
+  "suf-15": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the suffix \"-rrhage\" or \"-rrhagia\" mean?",
+    "answers": {
+      "A": "Excessive bleeding",
+      "B": "Pain",
+      "C": "Swelling",
+      "D": "Inflammation"
+    },
+    "correct_answer": "A",
+    "hint": "Think of HEMORRHAGE - massive blood loss!",
+    "explanation": "**-rrhage/-rrhagia** means **excessive bleeding** or **bursting forth** 🩸**\n\n\n---\n\n💡 **Remember it:**\n -RRHAGE sounds like 'RAGE!' - blood RAGING out! Hemorrhage = severe bleeding. Menorrhagia = heavy menstrual bleeding. Think of blood RAGING and GUSHING out uncontrollably - like a broken fire hydrant! Whenever you see -RRHAGE, there's TOO MUCH bleeding!"
+  },
+  "suf-16": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"-stenosis\" mean?",
+    "answers": {
+      "A": "Enlargement",
+      "B": "Narrowing",
+      "C": "Rupture",
+      "D": "Inflammation"
+    },
+    "correct_answer": "B",
+    "hint": "Think of a STENO pad - narrow lines squeezed together!",
+    "explanation": "**-stenosis** means **narrowing** or **tightening** 🔒**\n\n\n---\n\n💡 **Remember it:**\n STENOSIS sounds like STENO (stenographer) - writing in NARROW, TIGHT little lines! Or think 'SQUEEZE-IT-CLOSE!' Aortic stenosis = narrowing of aorta. Mitral stenosis = narrowing of heart valve. Whenever you see -STENOSIS, something's getting SQUEEZED and NARROWED like a tight collar!"
+  },
+  "suf-17": {
+    "question_type": "truefalse",
+    "question_text": "The suffix \"-lysis\" means hardening.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "Think of Listerine dissolving plaque - breaking things DOWN!",
+    "explanation": "**FALSE!** ❌ **-lysis** means **breakdown** or **destruction**, NOT hardening!**\n\n\n---\n\n💡 **Remember it:**\n -LYSIS sounds like 'LIES-IS' (falling apart)! Think of things DISSOLVING, BREAKING DOWN, LOOSENING! Hemolysis = breakdown of red blood cells. Dialysis = breaking down/filtering waste from blood. Paralysis = breakdown of muscle function. The opposite of hardening - it's about things FALLING APART or being DESTROYED!"
+  },
+  "suf-18": {
+    "question_type": "truefalse",
+    "question_text": "The suffix \"-centesis\" means surgical puncture to remove fluid.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a needle POKING IN to drain something out!",
+    "explanation": "**TRUE!** ✅ **-centesis** means **surgical puncture** to remove fluid 💉**\n\n\n---\n\n💡 **Remember it:**\n -CENTESIS sounds like 'SENT-A-NEEDLE-IN!' You're POKING through to drain fluid! Amniocentesis = puncture to remove amniotic fluid. Thoracentesis = puncture to remove fluid from chest. Paracentesis = puncture to remove abdominal fluid. Whenever you see -CENTESIS, someone's getting a NEEDLE POKE to drain something!"
+  },
+  "suf-19": {
+    "question_type": "truefalse",
+    "question_text": "The suffix \"-trophy\" refers to growth or development.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a TROPHY - you grew your skills and developed into a winner!",
+    "explanation": "**TRUE!** ✅ **-trophy** means **growth**, **development**, or **nourishment** 🏆**\n\n\n---\n\n💡 **Remember it:**\n -TROPHY like a sports TROPHY - you GREW and DEVELOPED your skills! Hypertrophy = excessive growth (muscles get BIGGER). Atrophy = wasting away (muscles SHRINK from lack of use). Dystrophy = abnormal development. Think of winning a TROPHY for GROWING stronger!"
+  }
+}

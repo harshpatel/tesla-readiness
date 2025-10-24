@@ -1,0 +1,258 @@
+{
+  "physiology-definition": {
+    "question_type": "multiplechoice",
+    "question_text": "Physiology pertains to the _____________ of the body.",
+    "answers": {
+      "a": "Structures",
+      "b": "Functions",
+      "c": "Diseases",
+      "d": "Physical motion"
+    },
+    "correct_answer": "b",
+    "hint": "Think: PHYSIO = HOW things work, not WHAT they look like!",
+    "explanation": "**Physiology** = How the body FUNCTIONS! ⚙️\n\n💡 **Remember it:** Anatomy tells you WHAT it looks like (structure), Physiology tells you HOW it works (function)! Like knowing a car has an engine (anatomy) vs. understanding how that engine makes the car move (physiology)!"
+  },
+  "pathology-definition": {
+    "question_type": "multiplechoice",
+    "question_text": "The study of diseases is ___________.",
+    "answers": {
+      "a": "Anatomy",
+      "b": "Physiology",
+      "c": "Pathology",
+      "d": "Infection Control"
+    },
+    "correct_answer": "c",
+    "hint": "Think of a PATHOgen - something that causes disease!",
+    "explanation": "**Pathology** = The study of DISEASE! 🦠\n\n💡 **Remember it:** PATHO = PATHOGEN (disease-causing germ)! A pathologist studies diseases - what causes them, how they progress, and what they do to tissues. Think: PATH-O-LOGY = the PATH of disease!"
+  },
+  "skeletal-function": {
+    "question_type": "multiplechoice",
+    "question_text": "A primary function of the skeletal system is ____________.",
+    "answers": {
+      "a": "Protection",
+      "b": "Movement",
+      "c": "Communication",
+      "d": "None of the above"
+    },
+    "correct_answer": "a",
+    "hint": "Think of your skull protecting your brain, your ribs protecting your heart and lungs!",
+    "explanation": "**Protection** = A primary skeletal function! 🛡️\n\n💡 **Remember it:** Your bones are like body armor! Skull protects brain, ribs protect heart/lungs, vertebrae protect spinal cord. While bones also help with movement (they're the framework), PROTECTION is the PRIMARY function listed here!"
+  },
+  "tendons-location": {
+    "question_type": "truefalse",
+    "question_text": "True or False: Tendons are found in both the skeletal and muscular systems.",
+    "answers": {
+      "a": "True",
+      "b": "False"
+    },
+    "correct_answer": "a",
+    "hint": "Tendons are the CONNECTION between muscle and bone!",
+    "explanation": "**TRUE!** ✅ Tendons connect MUSCLE to BONE! 💪🦴\n\n💡 **Remember it:** Tendons are like the rope connecting two systems - they're part of BOTH! Think of your Achilles tendon - it connects your calf MUSCLE to your heel BONE. Since they bridge both systems, they belong to both!"
+  },
+  "ligaments-connect": {
+    "question_type": "multiplechoice",
+    "question_text": "Ligaments connect ________ to _________.",
+    "answers": {
+      "a": "Muscle, muscle",
+      "b": "Bone, Bone",
+      "c": "Muscle, Bone",
+      "d": "Connective tissue, Epithelial tissue"
+    },
+    "correct_answer": "b",
+    "hint": "Think of ligaments as the straps holding your skeleton together!",
+    "explanation": "**Bone to Bone!** 🦴↔️🦴\n\n💡 **Remember it:** TENDONS = muscle TO bone. LIGAMENTS = bone TO bone! Ligaments are like the straps that hold your skeleton together. Like the ACL in your knee - it connects the femur BONE to the tibia BONE to keep the joint stable!"
+  },
+  "cells-build": {
+    "question_type": "multiplechoice",
+    "question_text": "Groups of cells build ____________.",
+    "answers": {
+      "a": "Organs",
+      "b": "Systems",
+      "c": "Structures",
+      "d": "Tissue"
+    },
+    "correct_answer": "d",
+    "hint": "Think of the building blocks: Cells → ? → Organs → Systems",
+    "explanation": "**Tissue!** 🧱\n\n💡 **Remember it:** The hierarchy goes: CELLS (smallest) → TISSUE → ORGANS → ORGAN SYSTEMS (largest). Groups of similar cells working together = TISSUE! Like muscle tissue is made of muscle cells, nerve tissue is made of nerve cells. Then tissues combine to form organs!"
+  },
+  "mitochondrion-function": {
+    "question_type": "multiplechoice",
+    "question_text": "The mitochondrion on a cell produces __________ for a cell.",
+    "answers": {
+      "a": "Oxygen",
+      "b": "Nutrients",
+      "c": "Energy",
+      "d": "DNA"
+    },
+    "correct_answer": "c",
+    "hint": "Think of the mitochondria as the POWERHOUSE of the cell!",
+    "explanation": "**Energy!** ⚡\n\n💡 **Remember it:** Mitochondria = the POWERHOUSE of the cell! They produce ATP (adenosine triphosphate), which is cellular ENERGY currency. Like a battery or power plant for the cell. Every time you move, think, breathe - thank your mitochondria for the energy!"
+  },
+  "tissue-types": {
+    "question_type": "multiplechoice",
+    "question_text": "The four types of tissue in the body are Connective, Muscle, Nervous, and ____________.",
+    "answers": {
+      "a": "Skeletal",
+      "b": "Epithelial",
+      "c": "Cartilage",
+      "d": "Squamous"
+    },
+    "correct_answer": "b",
+    "hint": "Think of the tissue that covers and lines everything - like your skin!",
+    "explanation": "**Epithelial!** 🧪\n\n💡 **Remember it:** The 4 tissue types are: (1) EPITHELIAL (covering/lining - skin, organ linings), (2) CONNECTIVE (support - bone, blood, fat), (3) MUSCLE (movement), (4) NERVOUS (communication). Epithelial = your body's wallpaper and lining!"
+  },
+  "muscle-types": {
+    "question_type": "multiplechoice",
+    "question_text": "Three examples of muscle tissue are smooth muscle tissue, skeletal muscle tissue and __________ muscle tissue.",
+    "answers": {
+      "a": "Connective",
+      "b": "Cartilage",
+      "c": "Cardiac",
+      "d": "Circular"
+    },
+    "correct_answer": "c",
+    "hint": "Think of the special muscle in your heart!",
+    "explanation": "**Cardiac!** ❤️\n\n💡 **Remember it:** The 3 muscle types are: (1) SKELETAL (voluntary, moves bones), (2) SMOOTH (involuntary, in organs/blood vessels), (3) CARDIAC (involuntary, only in the HEART). Cardiac muscle never stops - it beats your whole life!"
+  },
+  "neuron-stimulus": {
+    "question_type": "multiplechoice",
+    "question_text": "The part of a neuron that receives stimulus is the ______________.",
+    "answers": {
+      "a": "Dendrite",
+      "b": "Axon",
+      "c": "Synapse",
+      "d": "Nucleus"
+    },
+    "correct_answer": "a",
+    "hint": "Think of tree branches RECEIVING signals from other neurons!",
+    "explanation": "**Dendrite!** 🌳\n\n💡 **Remember it:** DENDRITE = TREE BRANCHES (dendron = tree in Greek)! Dendrites RECEIVE signals like branches catching leaves. The signal flows: Dendrites (receive) → Cell body → Axon (send out). Think: DEN-RECEIVE-ITE!"
+  },
+  "cell-cycle": {
+    "question_type": "multiplechoice",
+    "question_text": "The life cycle of a cell is divided into 2 parts: __________ and cell division.",
+    "answers": {
+      "a": "Interphase",
+      "b": "Prophase",
+      "c": "Metaphase",
+      "d": "Mitosis"
+    },
+    "correct_answer": "a",
+    "hint": "Think of the BETWEEN phase - when the cell is growing and preparing!",
+    "explanation": "**Interphase!** 📈\n\n💡 **Remember it:** INTERPHASE = INTER (between) phases of division! It's the cell's REST and GROWTH period between divisions. The cell cycle = INTERPHASE (90% of time - growing, copying DNA) + MITOSIS (cell division). Think: INTER-phase = IN BETWEEN divisions!"
+  },
+  "mitosis-definition": {
+    "question_type": "multiplechoice",
+    "question_text": "Mitosis is the division of the ______________.",
+    "answers": {
+      "a": "Cell wall",
+      "b": "Cytoplasm",
+      "c": "Cell nucleus",
+      "d": "Daughter cell"
+    },
+    "correct_answer": "c",
+    "hint": "Mitosis = the nucleus splits to make 2 identical copies!",
+    "explanation": "**Cell Nucleus!** 🧬\n\n💡 **Remember it:** MITOSIS = division of the NUCLEUS (where DNA is stored). The nucleus splits into 2 identical nuclei. Remember: MI-TOE-SIS sounds like 'my-TWO-sis' = making TWO nuclei from one! The cytoplasm divides separately (cytokinesis)."
+  },
+  "anatomical-position": {
+    "question_type": "multiplechoice",
+    "question_text": "In Anatomical Position the palms of the hand are placed____________.",
+    "answers": {
+      "a": "Facing inward toward the body",
+      "b": "Facing forward",
+      "c": "Facing backward",
+      "d": "Facing outward from the body"
+    },
+    "correct_answer": "b",
+    "hint": "Stand up straight and show someone your palms - which way do they face?",
+    "explanation": "**Facing Forward!** 🖐️\n\n💡 **Remember it:** Anatomical position = standing UPRIGHT, arms at sides, palms facing FORWARD (like you're about to catch something). This is the standard reference position for all anatomical descriptions. Not inward (that's pronated), not backward (that's reversed)!"
+  },
+  "sagittal-plane": {
+    "question_type": "multiplechoice",
+    "question_text": "The Sagittal anatomical plane is ____________.",
+    "answers": {
+      "a": "Superior-Inferior",
+      "b": "Posterior-Anterior",
+      "c": "Left-Right",
+      "d": "Oblique"
+    },
+    "correct_answer": "c",
+    "hint": "Think of an arrow dividing you into LEFT and RIGHT halves!",
+    "explanation": "**Left-Right!** ↔️\n\n💡 **Remember it:** SAGITTAL = ARROW (sagitta = arrow in Latin)! An arrow shot through you divides LEFT and RIGHT sides. Imagine a vertical plane slicing you into left and right halves. Axial = top/bottom, Coronal = front/back, Sagittal = left/right!"
+  },
+  "tarsal-bones": {
+    "question_type": "multiplechoice",
+    "question_text": "The tarsal bones are small bones found in the __________.",
+    "answers": {
+      "a": "Wrist",
+      "b": "Face",
+      "c": "Knee",
+      "d": "Foot"
+    },
+    "correct_answer": "d",
+    "hint": "Carpals = wrist, Tarsals = ?",
+    "explanation": "**Foot!** 🦶\n\n💡 **Remember it:** CARPAL bones = wrist, TARSAL bones = FOOT/ankle! There are 7 tarsal bones (calcaneus/heel, talus, navicular, cuboid, 3 cuneiforms). Think: TARSAL sounds like 'TAR on your SOLE' - foot bones!"
+  },
+  "largest-organ": {
+    "question_type": "multiplechoice",
+    "question_text": "The largest internal organ of the human body is the ___________.",
+    "answers": {
+      "a": "Skin",
+      "b": "Liver",
+      "c": "Brain",
+      "d": "Lungs"
+    },
+    "correct_answer": "b",
+    "hint": "It's in your upper right abdomen and weighs about 3 pounds!",
+    "explanation": "**Liver!** 🫀\n\n💡 **Remember it:** The LIVER is the largest INTERNAL organ (about 3 lbs / 1.4 kg)! It sits in your upper right abdomen and does 500+ jobs (detox, makes bile, stores nutrients, etc.). Note: SKIN is technically the largest organ overall, but the question asks for INTERNAL organ!"
+  },
+  "abdomen-pelvis-organ": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the organs listed below, which is contained in both the abdomen and the pelvis?",
+    "answers": {
+      "a": "Abdominal aorta",
+      "b": "Liver",
+      "c": "Kidneys",
+      "d": "Large bowel"
+    },
+    "correct_answer": "d",
+    "hint": "Think of an organ that's so LONG it spans both regions!",
+    "explanation": "**Large Bowel (Colon)!** 🌀\n\n💡 **Remember it:** The LARGE BOWEL is LONG! It travels through both the ABDOMEN (ascending, transverse, descending colon) and PELVIS (sigmoid colon, rectum). The aorta, liver, and kidneys are all in the abdomen only. The colon is the only one that extends into the pelvis!"
+  },
+  "cervical-vertebrae": {
+    "question_type": "multiplechoice",
+    "question_text": "The cervical spine has _____ vertebrae.",
+    "answers": {
+      "a": "7",
+      "b": "12",
+      "c": "5",
+      "d": "3-4"
+    },
+    "correct_answer": "a",
+    "hint": "Breakfast at 7, Lunch at 12, Dinner at 5!",
+    "explanation": "**7 Cervical Vertebrae!** 🦴\n\n💡 **Remember it:** Use the meal trick! **Breakfast at 7** (Cervical = 7), **Lunch at 12** (Thoracic = 12), **Dinner at 5** (Lumbar = 5). Your NECK (cervical) has 7 bones (C1-C7)!"
+  },
+  "spinal-cord-end": {
+    "question_type": "multiplechoice",
+    "question_text": "The spinal cord generally ends near the ___________.",
+    "answers": {
+      "a": "L5 level of the lumbar spine",
+      "b": "C7-T1 level of the spine",
+      "c": "T12-L1 level of the spine",
+      "d": "Junction between the base of the skull and C1"
+    },
+    "correct_answer": "c",
+    "hint": "The cord ends at the transition from thoracic to lumbar!",
+    "explanation": "**T12-L1 Level!** 🎯\n\n💡 **Remember it:** The spinal CORD ends at the junction between THORACIC and LUMBAR (T12-L1) - this tapered end is called the CONUS MEDULLARIS. Below this, only nerve roots continue (cauda equina = horse's tail). The cord doesn't go all the way down!"
+  },
+  "nerve-roots-coccyx": {
+    "question_type": "truefalse",
+    "question_text": "True or False: Nerve roots travel through the coccyx and then down each leg.",
+    "answers": {
+      "a": "True",
+      "b": "False"
+    },
+    "correct_answer": "b",
+    "hint": "Nerve roots come OUT of the spine, they don't pass through the tailbone!",
+    "explanation": "**FALSE!** ❌\n\n💡 **Remember it:** Nerve roots EXIT the spine at each vertebral level through foramina (holes) - they go SIDEWAYS out to the body, NOT down through the coccyx! Leg nerves (sciatic, femoral) exit from lumbar/sacral levels and travel down. The coccyx (tailbone) is just a tiny bone at the end - no nerves pass through it!"
+  }
+}

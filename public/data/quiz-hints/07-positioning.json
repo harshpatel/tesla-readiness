@@ -1,0 +1,256 @@
+{
+  "pos-1": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"anterior\" mean?",
+    "answers": {
+      "A": "Front",
+      "B": "Back",
+      "C": "Side",
+      "D": "Center"
+    },
+    "correct_answer": "A",
+    "hint": "Think of an ANTeater's FRONT snout sticking out ahead!",
+    "explanation": "**anterior** means **front** or **toward the front** ➡️**\n\n\n---\n\n💡 **Remember it:**\n ANTERIOR = ANT crawling on the FRONT of you! Your chest, face, and belly are ANTERIOR (front) surfaces. Opposite of POSTERIOR (back). Think of being 'in front' of (ANTERIOR to) someone in line!"
+  },
+  "pos-2": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"posterior\" mean?",
+    "answers": {
+      "A": "Front",
+      "B": "Back",
+      "C": "Above",
+      "D": "Below"
+    },
+    "correct_answer": "B",
+    "hint": "Think of your POSTERIOR - your backside, your butt!",
+    "explanation": "**posterior** means **back** or **toward the back** ⬅️**\n\n\n---\n\n💡 **Remember it:**\n POSTERIOR = POSTE-REAR! Your butt is your POSTERIOR! Your back, spine, and heels are POSTERIOR surfaces. Opposite of ANTERIOR (front). Like a POSTER on the wall BEHIND you!"
+  },
+  "pos-3": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"superior\" mean?",
+    "answers": {
+      "A": "Below",
+      "B": "Front",
+      "C": "Above or directed upward",
+      "D": "Side"
+    },
+    "correct_answer": "C",
+    "hint": "Think of a SUPERIOR officer - they're ABOVE you in rank!",
+    "explanation": "**superior** means **above** or **upper** ⬆️**\n\n\n---\n\n💡 **Remember it:**\n SUPERIOR = SUPER-UP! Like Superman flying ABOVE! Your head is SUPERIOR to your feet. Think of a SUPERIOR boss - they're ABOVE you! Opposite of INFERIOR (below)."
+  },
+  "pos-4": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"inferior\" mean?",
+    "answers": {
+      "A": "Above",
+      "B": "Front",
+      "C": "Side",
+      "D": "Below or directed downward"
+    },
+    "correct_answer": "D",
+    "hint": "Think of feeling INFERIOR - looking DOWN on yourself, BELOW others!",
+    "explanation": "**inferior** means **below** or **lower** ⬇️**\n\n\n---\n\n💡 **Remember it:**\n INFERIOR = IN-FEAR-OF heights because you're DOWN! Your feet are INFERIOR to your head. Like feeling 'inferior' - you're DOWN, BELOW. Opposite of SUPERIOR (above)."
+  },
+  "pos-5": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"lateral\" mean?",
+    "answers": {
+      "A": "Midline",
+      "B": "Side, away from the middle",
+      "C": "Front",
+      "D": "Back"
+    },
+    "correct_answer": "B",
+    "hint": "**Think of a _LATERAL_ pass in football**  **\n— **throw it to the _SIDE_!**",
+    "explanation": "## Lateral\n\n\n**Definition:**  **\n**Lateral** means **side** or **away from the midline** ↔️**\n\n\n---\n\n---\n\n💡 **Remember it:**\n\n**\n\n- **LATERAL = LATER-ALL** *(to the side)!*\n\n- Like a **lateral pass** in football — throwing to the **SIDE**! 🏈  **\n\n- Your **ears** are lateral to your **nose**. 👂➡️👃  **\n\n- Think of moving **side-to-side**.  **\n\n- Opposite of **medial** *(toward the middle)*."
+  },
+  "pos-6": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"medial\" mean?",
+    "answers": {
+      "A": "Midline",
+      "B": "Side",
+      "C": "Above",
+      "D": "Below"
+    },
+    "correct_answer": "A",
+    "hint": "Think of the MEDIAN strip in the MIDDLE of the highway!",
+    "explanation": "**medial** means **midline** or **toward the middle** ⬅️➡️**\n\n\n---\n\n💡 **Remember it:**\n MEDIAL = MIDDLE! Like the MEDIAN strip in the MIDDLE of a highway! Your nose is MEDIAL to your ears. Think of MED-MIDDLE. Opposite of LATERAL (away from middle/to the side)."
+  },
+  "pos-7": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"proximal\" mean?",
+    "answers": {
+      "A": "Away from",
+      "B": "Outside",
+      "C": "Toward the center or at the point of attachment",
+      "D": "Inside"
+    },
+    "correct_answer": "C",
+    "hint": "Think 'PROXIMITY' - CLOSE to the body's center!",
+    "explanation": "**proximal** means **closer to the center** or **point of attachment** 🔗**\n\n\n---\n\n💡 **Remember it:**\n PROXIMAL = PROXIMITY (closeness)! Your shoulder is PROXIMAL to your hand (closer to body center). Like being in 'close PROXIMITY' - you're NEAR the center/attachment point! Opposite of DISTAL (far from center)."
+  },
+  "pos-8": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"distal\" mean?",
+    "answers": {
+      "A": "Toward the center",
+      "B": "Away from",
+      "C": "Inside",
+      "D": "Outside"
+    },
+    "correct_answer": "B",
+    "hint": "Think 'DISTANCE' - FAR from the body's center!",
+    "explanation": "**distal** means **farther from the center** or **point of attachment** 🚀**\n\n\n---\n\n💡 **Remember it:**\n DISTAL = DISTANCE! Your fingers are DISTAL to your shoulder (farther from body center). Think of the DISTANT end, FAR AWAY from attachment. Like being at a DISTANCE! Opposite of PROXIMAL (close to center)."
+  },
+  "pos-9": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"supine\" position mean?",
+    "answers": {
+      "A": "Standing",
+      "B": "Sitting",
+      "C": "Lying on the abdomen",
+      "D": "Lying on the back"
+    },
+    "correct_answer": "D",
+    "hint": "Think 'SOUP-INE' - lying on your BACK like holding a bowl of soup on your belly!",
+    "explanation": "**supine** means **lying on your back** (face up) 🛌**\n\n\n---\n\n💡 **Remember it:**\n SUPINE = SOUP-ON-SPINE! Lying on your BACK like you could balance a bowl of SOUP on your belly! Face pointing UP to the sky. Opposite of PRONE (face down)."
+  },
+  "pos-10": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"prone\" position mean?",
+    "answers": {
+      "A": "Lying on the back",
+      "B": "Standing",
+      "C": "Lying on the abdomen",
+      "D": "Sitting"
+    },
+    "correct_answer": "C",
+    "hint": "Think 'PRONE to fall' - face DOWN on the ground!",
+    "explanation": "**prone** means **lying on your stomach/abdomen** (face down) 🤸**\n\n\n---\n\n💡 **Remember it:**\n PRONE = PRONE to fall FACE-DOWN! Like doing a plank or push-up position - face pointing DOWN to the floor. Opposite of SUPINE (face up/on back)."
+  },
+  "pos-11": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"Trendelenburg\" position mean?",
+    "answers": {
+      "A": "Head positioned below the legs",
+      "B": "Head elevated",
+      "C": "Lying on side",
+      "D": "Standing straight"
+    },
+    "correct_answer": "A",
+    "hint": "Think 'TREND-DOWN' - head trending DOWN below your feet!",
+    "explanation": "**Trendelenburg** position means **head lower than feet** (tilted upside down) 🙃**\n\n\n---\n\n💡 **Remember it:**\n TRENDE-DOWN-BURG! Your HEAD is DOWN, legs are UP! Used to improve blood flow to the brain or for certain surgeries. Picture sliding down a slide - head going DOWN first!"
+  },
+  "pos-12": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"bilateral\" mean?",
+    "answers": {
+      "A": "One side",
+      "B": "Pertaining to both sides",
+      "C": "Front only",
+      "D": "Back only"
+    },
+    "correct_answer": "B",
+    "hint": "Think 'BI' (two) + 'LATERAL' (sides) = BOTH SIDES!",
+    "explanation": "**bilateral** means **both sides** or **affecting both sides** ↔️**\n\n\n---\n\n💡 **Remember it:**\n BI-LATERAL = BI (two) + LATERAL (sides) = BOTH SIDES! Like BIcycle (two wheels), BIlateral = TWO sides! Bilateral knee pain = BOTH knees hurt. Opposite of UNI-lateral (one side only)."
+  },
+  "pos-13": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"cephalic\" mean?",
+    "answers": {
+      "A": "Chest",
+      "B": "Abdomen",
+      "C": "Feet",
+      "D": "Head"
+    },
+    "correct_answer": "D",
+    "hint": "Think of ENCEPHALO (brain) - CEPHALIC is toward the HEAD!",
+    "explanation": "**cephalic** means **head** or **toward the head** 🧠**\n\n\n---\n\n💡 **Remember it:**\n CEPHALIC = sounds like 'SELF-LICK' - you'd need a HEAD to lick yourself! Or remember enCEPHALO means brain - CEPHALIC relates to HEAD! A cephalic presentation in birth means baby's HEAD is down. Opposite of caudal (toward feet/tail)."
+  },
+  "pos-14": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"external\" mean?",
+    "answers": {
+      "A": "Outside",
+      "B": "Inside",
+      "C": "Above",
+      "D": "Below"
+    },
+    "correct_answer": "A",
+    "hint": "EXTERNAL - like EXTERior of a house, the OUTSIDE!",
+    "explanation": "**external** means **outside** or **outer surface** 🏠**\n\n\n---\n\n💡 **Remember it:**\n EXTERNAL = EXTERior! Like the OUTSIDE of a building! Your skin is EXTERNAL (outside surface). External bleeding = bleeding you can SEE on the outside. Opposite of INTERNAL (inside)."
+  },
+  "pos-15": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"internal\" mean?",
+    "answers": {
+      "A": "Outside",
+      "B": "Inside",
+      "C": "Front",
+      "D": "Back"
+    },
+    "correct_answer": "B",
+    "hint": "INTERNAL - like INTERior of a house, the INSIDE!",
+    "explanation": "**internal** means **inside** or **within** 🫀**\n\n\n---\n\n💡 **Remember it:**\n INTERNAL = INTERior! Like the INSIDE of a building! Your organs are INTERNAL (inside your body). Internal bleeding = bleeding you CAN'T see (inside). Opposite of EXTERNAL (outside)."
+  },
+  "pos-16": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"flexion\" mean?",
+    "answers": {
+      "A": "Straightening",
+      "B": "Rotation",
+      "C": "Bending limb or body part at the joint",
+      "D": "Stretching"
+    },
+    "correct_answer": "C",
+    "hint": "Think 'FLEX your muscles' - you're BENDING your arm!",
+    "explanation": "**flexion** means **bending** or **decreasing the angle** at a joint 💪**\n\n\n---\n\n💡 **Remember it:**\n FLEXION = FLEX! When you FLEX your bicep, you're BENDING your elbow! Flexion DECREASES the angle between bones. Like doing a bicep curl - that's arm FLEXION! Opposite of EXTENSION (straightening)."
+  },
+  "pos-17": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"extension\" mean?",
+    "answers": {
+      "A": "Bring limb into a straight position",
+      "B": "Bending",
+      "C": "Rotation",
+      "D": "Turning"
+    },
+    "correct_answer": "A",
+    "hint": "Think 'EXTEND your arm' - you're STRAIGHTENING it out!",
+    "explanation": "**extension** means **straightening** or **increasing the angle** at a joint ➡️**\n\n\n---\n\n💡 **Remember it:**\n EXTENSION = EXTEND! When you EXTEND your arm out straight, you're STRAIGHTENING your elbow! Extension INCREASES the angle between bones. Like reaching for something - you EXTEND your arm straight! Opposite of FLEXION (bending)."
+  },
+  "pos-18": {
+    "question_type": "truefalse",
+    "question_text": "\"Peripheral\" means outside the central area.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of PERIPHERAL vision - what you see on the OUTER edges, not in the center!",
+    "explanation": "**TRUE!** ✅ **peripheral** means **outside** or **away from the center** 🔄**\n\n\n---\n\n💡 **Remember it:**\n PERIPHERAL = OUTER PERIMETER! Like PERIPHERAL vision (side vision) - you're seeing the EDGES, not the CENTER! Peripheral nerves = nerves in your arms/legs (away from spine/brain center). Peripheral devices = stuff OUTSIDE your computer (keyboard, mouse). Think PERIMETER - the OUTER boundary!"
+  },
+  "pos-19": {
+    "question_type": "truefalse",
+    "question_text": "\"Rotation\" means turning about the axis.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of ROTATING a doorknob - TURNING it in a circle!",
+    "explanation": "**TRUE!** ✅ **rotation** means **turning** or **revolving around an axis** 🔄**\n\n\n---\n\n💡 **Remember it:**\n ROTATION = like ROTATING tires on a car - you're TURNING them! Or Earth's ROTATION - spinning around its axis! When you turn your head side to side ('no'), that's ROTATION of your neck. Think of SPINNING, TWISTING, TURNING in a circle!"
+  },
+  "pos-20": {
+    "question_type": "truefalse",
+    "question_text": "\"Oblique\" means perfectly straight or perpendicular.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "Think of an OBLIQUE angle - it's SLANTED, not straight!",
+    "explanation": "**FALSE!** ❌ **oblique** means **slanted** or **at an angle**, NOT straight!**\n\n\n---\n\n💡 **Remember it:**\n OBLIQUE = OH-BLEAK (leaning over sadly)! It's SLANTED, DIAGONAL, at an ANGLE - not straight up/down or perfectly horizontal! Like the Leaning Tower of Pisa - that's OBLIQUE! Oblique muscles run at an angle across your abdomen. Think TILTED, not straight!"
+  }
+}

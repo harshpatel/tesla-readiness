@@ -1,0 +1,258 @@
+{
+  "intro-1": {
+    "question_type": "truefalse",
+    "question_text": "One can tell the system performance and magnetic field strength of an MRI system by looking at it.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "**Think about it:** Can you tell how fast a computer is just by looking at it? Modern MRI scanners with different field strengths often look identical on the outside. The real power is on the inside!",
+    "explanation": "**False!** This is a very common misconception. MRI systems of different field strengths (0.3T, 1.5T, 3T, even 7T) can look nearly identical externally. You cannot determine:**\n\n\n- **Magnetic field strength** (measured in Tesla)**\n\n- **System performance** or capabilities**\n\n- **Image quality** potential**\n\nJust by visual inspection. The differences are internal - in the magnet design, gradient systems, and RF technology. Always check the system specifications and labels to know what you're working with!\n\n---\n\n💡 **Remember:** *Don't judge a magnet by its cover!*"
+  },
+  "intro-2": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, we literally turn the human body into:",
+    "answers": {
+      "A": "A magnet",
+      "B": "An acoustic transmitter",
+      "C": "An x-ray receiver",
+      "D": "A radio receiver and transmitter"
+    },
+    "correct_answer": "D",
+    "hint": "**Think radio station:** The body doesn't become magnetic, make sound, or receive x-rays. We're using **radio waves** here! The protons in your body both receive and send back radio signals.",
+    "explanation": "**D. A radio receiver and transmitter** is correct!**\n\nHere's the beautiful process:\n\n1. **Radio Receiver:** The body's protons absorb radio frequency (RF) energy when we transmit at their resonant frequency**\n2. **Radio Transmitter:** When the RF pulse stops, those same protons release that energy as radio waves that we detect**\n\n🎙️ **Think of it like this:** Your body becomes a tiny radio station! We send out a signal, the protons tune in and absorb it, then broadcast it back to us. That's how we create the image.**\n\n⚡ **Key Point:** MRI is all about **radio waves**, not magnetism alone, not sound, not x-rays. Radio in, radio out!\n\n---\n\n💡 **Remember it:** **D. A radio receiver and transmitter** is correct!**"
+  },
+  "intro-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The essential particle that makes MRI possible is a(an):",
+    "answers": {
+      "A": "Electron",
+      "B": "Proton",
+      "C": "Neutron",
+      "D": "Photon"
+    },
+    "correct_answer": "B",
+    "hint": "**Think hydrogen:** What's in water? H₂O! The 'H' is hydrogen, which has one of these particles. And since we're 60-70% water, we have LOTS of them!",
+    "explanation": "**B. Proton** is the star of MRI!**\n\nHere's why protons are perfect:\n\n🎯 **Abundance:** Hydrogen protons are everywhere in the body (in water, fat, proteins)**\n🧲 **Magnetic:** Protons have a magnetic moment - they act like tiny bar magnets**\n📻 **Responsive:** They can absorb and emit radio frequency energy**\n⚡ **Spin:** They have nuclear spin, making them resonate at specific frequencies**\n\n**Why not the others?**\n**\n- Electrons: Too light and fast-moving\n\n- Neutrons: No charge, can't be detected this way\n\n- Photons: These are light particles, not the target of MRI\n\n---\n\n💡 **Remember:** *P is for Proton, P is for Power in MRI!*"
+  },
+  "intro-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The frequency that drives the resonant energy transfer from one system to another is referred to as:",
+    "answers": {
+      "A": "Resonant Frequency",
+      "B": "Resonant C-tuning Frequency",
+      "C": "Resonant phase",
+      "D": "Resonant proton"
+    },
+    "correct_answer": "A",
+    "hint": "**Think tuning fork:** When you strike a tuning fork at just the right pitch, another one nearby starts vibrating too. That specific pitch is the _______ frequency. Same concept in MRI!",
+    "explanation": "**A. Resonant Frequency** is correct!**\n\n🎵 **Musical Analogy:** Just like each musical note has a specific frequency (A = 440 Hz), each proton in a magnetic field has a specific resonant frequency where it will absorb energy most efficiently.**\n\n**Why it matters in MRI:**\n**\n- At 1.5T, hydrogen protons resonate at ~63.9 MHz\n\n- At 3T, they resonate at ~127.8 MHz\n\n- We must transmit at EXACTLY this frequency for energy transfer\n\n- Off frequency = no signal = no image!\n\n🎼 **Think of it like this:** The Larmor frequency (another name for resonant frequency) is like the proton's favorite song - it only dances when it hears that exact tune!**\n\n---\n\n💡 **Remember:** *Right frequency = Resonance = Energy transfer = MRI magic!*"
+  },
+  "intro-5": {
+    "question_type": "multiplechoice",
+    "question_text": "When the transmitted radio frequency is turned off, the proton that absorbed the energy:",
+    "answers": {
+      "A": "Releases the energy in the form of a radio wave",
+      "B": "Releases the energy in the form of light",
+      "C": "Releases the energy in the form of a sound wave",
+      "D": "Releases the energy in the form of heat"
+    },
+    "correct_answer": "A",
+    "hint": "**What goes in, must come out:** We send in radio waves to excite the protons. When they relax, they give back the same type of energy. Radio in = _____ out!",
+    "explanation": "**A. Releases the energy in the form of a radio wave** is correct!**\n\nThis is called **T1 and T2 relaxation:**\n**\n📡 **The Process:**\n1. RF pulse ON → Protons absorb radio energy and get excited**\n2. RF pulse OFF → Protons return to their low-energy state\n3. As they relax, they emit radio waves at the same frequency\n4. Our receiver coils pick up these radio signals\n5. Computer converts signals into an image!\n\n🪃 **Think boomerang:** You throw radio energy at the protons, they catch it, then throw it right back to you as a radio signal!**\n\n**Not light, not sound, not just heat** - it's radio waves all the way. That's why MRI is also called **MR** (Magnetic Resonance) - it's all about that resonant radio frequency!**\n\n---\n\n💡 **Remember:** *RF goes in, RF comes out - that's the MRI shout!*"
+  },
+  "intro-6": {
+    "question_type": "multiplechoice",
+    "question_text": "Protons that emit strong radio signals yield voxels that are:",
+    "answers": {
+      "A": "Dark rather than bright",
+      "B": "Bright rather than dark",
+      "C": "Loud rather than quiet",
+      "D": "Quiet rather than loud"
+    },
+    "correct_answer": "B",
+    "hint": "**Signal Strength = Brightness**\n**\nMore signal → more information → more brightness.\n\n*Like turning up the radio — stronger signal = clearer reception.*",
+    "explanation": "## ✅ Correct Answer: B. Bright rather than dark\n\n---\n\n### 🔆 The Brightness Rule\n\n\n- **Strong signal** → High signal intensity → **Bright pixels (hyperintense)**  **\n\n- **Weak signal** → Low signal intensity → **Dark pixels (hypointense)**  **\n\n- **No signal** → No intensity → **Black (signal void)**\n**\n\n---\n\n### What creates strong signals?\n\n\n- Water-rich tissues (e.g., CSF, fluid)\n\n- Fat (appears bright on T1)\n\n- Tissues with many mobile protons\n\n\n### What creates weak signals?\n\n\n- Dense bone (cortical)\n\n- Air\n\n- Fast-flowing blood\n\n- Dense fibrous tissue\n\n\n---\n\n\n📺 **Think TV reception:** strong broadcast signal = clear, bright picture. Weak signal = dark, fuzzy picture. Same in MRI!**\n\n\n---\n\n\n---\n\n💡 Remember:\n\n- **Strong signal = Bright light = Good night (for diagnosing)!**"
+  },
+  "intro-7": {
+    "question_type": "truefalse",
+    "question_text": "When used properly MRI has NO known adverse biological effects.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "**Non-ionizing = non-damaging:** Unlike X-rays and CT, MRI doesn't use ionizing radiation. The magnetic fields and radio waves don't damage DNA or cells when safety protocols are followed.",
+    "explanation": "**True!** MRI is remarkably safe when proper protocols are followed.**\n\n✅ **Why MRI is safe:**\n**\n- **No ionizing radiation** (unlike X-ray, CT, PET)**\n\n- **No DNA damage** from the magnetic field**\n\n- **No cumulative effects** - can be repeated safely**\n\n- **Radio waves** are non-ionizing (like FM radio)**\n\n⚠️ **But ONLY when used properly:**\n**\n- Screen for metallic implants and devices\n\n- Follow SAR (Specific Absorption Rate) limits\n\n- Prevent projectile accidents with ferrous objects\n\n- Protect hearing from gradient noise\n\n- Monitor patients with claustrophobia/anxiety\n\n🛡️ **The key phrase:** *\"When used properly\"* - this means following all safety protocols!\n\n**Contrast this with:**\n**\n- X-ray/CT: Ionizing radiation (cumulative risk)\n\n- PET: Radioactive isotopes\n\n---\n\n💡 **Remember:** *MRI is safe as can be, when you follow safety to a T!*"
+  },
+  "intro-8": {
+    "question_type": "multiplechoice",
+    "question_text": "The force with which a ferrous object is pulled toward a magnet field source increases by ______ when the distance from the magnet center decreases by ½.",
+    "answers": {
+      "A": "2x",
+      "B": "4x",
+      "C": "No change",
+      "D": "Ferrous objects do not pull into a magnet"
+    },
+    "correct_answer": "B",
+    "hint": "**Inverse square law:** This is physics! When you halve the distance, the force doesn't just double - it quadruples! This is why the '5-gauss line' is so critical for safety.",
+    "explanation": "**B. 4x** is correct - this is CRITICAL for safety!**\n\n📐 **The Math:**\n**\n- Magnetic force follows the **inverse square law**\n**\n- Force ∝ 1/distance²\n\n- If distance → ½, then force → 1/(½)² = 1/(¼) = **4x stronger**\n**\n⚠️ **Real-world danger:**\nImagine a wheelchair:**\n\n- At 8 feet away: Mild pull\n\n- At 4 feet away: 4x stronger pull\n\n- At 2 feet away: 16x stronger pull (4×4)\n\n- At 1 foot away: 64x stronger pull!\n\n🚀 **This is why:**\n**\n- Objects accelerate as they approach the magnet\n\n- The \"projectile effect\" can be deadly\n\n- Items feel \"yanked\" from your hands\n\n- Always control ferrous objects BEFORE entering the room\n\n---\n\n💡 **Remember:** *Half the distance = Four times the force = Danger at the source!*\n\n**Never underestimate magnetic attraction!**"
+  },
+  "intro-9": {
+    "question_type": "multiplechoice",
+    "question_text": "MRI emits ionizing radiation:",
+    "answers": {
+      "A": "Constantly",
+      "B": "Randomly",
+      "C": "Rarely",
+      "D": "Never"
+    },
+    "correct_answer": "D",
+    "hint": "**Zero, zip, nada:** MRI uses magnetic fields and radio waves - both are NON-ionizing. There's no X-ray tube, no gamma rays, no radiation at all!",
+    "explanation": "**D. Never** - MRI produces ZERO ionizing radiation!**\n\n🧲 **What MRI uses:**\n1. **Static magnetic field** (non-ionizing)**\n2. **Radio frequency waves** (non-ionizing, like your phone)**\n3. **Gradient magnetic fields** (non-ionizing)**\n\n⚛️ **What is ionizing radiation?**\n**\n- X-rays, gamma rays, cosmic rays\n\n- High enough energy to knock electrons off atoms\n\n- Can damage DNA → cancer risk\n\n- Found in: X-ray, CT, PET, fluoroscopy\n\n✅ **MRI's advantage:**\n**\n- Safe for children (no radiation)\n\n- Safe for repeated scans\n\n- No cumulative exposure risk\n\n- Can scan pregnant patients (2nd/3rd trimester)\n\n📻 **Think radio station:** FM radio has been broadcasting for decades - do radio waves cause cancer? No! MRI uses similar (but stronger) radio frequencies.**\n\n---\n\n💡 **Remember:** *MRI never, ever, not at all, uses ionizing radiation!*"
+  },
+  "intro-10": {
+    "question_type": "multiplechoice",
+    "question_text": "In order to create a useful MRI, the imaging area must have an abundance of:",
+    "answers": {
+      "A": "Iron",
+      "B": "Air",
+      "C": "Water",
+      "D": "Energy"
+    },
+    "correct_answer": "C",
+    "hint": "**Think hydrogen:** What contains hydrogen protons? H₂O! We're imaging hydrogen, and water is packed with it. That's why we see soft tissues so well!",
+    "explanation": "**C. Water** is the key to MRI success!**\n\n💧 **Why water matters:**\n**\n- Water = H₂O = 2 hydrogen atoms per molecule\n\n- Hydrogen protons are what we're imaging\n\n- Human body is 60-70% water\n\n- More water = More protons = Better signal!\n\n🎯 **What this means clinically:**\n**\n**Great MRI contrast:**\n**\n- Brain (75-80% water)\n\n- Muscles (75% water)\n\n- CSF (99% water) - appears very bright\n\n- Tumors (often high water content)\n\n**Poor MRI contrast:**\n**\n- Cortical bone (very little water) - appears black\n\n- Air/lung (no water) - appears black\n\n- Dense scar tissue (low water)\n\n**Not iron** (creates artifacts), **not air** (no signal), **not energy** (we provide that).**\n\n---\n\n💡 **Remember:** *Water is the matter for MRI to capture!*"
+  },
+  "intro-11": {
+    "question_type": "multiplechoice",
+    "question_text": "A naturally occurring mineral that has magnetic properties is:",
+    "answers": {
+      "A": "Lodestone",
+      "B": "Bronze",
+      "C": "Iron",
+      "D": "Tin"
+    },
+    "correct_answer": "A",
+    "hint": "**Ancient compass:** This is the natural magnet that ancient sailors used for navigation. It's also called magnetite. The word 'magnet' actually comes from this stone!",
+    "explanation": "**A. Lodestone** is correct!**\n\n🪨 **Lodestone Facts:**\n**\n- Also called **magnetite** (Fe₃O₄)**\n\n- Naturally occurring magnetic iron ore\n\n- Can attract iron objects without any external power\n\n- Used in ancient compasses\n\n- The word \"magnet\" comes from lodestone!\n\n📜 **Historical significance:**\n**\n- Discovered in ancient Magnesia (Asia Minor)\n\n- First known magnet used by humans\n\n- Helped sailors navigate for centuries\n\n- Led to our understanding of Earth's magnetic field\n\n**Why not the others?**\n**\n- **Bronze:** Alloy of copper and tin - not magnetic**\n\n- **Iron:** Can BE magnetized, but not naturally magnetic**\n\n- **Tin:** Not magnetic at all**\n\n🧭 **Fun fact:** Ancient Chinese called lodestone \"loving stone\" because it seemed to \"love\" (attract) iron!**\n\n---\n\n💡 **Remember:** *Lodestone loads up the magnetic zone - naturally magnetic, all on its own!*"
+  },
+  "intro-12": {
+    "question_type": "multiplechoice",
+    "question_text": "The term 'magnet' comes from the region Magnesia in an ancient part of:",
+    "answers": {
+      "A": "China",
+      "B": "Western Europe",
+      "C": "Southeast Asia",
+      "D": "Asia Minor"
+    },
+    "correct_answer": "D",
+    "hint": "**Greek origins:** This region is in modern-day Turkey. The ancient Greeks found magnetic stones there and named them after the place - Magnesia!",
+    "explanation": "**D. Asia Minor** (modern-day Turkey) is correct!**\n\n🗺️ **Geography & History:**\n**\n- **Magnesia** was a region in ancient Thessaly (Greece) and Asia Minor**\n\n- Part of the ancient Greek world\n\n- Now located in modern-day **Turkey**\n**\n- Site where lodestone (magnetite) was discovered\n\n📚 **Etymology:**\n1. Lodestone found in Magnesia**\n2. Greeks called it \"Magnētis lithos\" (stone from Magnesia)\n3. This became \"magnet\" in English\n4. The rest is history!\n\n**Other ancient magnetic discoveries:**\n**\n- China: Discovered lodestone independently around 300 BCE\n\n- Used for feng shui and compasses\n\n- But the word \"magnet\" came from Greek Magnesia\n\n🌍 **Asia Minor includes:** Ancient lands that are now Turkey, connecting Europe and Asia.**\n\n---\n\n💡 **Remember:** *Magnesia in Asia Minor = Where magnets earned their name!*"
+  },
+  "intro-13": {
+    "question_type": "multiplechoice",
+    "question_text": "In 1882 Nikola Tesla discovered that:",
+    "answers": {
+      "A": "Magnetic fields rotate",
+      "B": "Hydrogen is lighter than helium",
+      "C": "A magnetic field surrounds the planet",
+      "D": "Electricity can create a magnetic field"
+    },
+    "correct_answer": "D",
+    "hint": "**Electromagnetism:** Tesla's discovery was about using electrical current to generate magnetic fields. This is how we create the powerful magnets in MRI! Without this, no modern MRI scanners.",
+    "explanation": "**D. Electricity can create a magnetic field** is correct!**\n\n⚡ **Tesla's Revolutionary Discovery:**\n**\n- Running electrical current through a wire creates a magnetic field\n\n- This is called **electromagnetism**\n**\n- The basis for ALL modern electromagnets\n\n- Essential for MRI magnet design!\n\n🧲 **Why this matters for MRI:**\n**\n- Superconducting magnets use electrical current\n\n- Current flows through coils of wire\n\n- Creates the strong, stable magnetic field (1.5T, 3T, etc.)\n\n- When current stops, the field stops\n\n**Why not the others?**\n**\n- **Rotating fields:** That's also Tesla, but from his AC motor work**\n\n- **Hydrogen lighter than helium:** That's chemistry (true, but not Tesla)**\n\n- **Earth's magnetic field:** Known since ancient times**\n\n🎩 **Tesla fact:** The unit of magnetic field strength is named after him - the **Tesla (T)**!**\n\n---\n\n💡 **Remember:** *Tesla's electric trick made magnetic fields stick!*"
+  },
+  "intro-14": {
+    "question_type": "multiplechoice",
+    "question_text": "One of the most important concepts in MRI is Faraday's:",
+    "answers": {
+      "A": "Law of Magnetism",
+      "B": "Law of Thermodynamics",
+      "C": "Law of Induction",
+      "D": "Law of Radio Frequency Modulation"
+    },
+    "correct_answer": "C",
+    "hint": "**Opposite of Tesla's discovery:** Tesla showed electricity creates magnetism. Faraday showed the reverse - changing magnetic fields create electricity! This is how we DETECT the MRI signal.",
+    "explanation": "**C. Law of Induction** is fundamental to MRI!**\n\n🔄 **Faraday's Law of Electromagnetic Induction:**\n*A changing magnetic field induces an electrical current in a conductor*\n\n**How it works in MRI:**\n1. Excited protons emit radio waves (changing magnetic field)**\n2. This changing field passes through the receiver coil\n3. The coil acts as a conductor\n4. **Faraday's Law:** The changing field induces electrical current**\n5. We measure this current = MRI signal!\n\n⚡ **The beautiful cycle:**\n**\n- **Tesla's principle:** Electricity → Magnetism (creating the main field)**\n\n- **Faraday's principle:** Magnetism → Electricity (detecting the signal)**\n\n🎯 **Without Faraday's Law:**\n**\n- No way to detect the signal from protons\n\n- No receiver coils would work\n\n- No MRI images!\n\n---\n\n💡 **Remember:** *Faraday's induction lets us detect the MRI production!*"
+  },
+  "intro-15": {
+    "question_type": "multiplechoice",
+    "question_text": "First to perform nuclear magnetic resonance, the precursor to MRI, was ______ in the 1930s:",
+    "answers": {
+      "A": "Michael Faraday",
+      "B": "Nikola Tesla",
+      "C": "Isidor Rabi",
+      "D": "Niels Bohr"
+    },
+    "correct_answer": "C",
+    "hint": "**Nobel Prize 1944:** This physicist first observed nuclear magnetic resonance in molecular beams. His work laid the foundation for both NMR spectroscopy and eventually MRI!",
+    "explanation": "**C. Isidor Rabi** is correct!**\n\n🏆 **Isidor Rabi (1898-1988):**\n**\n- First observed **nuclear magnetic resonance (NMR)** in 1938**\n\n- Won the **Nobel Prize in Physics (1944)** for this work**\n\n- Showed that atomic nuclei could be made to absorb and emit radio waves\n\n- This was the foundation for MRI!\n\n📅 **Timeline:**\n**\n- **1938:** Rabi discovers NMR**\n\n- **1946:** Bloch and Purcell extend NMR to liquids and solids**\n\n- **1971:** Damadian shows tumors have different NMR signals**\n\n- **1973:** Lauterbur creates first MRI image**\n\n- **1977:** First human MRI scan**\n\n**Why not the others?**\n**\n- **Faraday:** 1800s, electromagnetic induction**\n\n- **Tesla:** 1800s, electromagnetism and AC current**\n\n- **Bohr:** Atomic model, not NMR**\n\n---\n\n💡 **Remember:** *Rabi was first to see NMR work - the spark that made MRI lurk!*"
+  },
+  "intro-16": {
+    "question_type": "multiplechoice",
+    "question_text": "The mathematical method by which MRI images are processed is:",
+    "answers": {
+      "A": "Fourier Transform",
+      "B": "Radio Frequency Modulation",
+      "C": "Electromagnetic Modulation",
+      "D": "DOS"
+    },
+    "correct_answer": "A",
+    "hint": "**From frequencies to pictures:** This mathematical technique converts complex frequency signals into spatial information (images). It's named after a French mathematician and is used in signal processing everywhere!",
+    "explanation": "**A. Fourier Transform** is the mathematical heart of MRI!**\n\n🎼 **What is Fourier Transform?**\n**\n- Mathematical method developed by Joseph Fourier (1768-1830)\n\n- Converts signals from the **frequency domain** to the **spatial domain**\n**\n- Breaks down complex signals into simple sine waves\n\n- Reconstructs them into an image\n\n🖼️ **How it works in MRI:**\n1. Protons emit radio signals at various frequencies**\n2. Signals are encoded with spatial information\n3. Computer collects this \"raw data\" (K-space)\n4. **Fast Fourier Transform (FFT)** processes the data**\n5. Out comes your MRI image!\n\n**Without Fourier Transform:**\n**\n- We'd have frequency data but no image\n\n- No way to reconstruct spatial information\n\n- MRI simply wouldn't work!\n\n🎵 **Musical analogy:** Like taking a recording of an orchestra and separating out each instrument's individual sound.**\n\n---\n\n💡 **Remember:** *Fourier Transform is the key - turns signals into what we see!*"
+  },
+  "intro-17": {
+    "question_type": "multiplechoice",
+    "question_text": "The first patent specifically for MRI was awarded in 1974 to:",
+    "answers": {
+      "A": "Isidor Rabi",
+      "B": "Felix Bloch",
+      "C": "Edward Purcell",
+      "D": "Raymond Damadian"
+    },
+    "correct_answer": "D",
+    "hint": "**Controversial pioneer:** This physician was first to propose using NMR for medical diagnosis and built a whole-body scanner. Though he got the first patent, he controversially wasn't included in the 2003 Nobel Prize.",
+    "explanation": "**D. Raymond Damadian** holds the first MRI patent!**\n\n📜 **Damadian's Contributions:**\n**\n- **1971:** Published paper showing cancerous tissue has different NMR properties**\n\n- **1974:** Awarded first patent for NMR body scanning apparatus**\n\n- **1977:** Built \"Indomitable\" - first whole-body MRI scanner**\n\n- **1977:** First MRI scan of a living human (took 5 hours!)**\n\n⚖️ **The Nobel Controversy:**\n**\n- **2003:** Nobel Prize awarded to Lauterbur and Mansfield**\n\n- Damadian was excluded despite his foundational work\n\n- He took out full-page newspaper ads protesting\n\n- Still controversial in the MRI community\n\n**Timeline clarification:**\n**\n- **Rabi (1938):** Discovered NMR**\n\n- **Bloch & Purcell (1946):** Extended NMR (shared 1952 Nobel)**\n\n- **Damadian (1974):** First MRI patent**\n\n- **Lauterbur (1973):** First MRI image**\n\n---\n\n💡 **Remember:** *Damadian's patent came first in '74 - MRI pioneer, that's for sure!*"
+  },
+  "intro-18": {
+    "question_type": "multiplechoice",
+    "question_text": "The first MRI image in vivo (living tissue) was performed in 1976 by:",
+    "answers": {
+      "A": "Raymond Damadian",
+      "B": "Peter Mansfield",
+      "C": "Paul Lauterbur",
+      "D": "Richard Ernst"
+    },
+    "correct_answer": "C",
+    "hint": "**The image maker:** This chemist created the first 2D NMR image in 1973 and the first living tissue image in 1976. He introduced the concept of using magnetic field gradients to create spatial information!",
+    "explanation": "**C. Paul Lauterbur** created the first MRI image!**\n\n🖼️ **Lauterbur's Breakthrough:**\n**\n- **1973:** First NMR image ever (two tubes of water)**\n\n- **1976:** First image of living tissue (a clam)**\n\n- Introduced the concept of **magnetic field gradients** for spatial encoding**\n\n- Called his technique \"zeugmatography\" (from Greek \"to join\")\n\n🧲 **His Key Innovation:**\n**\n- Used gradient magnetic fields to encode spatial information\n\n- Different locations have slightly different magnetic field strengths\n\n- Protons at different locations resonate at different frequencies\n\n- This creates the \"map\" needed for an image!\n\n🏆 **Recognition:**\n**\n- Shared 2003 Nobel Prize with Peter Mansfield\n\n- Often called the \"Father of MRI\"\n\n**Why not the others?**\n**\n- **Damadian:** First whole-body human scan (1977)**\n\n- **Mansfield:** Developed echo-planar imaging (fast MRI)**\n\n- **Ernst:** NMR spectroscopy (1991 Nobel)**\n\n---\n\n💡 **Remember:** *Lauterbur made pictures first appear - MRI imaging pioneer!*"
+  },
+  "intro-19": {
+    "question_type": "multiplechoice",
+    "question_text": "The first MRI in vivo (living tissue) using a whole-body MRI system was performed in 1977 by:",
+    "answers": {
+      "A": "Raymond Damadian",
+      "B": "Peter Mansfield",
+      "C": "Paul Lauterbur",
+      "D": "Richard Ernst"
+    },
+    "correct_answer": "A",
+    "hint": "**Indomitable achievement:** This was done on July 3, 1977, using a scanner named 'Indomitable.' The first human scanned was actually one of Damadian's graduate students, Larry Minkoff!",
+    "explanation": "**A. Raymond Damadian** performed the first whole-body human MRI scan!**\n\n🏥 **Historic Scan - July 3, 1977:**\n**\n- Scanner name: **\"Indomitable\"**\n**\n- First human subject: **Larry Minkoff** (Damadian's graduate student)**\n\n- Scan time: Nearly **5 hours!**\n**\n- Location: Brooklyn, New York\n\n- Image: Crude by today's standards, but revolutionary!\n\n🔬 **Why this was different:**\n**\n- **Lauterbur (1976):** First image of living tissue (small samples)**\n\n- **Damadian (1977):** First WHOLE HUMAN BODY scan**\n\n- Big enough to fit a person\n\n- Clinical potential proven\n\n⚡ **\"Indomitable\" Facts:**\n**\n- Weighed several tons\n\n- Required patient to remain completely still for hours\n\n- No gradient coils like modern MRI\n\n- Now in the Smithsonian Institution!\n\n**Fun fact:** Damadian wanted to be the first person scanned, but he was too large to fit in his own machine!**\n\n---\n\n💡 **Remember:** *Damadian's whole-body scan in '77 - opened MRI's door to heaven!*"
+  },
+  "intro-20": {
+    "question_type": "multiplechoice",
+    "question_text": "The 2003 Nobel Prize in Physiology and Medicine for development in MRI was awarded to:",
+    "answers": {
+      "A": "Paul Lauterbur and Raymond Damadian",
+      "B": "Raymond Damadian and Purcell",
+      "C": "Edward Purcell and Peter Mansfield",
+      "D": "Peter Mansfield and Paul Lauterbur"
+    },
+    "correct_answer": "D",
+    "hint": "**The controversial Nobel:** One pioneered spatial encoding and made the first image. The other developed echo-planar imaging for fast scanning. A third major contributor was notably excluded from this prize!",
+    "explanation": "**D. Peter Mansfield and Paul Lauterbur** shared the 2003 Nobel Prize!**\n\n🏆 **The Winners:**\n**\n**Paul Lauterbur (1929-2007):**\n**\n- Discovered how to create images using gradient fields\n\n- First MRI image (1973)\n\n- Introduced spatial encoding concept\n\n**Peter Mansfield (1933-2017):**\n**\n- Developed **Echo-Planar Imaging (EPI)**\n**\n- Made MRI much faster (seconds instead of hours)\n\n- Advanced mathematical techniques for image reconstruction\n\n⚖️ **The Controversy:**\n**\n- **Raymond Damadian** was NOT included**\n\n- He had the first patent (1974)\n\n- Did the first whole-body human scan (1977)\n\n- Showed tumors have different NMR signals (1971)\n\n- He publicly protested the decision\n\n📰 **The Debate:**\n**\n- Some say Damadian deserved inclusion\n\n- Others argue Lauterbur and Mansfield made the imaging breakthroughs\n\n- Nobel committee doesn't explain their decisions\n\n---\n\n💡 **Remember:** *Mansfield and Lauterbur won the Nobel crown - but Damadian's work won't be let down!*"
+  }
+}

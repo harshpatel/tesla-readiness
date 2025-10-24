@@ -1,0 +1,214 @@
+[
+  {
+    "id": "2f40a444-979b-435c-8c4d-0068e029e19f",
+    "section_key": "prefixes",
+    "question_id": "pre-1",
+    "question_type": "multiplechoice",
+    "question_text": "What does \"hyper-\" mean?",
+    "answers": {
+      "A": "Below normal",
+      "B": "Equal",
+      "C": "Slow",
+      "D": "Above normal"
+    },
+    "correct_answer": "D",
+    "points": 1,
+    "order_index": 0,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:20:52.224+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of a hyper kid bouncing off the walls — their energy is way UP!",
+    "explanation": "**hyper-** means **above normal** or **excessive** ⬆️\n\n💡 **Remember it:** Think of a HYPER kid bouncing off the walls — their energy is ABOVE normal, EXCESSIVELY high!\n\nHYPER sounds like \"high per\" — going HIGH and OVER the top!\n\n**Examples:**\n\n- HYPERtension = blood pressure ABOVE normal\n\n- HYPERglycemia = blood sugar ABOVE normal\n\n- HYPERactive = activity level ABOVE normal",
+    "image_url": null
+  },
+  {
+    "id": "a3fc49aa-416f-44a0-bc85-cd9e5a027c4e",
+    "section_key": "prefixes",
+    "question_id": "pre-2",
+    "question_type": "multiplechoice",
+    "question_text": "What does \"hypo-\" mean?",
+    "answers": {
+      "A": "Above normal",
+      "B": "Below normal",
+      "C": "Fast",
+      "D": "Inflammation"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 1,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T19:11:03.166232+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "HYPO sounds like 'go LOW' — think of going DOWN under!",
+    "explanation": "**hypo-** means **below normal** or **deficient** ⬇️\n\n💡 **Remember it:** HYPO sounds like \"HI, go LOW!\" You're going DOWN, UNDER normal levels.\n\nThink of a HYPOdermic needle going UNDER your skin!\n\n**Examples:**\n\n- HYPOthermia = body temperature BELOW normal (too cold!)\n\n- HYPOglycemia = blood sugar BELOW normal\n\n- HYPOtension = blood pressure BELOW normal",
+    "image_url": null
+  },
+  {
+    "id": "59882dd0-363b-4b19-9ca1-d8badbd7db05",
+    "section_key": "prefixes",
+    "question_id": "pre-3",
+    "question_type": "multiplechoice",
+    "question_text": "Which prefix means \"slow\"?",
+    "answers": {
+      "A": "Tachy-",
+      "B": "Brady-",
+      "C": "Hyper-",
+      "D": "Hypo-"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 2,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:26:48.675+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of Tom BRADY taking his sweet time in the pocket — slow and steady!",
+    "explanation": "**brady-** means **slow** 🐢\n\n💡 **Remember it:** Think of Tom BRADY slowly backing up in the pocket before throwing — taking his time!\n\nYour heart is being a \"Brady\" — playing it SLOW and steady.\n\n**Examples:**\n\n- BRADYcardia = SLOW heart rate\n\n- BRADYpnea = SLOW breathing\n\n**Opposite:** tachy- means FAST (like a TACHOmeter showing high RPMs!)",
+    "image_url": null
+  },
+  {
+    "id": "93f1e6a9-4e7e-4b12-82f7-d8b7f257f195",
+    "section_key": "prefixes",
+    "question_id": "pre-4",
+    "question_type": "multiplechoice",
+    "question_text": "What does \"tachycardia\" mean?",
+    "answers": {
+      "A": "Slow breathing",
+      "B": "Fast heart rate",
+      "C": "High blood sugar",
+      "D": "Joint pain"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 3,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:34:39.479+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "TACHY sounds like TACHOmeter — that RPM gauge in your car showing high speed!",
+    "explanation": "**tachycardia** means **fast heart rate** 🏃‍♂️💨\n\n💡 **Remember it:** TACHY means FAST (like a TACHOmeter showing high RPMs in a race car!). CARDIA = heart. So TACHYcardia = your heart is racing FAST!\n\nThink of getting TACKY (sticky) from sweating because you're running so fast.\n\n**Breakdown:**\n\n- TACHY- = fast\n\n- -CARDIA = heart\n\n- TACHYcardia = FAST heart rate\n\n**Opposite:** BRADYcardia (slow heart rate)",
+    "image_url": null
+  },
+  {
+    "id": "f8eabb04-32c2-4add-aeb1-578c1dd2d496",
+    "section_key": "prefixes",
+    "question_id": "pre-5",
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"leuko-\" refers to:",
+    "answers": {
+      "A": "Red",
+      "B": "White",
+      "C": "Blue",
+      "D": "Yellow"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 4,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:28:54.017+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of LUKE Skywalker in his white Jedi robes!",
+    "explanation": "**leuko-** means **white** 🤍\n\n💡 **Remember it:** Think of LUKE Skywalker in WHITE Jedi robes! Or LEUKemia — a disease of WHITE blood cells.\n\nLEUKO sounds like \"LOOK-OH\" — look at those white clouds!\n\n**Examples:**\n\n- LEUKOcytes = WHITE blood cells\n\n- LEUKemia = cancer of WHITE blood cells\n\n- LEUKOderm = abnormally WHITE skin",
+    "image_url": null
+  },
+  {
+    "id": "c4eb475a-af04-41d7-960e-20bc89af05c7",
+    "section_key": "prefixes",
+    "question_id": "pre-6",
+    "question_type": "multiplechoice",
+    "question_text": "What does \"erythro-\" mean?",
+    "answers": {
+      "A": "Red",
+      "B": "White",
+      "C": "Yellow",
+      "D": "Blue"
+    },
+    "correct_answer": "A",
+    "points": 1,
+    "order_index": 5,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:25:54.657+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of someone's face turning red when they're embarrassed!",
+    "explanation": "**erythro-** means **red** ❤️\n\n💡 **Remember it:** Think \"ERR-I-THROW up RED\" — like when you're embarrassed and your face turns RED!\n\nPicture someone blushing red — that's erythro-!\n\n**Examples:**\n\n- ERYTHROcytes = RED blood cells\n\n- ERYTHROmycin = antibiotic (originally had reddish color)\n\n- ERYTHROderma = abnormal REDness of the skin",
+    "image_url": null
+  },
+  {
+    "id": "f887d18e-93df-4dde-94d3-a8cab5959221",
+    "section_key": "prefixes",
+    "question_id": "pre-7",
+    "question_type": "truefalse",
+    "question_text": "\"Dys-\" is a prefix that means difficult, painful, or abnormal.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "points": 1,
+    "order_index": 6,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:28:53.768+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think DYSfunctional — something not working right!",
+    "explanation": "**dys-** means **difficult**, **painful**, or **abnormal** 😣\n\n💡 **Remember it:** DYS = \"THIS is difficult!\" Think of a DYSfunctional family — things aren't working normally.\n\nWhenever you see DYS-, something is going WRONG or is HARD to do!\n\n**Examples:**\n\n- DYSpnea = DIFFICULT or PAINFUL breathing\n\n- DYSpepsia = DIFFICULT digestion (indigestion)\n\n- DYStrophy = ABNORMAL development or growth",
+    "image_url": null
+  },
+  {
+    "id": "a43eb410-3615-46bb-acf5-85c591301673",
+    "section_key": "prefixes",
+    "question_id": "pre-8",
+    "question_type": "truefalse",
+    "question_text": "The prefix \"poly-\" means one or single.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 7,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T19:11:03.166232+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of Monopoly vs. POLYgamy — how many people are involved?",
+    "explanation": "**FALSE!** ❌ **poly-** means **many** or **multiple**, NOT one!\n\n💡 **Remember it:** POLY = PLENTY! Think of a parrot saying \"POLLY want a cracker\" — and POLLY wants MANY crackers!\n\nOr POLYgamy (MANY spouses), POLYgon (MANY sides).\n\n**Examples:**\n\n- POLYuria = urinating MANY times\n\n- POLYdipsia = drinking MANY fluids\n\n- POLYneuropathy = disease affecting MANY nerves\n\n**Opposite:** MONO- (one), like MONOpoly — ONE person controlling everything!",
+    "image_url": null
+  },
+  {
+    "id": "84552c51-c72b-4c08-8a9b-ffbea0496760",
+    "section_key": "prefixes",
+    "question_id": "pre-9",
+    "question_type": "truefalse",
+    "question_text": "\"Macro-\" means small.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "points": 1,
+    "order_index": 8,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:32:07.812+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of McDonald's Big MAC — is it small or LARGE?",
+    "explanation": "**FALSE!** ❌ **macro-** means **large** or **big**, NOT small!\n\n💡 **Remember it:** MACRO = MASSIVE! Think of McDonald's Big MAC — it's LARGE!\n\nMACRO sounds like \"MACHO\" — big and strong! 💪\n\n**Examples:**\n\n- MACROeconomics = studying the BIG picture of the economy\n\n- MACROcephaly = abnormally LARGE head\n\n- MACROscopic = visible to the naked eye (large enough to see)\n\n**Opposite:** MICRO- (small), like a MICROscope for seeing TINY things 🔬",
+    "image_url": null
+  },
+  {
+    "id": "86e77a01-4a8c-4c2d-91d7-7cac57e41474",
+    "section_key": "prefixes",
+    "question_id": "pre-10",
+    "question_type": "truefalse",
+    "question_text": "The prefix \"a-\" or \"an-\" means without or absence of.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "points": 1,
+    "order_index": 9,
+    "created_at": "2025-10-24T19:03:23.402026+00:00",
+    "updated_at": "2025-10-24T20:32:35.257+00:00",
+    "content_item_id": "2c0dfb71-7696-4f00-8584-5885d6cc6716",
+    "hint": "Think of Atheists — people WITHOUT belief in gods!",
+    "explanation": "**TRUE!** ✅ **a-** or **an-** means **without** or **absence of** 🚫\n\n💡 **Remember it:** Think \"AH, there's NONE!\" — the 'A' means ABSENT!\n\nWhen you see a- or an-, something is MISSING.\n\n**Examples:**\n\n- Atheist = WITHOUT belief in god\n\n- Anemia = WITHOUT enough red blood cells\n\n- Apnea = WITHOUT breathing (sleep apnea — you STOP breathing!)\n\n- Asymptomatic = WITHOUT symptoms\n\n**Note:** Use 'an-' before vowels (anemia), 'a-' before consonants (apnea).",
+    "image_url": null
+  }
+]

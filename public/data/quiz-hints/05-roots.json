@@ -1,0 +1,356 @@
+{
+  "root-1": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the root word \"neuro-\" mean?",
+    "answers": {
+      "A": "Blood",
+      "B": "Nerve",
+      "C": "Bone",
+      "D": "Muscle"
+    },
+    "correct_answer": "B",
+    "hint": "Think of a 'neurotic' person - their NERVES are all worked up!",
+    "explanation": "**neuro-** means **nerve** or **nervous system** 🧠⚡**\n\n\n---\n\n💡 **Remember it:**\n NEURO sounds like 'NEW-ROW' of nerves! Think of someone NEURotic - their NERVES are frayed! Neurology = study of nerves. Neuron = nerve cell. Neuropathy = nerve disease. Whenever you see NEURO-, it's about NERVES sending signals!"
+  },
+  "root-2": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"gastro-\" refers to:",
+    "answers": {
+      "A": "Muscles",
+      "B": "Stomach",
+      "C": "Bones",
+      "D": "Skin"
+    },
+    "correct_answer": "B",
+    "hint": "Think of GAS in your tummy - that's where it builds up!",
+    "explanation": "**gastro-** means **stomach** 🍽️**\n\n\n---\n\n💡 **Remember it:**\n GASTRO- sounds like GAS! Where does GAS build up? Your STOMACH! Gastritis = stomach inflammation. Gastroenterology = study of stomach and intestines. Gastric juice = stomach acid. Whenever you see GASTRO-, think of your BELLY and STOMACH!"
+  },
+  "root-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"derm-\" refers to:",
+    "answers": {
+      "A": "Skin",
+      "B": "Muscle",
+      "C": "Bone",
+      "D": "Blood"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a DERMatologist - what do they treat?",
+    "explanation": "**derm-** or **dermato-** means **skin** 🧴**\n\n\n---\n\n💡 **Remember it:**\n DERM- sounds like 'DERM-IS!' - your skin IS your covering! Dermatology = study of skin. Dermatitis = skin inflammation. Epidermis = outer layer of skin. Think of a DERMatologist checking your SKIN for problems!"
+  },
+  "root-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"hemo-\" or \"hema-\" refers to:",
+    "answers": {
+      "A": "Liver",
+      "B": "Brain",
+      "C": "Blood",
+      "D": "Muscle"
+    },
+    "correct_answer": "C",
+    "hint": "Think of a HEMOphiliac - someone with a BLOOD clotting disorder!",
+    "explanation": "**hemo-** or **hema-** means **blood** 🩸**\n\n\n---\n\n💡 **Remember it:**\n HEMO- sounds like 'HE-MOW' down enemies with BLOOD! Hemoglobin = protein in red BLOOD cells. Hemorrhage = excessive bleeding. Hematology = study of blood. Whenever you see HEMO- or HEMA-, it's all about BLOOD!"
+  },
+  "root-5": {
+    "question_type": "multiplechoice",
+    "question_text": "\"Arthro-\" refers to:",
+    "answers": {
+      "A": "Muscle",
+      "B": "Bone",
+      "C": "Joint",
+      "D": "Skin"
+    },
+    "correct_answer": "C",
+    "hint": "**Think of ARTHritis** 🦴  **\n*Where does it hurt?*\n**Your JOINTS!** 🦵",
+    "explanation": "# arthro- = joint 🦴\n\n\n**arthro-** means **joint**.**\n\n\n---\n\n---\n\n💡 **Remember it:**\n\n**\n\n- *ARTHRO-* sounds like “**ARTHUR!**” — picture King Arthur’s rusty armor JOINTS squeaking!**\n\n**Examples:**\n**\n\n- **Arthritis** — joint inflammation  **\n\n- **Arthroscopy** — looking inside a joint  **\n\n- **Arthroplasty** — joint replacement surgery**\n\nWhenever you see **ARTHRO-**, think of where bones **meet** and **move** — your **JOINTS**!"
+  },
+  "root-6": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"nephro-\" refers to which organ?",
+    "answers": {
+      "A": "Liver",
+      "B": "Kidney",
+      "C": "Heart",
+      "D": "Lung"
+    },
+    "correct_answer": "B",
+    "hint": "Think of your NEPHEW - he needs his KIDNEYS to filter out the juice he drinks!",
+    "explanation": "**nephro-** means **kidney** 🫘**\n\n\n---\n\n💡 **Remember it:**\n NEPHRO- sounds like NEPHEW! Your NEPHEW needs his KIDNEYS to filter all that soda! Nephrology = study of kidneys. Nephritis = kidney inflammation. Nephrectomy = kidney removal. Whenever you see NEPHRO-, think of those bean-shaped KIDNEY filters!"
+  },
+  "root-7": {
+    "question_type": "multiplechoice",
+    "question_text": "What does the root word \"pulmo-\" mean?",
+    "answers": {
+      "A": "Liver",
+      "B": "Lungs",
+      "C": "Stomach",
+      "D": "Blood"
+    },
+    "correct_answer": "B",
+    "hint": "Think of PULMonary - that's your breathing system!",
+    "explanation": "**pulmo-** or **pulmon-** means **lung** 🫁**\n\n\n---\n\n💡 **Remember it:**\n PULMO- sounds like 'PULL-MORE' air! You PULL air into your LUNGS! Pulmonary = relating to lungs. Pulmonologist = lung doctor. Think of your lungs PULLING and PUMPING air with every breath!"
+  },
+  "root-8": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"myo-\" refers to:",
+    "answers": {
+      "A": "Bone",
+      "B": "Muscle",
+      "C": "Blood",
+      "D": "Nerve"
+    },
+    "correct_answer": "B",
+    "hint": "Think 'MY-OH!' - flexing YOUR muscles!",
+    "explanation": "**myo-** means **muscle** 💪**\n\n\n---\n\n💡 **Remember it:**\n MYO- sounds like 'MY-OH!' - flex YOUR muscles! Myocardium = heart MUSCLE. Myalgia = MUSCLE pain. Myopathy = MUSCLE disease. Whenever you see MYO-, think of MUSCLES flexing and contracting!"
+  },
+  "root-9": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"cyto-\" refer to?",
+    "answers": {
+      "A": "Skin",
+      "B": "Liver",
+      "C": "Blood",
+      "D": "Cells"
+    },
+    "correct_answer": "D",
+    "hint": "Think of CYTOplasm - the gooey stuff inside CELLS!",
+    "explanation": "**cyto-** means **cell** 🔬**\n\n\n---\n\n💡 **Remember it:**\n CYTO- sounds like 'SIGHT-OH' - you need a microscope to SIGHT cells! Cytology = study of cells. Cytoplasm = cell contents. Leukocyte = white blood CELL. Whenever you see CYTO-, think of the tiny building blocks - CELLS!"
+  },
+  "root-10": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"cardio-\" refer to?",
+    "answers": {
+      "A": "Heart",
+      "B": "Lung",
+      "C": "Blood",
+      "D": "Vein"
+    },
+    "correct_answer": "A",
+    "hint": "Think of CARDIO workout - gets your HEART pumping!",
+    "explanation": "**cardio-** means **heart** ❤️**\n\n\n---\n\n💡 **Remember it:**\n CARDIO exercise gets your HEART racing! Cardiology = study of the heart. Cardiomyopathy = heart muscle disease. Tachycardia = fast heart rate. Whenever you see CARDIO-, think of that pump in your chest beating - your HEART!"
+  },
+  "root-11": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"rhino-\" refers to:",
+    "answers": {
+      "A": "Ear",
+      "B": "Throat",
+      "C": "Nose",
+      "D": "Eye"
+    },
+    "correct_answer": "C",
+    "hint": "Think of a RHINO - what's the most obvious feature on its face?",
+    "explanation": "**rhino-** means **nose** 👃**\n\n\n---\n\n💡 **Remember it:**\n Think of a RHINOCEROS - that big HORN coming out of its NOSE! Rhinitis = nose inflammation (stuffy nose). Rhinoplasty = nose job. Rhinorrhea = runny nose. Whenever you see RHINO-, picture that rhino's giant NOSE horn!"
+  },
+  "root-12": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"encephalo-\" refers to:",
+    "answers": {
+      "A": "Brain",
+      "B": "Skull",
+      "C": "Spine",
+      "D": "Nerve"
+    },
+    "correct_answer": "A",
+    "hint": "Think of it as 'EN-CEPHALO' - IN your head is your BRAIN!",
+    "explanation": "**encephalo-** means **brain** 🧠**\n\n\n---\n\n💡 **Remember it:**\n ENCEPHALO- = 'IN-CEPHALON' (IN your head)! Encephalitis = brain inflammation. Encephalopathy = brain disease. EEG (electroENCEPHALOgram) = recording brain waves. Whenever you see ENCEPHALO-, think of what's INSIDE your skull - your BRAIN!"
+  },
+  "root-13": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"chole-\" or \"cholo-\" refer to?",
+    "answers": {
+      "A": "Blood",
+      "B": "Kidney",
+      "C": "Bile",
+      "D": "Liver"
+    },
+    "correct_answer": "C",
+    "hint": "Think of CHOLEsterol - that fatty stuff in your BILE!",
+    "explanation": "**chole-** or **cholo-** means **bile** or **gall** 💛**\n\n\n---\n\n💡 **Remember it:**\n CHOLE- sounds like CHOLESTEROL - found in BILE! Cholecystitis = gallbladder inflammation (stores bile). Cholesterol = fatty substance in bile. Bile is that greenish-yellow digestive fluid your liver makes!"
+  },
+  "root-14": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"entero-\" refers to:",
+    "answers": {
+      "A": "Stomach",
+      "B": "Intestines",
+      "C": "Liver",
+      "D": "Pancreas"
+    },
+    "correct_answer": "B",
+    "hint": "**Quiz Hint**\n**\nThink of the food you’re **ENTERING**  **\n— it travels through your *long, winding intestines!*",
+    "explanation": "## Prefix: **entero-**\n**\n\n**Meaning:** **intestines** or **small intestine** 🌀**\n\n\n---\n\n### 💡 Remember it:\n\n**ENTERO-** sounds like **ENTER** — food ENTERS and travels through those long, twisty **INTESTINES!**\n**\n\n- Think: that long tube where food **enters** and gets **digested**.  **\n\n- Picture the path: **stomach ➜ small intestine ➜ intestines**.**\n\n\n---\n\n### Examples\n\n\n- **Gastroenterology** — study of the stomach and intestines.  **\n\n- **Enteritis** — inflammation of the intestine."
+  },
+  "root-15": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"ocul-\" or \"ophthalmo-\" refers to:",
+    "answers": {
+      "A": "Ear",
+      "B": "Nose",
+      "C": "Mouth",
+      "D": "Eye"
+    },
+    "correct_answer": "D",
+    "hint": "Think of OCULAR vision or an OPHTHALMOlogist - the EYE doctor!",
+    "explanation": "**ocul-** or **ophthalmo-** means **eye** 👁️**\n\n\n---\n\n💡 **Remember it:**\n OCULAR sounds like 'OH-COOL-ARE' your eyes! Or think of binoculars - for your EYES! Ophthalmologist = eye doctor. Intraocular = inside the eye. Whenever you see OCUL- or OPHTHALMO-, think of those peepers - your EYES!"
+  },
+  "root-16": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"crani-\" refers to:",
+    "answers": {
+      "A": "Brain",
+      "B": "Skull",
+      "C": "Spine",
+      "D": "Neck"
+    },
+    "correct_answer": "B",
+    "hint": "Think of CRANIUM - your hard SKULL protecting your brain!",
+    "explanation": "**crani-** or **cranio-** means **skull** 💀**\n\n\n---\n\n💡 **Remember it:**\n CRANI- = CRANIUM! That hard SKULL bone protecting your brain! Craniotomy = cutting into the skull. Craniofacial = relating to skull and face. Think of CRANIberries - hard like your SKULL!"
+  },
+  "root-17": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"thoraco-\" refers to:",
+    "answers": {
+      "A": "Abdomen",
+      "B": "Pelvis",
+      "C": "Chest",
+      "D": "Back"
+    },
+    "correct_answer": "C",
+    "hint": "Think of THOR - the superhero with the mighty CHEST!",
+    "explanation": "**thoraco-** or **thorax** means **chest** 🫁**\n\n\n---\n\n💡 **Remember it:**\n THORACO- sounds like THOR! Picture THOR puffing out his mighty CHEST! Thoracic cavity = chest cavity (contains heart and lungs). Thoracotomy = chest surgery. Whenever you see THORACO-, think of that barrel CHEST!"
+  },
+  "root-18": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"pneumo-\" refers to:",
+    "answers": {
+      "A": "Lung or air",
+      "B": "Blood",
+      "C": "Heart",
+      "D": "Liver"
+    },
+    "correct_answer": "A",
+    "hint": "Think of PNEUMONIA - a LUNG infection!",
+    "explanation": "**pneumo-** or **pneumon-** means **lung** or **air** 🫁**\n\n\n---\n\n💡 **Remember it:**\n PNEUMO- = PNEUMONIA (LUNG disease)! Pneumothorax = air in chest cavity (collapsed lung). Pneumonia = lung infection. Think of BREATHING air into your LUNGS - that's PNEUMO!"
+  },
+  "root-19": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"reno-\" refers to which organ?",
+    "answers": {
+      "A": "Liver",
+      "B": "Heart",
+      "C": "Kidney",
+      "D": "Spleen"
+    },
+    "correct_answer": "C",
+    "hint": "RENO sounds like RENAL - your KIDNEY system!",
+    "explanation": "**reno-** means **kidney** 🫘**\n\n\n---\n\n💡 **Remember it:**\n RENO- sounds like RENAL (kidney)! Think of the city RENO - you need your KIDNEYS to filter out the casino drinks! Renal failure = kidney failure. Renovascular = relating to kidney blood vessels. Just another word for KIDNEY (like nephro-)!"
+  },
+  "root-20": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"hystero-\" or \"utero-\" refer to?",
+    "answers": {
+      "A": "Ovary",
+      "B": "Uterus",
+      "C": "Fallopian tube",
+      "D": "Cervix"
+    },
+    "correct_answer": "B",
+    "hint": "Think of a HYSTERectomy - removing the UTERUS!",
+    "explanation": "**hystero-** or **utero-** means **uterus** or **womb** 🤰**\n\n\n---\n\n💡 **Remember it:**\n HYSTERO- in HYSTERectomy = removal of UTERUS! UTERO- literally has 'UTER-US' in it! The uterus is where babies grow. Hysterectomy = uterus removal. Intrauterine = inside the uterus. Think of the baby's first home - the UTERUS!"
+  },
+  "root-21": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"colpo-\" refers to:",
+    "answers": {
+      "A": "Colon",
+      "B": "Uterus",
+      "C": "Vagina",
+      "D": "Bladder"
+    },
+    "correct_answer": "C",
+    "hint": "Don't confuse with COLON! Think of a COLPOscopy exam.",
+    "explanation": "**colpo-** means **vagina** 🔬**\n\n\n---\n\n💡 **Remember it:**\n COLPO- sounds like COAL-POT (a passageway)! Colposcopy = visual exam of vagina and cervix. Colpotomy = incision into vaginal wall. Don't confuse with COLO- (colon) - this is specifically the VAGINAL canal!"
+  },
+  "root-22": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"angio-\" refers to:",
+    "answers": {
+      "A": "Bone",
+      "B": "Muscle",
+      "C": "Nerve",
+      "D": "Blood vessel"
+    },
+    "correct_answer": "D",
+    "hint": "Think of an ANGIOgram - imaging of BLOOD VESSELS!",
+    "explanation": "**angio-** means **blood vessel** or **vessel** 🩸**\n\n\n---\n\n💡 **Remember it:**\n ANGIO- sounds like 'ANGLE-OF' tubes! Your blood vessels ANGLE all through your body! Angiogram = x-ray of blood vessels. Angioplasty = repair of blood vessel. Angiology = study of blood vessels. Think of those tubes carrying blood - VESSELS!"
+  },
+  "root-23": {
+    "question_type": "multiplechoice",
+    "question_text": "The prefix \"oophor-\" refers to:",
+    "answers": {
+      "A": "Uterus",
+      "B": "Cervix",
+      "C": "Ovary",
+      "D": "Fallopian tube"
+    },
+    "correct_answer": "C",
+    "hint": "Think 'OOH-FOR' eggs - where do eggs come from? OVARIES!",
+    "explanation": "**oophor-** means **ovary** 🥚**\n\n\n---\n\n💡 **Remember it:**\n OOPHOR- sounds like 'OOH-FOR' eggs! OVARIES make eggs! Oophorectomy = ovary removal. Oophoritis = ovary inflammation. Think of those egg-producing organs - the OVARIES!"
+  },
+  "root-24": {
+    "question_type": "truefalse",
+    "question_text": "\"Hepato-\" is a prefix related to the liver.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of HEPAtitis - LIVER inflammation!",
+    "explanation": "**TRUE!** ✅ **hepato-** means **liver** 🫀**\n\n\n---\n\n💡 **Remember it:**\n HEPATO- = HEP-A! Hepatitis A = LIVER inflammation! Hepatology = study of liver. Hepatomegaly = enlarged liver. Think of the liver as your body's FILTER - and HEPATO- is the word for it!"
+  },
+  "root-25": {
+    "question_type": "truefalse",
+    "question_text": "\"Osteo-\" refers to something related to bones.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of OSTEOporosis - weak, brittle BONES!",
+    "explanation": "**TRUE!** ✅ **osteo-** means **bone** 🦴**\n\n\n---\n\n💡 **Remember it:**\n OSTEO- = OH-STEE-OH (bones)! Osteoporosis = porous, weak bones. Osteopathy = bone disease. Osteology = study of bones. Think of your skeleton - that's all OSTEO!"
+  },
+  "root-26": {
+    "question_type": "truefalse",
+    "question_text": "The prefix \"path-\" or \"patho-\" means disease.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a PATHOgen - something that causes DISEASE!",
+    "explanation": "**TRUE!** ✅ **path-** or **patho-** means **disease** or **suffering** 🤒**\n\n\n---\n\n💡 **Remember it:**\n PATHO- = PATHOGEN (disease-causing germ)! Pathology = study of disease. Pathologist = doctor who studies diseases. Neuropathy = nerve disease. Whenever you see PATHO-, something's SICK or DISEASED!"
+  },
+  "root-27": {
+    "question_type": "truefalse",
+    "question_text": "\"Cardi-\" and \"cardio-\" both refer to the heart.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a CARDIologist - the HEART doctor!",
+    "explanation": "**TRUE!** ✅ Both **cardi-** and **cardio-** mean **heart** ❤️**\n\n\n---\n\n💡 **Remember it:**\n CARDI/CARDIO = that CARD-shaped pump in your chest! Cardiologist = heart doctor. Cardiac arrest = heart stops. Pericardium = sac around the heart. Same meaning, just slightly different spelling!"
+  },
+  "root-28": {
+    "question_type": "truefalse",
+    "question_text": "\"Spondyl-\" refers to the ribs.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "Think of your SPINE - those stacked vertebrae!",
+    "explanation": "**FALSE!** ❌ **spondyl-** means **vertebrae** or **spine**, NOT ribs!**\n\n\n---\n\n💡 **Remember it:**\n SPONDYL- sounds like 'SPONDY-LONG' - your LONG SPINE! Spondylitis = vertebrae inflammation. Spondylolisthesis = vertebra slipping. Think of those stacked bones running down your back - your SPINE/VERTEBRAE, not your ribs!"
+  }
+}

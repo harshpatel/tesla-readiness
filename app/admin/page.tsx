@@ -97,6 +97,16 @@ export default async function AdminPage() {
       <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <main className="flex-1 p-4">
+        {/* Quick Actions */}
+        <div className="mb-6 flex gap-4">
+          <a
+            href="/admin/quizzes"
+            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
+          >
+            📝 View Quiz Data (Source of Truth)
+          </a>
+        </div>
+
         <AdminTable
           users={allUsers || []}
           sections={sections || []}

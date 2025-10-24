@@ -1,0 +1,141 @@
+{
+  "abbr-1": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"BP\" stand for?",
+    "answers": {
+      "A": "Body Position",
+      "B": "Blood Pressure",
+      "C": "Body Part",
+      "D": "Breathing Pattern"
+    },
+    "correct_answer": "B",
+    "hint": "Think of a BP cuff squeezing your arm to measure something!",
+    "explanation": "**BP** = **Blood Pressure** 🩺**\n\n\n---\n\n💡 **Remember it:**\n BP = the pressure in your BLOOD vessels! That cuff on your arm measures how hard your blood is pushing against artery walls. Normal BP is around 120/80. Too high (hypertension) or too low (hypotension) can be dangerous!"
+  },
+  "abbr-2": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"HR\" stand for?",
+    "answers": {
+      "A": "Heart Rate",
+      "B": "Hospital Record",
+      "C": "Health Report",
+      "D": "Human Resources"
+    },
+    "correct_answer": "A",
+    "hint": "Think of checking your pulse - counting how fast something beats!",
+    "explanation": "**HR** = **Heart Rate** ❤️**\n\n\n---\n\n💡 **Remember it:**\n HR = how fast your HEART is RACING! Measured in beats per minute (bpm). Normal resting HR is 60-100 bpm. Feel your pulse on your wrist - that's your HR!"
+  },
+  "abbr-3": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"CT\" stand for in medical imaging?",
+    "answers": {
+      "A": "Clinical Test",
+      "B": "Central Tissue",
+      "C": "Computed Tomography",
+      "D": "Cardiac Therapy"
+    },
+    "correct_answer": "C",
+    "hint": "Think of a CAT scan - uses a COMPUTER to create cross-section images!",
+    "explanation": "**CT** = **Computed Tomography** (also called CAT scan) 🖥️**\n\n\n---\n\n💡 **Remember it:**\n CT = COMPUTER + TOMO (slices)! A CT scan uses x-rays and a COMPUTER to create detailed slice-by-slice images of your body. Like taking photos of bread slices to see what's inside the loaf!"
+  },
+  "abbr-4": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"MRI\" stand for?",
+    "answers": {
+      "A": "Medical Radiology Imaging",
+      "B": "Muscle Resonance Image",
+      "C": "Multiple Radio Images",
+      "D": "Magnetic Resonance Imaging"
+    },
+    "correct_answer": "D",
+    "hint": "Think of powerful MAGNETS creating detailed images!",
+    "explanation": "**MRI** = **Magnetic Resonance Imaging** 🧲**\n\n\n---\n\n💡 **Remember it:**\n MRI = MAGNETS Resonating Inside! Uses powerful magnets (not radiation!) to create super detailed images of soft tissues. No metal allowed - those magnets are STRONG! Great for seeing brain, muscles, and organs!"
+  },
+  "abbr-5": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"NPO\" mean?",
+    "answers": {
+      "A": "Not Previously Ordered",
+      "B": "Nothing by mouth",
+      "C": "Normal Patient Order",
+      "D": "No Pain Observed"
+    },
+    "correct_answer": "B",
+    "hint": "From Latin 'nil per os' - no food or drink before surgery!",
+    "explanation": "**NPO** = **Nothing by mouth** (from Latin: nil per os) 🚫**\n\n\n---\n\n💡 **Remember it:**\n NPO = NO PIZZA OR anything! Can't eat or drink - usually before surgery or procedures. Empty stomach prevents choking/aspiration during anesthesia. If you see NPO, the patient is FASTING!"
+  },
+  "abbr-6": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"PRN\" mean?",
+    "answers": {
+      "A": "As needed",
+      "B": "Prior to night",
+      "C": "Patient requires nurse",
+      "D": "Prescription renewal needed"
+    },
+    "correct_answer": "A",
+    "hint": "From Latin 'pro re nata' - take medicine when you need it, not on a schedule!",
+    "explanation": "**PRN** = **As needed** (from Latin: pro re nata) 💊**\n\n\n---\n\n💡 **Remember it:**\n PRN = PAIN? RELIEF NOW! Take the medicine AS NEEDED, not on a set schedule. Like taking Tylenol when your head hurts, not every 4 hours automatically. It's 'as-needed' medicine!"
+  },
+  "abbr-7": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"STAT\" mean?",
+    "answers": {
+      "A": "Standard Test",
+      "B": "Stop All Treatment",
+      "C": "Immediately",
+      "D": "Statistical Analysis"
+    },
+    "correct_answer": "C",
+    "hint": "From Latin 'statim' - think of medical emergency TV shows: 'We need that STAT!'",
+    "explanation": "**STAT** = **Immediately** or **right now** (from Latin: statim) ⚡**\n\n\n---\n\n💡 **Remember it:**\n STAT = START-AT-TOP priority! When doctors yell 'I need that blood work STAT!' they mean RIGHT NOW, drop everything else! It's URGENT, EMERGENCY, no delays! Like when you're 'standing' (stat) still waiting - except you CAN'T wait!"
+  },
+  "abbr-8": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"IV\" stand for?",
+    "answers": {
+      "A": "Intravenous",
+      "B": "Internal Ventilation",
+      "C": "Intensive Visit",
+      "D": "Invasive Valve"
+    },
+    "correct_answer": "A",
+    "hint": "Think of a needle in your VEIN delivering fluids directly into your blood!",
+    "explanation": "**IV** = **Intravenous** (within the vein) 💉**\n\n\n---\n\n💡 **Remember it:**\n IV = IN VEIN! INTRA = inside, VENOUS = vein. That IV drip puts medicine/fluids directly INTO your VEIN! Fast delivery straight to your bloodstream. Think of it like an express highway directly into your blood!"
+  },
+  "abbr-9": {
+    "question_type": "multiplechoice",
+    "question_text": "What does \"ICU\" stand for?",
+    "answers": {
+      "A": "Internal Care Unit",
+      "B": "Intensive Care Unit",
+      "C": "Immediate Clinical Unit",
+      "D": "Inpatient Cardiac Unit"
+    },
+    "correct_answer": "B",
+    "hint": "### Intensive Care\n\n\n*For the **most serious** patients.*\n**INTENSIVE** monitoring — 24/7.",
+    "explanation": "### ICU\n\n\n**ICU = Intensive Care Unit** 🏥  **\nA specialized hospital unit for patients who need the most intensive monitoring and treatment.\n\n\n---\n\n---\n\n💡 **Remember it:**\n\n**\n\n- **ICU = “I SEE YOU” constantly!**\n**\n- 24/7 **intensive** monitoring for the sickest patients  **\n\n- Constant nurse attention\n\n- Lots of machines\n\n- Critical care\n\n- If someone’s in the ICU, they need **INTENSE** medical attention!"
+  },
+  "abbr-10": {
+    "question_type": "truefalse",
+    "question_text": "\"DNR\" stands for Do Not Resuscitate.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "## A Patient’s Choice\n\n*About CPR and life‑saving measures*\n\n\n- **Ask early.**  **\n  Know the patient’s goals and values.\n\n\n- **Explain clearly.**  **\n  Discuss risks, benefits, and likely outcomes of CPR.\n\n\n- **Respect autonomy.**  **\n  Honor advance directives and DNR orders.\n\n\n- **Document and share.**  **\n  Make the plan visible to the care team.\n\n\n- **Revisit as needed.**  **\n  Preferences may change with the patient’s condition.",
+    "explanation": "# TRUE! ✅\n\n## DNR = Do Not Resuscitate 🕊️\n\n\n**Definition:**  **\nA DNR (Do Not Resuscitate) is a serious medical order that honors a patient’s legal choice to not receive CPR or other life-saving measures if their heart or breathing stops. It respects end-of-life wishes—letting nature take its course.\n\n\n---\n\n---\n\n💡 **Remember it:**\n\n**\n\n- **DNR = _DON'T NEED REVIVAL!_**\n**\n- A patient’s legal choice to **not receive CPR** or other life-saving measures if their heart stops.**\n\n- A **serious medical order** respecting end-of-life wishes.**\n\n- DNR means **“let nature take its course.”**"
+  },
+  "abbr-11": {
+    "question_type": "truefalse",
+    "question_text": "\"OR\" stands for Operating Room.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "Where do surgeons perform operations?",
+    "explanation": "**TRUE!** ✅ **OR** = **Operating Room** 🏥**\n\n\n---\n\n💡 **Remember it:**\n OR = where they OPERATE! The sterile room where surgeries happen. Bright lights, surgical tools, anesthesiologist, surgical team. When someone says 'patient's in the OR,' they're having surgery right now!"
+  }
+}
