@@ -22,6 +22,7 @@ interface Module {
   icon: string;
   sectionSlug: string;
   isPublished: boolean;
+  isLocked: boolean;
   contentItems: ContentItem[];
   progress?: {
     completedItems: number;
@@ -55,26 +56,30 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
   // Automatically expand sections and modules based on current path
   const getInitialExpandedState = () => {
     const pathParts = pathname.split('/').filter(Boolean);
-    const currentSection = pathParts[0]; // e.g., 'phase1'
     const currentModule = pathParts[1]; // e.g., 'medical-terminology'
     
-    // Always expand published sections
+    // Always expand ALL published sections by default
     const expandedSectionSet = new Set(sections.filter(s => s.isPublished).map(s => s.slug));
     
-    // Also expand the current section if it exists
-    if (currentSection) {
-      expandedSectionSet.add(currentSection);
-    }
+    // Always expand ALL published, unlocked modules by default
+    const expandedModuleSet = new Set<string>();
+    sections.forEach(section => {
+      if (section.isPublished) {
+        section.modules.forEach(module => {
+          if (module.isPublished && !module.isLocked) {
+            expandedModuleSet.add(module.slug);
+          }
+        });
+      }
+    });
     
-    return { expandedSections: expandedSectionSet, currentModule };
+    return { expandedSections: expandedSectionSet, expandedModules: expandedModuleSet };
   };
   
-  const { expandedSections: initialSections, currentModule } = getInitialExpandedState();
+  const { expandedSections: initialSections, expandedModules: initialModules } = getInitialExpandedState();
   
   const [expandedSections, setExpandedSections] = useState<Set<string>>(initialSections);
-  const [expandedModules, setExpandedModules] = useState<Set<string>>(
-    currentModule ? new Set([currentModule]) : new Set()
-  );
+  const [expandedModules, setExpandedModules] = useState<Set<string>>(initialModules);
 
   const toggleSection = (sectionSlug: string) => {
     setExpandedSections((prev) => {
@@ -130,132 +135,138 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
           flex flex-col overflow-y-auto
         `}
       >
-        <div className="p-4 space-y-2">
+        <div className="p-4 space-y-3">
           {sections.map((section) => {
             const isSectionExpanded = expandedSections.has(section.slug);
             const hasModules = section.modules.length > 0;
 
             return (
-              <div key={section.id}>
-                {/* Section Header */}
+              <div key={section.id} className="space-y-2">
+                {/* Section Header - Prominent Card */}
                 {section.isPublished ? (
-                  <button
-                    onClick={() => hasModules && toggleSection(section.slug)}
-                    className="w-full p-4 rounded-xl bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 text-left hover:shadow-md transition-all"
-                  >
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-1">
-                          <span className="text-2xl">{section.icon}</span>
-                          <h2 className="text-base font-bold text-[#1a1a1a]">
-                            {section.title}
-                          </h2>
+                  <div className="bg-white rounded-xl border-2 border-gray-200 shadow-sm overflow-hidden">
+                    <button
+                      onClick={() => hasModules && toggleSection(section.slug)}
+                      className="w-full p-4 text-left hover:bg-gray-50 transition-all"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-xl">
+                            {section.icon}
+                          </div>
+                          <div>
+                            <h2 className="text-base font-bold text-[#1a1a1a] leading-tight">
+                              {section.title}
+                            </h2>
+                            {section.progress && section.progress.totalModules > 0 && (
+                              <p className="text-xs text-gray-500 mt-0.5">
+                                {section.progress.completedModules} / {section.progress.totalModules} modules
+                              </p>
+                            )}
+                          </div>
                         </div>
-                        {section.progress && section.progress.totalModules > 0 && (
-                          <p className="text-xs text-gray-600 ml-8">
-                            {section.progress.completedModules} of {section.progress.totalModules} completed
-                          </p>
+                        {hasModules && (
+                          <span
+                            className="text-gray-400 text-base transition-transform duration-200"
+                            style={{ transform: isSectionExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
+                          >
+                            ▼
+                          </span>
                         )}
                       </div>
-                      {hasModules && (
-                        <span
-                          className="text-gray-400 text-lg ml-2 transition-transform duration-200"
-                          style={{ transform: isSectionExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
-                        >
-                          ▼
-                        </span>
-                      )}
-                    </div>
-                  </button>
-                ) : (
-                  <div className="p-3 rounded-lg border border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-lg flex-shrink-0">{section.icon}</span>
-                      <span className="font-medium text-sm text-gray-600 flex-1">
-                        {section.title}
-                      </span>
-                      <span className="text-xs text-gray-400">Coming Soon</span>
-                    </div>
-                  </div>
-                )}
+                    </button>
 
-                {/* Modules (collapsible) */}
-                {section.isPublished && isSectionExpanded && hasModules && (
-                  <div className="pl-3 mt-2 border-l-2 border-blue-200">
-                    <div className="ml-3 space-y-2">
-                      {section.modules.map((module) => {
-                        const isModuleExpanded = expandedModules.has(module.slug);
-                        const hasContent = module.contentItems.length > 0;
-                        const progressPercent = module.progress?.progressPercent || 0;
+                    {/* Modules Container - Visually contained within section */}
+                    {section.isPublished && isSectionExpanded && hasModules && (
+                      <div className="px-3 pb-3 space-y-2">
+                        {section.modules.map((module) => {
+                          const isModuleExpanded = expandedModules.has(module.slug);
+                          const hasContent = module.contentItems.length > 0;
+                          const progressPercent = module.progress?.progressPercent || 0;
 
-                        return (
-                          <div key={module.id}>
-                            {/* Module Item */}
-                            <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${!module.isPublished ? 'opacity-60' : ''}`}>
-                              <div className="flex items-center">
-                                {module.isPublished ? (
-                                  <Link
-                                    href={`/${section.slug}/${module.slug}`}
-                                    onClick={() => setIsOpen(false)}
-                                    className="flex-1 p-3 hover:bg-blue-50 transition-colors"
-                                  >
-                                    <div className="flex items-center gap-2 mb-1">
-                                      <span className="text-lg">{module.icon}</span>
-                                      <span className="font-medium text-sm text-gray-900 flex-1">
-                                        {module.title}
-                                      </span>
-                                      {progressPercent === 100 && (
-                                        <span className="text-sm text-green-600">✓</span>
-                                      )}
-                                    </div>
-                                    {module.progress && module.progress.totalItems > 0 && (
-                                      <div className="ml-7">
-                                        <div className="flex items-center justify-between text-xs mb-1">
-                                          <span className="text-gray-600">
-                                            {module.progress.completedItems} / {module.progress.totalItems}
-                                          </span>
-                                          <span className="text-gray-600">{progressPercent}%</span>
-                                        </div>
-                                        <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                                          <div
-                                            className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
-                                            style={{ width: `${progressPercent}%` }}
-                                          />
+                          return (
+                            <div key={module.id} className={`bg-gray-50 rounded-lg border border-gray-200 overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
+                              {/* Module Header */}
+                              <div>
+                                {module.isPublished && !module.isLocked ? (
+                                  <div className="flex items-stretch">
+                                    <Link
+                                      href={`/${section.slug}/${module.slug}`}
+                                      onClick={() => setIsOpen(false)}
+                                      className="flex-1 p-3 hover:bg-white transition-colors"
+                                    >
+                                      <div className="flex items-center gap-2.5">
+                                        <span className="text-xl">{module.icon}</span>
+                                        <div className="flex-1">
+                                          <div className="flex items-center gap-2">
+                                            <span className="font-semibold text-sm text-gray-900">
+                                              {module.title}
+                                            </span>
+                                            {progressPercent === 100 && (
+                                              <span className="text-green-600 text-sm">✓</span>
+                                            )}
+                                          </div>
+                                          {module.progress && module.progress.totalItems > 0 && (
+                                            <div className="mt-1.5">
+                                              <div className="flex items-center justify-between text-xs mb-1">
+                                                <span className="text-gray-600">
+                                                  {module.progress.completedItems} / {module.progress.totalItems} items
+                                                </span>
+                                                <span className="text-gray-600 font-medium">{progressPercent}%</span>
+                                              </div>
+                                              <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                                                <div
+                                                  className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] rounded-full transition-all"
+                                                  style={{ width: `${progressPercent}%` }}
+                                                />
+                                              </div>
+                                            </div>
+                                          )}
                                         </div>
                                       </div>
+                                    </Link>
+                                    {hasContent && (
+                                      <button
+                                        onClick={() => toggleModule(module.slug)}
+                                        className="px-3 border-l border-gray-200 hover:bg-gray-50 transition-colors flex items-center"
+                                      >
+                                        <span
+                                          className="text-gray-400 text-sm transition-transform duration-200 inline-block"
+                                          style={{ transform: isModuleExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
+                                        >
+                                          ▼
+                                        </span>
+                                      </button>
                                     )}
-                                  </Link>
-                                ) : (
-                                  <div className="flex-1 p-3 cursor-not-allowed">
-                                    <div className="flex items-center gap-2">
-                                      <span className="text-lg">{module.icon}</span>
-                                      <span className="font-medium text-sm text-gray-600 flex-1">
+                                  </div>
+                                ) : module.isLocked ? (
+                                  <div className="p-3 cursor-not-allowed">
+                                    <div className="flex items-center gap-2.5">
+                                      <span className="text-xl">{module.icon}</span>
+                                      <span className="font-semibold text-sm text-gray-600 flex-1">
                                         {module.title}
                                       </span>
-                                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                                      <span className="text-gray-400 text-base">🔒</span>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="p-3">
+                                    <div className="flex items-center gap-2.5">
+                                      <span className="text-xl">{module.icon}</span>
+                                      <span className="font-semibold text-sm text-gray-600 flex-1">
+                                        {module.title}
+                                      </span>
+                                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-md">
                                         Coming Soon
                                       </span>
                                     </div>
                                   </div>
                                 )}
-                                {hasContent && module.isPublished && (
-                                  <button
-                                    onClick={() => toggleModule(module.slug)}
-                                    className="px-3 py-3 hover:bg-gray-100 transition-colors"
-                                  >
-                                    <span
-                                      className="text-gray-400 text-sm transition-transform duration-200 inline-block"
-                                      style={{ transform: isModuleExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
-                                    >
-                                      ▼
-                                    </span>
-                                  </button>
-                                )}
                               </div>
 
-                              {/* Content Items (nested) */}
+                              {/* Content Items - Nested inside module */}
                               {isModuleExpanded && hasContent && (
-                                <div className="border-t border-gray-200 bg-gray-50 p-2 space-y-1">
+                                <div className="border-t border-gray-200 bg-white p-2.5 space-y-1">
                                   {module.contentItems.map((item) => {
                                     const itemHref = `/${section.slug}/${module.slug}/${item.type}/${item.slug}`;
                                     const isActive = pathname === itemHref;
@@ -267,18 +278,20 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                         href={itemHref}
                                         onClick={() => setIsOpen(false)}
                                         className={`
-                                          block px-3 py-2 rounded-lg transition-all text-sm
+                                          block px-3 py-2.5 rounded-lg transition-all text-sm
                                           ${isActive
-                                            ? 'bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white shadow-sm'
-                                            : 'hover:bg-white text-gray-700'
+                                            ? 'bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white shadow-md scale-[1.02]'
+                                            : 'hover:bg-white hover:shadow-sm text-gray-700'
                                           }
                                         `}
                                       >
-                                        <div className="flex items-center gap-2">
+                                        <div className="flex items-center gap-2.5">
                                           <span className="text-base">{item.icon}</span>
-                                          <span className="flex-1 font-medium">{item.title}</span>
+                                          <span className={`flex-1 ${isActive ? 'font-semibold' : 'font-medium'}`}>
+                                            {item.title}
+                                          </span>
                                           {isCompleted && (
-                                            <span className={`text-xs ${isActive ? 'text-white' : 'text-green-600'}`}>
+                                            <span className={`text-sm ${isActive ? 'text-white' : 'text-green-600'}`}>
                                               ✓
                                             </span>
                                           )}
@@ -289,9 +302,19 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                 </div>
                               )}
                             </div>
-                          </div>
-                        );
-                      })}
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="p-3 rounded-xl border border-gray-200 bg-gray-50 opacity-60">
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-lg flex-shrink-0">{section.icon}</span>
+                      <span className="font-medium text-sm text-gray-600 flex-1">
+                        {section.title}
+                      </span>
+                      <span className="text-xs text-gray-400">Coming Soon</span>
                     </div>
                   </div>
                 )}
