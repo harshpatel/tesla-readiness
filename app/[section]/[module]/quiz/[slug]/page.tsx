@@ -9,6 +9,7 @@ import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
 import medicalTerminologyQuizData from '@/public/data/medical-terminology-questions.json';
 import introToMriQuizData from '@/public/data/introduction-to-mri-questions.json';
+import generalAnatomyPhysiologyQuizData from '@/public/data/general-anatomy-physiology-questions.json';
 
 interface PageProps {
   params: Promise<{
@@ -22,6 +23,7 @@ interface PageProps {
 const QUIZ_DATA_MAP: Record<string, any> = {
   'medical-terminology': medicalTerminologyQuizData,
   'introduction-to-mri': introToMriQuizData,
+  'general-anatomy-physiology': generalAnatomyPhysiologyQuizData,
 };
 
 // Icon mapping for quiz sections
@@ -32,6 +34,7 @@ const QUIZ_ICONS: Record<string, string> = {
   'abbreviations': '📋',
   'positioning': '🧍',
   'introduction-quiz': '📝',
+  'fundamentals': '🫀',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
