@@ -69,6 +69,53 @@ export default async function DashboardPage() {
     .eq('is_published', true);
   
   const totalContent = totalContentCount || 0;
+
+  // Fetch next incomplete content items
+  const { data: allContentItems } = await supabase
+    .from('content_items')
+    .select(`
+      id,
+      slug,
+      title,
+      description,
+      type,
+      icon,
+      order_index,
+      module:modules!inner (
+        id,
+        slug,
+        title,
+        order_index,
+        section:sections!inner (
+          id,
+          slug,
+          title,
+          order_index
+        )
+      )
+    `)
+    .eq('is_published', true)
+    .order('order_index', { ascending: true });
+
+  // Filter for incomplete items and sort by section, module, and content order
+  const sortedItems = allContentItems
+    ?.map((item: any) => ({
+      ...item,
+      sectionOrderIndex: item.module.section.order_index,
+      moduleOrderIndex: item.module.order_index,
+      isCompleted: contentProgress?.some(p => p.content_item_id === item.id) || false
+    }))
+    .sort((a: any, b: any) => {
+      if (a.sectionOrderIndex !== b.sectionOrderIndex) {
+        return a.sectionOrderIndex - b.sectionOrderIndex;
+      }
+      if (a.moduleOrderIndex !== b.moduleOrderIndex) {
+        return a.moduleOrderIndex - b.moduleOrderIndex;
+      }
+      return a.order_index - b.order_index;
+    });
+
+  const nextIncompleteItems = sortedItems?.filter((item: any) => !item.isCompleted).slice(0, 3) || [];
   
   // Calculate overall stats
   const completedSections = sectionProgress?.filter((p) => p.progress_percent === 100).length || 0;
@@ -136,48 +183,61 @@ export default async function DashboardPage() {
             ))}
           </div>
 
-          {/* Quick Access to Sections */}
+          {/* What to Complete Next */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Your Learning Path</h2>
+            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">What to complete next:</h2>
             <div className="grid gap-4">
-              {sections?.map((section) => {
-                const progress = sectionProgress?.find((p) => p.section_id === section.id);
-                const progressPercent = progress?.progress_percent || 0;
+              {nextIncompleteItems.length > 0 ? (
+                nextIncompleteItems.map((item: any) => {
+                  const contentTypeLabel = item.type === 'quiz' ? '📝 Quiz' : 
+                                          item.type === 'video' ? '🎥 Video' : 
+                                          item.type === 'reading' ? '📖 Reading' : 
+                                          '📄 Content';
+                  
+                  const itemUrl = `/${item.module.section.slug}/${item.module.slug}/${item.type}/${item.slug}`;
 
-                return (
-                  <Link
-                    key={section.id}
-                    href={`/${section.slug}`}
-                    className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
-                  >
-                    <div className="flex items-center gap-4">
-                      <span className="text-4xl">{section.icon}</span>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-[#1a1a1a] mb-1">
-                          {section.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 mb-2">{section.description}</p>
-                        {progress && (
-                          <div className="flex items-center gap-2">
-                            <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
-                              <div
-                                className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
-                                style={{ width: `${progressPercent}%` }}
-                              />
-                            </div>
-                            <span className="text-xs font-medium text-gray-600">{progressPercent}%</span>
+                  return (
+                    <Link
+                      key={item.id}
+                      href={itemUrl}
+                      className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
+                    >
+                      <div className="flex items-center gap-4">
+                        <span className="text-4xl">{item.icon}</span>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                              {item.module.section.title} → {item.module.title}
+                            </span>
+                            <span className="text-xs font-medium text-[#0A84FF]">
+                              {contentTypeLabel}
+                            </span>
                           </div>
-                        )}
+                          <h3 className="text-xl font-semibold text-[#1a1a1a] mb-1">
+                            {item.title}
+                          </h3>
+                          <p className="text-sm text-gray-600">{item.description}</p>
+                        </div>
+                        <div className="text-[#0A84FF]">
+                          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </div>
                       </div>
-                      <div className="text-[#0A84FF]">
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })}
+                    </Link>
+                  );
+                })
+              ) : (
+                <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100 text-center">
+                  <span className="text-5xl mb-4 block">🎉</span>
+                  <h3 className="text-xl font-semibold text-[#1a1a1a] mb-2">
+                    All caught up!
+                  </h3>
+                  <p className="text-gray-600">
+                    You've completed all available content. Great work!
+                  </p>
+                </div>
+              )}
             </div>
           </div>
           </div>
