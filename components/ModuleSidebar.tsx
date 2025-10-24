@@ -103,6 +103,7 @@ export default async function ModuleSidebar() {
         title: module.title,
         icon: module.icon || '📚',
         sectionSlug: section.slug,
+        isPublished: module.is_published,
         contentItems: itemsWithProgress,
         progress: moduleProgressData
           ? {

@@ -21,6 +21,7 @@ interface Module {
   title: string;
   icon: string;
   sectionSlug: string;
+  isPublished: boolean;
   contentItems: ContentItem[];
   progress?: {
     completedItems: number;
@@ -121,7 +122,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
       {/* Sidebar */}
       <aside
         className={`
-          fixed lg:static inset-y-0 left-0 z-40
+          fixed lg:static top-16 lg:top-0 bottom-0 left-0 z-40
           w-80 bg-white border-r border-gray-200
           transform transition-transform duration-300 ease-in-out
           lg:transform-none
@@ -190,40 +191,54 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                         return (
                           <div key={module.id}>
                             {/* Module Item */}
-                            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                            <div className={`bg-white rounded-lg border border-gray-200 overflow-hidden ${!module.isPublished ? 'opacity-60' : ''}`}>
                               <div className="flex items-center">
-                                <Link
-                                  href={`/${section.slug}/${module.slug}`}
-                                  onClick={() => setIsOpen(false)}
-                                  className="flex-1 p-3 hover:bg-blue-50 transition-colors"
-                                >
-                                  <div className="flex items-center gap-2 mb-1">
-                                    <span className="text-lg">{module.icon}</span>
-                                    <span className="font-medium text-sm text-gray-900 flex-1">
-                                      {module.title}
-                                    </span>
-                                    {progressPercent === 100 && (
-                                      <span className="text-sm text-green-600">✓</span>
-                                    )}
-                                  </div>
-                                  {module.progress && module.progress.totalItems > 0 && (
-                                    <div className="ml-7">
-                                      <div className="flex items-center justify-between text-xs mb-1">
-                                        <span className="text-gray-600">
-                                          {module.progress.completedItems} / {module.progress.totalItems}
-                                        </span>
-                                        <span className="text-gray-600">{progressPercent}%</span>
-                                      </div>
-                                      <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                                        <div
-                                          className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
-                                          style={{ width: `${progressPercent}%` }}
-                                        />
-                                      </div>
+                                {module.isPublished ? (
+                                  <Link
+                                    href={`/${section.slug}/${module.slug}`}
+                                    onClick={() => setIsOpen(false)}
+                                    className="flex-1 p-3 hover:bg-blue-50 transition-colors"
+                                  >
+                                    <div className="flex items-center gap-2 mb-1">
+                                      <span className="text-lg">{module.icon}</span>
+                                      <span className="font-medium text-sm text-gray-900 flex-1">
+                                        {module.title}
+                                      </span>
+                                      {progressPercent === 100 && (
+                                        <span className="text-sm text-green-600">✓</span>
+                                      )}
                                     </div>
-                                  )}
-                                </Link>
-                                {hasContent && (
+                                    {module.progress && module.progress.totalItems > 0 && (
+                                      <div className="ml-7">
+                                        <div className="flex items-center justify-between text-xs mb-1">
+                                          <span className="text-gray-600">
+                                            {module.progress.completedItems} / {module.progress.totalItems}
+                                          </span>
+                                          <span className="text-gray-600">{progressPercent}%</span>
+                                        </div>
+                                        <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+                                          <div
+                                            className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
+                                            style={{ width: `${progressPercent}%` }}
+                                          />
+                                        </div>
+                                      </div>
+                                    )}
+                                  </Link>
+                                ) : (
+                                  <div className="flex-1 p-3 cursor-not-allowed">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-lg">{module.icon}</span>
+                                      <span className="font-medium text-sm text-gray-600 flex-1">
+                                        {module.title}
+                                      </span>
+                                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                                        Coming Soon
+                                      </span>
+                                    </div>
+                                  </div>
+                                )}
+                                {hasContent && module.isPublished && (
                                   <button
                                     onClick={() => toggleModule(module.slug)}
                                     className="px-3 py-3 hover:bg-gray-100 transition-colors"

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import Header from '@/components/Header';
 import { QuizQuestion } from '@/lib/types/quiz';
 import { calculateNextReview } from '@/lib/algorithms/spacedRepetition';
 
@@ -240,10 +239,8 @@ export default function QuizInterface({
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header title={`${sectionIcon} ${sectionTitle}`} showAuth showBackButton userEmail={userEmail} />
-      
-      <main className="flex-1 p-4 md:p-8">
+    <div className="flex flex-col h-full">
+      <main className="flex-1 p-4 md:p-8 bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <div className="max-w-3xl mx-auto">
           {/* Progress Section */}
           <div className="mb-6 p-4 bg-white rounded-xl border border-gray-200 shadow-sm">

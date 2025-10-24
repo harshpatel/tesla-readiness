@@ -3,10 +3,12 @@ import { getCurrentUser } from '@/lib/auth';
 import QuizInterface from '@/components/QuizInterface';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import ModuleSidebar from '@/components/ModuleSidebar';
+import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
-import quizData from '@/public/data/medical-terminology-questions.json';
+import medicalTerminologyQuizData from '@/public/data/medical-terminology-questions.json';
+import introToMriQuizData from '@/public/data/introduction-to-mri-questions.json';
 
 interface PageProps {
   params: Promise<{
@@ -16,8 +18,11 @@ interface PageProps {
   }>;
 }
 
-// Map of valid quiz slugs from JSON
-const VALID_QUIZ_SLUGS = ['prefixes', 'suffixes', 'roots', 'abbreviations', 'positioning'];
+// Map module slugs to their quiz data files
+const QUIZ_DATA_MAP: Record<string, any> = {
+  'medical-terminology': medicalTerminologyQuizData,
+  'introduction-to-mri': introToMriQuizData,
+};
 
 // Icon mapping for quiz sections
 const QUIZ_ICONS: Record<string, string> = {
@@ -26,10 +31,17 @@ const QUIZ_ICONS: Record<string, string> = {
   'roots': '🌿',
   'abbreviations': '📋',
   'positioning': '🧍',
+  'introduction-quiz': '📝',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { module, slug } = await params;
+  
+  // Get the appropriate quiz data based on module
+  const quizData = QUIZ_DATA_MAP[module];
+  if (!quizData) {
+    return { title: 'Quiz Not Found' };
+  }
   
   // Get quiz data from JSON
   const sectionData = quizData.sections[slug as keyof typeof quizData.sections];
@@ -53,8 +65,9 @@ export default async function QuizPage({ params }: PageProps) {
     redirect('/login');
   }
 
-  // Verify valid section, module, and quiz slug
-  if (section !== 'phase1' || module !== 'medical-terminology' || !VALID_QUIZ_SLUGS.includes(slug)) {
+  // Get the appropriate quiz data based on module
+  const quizData = QUIZ_DATA_MAP[module];
+  if (!quizData) {
     notFound();
   }
 
@@ -80,8 +93,11 @@ export default async function QuizPage({ params }: PageProps) {
     explanation: q.explanation,
   }));
 
+  const quizTitle = `${QUIZ_ICONS[slug] || '📝'} ${sectionData.title}`;
+  
   return (
     <div className="min-h-screen flex flex-col">
+      <Header title={quizTitle} showAuth showBackButton userEmail={user.email} />
       <div className="flex flex-1">
         {/* Sidebar */}
         <ModuleSidebar />
