@@ -128,46 +128,59 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
       <aside
         className={`
           fixed lg:static top-16 lg:top-0 bottom-0 left-0 z-40
-          w-80 bg-white border-r border-gray-200
+          w-96 bg-white border-r border-gray-200
           transform transition-transform duration-300 ease-in-out
           lg:transform-none
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
           flex flex-col overflow-y-auto
         `}
       >
-        <div className="p-4 space-y-3">
+        <div className="p-3 space-y-1.5">
           {sections.map((section) => {
             const isSectionExpanded = expandedSections.has(section.slug);
             const hasModules = section.modules.length > 0;
 
             return (
-              <div key={section.id} className="space-y-2">
-                {/* Section Header - Prominent Card */}
+              <div key={section.id} className="space-y-1">
+                {/* Section Header - Compact */}
                 {section.isPublished ? (
-                  <div className="bg-white rounded-xl border-2 border-gray-200 shadow-sm overflow-hidden">
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg border border-gray-300 overflow-hidden">
                     <button
                       onClick={() => hasModules && toggleSection(section.slug)}
-                      className="w-full p-4 text-left hover:bg-gray-50 transition-all"
+                      className="w-full px-3 py-2.5 text-left hover:bg-gray-100 transition-all"
                     >
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center text-xl">
-                            {section.icon}
-                          </div>
-                          <div>
-                            <h2 className="text-base font-bold text-[#1a1a1a] leading-tight">
-                              {section.title}
-                            </h2>
+                      <div className="flex items-center justify-between gap-2">
+                        <div className="flex items-center gap-2 flex-1 min-w-0">
+                          <span className="text-lg flex-shrink-0">{section.icon}</span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <h2 className="text-sm font-bold text-gray-900 leading-tight truncate">
+                                {section.title}
+                              </h2>
+                              {section.progress && section.progress.totalModules > 0 && (
+                                <span className="text-[10px] font-semibold text-gray-600 bg-white px-1.5 py-0.5 rounded flex-shrink-0">
+                                  {section.progress.completedModules}/{section.progress.totalModules}
+                                </span>
+                              )}
+                            </div>
                             {section.progress && section.progress.totalModules > 0 && (
-                              <p className="text-xs text-gray-500 mt-0.5">
-                                {section.progress.completedModules} / {section.progress.totalModules} modules
-                              </p>
+                              <div className="mt-1 flex items-center gap-1.5">
+                                <div className="flex-1 h-1 bg-gray-200 rounded-full overflow-hidden">
+                                  <div
+                                    className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all"
+                                    style={{ width: `${section.progress.progressPercent}%` }}
+                                  />
+                                </div>
+                                <span className="text-[10px] font-bold text-gray-700 w-8 text-right flex-shrink-0">
+                                  {section.progress.progressPercent}%
+                                </span>
+                              </div>
                             )}
                           </div>
                         </div>
                         {hasModules && (
                           <span
-                            className="text-gray-400 text-base transition-transform duration-200"
+                            className="text-gray-500 text-xs transition-transform duration-200 flex-shrink-0"
                             style={{ transform: isSectionExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
                           >
                             ▼
@@ -176,50 +189,54 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                       </div>
                     </button>
 
-                    {/* Modules Container - Visually contained within section */}
+                    {/* Modules Container - Compact List */}
                     {section.isPublished && isSectionExpanded && hasModules && (
-                      <div className="px-3 pb-3 space-y-2">
+                      <div className="px-2 pb-2 space-y-0.5">
                         {section.modules.map((module) => {
                           const isModuleExpanded = expandedModules.has(module.slug);
                           const hasContent = module.contentItems.length > 0;
                           const progressPercent = module.progress?.progressPercent || 0;
+                          const completedItems = module.progress?.completedItems || 0;
+                          const totalItems = module.progress?.totalItems || 0;
 
                           return (
-                            <div key={module.id} className={`bg-gray-50 rounded-lg border border-gray-200 overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
-                              {/* Module Header */}
+                            <div key={module.id} className={`bg-white rounded-md border border-gray-200 overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
+                              {/* Module Header - Compact */}
                               <div>
                                 {module.isPublished && !module.isLocked ? (
                                   <div className="flex items-stretch">
                                     <Link
                                       href={`/${section.slug}/${module.slug}`}
                                       onClick={() => setIsOpen(false)}
-                                      className="flex-1 p-3 hover:bg-white transition-colors"
+                                      className="flex-1 px-2.5 py-2 hover:bg-gray-50 transition-colors"
                                     >
-                                      <div className="flex items-center gap-2.5">
-                                        <span className="text-xl">{module.icon}</span>
-                                        <div className="flex-1">
-                                          <div className="flex items-center gap-2">
-                                            <span className="font-semibold text-sm text-gray-900">
+                                      <div className="flex items-center gap-2 min-w-0">
+                                        <span className="text-base flex-shrink-0">{module.icon}</span>
+                                        <div className="flex-1 min-w-0">
+                                          <div className="flex items-center gap-1.5 mb-0.5">
+                                            <span className="font-semibold text-xs text-gray-900 truncate">
                                               {module.title}
                                             </span>
                                             {progressPercent === 100 && (
-                                              <span className="text-green-600 text-sm">✓</span>
+                                              <span className="text-green-600 text-xs flex-shrink-0">✓</span>
+                                            )}
+                                            {totalItems > 0 && (
+                                              <span className="text-[10px] font-medium text-gray-500 flex-shrink-0 ml-auto">
+                                                {completedItems}/{totalItems}
+                                              </span>
                                             )}
                                           </div>
-                                          {module.progress && module.progress.totalItems > 0 && (
-                                            <div className="mt-1.5">
-                                              <div className="flex items-center justify-between text-xs mb-1">
-                                                <span className="text-gray-600">
-                                                  {module.progress.completedItems} / {module.progress.totalItems} items
-                                                </span>
-                                                <span className="text-gray-600 font-medium">{progressPercent}%</span>
-                                              </div>
-                                              <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                                          {totalItems > 0 && (
+                                            <div className="flex items-center gap-1">
+                                              <div className="flex-1 h-1 bg-gray-100 rounded-full overflow-hidden">
                                                 <div
-                                                  className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] rounded-full transition-all"
+                                                  className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transition-all"
                                                   style={{ width: `${progressPercent}%` }}
                                                 />
                                               </div>
+                                              <span className="text-[9px] font-bold text-gray-600 w-7 text-right flex-shrink-0">
+                                                {progressPercent}%
+                                              </span>
                                             </div>
                                           )}
                                         </div>
@@ -228,10 +245,10 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                     {hasContent && (
                                       <button
                                         onClick={() => toggleModule(module.slug)}
-                                        className="px-3 border-l border-gray-200 hover:bg-gray-50 transition-colors flex items-center"
+                                        className="px-2 border-l border-gray-200 hover:bg-gray-50 transition-colors flex items-center"
                                       >
                                         <span
-                                          className="text-gray-400 text-sm transition-transform duration-200 inline-block"
+                                          className="text-gray-400 text-[10px] transition-transform duration-200 inline-block"
                                           style={{ transform: isModuleExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
                                         >
                                           ▼
@@ -240,33 +257,33 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                     )}
                                   </div>
                                 ) : module.isLocked ? (
-                                  <div className="p-3 cursor-not-allowed">
-                                    <div className="flex items-center gap-2.5">
-                                      <span className="text-xl">{module.icon}</span>
-                                      <span className="font-semibold text-sm text-gray-600 flex-1">
+                                  <div className="px-2.5 py-2 cursor-not-allowed">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">{module.icon}</span>
+                                      <span className="font-semibold text-xs text-gray-600 flex-1 truncate">
                                         {module.title}
                                       </span>
-                                      <span className="text-gray-400 text-base">🔒</span>
+                                      <span className="text-gray-400 text-sm">🔒</span>
                                     </div>
                                   </div>
                                 ) : (
-                                  <div className="p-3">
-                                    <div className="flex items-center gap-2.5">
-                                      <span className="text-xl">{module.icon}</span>
-                                      <span className="font-semibold text-sm text-gray-600 flex-1">
+                                  <div className="px-2.5 py-2">
+                                    <div className="flex items-center gap-2">
+                                      <span className="text-base">{module.icon}</span>
+                                      <span className="font-semibold text-xs text-gray-600 flex-1 truncate">
                                         {module.title}
                                       </span>
-                                      <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-md">
-                                        Coming Soon
+                                      <span className="text-[9px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">
+                                        Soon
                                       </span>
                                     </div>
                                   </div>
                                 )}
                               </div>
 
-                              {/* Content Items - Nested inside module */}
+                              {/* Content Items - Compact List */}
                               {isModuleExpanded && hasContent && (
-                                <div className="border-t border-gray-200 bg-white p-2.5 space-y-1">
+                                <div className="border-t border-gray-200 bg-gray-50 px-2 py-1.5 space-y-0.5">
                                   {module.contentItems.map((item) => {
                                     const itemHref = `/${section.slug}/${module.slug}/${item.type}/${item.slug}`;
                                     const isActive = pathname === itemHref;
@@ -278,20 +295,20 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                         href={itemHref}
                                         onClick={() => setIsOpen(false)}
                                         className={`
-                                          block px-3 py-2.5 rounded-lg transition-all text-sm
+                                          block px-2 py-1.5 rounded transition-all text-xs
                                           ${isActive
-                                            ? 'bg-gradient-to-r from-[#0A84FF] to-[#0077ED] text-white shadow-md scale-[1.02]'
-                                            : 'hover:bg-white hover:shadow-sm text-gray-700'
+                                            ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-sm font-semibold'
+                                            : 'hover:bg-white text-gray-700 font-medium'
                                           }
                                         `}
                                       >
-                                        <div className="flex items-center gap-2.5">
-                                          <span className="text-base">{item.icon}</span>
-                                          <span className={`flex-1 ${isActive ? 'font-semibold' : 'font-medium'}`}>
+                                        <div className="flex items-center gap-1.5">
+                                          <span className="text-sm">{item.icon}</span>
+                                          <span className="flex-1 truncate">
                                             {item.title}
                                           </span>
                                           {isCompleted && (
-                                            <span className={`text-sm ${isActive ? 'text-white' : 'text-green-600'}`}>
+                                            <span className={`text-xs ${isActive ? 'text-white' : 'text-green-600'}`}>
                                               ✓
                                             </span>
                                           )}
@@ -308,13 +325,13 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                     )}
                   </div>
                 ) : (
-                  <div className="p-3 rounded-xl border border-gray-200 bg-gray-50 opacity-60">
-                    <div className="flex items-center gap-2.5">
-                      <span className="text-lg flex-shrink-0">{section.icon}</span>
-                      <span className="font-medium text-sm text-gray-600 flex-1">
+                  <div className="px-2.5 py-2 rounded-lg border border-gray-200 bg-gray-50 opacity-60">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base flex-shrink-0">{section.icon}</span>
+                      <span className="font-medium text-xs text-gray-600 flex-1 truncate">
                         {section.title}
                       </span>
-                      <span className="text-xs text-gray-400">Coming Soon</span>
+                      <span className="text-[9px] text-gray-400">Soon</span>
                     </div>
                   </div>
                 )}
@@ -323,18 +340,14 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
           })}
         </div>
 
-        {/* Sidebar Footer */}
-        <div className="p-4 border-t border-gray-200 mt-auto">
-          <div className="text-xs text-gray-600 text-center">
-            <div className="mb-2">
-              <strong className="text-[#1a1a1a]">
-                {sections.reduce((sum, s) => sum + (s.progress?.completedModules || 0), 0)} /{' '}
-                {sections.reduce((sum, s) => sum + (s.progress?.totalModules || 0), 0)}
-              </strong>{' '}
-              modules completed
+        {/* Sidebar Footer - Compact */}
+        <div className="px-3 py-2.5 border-t border-gray-200 mt-auto bg-gray-50">
+          <div className="text-[10px] text-gray-600 text-center">
+            <div className="font-bold text-gray-900">
+              {sections.reduce((sum, s) => sum + (s.progress?.completedModules || 0), 0)} / {sections.reduce((sum, s) => sum + (s.progress?.totalModules || 0), 0)} Modules
             </div>
-            <div className="text-[10px]">
-              Track your progress as you learn
+            <div className="text-gray-500 mt-0.5">
+              Track your progress
             </div>
           </div>
         </div>
