@@ -53,6 +53,8 @@ interface ContentProgress {
   user_id: string;
   content_item_id: string;
   completed: boolean;
+  attempts: number;
+  score: number | null;
 }
 
 interface SectionProgress {
