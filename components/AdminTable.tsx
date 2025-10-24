@@ -30,6 +30,7 @@ interface Module {
   section_id: string;
   slug: string;
   title: string;
+  icon: string;
   order_index: number;
 }
 
