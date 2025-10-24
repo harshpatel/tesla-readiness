@@ -63,7 +63,7 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+    <div>
       {/* YouTube Embed */}
       <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
         <iframe

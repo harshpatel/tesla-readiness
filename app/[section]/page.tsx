@@ -152,43 +152,51 @@ export default async function SectionPage({ params }: PageProps) {
             <span className="text-gray-900 font-medium">{sectionData.title}</span>
           </nav>
 
-          {/* Section Header */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="text-6xl">{sectionData.icon || '📖'}</span>
-              <div className="flex-1">
-                <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
-                  {sectionData.title}
-                </h1>
-                <p className="text-lg text-gray-600">
-                  {sectionData.description}
-                </p>
+          {/* Combined Card with Header and Modules */}
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            {/* Section Header */}
+            <div className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <span className="text-6xl">{sectionData.icon || '📖'}</span>
+                <div className="flex-1">
+                  <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
+                    {sectionData.title}
+                  </h1>
+                  <p className="text-lg text-gray-600">
+                    {sectionData.description}
+                  </p>
+                </div>
               </div>
+
+              {/* Progress Bar */}
+              {totalModules > 0 && (
+                <div className="mt-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-700">
+                      Your Progress: {completedModules} / {totalModules} modules completed
+                    </span>
+                    <span className="text-sm font-bold text-[#0A84FF]">
+                      {progressPercent}%
+                    </span>
+                  </div>
+                  <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Progress Bar */}
-            {totalModules > 0 && (
-              <div className="mt-6">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-medium text-gray-700">
-                    Your Progress: {completedModules} / {totalModules} modules completed
-                  </span>
-                  <span className="text-sm font-bold text-[#0A84FF]">
-                    {progressPercent}%
-                  </span>
-                </div>
-                <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
-                    style={{ width: `${progressPercent}%` }}
-                  />
-                </div>
-              </div>
+            {/* Dashed Divider */}
+            {modulesWithProgress.length > 0 && (
+              <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
             )}
-          </div>
 
-          {/* Modules Grid */}
-          <div className="grid gap-4">
+            {/* Modules List */}
+            {modulesWithProgress.length > 0 && (
+              <div className="p-8 space-y-4">
             {modulesWithProgress.map((mod) => {
               const isCompleted = mod.progress?.progressPercent === 100;
               const progressPercent = mod.progress?.progressPercent || 0;
@@ -199,7 +207,7 @@ export default async function SectionPage({ params }: PageProps) {
                 <Link
                   key={mod.id}
                   href={`/${section}/${mod.slug}`}
-                  className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
+                  className="block bg-gray-50 rounded-xl hover:bg-gray-100 transition-all p-6 border border-gray-200 hover:border-[#0A84FF]"
                 >
                   <div className="flex items-start gap-4">
                     <span className="text-4xl">{mod.icon || '📚'}</span>
@@ -243,13 +251,16 @@ export default async function SectionPage({ params }: PageProps) {
                 </Link>
               );
             })}
-          </div>
+              </div>
+            )}
 
-          {(!modules || modules.length === 0) && (
-            <div className="bg-white rounded-xl shadow-sm p-12 text-center">
-              <p className="text-gray-500 text-lg">No modules available yet. Check back soon!</p>
-            </div>
-          )}
+            {/* Empty State */}
+            {(!modules || modules.length === 0) && (
+              <div className="p-12 text-center">
+                <p className="text-gray-500 text-lg">No modules available yet. Check back soon!</p>
+              </div>
+            )}
+          </div>
           </div>
         </main>
       </div>

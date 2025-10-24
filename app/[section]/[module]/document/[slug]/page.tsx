@@ -120,36 +120,42 @@ export default async function DocumentPage({ params }: PageProps) {
               <span className="text-gray-900 font-medium">{contentItem.title}</span>
             </nav>
 
-            {/* Content Header */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-              <div className="flex items-start gap-4 mb-4">
-                <span className="text-6xl">{contentItem.icon}</span>
-                <div className="flex-1">
-                  <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
-                    {contentItem.title}
-                  </h1>
-                  <p className="text-lg text-gray-600">
-                    {contentItem.description}
-                  </p>
+            {/* Combined Card with Header and Content */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              {/* Content Header */}
+              <div className="p-8">
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="text-6xl">{contentItem.icon}</span>
+                  <div className="flex-1">
+                    <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
+                      {contentItem.title}
+                    </h1>
+                    <p className="text-lg text-gray-600">
+                      {contentItem.description}
+                    </p>
+                  </div>
                 </div>
+
+                {userProgress?.completed && (
+                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    <span className="text-sm font-medium text-green-700">Completed</span>
+                  </div>
+                )}
               </div>
 
-              {userProgress?.completed && (
-                <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2">
-                  <span className="text-green-600">✓</span>
-                  <span className="text-sm font-medium text-green-700">Completed</span>
-                </div>
-              )}
-            </div>
+              {/* Dashed Divider */}
+              <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
 
-            {/* Document Viewer with Checkboxes */}
-            <DocumentViewer
-              documentUrl={documentUrl}
-              checkboxes={checkboxes}
-              userId={user.id}
-              contentItemId={contentItem.id}
-              isCompleted={userProgress?.completed || false}
-            />
+              {/* Document Viewer Content (without outer container) */}
+              <DocumentViewer
+                documentUrl={documentUrl}
+                checkboxes={checkboxes}
+                userId={user.id}
+                contentItemId={contentItem.id}
+                isCompleted={userProgress?.completed || false}
+              />
+            </div>
           </div>
         </main>
       </div>

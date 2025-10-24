@@ -167,41 +167,51 @@ export default async function ModulePage({ params }: PageProps) {
             <span className="text-gray-900 font-medium">{moduleData.title}</span>
           </nav>
 
-          {/* Module Header */}
-          <div className="bg-white rounded-2xl shadow-lg p-8 mb-8 border border-gray-100">
-            <div className="flex items-start gap-4 mb-4">
-              <span className="text-5xl">{moduleData.icon || '📚'}</span>
-              <div className="flex-1">
-                <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
-                  {moduleData.title}
-                </h1>
-                <p className="text-lg text-gray-600">
-                  {moduleData.description}
-                </p>
+          {/* Combined Card with Header and Content Items */}
+          <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            {/* Module Header */}
+            <div className="p-8">
+              <div className="flex items-start gap-4 mb-4">
+                <span className="text-5xl">{moduleData.icon || '📚'}</span>
+                <div className="flex-1">
+                  <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
+                    {moduleData.title}
+                  </h1>
+                  <p className="text-lg text-gray-600">
+                    {moduleData.description}
+                  </p>
+                </div>
               </div>
+
+              {/* Progress Bar */}
+              {totalItems > 0 && (
+                <div className="mt-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-medium text-gray-700">
+                      Your Progress: {completedItems} / {totalItems} completed
+                    </span>
+                    <span className="text-sm font-bold text-[#0A84FF]">
+                      {progressPercent}%
+                    </span>
+                  </div>
+                  <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
+                      style={{ width: `${progressPercent}%` }}
+                    />
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Progress Bar */}
-            <div className="mt-6">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm font-medium text-gray-700">
-                  Your Progress: {completedItems} / {totalItems} completed
-                </span>
-                <span className="text-sm font-bold text-[#0A84FF]">
-                  {progressPercent}%
-                </span>
-              </div>
-              <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
-                  style={{ width: `${progressPercent}%` }}
-                />
-              </div>
-            </div>
-          </div>
+            {/* Dashed Divider */}
+            {contentItemsWithProgress.length > 0 && (
+              <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
+            )}
 
-          {/* Content Items Grid */}
-          <div className="grid gap-4">
+            {/* Content Items List */}
+            {contentItemsWithProgress.length > 0 && (
+              <div className="p-8 space-y-4">
             {contentItemsWithProgress.map((item) => {
               const isCompleted = item.progress?.completed || false;
               const typeLabel = item.type === 'quiz' ? '📝 Quiz' : 
@@ -216,7 +226,7 @@ export default async function ModulePage({ params }: PageProps) {
                 <Link
                   key={item.id}
                   href={href}
-                  className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
+                  className="block bg-gray-50 rounded-xl hover:bg-gray-100 transition-all p-6 border border-gray-200 hover:border-[#0A84FF]"
                 >
                   <div className="flex items-center gap-4">
                     <span className="text-3xl">{item.icon || '📄'}</span>
@@ -245,13 +255,16 @@ export default async function ModulePage({ params }: PageProps) {
                 </Link>
               );
             })}
-          </div>
+              </div>
+            )}
 
-          {(!contentItems || contentItems.length === 0) && (
-            <div className="bg-white rounded-xl shadow-sm p-12 text-center">
-              <p className="text-gray-500 text-lg">No content available yet. Check back soon!</p>
-            </div>
-          )}
+            {/* Empty State */}
+            {(!contentItems || contentItems.length === 0) && (
+              <div className="p-12 text-center">
+                <p className="text-gray-500 text-lg">No content available yet. Check back soon!</p>
+              </div>
+            )}
+          </div>
           </div>
         </main>
       </div>

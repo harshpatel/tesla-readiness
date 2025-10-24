@@ -65,9 +65,9 @@ export default function DocumentViewer({
   };
 
   return (
-    <div className="space-y-6">
+    <>
       {/* Document Link */}
-      <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+      <div className="p-8">
         <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">📄 Review the Document</h2>
         <p className="text-gray-600 mb-6">
           Please read the full document carefully before acknowledging the terms below.
@@ -83,9 +83,14 @@ export default function DocumentViewer({
         </a>
       </div>
 
+      {/* Dashed Divider */}
+      {!isCompleted && (
+        <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
+      )}
+
       {/* Acknowledgement Checkboxes */}
       {!isCompleted && (
-        <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+        <div className="p-8">
           <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6">✓ Acknowledge and Agree</h2>
           <p className="text-gray-600 mb-6">
             Please check all boxes below to confirm you have read and agree to the terms:
@@ -124,9 +129,14 @@ export default function DocumentViewer({
         </div>
       )}
 
+      {/* Dashed Divider for Completed State */}
+      {isCompleted && (
+        <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
+      )}
+
       {/* Completed State */}
       {isCompleted && (
-        <div className="bg-white rounded-2xl shadow-lg p-8 border border-green-200">
+        <div className="p-8 bg-green-50">
           <div className="flex items-center justify-center gap-3 text-green-700 mb-4">
             <span className="text-3xl">✓</span>
             <h2 className="text-2xl font-bold">Agreement Completed!</h2>
@@ -136,7 +146,7 @@ export default function DocumentViewer({
           </p>
         </div>
       )}
-    </div>
+    </>
   );
 }
 
