@@ -56,22 +56,20 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
   // Automatically expand sections and modules based on current path
   const getInitialExpandedState = () => {
     const pathParts = pathname.split('/').filter(Boolean);
+    const currentSection = pathParts[0]; // e.g., 'phase1'
     const currentModule = pathParts[1]; // e.g., 'medical-terminology'
     
-    // Always expand ALL published sections by default
+    // Expand ALL published sections by default
     const expandedSectionSet = new Set(sections.filter(s => s.isPublished).map(s => s.slug));
     
-    // Always expand ALL published, unlocked modules by default
+    // Only expand the CURRENT module if we're viewing a specific page, otherwise expand none
     const expandedModuleSet = new Set<string>();
-    sections.forEach(section => {
-      if (section.isPublished) {
-        section.modules.forEach(module => {
-          if (module.isPublished && !module.isLocked) {
-            expandedModuleSet.add(module.slug);
-          }
-        });
-      }
-    });
+    
+    // If we're on a specific module page (e.g., /phase1/medical-terminology/quiz/prefixes)
+    // Only expand THAT module
+    if (currentModule) {
+      expandedModuleSet.add(currentModule);
+    }
     
     return { expandedSections: expandedSectionSet, expandedModules: expandedModuleSet };
   };

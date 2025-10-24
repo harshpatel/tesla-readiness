@@ -10,6 +10,7 @@ export interface QuizQuestion {
   order_index: number;
   hint?: string; // Shown after first wrong answer
   explanation?: string; // Detailed explanation with mnemonics
+  image_url?: string; // Optional image to display with question (anatomy, MRI scans, etc.)
 }
 
 export interface UserQuizProgress {

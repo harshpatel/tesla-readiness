@@ -7,9 +7,6 @@ import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import type { Metadata } from 'next';
-import medicalTerminologyQuizData from '@/public/data/medical-terminology-questions.json';
-import introToMriQuizData from '@/public/data/introduction-to-mri-questions.json';
-import generalAnatomyPhysiologyQuizData from '@/public/data/general-anatomy-physiology-questions.json';
 
 interface PageProps {
   params: Promise<{
@@ -18,13 +15,6 @@ interface PageProps {
     slug: string;
   }>;
 }
-
-// Map module slugs to their quiz data files
-const QUIZ_DATA_MAP: Record<string, any> = {
-  'medical-terminology': medicalTerminologyQuizData,
-  'introduction-to-mri': introToMriQuizData,
-  'general-anatomy-physiology': generalAnatomyPhysiologyQuizData,
-};
 
 // Icon mapping for quiz sections
 const QUIZ_ICONS: Record<string, string> = {
@@ -40,22 +30,33 @@ const QUIZ_ICONS: Record<string, string> = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { module, slug } = await params;
   
-  // Get the appropriate quiz data based on module
-  const quizData = QUIZ_DATA_MAP[module];
-  if (!quizData) {
-    return { title: 'Quiz Not Found' };
-  }
+  // Query DB for content item to get title and description
+  const cookieStore = await cookies();
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll: () => cookieStore.getAll(),
+        setAll: () => {},
+      },
+    }
+  );
+
+  const { data: contentItem } = await supabase
+    .from('content_items')
+    .select('title, description')
+    .eq('slug', slug)
+    .eq('type', 'quiz')
+    .single();
   
-  // Get quiz data from JSON
-  const sectionData = quizData.sections[slug as keyof typeof quizData.sections];
-  
-  if (!sectionData) {
+  if (!contentItem) {
     return { title: 'Quiz Not Found' };
   }
 
   return {
-    title: `${sectionData.title} Quiz`,
-    description: sectionData.description || `Master ${sectionData.title.toLowerCase()} with interactive quizzes.`,
+    title: `${contentItem.title} Quiz`,
+    description: contentItem.description || `Master ${contentItem.title.toLowerCase()} with interactive quizzes.`,
   };
 }
 
@@ -89,35 +90,51 @@ export default async function QuizPage({ params }: PageProps) {
     .eq('id', user.id)
     .single();
 
-  // Get the appropriate quiz data based on module
-  const quizData = QUIZ_DATA_MAP[module];
-  if (!quizData) {
+  // Get content item (quiz) from database
+  const { data: contentItem } = await supabase
+    .from('content_items')
+    .select('id, title, description, slug')
+    .eq('slug', slug)
+    .eq('type', 'quiz')
+    .single();
+
+  if (!contentItem) {
     notFound();
   }
 
-  // Get quiz data from JSON file
-  const sectionData = quizData.sections[slug as keyof typeof quizData.sections];
-  
-  if (!sectionData) {
+  // Fetch quiz questions from database
+  console.log('🔍 [DB QUERY] Fetching quiz questions from database for content_item_id:', contentItem.id);
+  const { data: questions, error: questionsError } = await supabase
+    .from('quiz_questions')
+    .select('*')
+    .eq('content_item_id', contentItem.id)
+    .order('order_index', { ascending: true });
+
+  if (questionsError || !questions || questions.length === 0) {
+    console.error('❌ Error fetching quiz questions:', questionsError);
     notFound();
   }
 
-  // Transform questions from JSON to match our format
-  const transformedQuestions = sectionData.questions.map((q: any, idx: number) => ({
+  console.log(`✅ [DB SUCCESS] Loaded ${questions.length} questions from DATABASE for quiz: "${contentItem.title}"`);
+  console.log('📊 [DB DATA] First question ID:', questions[0]?.question_id, '| Has hint:', !!questions[0]?.hint, '| Has explanation:', !!questions[0]?.explanation, '| Has image:', !!questions[0]?.image_url);
+
+  // Questions are already in the correct format from the database
+  const transformedQuestions = questions.map((q) => ({
     id: q.id,
-    section_key: slug,
-    question_id: q.id,
-    question_type: q.type as 'multiplechoice' | 'truefalse',
-    question_text: q.question,
+    section_key: q.section_key,
+    question_id: q.question_id,
+    question_type: q.question_type as 'multiplechoice' | 'truefalse',
+    question_text: q.question_text,
     answers: q.answers as Record<string, string>,
-    correct_answer: q.correctAnswer,
+    correct_answer: q.correct_answer,
     points: q.points || 1,
-    order_index: idx,
-    hint: q.hint,
-    explanation: q.explanation,
+    order_index: q.order_index,
+    hint: q.hint || undefined,
+    explanation: q.explanation || undefined,
+    image_url: q.image_url || undefined,
   }));
 
-  const quizTitle = `${QUIZ_ICONS[slug] || '📝'} ${sectionData.title}`;
+  const quizTitle = `${QUIZ_ICONS[slug] || '📝'} ${contentItem.title}`;
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -130,7 +147,7 @@ export default async function QuizPage({ params }: PageProps) {
         <div className="flex-1">
           <QuizInterface
             sectionKey={slug}
-            sectionTitle={sectionData.title}
+            sectionTitle={contentItem.title}
             sectionIcon={QUIZ_ICONS[slug] || '📝'}
             questions={transformedQuestions}
             userId={user.id}

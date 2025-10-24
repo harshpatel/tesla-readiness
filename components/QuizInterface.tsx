@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { QuizQuestion } from '@/lib/types/quiz';
 import { calculateNextReview } from '@/lib/algorithms/spacedRepetition';
+import ReactMarkdown from 'react-markdown';
 
 interface QuizInterfaceProps {
   sectionKey: string;
@@ -120,19 +121,24 @@ export default function QuizInterface({
 
       if (!response.ok) {
         const responseText = await response.text();
-        console.error('Failed to save progress:', {
+        console.error('❌ Failed to save progress:', {
           status: response.status,
           statusText: response.statusText,
-          responseBody: responseText,
+          responseBody: responseText || '(empty response)',
           questionId: question.question_id,
+          sectionKey: question.section_key,
         });
         
         // Try to parse as JSON
-        try {
-          const errorData = JSON.parse(responseText);
-          console.error('Parsed error:', errorData);
-        } catch (e) {
-          console.error('Response was not valid JSON');
+        if (responseText) {
+          try {
+            const errorData = JSON.parse(responseText);
+            console.error('Parsed error data:', JSON.stringify(errorData, null, 2));
+          } catch (e) {
+            console.error('Response was not valid JSON. Raw text:', responseText);
+          }
+        } else {
+          console.error('Response body was completely empty');
         }
       } else {
         console.log('✅ Progress saved successfully for question:', question.question_id);
@@ -282,6 +288,18 @@ export default function QuizInterface({
               </span>
             </div>
 
+            {/* Question Image (if exists) */}
+            {currentQuestion.image_url && (
+              <div className="mb-6 rounded-xl overflow-hidden border-2 border-gray-200 shadow-sm bg-gray-50">
+                <img 
+                  src={currentQuestion.image_url} 
+                  alt="Question reference image"
+                  className="w-full h-auto max-h-[500px] object-contain"
+                  loading="lazy"
+                />
+              </div>
+            )}
+
             {/* Question Text */}
             <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-6 leading-tight">
               {currentQuestion.question_text}
@@ -337,14 +355,11 @@ export default function QuizInterface({
                           <h3 className="text-2xl font-bold text-[#34C759]">Correct!</h3>
                         </div>
                         {currentQuestion.explanation && (
-                          <div 
-                            className="text-base text-gray-800 leading-relaxed mb-6"
-                            dangerouslySetInnerHTML={{
-                              __html: currentQuestion.explanation
-                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                                .replace(/\n/g, '<br/>')
-                            }}
-                          />
+                          <div className="prose prose-sm max-w-none text-gray-800 mb-6">
+                            <ReactMarkdown>
+                              {currentQuestion.explanation.replace(/\\n/g, '\n')}
+                            </ReactMarkdown>
+                          </div>
                         )}
                         {!currentQuestion.explanation && (
                           <p className="text-base text-gray-800 mb-6">Great job! Moving to next question...</p>
@@ -365,7 +380,12 @@ export default function QuizInterface({
                         </div>
                         {currentQuestion.hint ? (
                           <div className="text-base text-gray-800 bg-white p-4 rounded-xl border-2 border-orange-300 mb-6">
-                            <strong className="text-[#FF9500]">💡 Hint:</strong> {currentQuestion.hint}
+                            <strong className="text-[#FF9500] block mb-2">💡 Hint:</strong>
+                            <div className="prose prose-sm max-w-none">
+                              <ReactMarkdown>
+                                {currentQuestion.hint.replace(/\\n/g, '\n')}
+                              </ReactMarkdown>
+                            </div>
                           </div>
                         ) : (
                           <p className="text-base text-gray-800 mb-6">
@@ -388,14 +408,11 @@ export default function QuizInterface({
                           </h3>
                         </div>
                         {currentQuestion.explanation && (
-                          <div 
-                            className="text-base text-gray-800 leading-relaxed mb-4"
-                            dangerouslySetInnerHTML={{
-                              __html: currentQuestion.explanation
-                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                                .replace(/\n/g, '<br/>')
-                            }}
-                          />
+                          <div className="prose prose-sm max-w-none text-gray-800 mb-4">
+                            <ReactMarkdown>
+                              {currentQuestion.explanation.replace(/\\n/g, '\n')}
+                            </ReactMarkdown>
+                          </div>
                         )}
                         <p className="text-sm text-gray-600 mb-6 italic">This question will appear again later for review.</p>
                         <button

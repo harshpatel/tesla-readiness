@@ -64,19 +64,19 @@ export async function POST(request: NextRequest) {
     const nextReviewDate = new Date();
     nextReviewDate.setDate(nextReviewDate.getDate() + intervalDays);
 
-    // Get the content_item_id from the question
+    // Try to get the content_item_id from the question (optional - may not exist for all quizzes)
     const { data: question } = await supabase
       .from('quiz_questions')
       .select('content_item_id, question_id')
       .eq('question_id', questionId)
       .single();
 
-    if (!question) {
-      console.error('❌ Question not found:', questionId);
-      return NextResponse.json({ error: 'Question not found' }, { status: 404 });
+    // Don't fail if question not found in DB - questions come from JSON files
+    if (question) {
+      console.log('📌 Question content_item_id:', question.content_item_id);
+    } else {
+      console.log('ℹ️ Question not in DB (using JSON-only mode):', questionId);
     }
-
-    console.log('📌 Question content_item_id:', question.content_item_id);
 
     // Check if progress exists
     const { data: existing } = await supabase
@@ -133,9 +133,9 @@ export async function POST(request: NextRequest) {
       console.log('✅ Progress inserted successfully');
     }
 
-    // Also update the new user_content_progress table
+    // Also update the new user_content_progress table if question exists in DB
     // This will trigger the cascading updates to module and section progress
-    if (question.content_item_id) {
+    if (question?.content_item_id) {
       console.log('📝 Updating user_content_progress for content_item_id:', question.content_item_id);
       
       // Check if content progress exists
@@ -188,6 +188,8 @@ export async function POST(request: NextRequest) {
           console.log('✅ Content progress inserted - triggers will update module & section progress');
         }
       }
+    } else {
+      console.log('ℹ️ Skipping content progress update (question not in DB)');
     }
 
     return NextResponse.json({ success: true });

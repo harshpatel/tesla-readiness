@@ -7,52 +7,278 @@
 ## Required Info
 
 **Module Name:**
+MRI Procedures & Set Up I: Neuro
 
 **Section:**
+Phase 1
 
 **Position:**
+Where u see it now, below MRI Safety II and above MRI body
 
 **Video URL:**
+https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/MRI%20Procedures%20&%20Set%20Up%20I%20-%20Neuro.mp4
 
 **Quiz Questions:**
+(Note: For questions with images, use format: https://0cm.classmarker.com/10742032_TNJF0ZXE.png - replace the slug with what's referenced in [cmimg] tags)
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The anatomical point that establishes the what part of the body moves to the center of the magnet at the start of an MR exam is the:
+(A): Pule Sequence
+(B): Landmark
+(C): Field-of-View
+(D): None of the Above 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): In MRI, a “protocol” is best defined as:
+(A): The complete list of all the imaging pulse sequences and parameters in the entire MRI exam
+(B): The body part to be imagined and the reason for the exam found on the physician’s order
+(C): The written patient screening policy
+(D): None of the above
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The 2-dimensional area to be imagined in a particular pulse sequence is the:
+(A): Slice Thickness
+(B): Slice Gap
+(C): Field-of-View (FOV) 
+(D): Image Weighting 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The type of MR image contrast that has the strongest influence in the image is referred to as its:
+(A): Image weighting 
+(B): T1 weighting 
+(C): T2 Weighting
+(D): Voxel Brightness 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Grade style): 0
+(Random answers): 0
+(Question): All of the following are indications for imaging the brain except for:
+(A): Multiple Sclerosis 
+(B): Loss of Balance
+(C): Loss of Hearing
+(D): Herniated Nucleus Pulposus (HNP)
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The landmark of brain imaging is the nasion or the _____________.
+(A): Tip of the nose 
+(B): Glabella 
+(C): Tip of the Chin
+(D): Angle of the mandible 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The typical coverage for axial imaging of the brain is _____________
+(A): C1 to the Calvarium 
+(B): C1 to the ACPC line
+(C): Foramen Magnum to superior sagittal sinus
+(D): Foramen Magnum to the Calvarium
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): All of the following are indications for imaging the spine except for:
+(A): Multiple Sclerosis 
+(B): Tumor 
+(C): Degenerative disk disease (DDD)
+(D): Chest Pain
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The typical landmark for the cervical spine is the____________.
+(A): Base of the skull
+(B): Base of the Chin
+(C): Nasion 
+(D): Mandible 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): Typical angulation for axial imaging of the cervical spine is _________.
+(A): Perpendicular to the plane of the cervical spinal cord
+(B): Parallel to the plane of the cervical spinal cord 
+(C): 45[sup]0[/sup] to the plane of the cervical spinal cord 
+(D): Orthogonal to the axial plane
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): There are ____________ vertebral bodies in the thoracic spine
+(A): 7
+(B): 10
+(C): 5
+(D): 12
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The landmark for the thoracic spine is the _______________.
+(A): Superior segment of the sternum
+(B): Mid sternum
+(C): Inferior segment of the sternum
+(D): Larynx 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The landmark for the lumbar spine is at ________________.
+(A): The inferior segment of the sternum
+(B): The iliac crest
+(C): The symphysis pubis
+(D): 1”-2” above the iliac crest
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The Sagittal coverage for the lumbar spine is:
+(A): All of T12 and includes all S1
+(B): All of L1 and incudes all of S2
+(C): All of L1 and includes all of S1
+(D): All of T12 and includes the L5-S1 disc space
+(Correct): A
+(Points): 1
+
+
+(Type): matching
+(Matching style): 0
+(Points style): 0
+(Random matches): 0
+(Question): [cmimg]0/10742032_TNJF0ZXE.png[/cmimg]Label the areas: 
+(A Clue): 1
+(A Match): Corpus callosum
+(B Clue): 2
+(B Match): Thalamus
+(C Clue): 3
+(C Match): Pons
+(D Clue): 4
+(D Match): Cerebellum
+(Category): 18
+(Grade style): 0
+(Points): 1
+
+
+(Type): matching
+(Matching style): 0
+(Points style): 0
+(Random matches): 0
+(Question): [cmimg]0/10742032_7HYOGSLT.png[/cmimg]Label the areas: 
+(A Clue): 1
+(A Match): C2
+(B Clue): 2
+(B Match): C4-C5 Disc
+(C Clue): 3
+(C Match): Spinal Cord
+(D Clue): 4
+(D Match): Spinous Process
+(Category): 18
+(Grade style): 0
+(Points): 1
+
+
+(Type): matching
+(Matching style): 0
+(Points style): 0
+(Random matches): 0
+(Question): [cmimg]0/10742032_T0EIXV4L.png[/cmimg]Label the Areas
+(A Clue): 1
+(A Match): Vertebral body
+(B Clue): 2
+(B Match): Spinal Cord
+(C Clue): 3
+(C Match): Transverse Process
+(Category): 18
+(Grade style): 0
+(Points): 1
+
+
+(Type): matching
+(Matching style): 0
+(Points style): 0
+(Random matches): 0
+(Question): [cmimg]0/10742032_KB45918J.png[/cmimg]Label the Areas:
+(A Clue): 1
+(A Match): Conus Medullaris
+(B Clue): 2
+(B Match): Abdominal Aorta
+(C Clue): 3
+(C Match): L3 Vertebral Body
+(D Clue): 4
+(D Match): L5-S1 disc space
+(Category): 18
+(Grade style): 0
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 18
+(Random answers): 0
+(Question): The typical angulation for axial imaging of the brain is parallel to the
+________________.
+(A): Foramen Magnum
+(B): Anterior Commissure-Posterior Commissure (ACPC) line
+(C): Nasion
+(D): Glabella
+(Correct): B
+(Points): 1
+
+
 
 **Document URL:**
 
 ---
 
 ## Optional Notes
-
----
-
-## Example
-
-**Module Name:**
-Physics of MRI
-
-**Section:**
-Phase 1
-
-**Position:**
-after Introduction to MRI
-
-**Video URL:**
-https://xyz.supabase.co/storage/v1/object/public/videos/mri-physics.mp4
-
-**Quiz Questions:**
-1. What is the primary magnetic field strength in most clinical MRI scanners?
-a) 0.5 Tesla
-b) 1.5 Tesla
-c) 3.0 Tesla
-d) Both b and c
-Answer: d
-
-2. MRI uses ionizing radiation - True or False
-Answer: False
-
-**Document URL:**
-
-**Optional Notes:**
-Make sure to emphasize safety aspects
 
 ---
 
@@ -124,8 +350,7 @@ For each content type present:
   },
   "correct_answer": "D",
   "hint": "Think MEGA - like mega-size, mega-big!",
-  "explanation": "**-megaly** means **enlargement** or **abnormally large** 📏\n\n💡 **Remember it:** -MEGALY starts with MEGA - like MEGA-SIZE at McDonald's, or MEGA-blocks - it means BIG! Cardiomegaly = enlarged heart. Hepatomegaly = enlarged liver. Splenomegaly = enlarged spleen. Whenever you see -MEGALY, something grew too BIG, like it got MEGA-SIZED!",
-  "image_url": null
+  "explanation": "**-megaly** means **enlargement** or **abnormally large** 📏\n\n💡 **Remember it:** -MEGALY starts with MEGA - like MEGA-SIZE at McDonald's, or MEGA-blocks - it means BIG! Cardiomegaly = enlarged heart. Hepatomegaly = enlarged liver. Splenomegaly = enlarged spleen. Whenever you see -MEGALY, something grew too BIG, like it got MEGA-SIZED!"
 }
 ```
 
@@ -204,22 +429,10 @@ BEGIN
   -- Get section ID
   SELECT id INTO v_section_id FROM sections WHERE slug = '[section-slug]';
   
-  -- Insert module (or UPDATE if it already exists)
+  -- Insert module
   INSERT INTO modules (section_id, slug, title, description, icon, order_index, is_published, is_locked)
   VALUES (v_section_id, '[module-slug]', '[Module Name]', '[Description]', '[Emoji]', [order_index], true, false)
   RETURNING id INTO v_module_id;
-  
-  -- OR if updating an existing module:
-  -- UPDATE modules
-  -- SET
-  --   title = '[Module Name]',
-  --   description = '[Description]',
-  --   icon = '[Emoji]',
-  --   is_published = true,
-  --   is_locked = false,
-  --   updated_at = NOW()
-  -- WHERE section_id = v_section_id AND slug = '[module-slug]'
-  -- RETURNING id INTO v_module_id;
   
   -- Insert video content (if exists)
   INSERT INTO content_items (module_id, slug, title, description, type, icon, order_index, metadata, is_published)
@@ -277,7 +490,6 @@ END $$;
 - Use `\n\n` for line breaks in explanations
 - Variable names must use underscores not hyphens: `v_quiz_content_id` not `v_quiz-content-id`
 - Include `image_url` column in INSERT statements (set to `null` if no image)
-- **ALWAYS set `is_locked = false`** when publishing a module (or it will show as locked in sidebar!)
 
 ### Step 6: Execute Migration
 1. Save the SQL migration file
