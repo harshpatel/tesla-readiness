@@ -1,23 +1,15 @@
 import Header from '@/components/Header';
-import QuizSidebar from '@/components/QuizSidebar';
+import ModuleSidebar from '@/components/ModuleSidebar';
 import { getCurrentUser } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
   description: 'Track your progress and continue learning medical terminology for MRI readiness.',
 };
-
-// Define sections (will later fetch from Supabase)
-const QUIZ_SECTIONS = [
-  { key: 'prefixes', title: 'Prefixes', icon: '🔤' },
-  { key: 'suffixes', title: 'Suffixes', icon: '📝' },
-  { key: 'roots', title: 'Root Words', icon: '🌿' },
-  { key: 'abbreviations', title: 'Abbreviations', icon: '📋' },
-  { key: 'positioning', title: 'Patient Positioning', icon: '🧍' },
-];
 
 export default async function DashboardPage() {
   const user = await getCurrentUser();
@@ -41,37 +33,39 @@ export default async function DashboardPage() {
     }
   );
 
-  // Fetch section progress
+  // Fetch all sections
+  const { data: sections } = await supabase
+    .from('sections')
+    .select('*')
+    .eq('is_published', true)
+    .order('order_index');
+
+  // Fetch user's section progress
   const { data: sectionProgress } = await supabase
     .from('user_section_progress')
     .select('*')
     .eq('user_id', user?.id);
 
-  // Map progress to sections
-  const sectionsWithProgress = QUIZ_SECTIONS.map((section) => {
-    const progress = sectionProgress?.find((p) => p.section_key === section.key);
-    return {
-      ...section,
-      progress: progress
-        ? {
-            mastered: progress.mastered_questions,
-            total: progress.total_questions,
-            completed: progress.completed,
-          }
-        : undefined,
-    };
-  });
+  // Fetch user's content progress to count completed items
+  const { data: contentProgress } = await supabase
+    .from('user_content_progress')
+    .select('*')
+    .eq('user_id', user?.id)
+    .eq('completed', true);
 
-  // Get total questions from quiz_questions table (actual count, not sum of progress)
-  const { count: totalQuestionsCount } = await supabase
-    .from('quiz_questions')
-    .select('id', { count: 'exact', head: true });
+  const completedContentItems = contentProgress?.length || 0;
+
+  // Get total content items
+  const { count: totalContentCount } = await supabase
+    .from('content_items')
+    .select('id', { count: 'exact', head: true })
+    .eq('is_published', true);
   
-  const totalQuestions = totalQuestionsCount || 88;
+  const totalContent = totalContentCount || 0;
   
   // Calculate overall stats
-  const masteredQuestions = sectionProgress?.reduce((sum, p) => sum + p.mastered_questions, 0) || 0;
-  const completedSections = sectionProgress?.filter((p) => p.completed).length || 0;
+  const completedSections = sectionProgress?.filter((p) => p.progress_percent === 100).length || 0;
+  const totalSections = sections?.length || 0;
   
   // Get user's current streak
   const { data: profileData } = await supabase
@@ -88,7 +82,7 @@ export default async function DashboardPage() {
       
       <div className="flex flex-1">
         {/* Sidebar */}
-        <QuizSidebar sections={sectionsWithProgress} />
+        <ModuleSidebar />
         
         {/* Main Content */}
         <main className="flex-1 p-8 lg:ml-0">
@@ -106,9 +100,9 @@ export default async function DashboardPage() {
           {/* Stats Section */}
           <div className="grid md:grid-cols-3 gap-4 mb-8">
             {[
-              { label: 'Questions Mastered', value: `${masteredQuestions}/${totalQuestions}`, emoji: '✓' },
+              { label: 'Content Completed', value: `${completedContentItems}/${totalContent}`, emoji: '✓' },
               { label: 'Study Streak', value: `${currentStreak} ${currentStreak === 1 ? 'day' : 'days'}`, emoji: '🔥' },
-              { label: 'Sections Completed', value: `${completedSections}/${QUIZ_SECTIONS.length}`, emoji: '📚' }
+              { label: 'Sections Completed', value: `${completedSections}/${totalSections}`, emoji: '📚' }
             ].map((stat, index) => (
               <div
                 key={stat.label}
@@ -127,6 +121,51 @@ export default async function DashboardPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Quick Access to Sections */}
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">Your Learning Path</h2>
+            <div className="grid gap-4">
+              {sections?.map((section) => {
+                const progress = sectionProgress?.find((p) => p.section_id === section.id);
+                const progressPercent = progress?.progress_percent || 0;
+
+                return (
+                  <Link
+                    key={section.id}
+                    href={`/${section.slug}`}
+                    className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="text-4xl">{section.icon}</span>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-[#1a1a1a] mb-1">
+                          {section.title}
+                        </h3>
+                        <p className="text-sm text-gray-600 mb-2">{section.description}</p>
+                        {progress && (
+                          <div className="flex items-center gap-2">
+                            <div className="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                              <div
+                                className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
+                                style={{ width: `${progressPercent}%` }}
+                              />
+                            </div>
+                            <span className="text-xs font-medium text-gray-600">{progressPercent}%</span>
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-[#0A84FF]">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
           </div>
         </main>

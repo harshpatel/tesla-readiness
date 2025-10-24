@@ -64,6 +64,20 @@ export async function POST(request: NextRequest) {
     const nextReviewDate = new Date();
     nextReviewDate.setDate(nextReviewDate.getDate() + intervalDays);
 
+    // Get the content_item_id from the question
+    const { data: question } = await supabase
+      .from('quiz_questions')
+      .select('content_item_id, question_id')
+      .eq('question_id', questionId)
+      .single();
+
+    if (!question) {
+      console.error('❌ Question not found:', questionId);
+      return NextResponse.json({ error: 'Question not found' }, { status: 404 });
+    }
+
+    console.log('📌 Question content_item_id:', question.content_item_id);
+
     // Check if progress exists
     const { data: existing } = await supabase
       .from('user_quiz_progress')
@@ -117,6 +131,63 @@ export async function POST(request: NextRequest) {
       }
       
       console.log('✅ Progress inserted successfully');
+    }
+
+    // Also update the new user_content_progress table
+    // This will trigger the cascading updates to module and section progress
+    if (question.content_item_id) {
+      console.log('📝 Updating user_content_progress for content_item_id:', question.content_item_id);
+      
+      // Check if content progress exists
+      const { data: existingContentProgress } = await supabase
+        .from('user_content_progress')
+        .select('*')
+        .eq('user_id', userId)
+        .eq('content_item_id', question.content_item_id)
+        .single();
+
+      const isMastered = isCorrect && isFirstAttempt;
+      const totalAttempts = existing 
+        ? existing.correct_attempts + existing.incorrect_attempts + 1
+        : 1;
+
+      if (existingContentProgress) {
+        // Update existing content progress
+        const { error: contentError } = await supabase
+          .from('user_content_progress')
+          .update({
+            completed: isMastered || existingContentProgress.completed,
+            attempts: totalAttempts,
+            last_accessed_at: new Date().toISOString(),
+            completed_at: isMastered && !existingContentProgress.completed ? new Date().toISOString() : existingContentProgress.completed_at,
+            updated_at: new Date().toISOString(),
+          })
+          .eq('id', existingContentProgress.id);
+
+        if (contentError) {
+          console.error('❌ Error updating content progress:', contentError);
+        } else {
+          console.log('✅ Content progress updated - triggers will update module & section progress');
+        }
+      } else {
+        // Insert new content progress
+        const { error: contentError } = await supabase
+          .from('user_content_progress')
+          .insert({
+            user_id: userId,
+            content_item_id: question.content_item_id,
+            completed: isMastered,
+            attempts: 1,
+            last_accessed_at: new Date().toISOString(),
+            completed_at: isMastered ? new Date().toISOString() : null,
+          });
+
+        if (contentError) {
+          console.error('❌ Error inserting content progress:', contentError);
+        } else {
+          console.log('✅ Content progress inserted - triggers will update module & section progress');
+        }
+      }
     }
 
     return NextResponse.json({ success: true });
