@@ -9,7 +9,7 @@ interface HeaderProps {
   userEmail?: string;
 }
 
-export default function Header({ title, showAuth = false, showBackButton = false, userEmail }: HeaderProps) {
+export default function Header({ title = 'MRI Technologist Curriculum', showAuth = false, showBackButton = false, userEmail }: HeaderProps) {
   return (
     <div className="top-header sticky top-0 z-50 flex items-center justify-between gap-5 px-6 py-4 min-h-[72px]">
       <div className="flex items-center gap-4 flex-1 min-w-0">

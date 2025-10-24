@@ -14,14 +14,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "TeslaMR - MRI Readiness Quiz",
+    default: "TeslaMR - MRI Technologist Curriculum",
     template: "%s | TeslaMR"
   },
-  description: "Master medical terminology and MRI concepts with interactive quizzes. Learn prefixes, suffixes, root words, abbreviations, and patient positioning for MRI readiness.",
-  keywords: ["MRI", "medical terminology", "quiz", "radiology", "medical training", "Tesla", "MRI certification"],
+  description: "Complete MRI technologist training curriculum with interactive lessons, quizzes, and hands-on preparation for clinical readiness.",
+  keywords: ["MRI", "MRI technologist", "curriculum", "radiology", "medical training", "Tesla", "MRI certification"],
   authors: [{ name: "TeslaMR" }],
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://teslamr.com',
+    siteName: 'TeslaMR',
+    title: 'TeslaMR - MRI Technologist Curriculum',
+    description: 'Complete MRI technologist training curriculum with interactive lessons, quizzes, and hands-on preparation for clinical readiness.',
+    images: [
+      {
+        url: '/opengraph-image',
+        width: 1200,
+        height: 630,
+        alt: 'TeslaMR - MRI Technologist Curriculum',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TeslaMR - MRI Technologist Curriculum',
+    description: 'Complete MRI technologist training curriculum with interactive lessons, quizzes, and hands-on preparation.',
+    images: ['/opengraph-image'],
   },
 };
 

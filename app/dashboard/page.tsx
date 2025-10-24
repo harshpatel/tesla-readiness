@@ -8,7 +8,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashboard',
-  description: 'Track your progress and continue learning medical terminology for MRI readiness.',
+  description: 'Track your progress through the MRI Technologist Curriculum',
 };
 
 export default async function DashboardPage() {
@@ -78,7 +78,7 @@ export default async function DashboardPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title="Clinical Readiness Checks" showAuth={true} userEmail={user?.email} />
+      <Header title="MRI Technologist Curriculum" showAuth={true} userEmail={user?.email} />
       
       <div className="flex flex-1">
         {/* Sidebar */}
@@ -93,7 +93,7 @@ export default async function DashboardPage() {
               Welcome back{user?.full_name ? `, ${user.full_name}` : ''}! 👋
             </h1>
             <p className="text-lg text-gray-600">
-              Ready to continue your clinical readiness training?
+              Ready to continue your MRI technologist training?
             </p>
           </div>
           
