@@ -204,9 +204,9 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                           const isModuleActive = pathname === moduleHref || pathname.startsWith(`${moduleHref}/`);
 
                           return (
-                            <div key={module.id} className={`bg-white rounded-md border ${isModuleActive ? 'border-blue-500 shadow-sm' : 'border-gray-200'} overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
+                            <div key={module.id} className={`bg-white rounded-md border overflow-hidden transition-all duration-200 ${isModuleActive ? 'border-blue-500 shadow-sm opacity-100' : 'border-gray-200 opacity-30 hover:opacity-100'} ${module.isLocked ? 'opacity-60' : ''}`}>
                               {/* Module Header - Compact */}
-                              <div>
+                              <div className="group">
                                 {module.isPublished && !module.isLocked ? (
                                   <div className="flex items-stretch">
                                     <Link
@@ -218,27 +218,27 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                         <span className="text-base flex-shrink-0">{module.icon}</span>
                                         <div className="flex-1 min-w-0">
                                           <div className="flex items-center gap-1.5 mb-0.5">
-                                            <span className={`font-semibold text-xs truncate ${isModuleActive ? 'text-blue-700' : 'text-gray-900'}`}>
+                                            <span className={`font-semibold text-xs truncate transition-colors ${isModuleActive ? 'text-blue-700' : 'text-gray-500 group-hover:text-gray-900'}`}>
                                               {module.title}
                                             </span>
                                             {progressPercent === 100 && (
-                                              <span className="text-green-600 text-sm flex-shrink-0">✓</span>
+                                              <span className={`text-sm flex-shrink-0 ${isModuleActive ? 'text-green-600' : 'text-green-500'}`}>✓</span>
                                             )}
                                             {totalItems > 0 && (
-                                              <span className="text-xs font-medium text-gray-500 flex-shrink-0 ml-auto">
+                                              <span className={`text-xs font-medium flex-shrink-0 ml-auto transition-colors ${isModuleActive ? 'text-gray-600' : 'text-gray-400 group-hover:text-gray-600'}`}>
                                                 {completedItems}/{totalItems}
                                               </span>
                                             )}
                                           </div>
                                           {totalItems > 0 && (
                                             <div className="flex items-center gap-1">
-                                              <div className="flex-1 h-1 bg-gray-100 rounded-full overflow-hidden">
+                                              <div className={`flex-1 h-1 rounded-full overflow-hidden ${isModuleActive ? 'bg-gray-100' : 'bg-gray-200'}`}>
                                                 <div
-                                                  className="h-full bg-gradient-to-r from-green-500 to-green-600 rounded-full transition-all"
+                                                  className={`h-full rounded-full transition-all ${isModuleActive ? 'bg-gradient-to-r from-green-500 to-green-600' : 'bg-gradient-to-r from-green-400 to-green-500'}`}
                                                   style={{ width: `${progressPercent}%` }}
                                                 />
                                               </div>
-                                              <span className="text-[10px] font-bold text-gray-600 w-8 text-right flex-shrink-0">
+                                              <span className={`text-[10px] font-bold w-8 text-right flex-shrink-0 transition-colors ${isModuleActive ? 'text-gray-600' : 'text-gray-400 group-hover:text-gray-600'}`}>
                                                 {progressPercent}%
                                               </span>
                                             </div>
@@ -252,7 +252,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                         className="px-2 border-l border-gray-200 hover:bg-gray-50 transition-colors flex items-center"
                                       >
                                         <span
-                                          className="text-gray-400 text-[10px] transition-transform duration-200 inline-block"
+                                          className={`text-[10px] transition-all duration-200 inline-block ${isModuleActive ? 'text-gray-400' : 'text-gray-300 group-hover:text-gray-400'}`}
                                           style={{ transform: isModuleExpanded ? 'rotate(0deg)' : 'rotate(-90deg)' }}
                                         >
                                           ▼
