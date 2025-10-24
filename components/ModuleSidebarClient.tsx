@@ -158,7 +158,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                 {section.title}
                               </h2>
                               {section.progress && section.progress.totalModules > 0 && (
-                                <span className="text-[10px] font-semibold text-gray-600 bg-white px-1.5 py-0.5 rounded flex-shrink-0">
+                                <span className="text-xs font-semibold text-gray-600 bg-white px-2 py-0.5 rounded flex-shrink-0">
                                   {section.progress.completedModules}/{section.progress.totalModules}
                                 </span>
                               )}
@@ -171,7 +171,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                     style={{ width: `${section.progress.progressPercent}%` }}
                                   />
                                 </div>
-                                <span className="text-[10px] font-bold text-gray-700 w-8 text-right flex-shrink-0">
+                                <span className="text-xs font-bold text-gray-700 w-9 text-right flex-shrink-0">
                                   {section.progress.progressPercent}%
                                 </span>
                               </div>
@@ -218,10 +218,10 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                               {module.title}
                                             </span>
                                             {progressPercent === 100 && (
-                                              <span className="text-green-600 text-xs flex-shrink-0">✓</span>
+                                              <span className="text-green-600 text-sm flex-shrink-0">✓</span>
                                             )}
                                             {totalItems > 0 && (
-                                              <span className="text-[10px] font-medium text-gray-500 flex-shrink-0 ml-auto">
+                                              <span className="text-xs font-medium text-gray-500 flex-shrink-0 ml-auto">
                                                 {completedItems}/{totalItems}
                                               </span>
                                             )}
@@ -234,7 +234,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                                   style={{ width: `${progressPercent}%` }}
                                                 />
                                               </div>
-                                              <span className="text-[9px] font-bold text-gray-600 w-7 text-right flex-shrink-0">
+                                              <span className="text-[10px] font-bold text-gray-600 w-8 text-right flex-shrink-0">
                                                 {progressPercent}%
                                               </span>
                                             </div>
@@ -273,7 +273,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                       <span className="font-semibold text-xs text-gray-600 flex-1 truncate">
                                         {module.title}
                                       </span>
-                                      <span className="text-[9px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">
+                                      <span className="text-[10px] text-gray-500 bg-gray-100 px-1.5 py-0.5 rounded">
                                         Soon
                                       </span>
                                     </div>
@@ -342,11 +342,11 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
 
         {/* Sidebar Footer - Compact */}
         <div className="px-3 py-2.5 border-t border-gray-200 mt-auto bg-gray-50">
-          <div className="text-[10px] text-gray-600 text-center">
+          <div className="text-xs text-gray-600 text-center">
             <div className="font-bold text-gray-900">
               {sections.reduce((sum, s) => sum + (s.progress?.completedModules || 0), 0)} / {sections.reduce((sum, s) => sum + (s.progress?.totalModules || 0), 0)} Modules
             </div>
-            <div className="text-gray-500 mt-0.5">
+            <div className="text-gray-500 mt-0.5 text-[10px]">
               Track your progress
             </div>
           </div>
