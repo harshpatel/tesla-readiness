@@ -5,6 +5,7 @@ import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import { getCurrentUser } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 
@@ -15,6 +16,10 @@ export const metadata: Metadata = {
 
 export default async function DashboardPage() {
   const user = await getCurrentUser();
+  
+  if (!user) {
+    redirect('/login');
+  }
   
   // Fetch user's progress for each section
   const cookieStore = await cookies();
