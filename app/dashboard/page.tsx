@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
+import ProfileCompletionModal from '@/components/ProfileCompletionModal';
 import { getCurrentUser } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
@@ -67,10 +68,10 @@ export default async function DashboardPage() {
   const completedSections = sectionProgress?.filter((p) => p.progress_percent === 100).length || 0;
   const totalSections = sections?.length || 0;
   
-  // Get user's current streak
+  // Get user's current streak and profile data
   const { data: profileData } = await supabase
     .from('profiles')
-    .select('current_streak, last_activity_date')
+    .select('current_streak, last_activity_date, first_name, last_name, phone, date_of_birth')
     .eq('id', user?.id)
     .single();
   
@@ -78,6 +79,12 @@ export default async function DashboardPage() {
   
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Profile Completion Modal */}
+      <ProfileCompletionModal 
+        userId={user!.id} 
+        currentProfile={profileData}
+      />
+      
       <Header title="MRI Technologist Curriculum" showAuth={true} userEmail={user?.email} />
       
       <div className="flex flex-1">
@@ -90,7 +97,7 @@ export default async function DashboardPage() {
           {/* Welcome Section */}
           <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
             <h1 className="text-4xl font-bold text-[#1a1a1a] mb-3 tracking-tight">
-              Welcome back{user?.full_name ? `, ${user.full_name}` : ''}! 👋
+              Welcome back{profileData?.first_name ? `, ${profileData.first_name}` : ''}! 👋
             </h1>
             <p className="text-lg text-gray-600">
               Ready to continue your MRI technologist training?
