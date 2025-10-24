@@ -62,7 +62,7 @@ export default async function QuizPage({ params }: PageProps) {
   // Ensure user is authenticated
   const user = await getCurrentUser();
   if (!user) {
-    redirect('/login');
+    redirect('/');
   }
 
   // Fetch user's profile data for first name

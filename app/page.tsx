@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Home',
-  description: 'Master medical terminology before your first clinical day. Show up ready, sound like a pro.',
+  description: 'Complete MRI technologist training curriculum. From fundamentals to clinical readiness—everything you need to launch your career in medical imaging.',
 };
 
 export default async function Home() {
@@ -40,18 +40,19 @@ export default async function Home() {
             <div className="text-center lg:text-left space-y-8">
               <div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1a1a1a] mb-4 tracking-tight animate-[fadeIn_0.6s_ease-out]">
-                  Show Up Ready.<br/>Sound Like a Pro.
+                  Your Complete Path to<br/>Becoming an MRI Tech
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 mb-6 leading-relaxed animate-[fadeIn_0.6s_ease-out_0.1s_backwards]">
-                  Master medical terminology before your first clinical day
+                  From fundamentals to clinical readiness—everything you need to launch your career in medical imaging
                 </p>
                 
                 {/* Benefits */}
                 <div className="grid gap-3 mb-8">
                   {[
-                    { emoji: '💪', text: 'Feel confident when you show up on site' },
-                    { emoji: '⭐', text: 'Impress your clinical mentor' },
-                    { emoji: '🚀', text: 'Get so good they offer you a job' }
+                    { emoji: '🎓', text: 'Master MRI physics, safety, and patient care' },
+                    { emoji: '📚', text: 'Interactive lessons, videos, and quizzes' },
+                    { emoji: '🏥', text: 'Clinical-ready skills from day one' },
+                    { emoji: '🚀', text: 'Registry prep included—pass with confidence' }
                   ].map((feature, index) => (
                     <div
                       key={feature.text}

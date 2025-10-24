@@ -32,9 +32,9 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname.startsWith(route)
   );
 
-  // If accessing protected route without session, redirect to login
+  // If accessing protected route without session, redirect to home page
   if (isProtectedRoute && !session) {
-    const redirectUrl = new URL('/login', req.url);
+    const redirectUrl = new URL('/', req.url);
     redirectUrl.searchParams.set('redirectTo', req.nextUrl.pathname);
     return NextResponse.redirect(redirectUrl);
   }
@@ -66,16 +66,11 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  // If accessing login page with active session, redirect to dashboard
-  if (req.nextUrl.pathname === '/login' && session) {
-    return NextResponse.redirect(new URL('/dashboard', req.url));
-  }
-
   return res;
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/phase1/:path*', '/phase2/:path*', '/onboarding/:path*', '/clinical/:path*', '/registry/:path*', '/results/:path*', '/admin/:path*', '/masteradmin/:path*', '/login'],
+  matcher: ['/dashboard/:path*', '/phase1/:path*', '/phase2/:path*', '/onboarding/:path*', '/clinical/:path*', '/registry/:path*', '/results/:path*', '/admin/:path*', '/masteradmin/:path*'],
 };
 
 

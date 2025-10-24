@@ -6,6 +6,8 @@ export async function POST(request: NextRequest) {
   try {
     const { userId, contentItemId, completed } = await request.json();
 
+    console.log('📝 Mark complete API called with:', { userId, contentItemId, completed });
+
     if (!userId || !contentItemId) {
       return NextResponse.json(
         { error: 'Missing required fields' },
@@ -26,8 +28,13 @@ export async function POST(request: NextRequest) {
             );
           },
         },
+        global: {
+          fetch: fetch,
+        },
       }
     );
+
+    console.log('🔄 Attempting to upsert content progress...');
 
     // Upsert user content progress
     const { data, error } = await supabase
@@ -48,18 +55,24 @@ export async function POST(request: NextRequest) {
       .single();
 
     if (error) {
-      console.error('Error updating content progress:', error);
+      console.error('❌ Error updating content progress:', error);
       return NextResponse.json(
-        { error: 'Failed to update progress' },
+        { error: 'Failed to update progress', details: error },
         { status: 500 }
       );
     }
 
+    console.log('✅ Content progress updated successfully:', data);
     return NextResponse.json({ success: true, data });
-  } catch (error) {
-    console.error('Error in mark-complete API:', error);
+  } catch (error: any) {
+    console.error('❌ Error in mark-complete API:', {
+      message: error.message,
+      details: error.stack,
+      hint: error.hint || '',
+      code: error.code || ''
+    });
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Internal server error', details: error.message },
       { status: 500 }
     );
   }

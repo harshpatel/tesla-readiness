@@ -19,7 +19,7 @@ export default function LogoutButton() {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
       await supabase.auth.signOut();
-      router.push('/login');
+      router.push('/');
       router.refresh();
     } catch (error) {
       console.error('Logout error:', error);

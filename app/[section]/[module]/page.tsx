@@ -62,7 +62,7 @@ export default async function ModulePage({ params }: PageProps) {
   // Ensure user is authenticated
   const user = await getCurrentUser();
   if (!user) {
-    redirect('/login');
+    redirect('/');
   }
 
   const cookieStore = await cookies();

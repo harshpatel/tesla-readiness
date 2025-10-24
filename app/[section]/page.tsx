@@ -58,7 +58,7 @@ export default async function SectionPage({ params }: PageProps) {
   // Ensure user is authenticated
   const user = await getCurrentUser();
   if (!user) {
-    redirect('/login');
+    redirect('/');
   }
 
   const cookieStore = await cookies();

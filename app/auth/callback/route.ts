@@ -56,7 +56,7 @@ export async function GET(request: NextRequest) {
 
     if (error) {
       console.error('Error verifying OTP:', error);
-      return NextResponse.redirect(new URL('/login?error=auth_failed', siteUrl));
+      return NextResponse.redirect(new URL('/?error=auth_failed', siteUrl));
     }
   }
   
@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
     if (error) {
       console.error('Error exchanging code for session:', error);
       console.error('This likely means the code_verifier is missing from cookies');
-      return NextResponse.redirect(new URL('/login?error=auth_failed', siteUrl));
+      return NextResponse.redirect(new URL('/?error=auth_failed', siteUrl));
     }
 
     if (data.session) {
@@ -150,7 +150,7 @@ export async function GET(request: NextRequest) {
   }
 
   // If no valid auth, redirect to login
-  return NextResponse.redirect(new URL('/login?error=no_auth', siteUrl));
+  return NextResponse.redirect(new URL('/?error=no_auth', siteUrl));
 }
 
 

@@ -23,7 +23,14 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
     return match && match[2].length === 11 ? match[2] : null;
   };
 
+  // Check if it's a direct video URL (e.g., .mp4, Supabase Storage)
+  const isDirectVideo = (url: string) => {
+    if (!url) return false;
+    return url.includes('.mp4') || url.includes('.webm') || url.includes('.ogg') || url.includes('supabase.co/storage');
+  };
+
   const videoId = getYouTubeId(videoUrl);
+  const isDirectVideoUrl = isDirectVideo(videoUrl);
 
   const handleMarkComplete = async () => {
     setIsMarking(true);
@@ -52,7 +59,7 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
     }
   };
 
-  if (!videoId) {
+  if (!videoId && !isDirectVideoUrl) {
     return (
       <div className="bg-white rounded-2xl shadow-lg p-12 text-center border border-gray-100">
         <div className="text-6xl mb-4">📹</div>
@@ -64,15 +71,29 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
 
   return (
     <div>
-      {/* YouTube Embed */}
+      {/* Video Player - YouTube or Direct Video */}
       <div className="relative w-full" style={{ paddingBottom: '56.25%' /* 16:9 aspect ratio */ }}>
-        <iframe
-          className="absolute top-0 left-0 w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}`}
-          title="Video content"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
+        {videoId ? (
+          // YouTube Embed
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src={`https://www.youtube.com/embed/${videoId}`}
+            title="Video content"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        ) : (
+          // Direct Video (MP4, Supabase Storage, etc.)
+          <video
+            className="absolute top-0 left-0 w-full h-full"
+            controls
+            controlsList="nodownload"
+            preload="metadata"
+          >
+            <source src={videoUrl} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        )}
       </div>
 
       {/* Mark as Complete Button */}

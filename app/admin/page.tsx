@@ -15,7 +15,7 @@ export default async function AdminPage() {
   const user = await getCurrentUser();
   
   if (!user) {
-    redirect('/login');
+    redirect('/');
   }
   
   const cookieStore = await cookies();

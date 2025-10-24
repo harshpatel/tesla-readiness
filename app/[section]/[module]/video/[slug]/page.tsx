@@ -32,7 +32,7 @@ export default async function VideoPage({ params }: PageProps) {
   // Auth check
   const user = await getCurrentUser();
   if (!user) {
-    redirect('/login');
+    redirect('/');
   }
 
   // Initialize Supabase client
