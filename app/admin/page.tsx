@@ -3,6 +3,7 @@ import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { getCurrentUser } from '@/lib/auth';
 import ClickableUserRow from '@/components/ClickableUserRow';
+import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -12,6 +13,11 @@ export const metadata: Metadata = {
 
 export default async function AdminPage() {
   const user = await getCurrentUser();
+  
+  if (!user) {
+    redirect('/login');
+  }
+  
   const cookieStore = await cookies();
   
   const supabase = createServerClient(
@@ -32,6 +38,19 @@ export default async function AdminPage() {
       },
     }
   );
+
+  // Check if user has admin or masteradmin role
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('role')
+    .eq('id', user.id)
+    .single();
+
+  const userRole = profile?.role || 'student';
+  
+  if (userRole !== 'admin' && userRole !== 'masteradmin') {
+    redirect('/dashboard');
+  }
   
   // Fetch ALL user profiles (students, admins, master admins)
   const { data: allUsers, error } = await supabase

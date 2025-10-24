@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
 import DocumentViewer from '@/components/DocumentViewer';
+import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 
 interface PageProps {
   params: Promise<{
@@ -91,6 +92,13 @@ export default async function DocumentPage({ params }: PageProps) {
     .eq('content_item_id', contentItem.id)
     .single();
 
+  // Fetch user's first name for ElevenLabs widget
+  const { data: profileData } = await supabase
+    .from('profiles')
+    .select('first_name')
+    .eq('id', user.id)
+    .single();
+
   const documentUrl = contentItem.metadata?.documentUrl || '';
   const checkboxes = contentItem.metadata?.checkboxes || [];
 
@@ -159,6 +167,7 @@ export default async function DocumentPage({ params }: PageProps) {
           </div>
         </main>
       </div>
+      <ElevenLabsWidget firstName={profileData?.first_name || undefined} />
     </div>
   );
 }

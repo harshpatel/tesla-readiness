@@ -39,6 +39,33 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(redirectUrl);
   }
 
+  // Role-based access control for admin routes
+  if (session && (req.nextUrl.pathname.startsWith('/admin') || req.nextUrl.pathname.startsWith('/masteradmin'))) {
+    // Fetch user's role from profiles table
+    const { data: profile } = await supabase
+      .from('profiles')
+      .select('role')
+      .eq('id', session.user.id)
+      .single();
+
+    const userRole = profile?.role || 'student';
+
+    // Check if trying to access /masteradmin
+    if (req.nextUrl.pathname.startsWith('/masteradmin')) {
+      if (userRole !== 'masteradmin') {
+        // Redirect to dashboard if not masteradmin
+        return NextResponse.redirect(new URL('/dashboard', req.url));
+      }
+    }
+    // Check if trying to access /admin
+    else if (req.nextUrl.pathname.startsWith('/admin')) {
+      if (userRole !== 'admin' && userRole !== 'masteradmin') {
+        // Redirect to dashboard if not admin or masteradmin
+        return NextResponse.redirect(new URL('/dashboard', req.url));
+      }
+    }
+  }
+
   // If accessing login page with active session, redirect to dashboard
   if (req.nextUrl.pathname === '/login' && session) {
     return NextResponse.redirect(new URL('/dashboard', req.url));

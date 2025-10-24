@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
 import ProfileCompletionModal from '@/components/ProfileCompletionModal';
+import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import { getCurrentUser } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
@@ -177,6 +178,7 @@ export default async function DashboardPage() {
           </div>
         </main>
       </div>
+      <ElevenLabsWidget firstName={profileData?.first_name || undefined} />
     </div>
   );
 }

@@ -65,6 +65,25 @@ export default async function QuizPage({ params }: PageProps) {
     redirect('/login');
   }
 
+  // Fetch user's profile data for first name
+  const cookieStore = await cookies();
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll: () => cookieStore.getAll(),
+        setAll: () => {},
+      },
+    }
+  );
+
+  const { data: profileData } = await supabase
+    .from('profiles')
+    .select('first_name')
+    .eq('id', user.id)
+    .single();
+
   // Get the appropriate quiz data based on module
   const quizData = QUIZ_DATA_MAP[module];
   if (!quizData) {
@@ -112,7 +131,7 @@ export default async function QuizPage({ params }: PageProps) {
             userId={user.id}
             userEmail={user.email}
           />
-          <ElevenLabsWidget />
+          <ElevenLabsWidget firstName={profileData?.first_name || undefined} />
         </div>
       </div>
     </div>

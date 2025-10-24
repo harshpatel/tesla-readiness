@@ -2,7 +2,11 @@
 
 import { useEffect, useRef } from 'react';
 
-export default function ElevenLabsWidget() {
+interface ElevenLabsWidgetProps {
+  firstName?: string;
+}
+
+export default function ElevenLabsWidget({ firstName }: ElevenLabsWidgetProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -13,10 +17,17 @@ export default function ElevenLabsWidget() {
     script.type = 'text/javascript';
     document.body.appendChild(script);
 
-    // Create the widget element
+    // Create the widget element with dynamic variables
     if (containerRef.current) {
       const widget = document.createElement('elevenlabs-convai');
       widget.setAttribute('agent-id', 'agent_4001k86e3t32ef9bm924j3ccg9kk');
+      
+      // Add dynamic variables as JSON string
+      if (firstName) {
+        const dynamicVars = JSON.stringify({ user_name: firstName });
+        widget.setAttribute('dynamic-variables', dynamicVars);
+      }
+      
       containerRef.current.appendChild(widget);
     }
 
@@ -26,7 +37,7 @@ export default function ElevenLabsWidget() {
         document.body.removeChild(script);
       }
     };
-  }, []);
+  }, [firstName]);
 
   return <div ref={containerRef} />;
 }

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
+import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 
 interface PageProps {
   params: Promise<{
@@ -128,6 +129,13 @@ export default async function ModulePage({ params }: PageProps) {
     .select('*')
     .eq('user_id', user.id)
     .eq('module_id', moduleData.id)
+    .single();
+
+  // Fetch user's first name for ElevenLabs widget
+  const { data: profileData } = await supabase
+    .from('profiles')
+    .select('first_name')
+    .eq('id', user.id)
     .single();
 
   const contentItemsWithProgress = (contentItems || []).map((item) => {
@@ -268,6 +276,7 @@ export default async function ModulePage({ params }: PageProps) {
           </div>
         </main>
       </div>
+      <ElevenLabsWidget firstName={profileData?.first_name || undefined} />
     </div>
   );
 }
