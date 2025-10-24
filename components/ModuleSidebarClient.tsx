@@ -199,9 +199,9 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                           const completedItems = module.progress?.completedItems || 0;
                           const totalItems = module.progress?.totalItems || 0;
                           
-                          // Check if we're on the module overview page
+                          // Check if we're on the module overview page OR any page within this module
                           const moduleHref = `/${section.slug}/${module.slug}`;
-                          const isModuleActive = pathname === moduleHref;
+                          const isModuleActive = pathname === moduleHref || pathname.startsWith(`${moduleHref}/`);
 
                           return (
                             <div key={module.id} className={`bg-white rounded-md border ${isModuleActive ? 'border-blue-500 shadow-sm' : 'border-gray-200'} overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
