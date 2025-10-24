@@ -100,10 +100,10 @@
           "type": "multiplechoice",
           "question": "True / False: A Combining Form for a prefix and suffix is always a vowel.",
           "points": 1,
-          "correctAnswer": "False",
+          "correctAnswer": "B",
           "answers": {
-            "True": "True",
-            "False": "False"
+            "A": "True",
+            "B": "False"
           },
           "hint": "MOST of the time it's a vowel, but not ALWAYS!",
           "explanation": "**FALSE!** While combining forms are USUALLY vowels (o, i, a), they're not ALWAYS vowels! ⚠️\n\n💡 **Remember it:** MOST combining forms are vowels (like 'o' in gastr-o-logy), but sometimes consonants can be used. The key is that they make pronunciation easier - that's their job! Don't assume 100% vowel - think 'pronunciation helper' instead!"
