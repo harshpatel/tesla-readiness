@@ -158,7 +158,7 @@
           "type": "multiplechoice",
           "question": "Pericardium refers to the area:",
           "points": 1,
-          "correctAnswer": "Around the heart",
+          "correctAnswer": "C",
           "answers": {
             "A": "Above the heart",
             "B": "Below the heart",
@@ -173,7 +173,7 @@
           "type": "multiplechoice",
           "question": "Hypodermic means:",
           "points": 1,
-          "correctAnswer": "Under the skin",
+          "correctAnswer": "B",
           "answers": {
             "A": "Above the skin",
             "B": "Under the skin",
@@ -188,7 +188,7 @@
           "type": "multiplechoice",
           "question": "A sharp rise or sudden onset is the definition of:",
           "points": 1,
-          "correctAnswer": "Acute",
+          "correctAnswer": "D",
           "answers": {
             "A": "Fever",
             "B": "Infection",
@@ -203,7 +203,7 @@
           "type": "multiplechoice",
           "question": "Hepatis-C, a type of inflammation of the liver, is a(n) _____________ condition.",
           "points": 1,
-          "correctAnswer": "Chronic",
+          "correctAnswer": "A",
           "answers": {
             "A": "Chronic",
             "B": "Cancerous",
@@ -218,7 +218,7 @@
           "type": "multiplechoice",
           "question": "An immune system response that is marked by redness, pain, and/or swelling is ______________.",
           "points": 1,
-          "correctAnswer": "Inflammation",
+          "correctAnswer": "B",
           "answers": {
             "A": "An infection",
             "B": "Inflammation",
@@ -233,7 +233,7 @@
           "type": "multiplechoice",
           "question": "True or False: A cough, for example, can sometimes be both a sign and a symptom.",
           "points": 1,
-          "correctAnswer": "True",
+          "correctAnswer": "A",
           "answers": {
             "A": "True",
             "B": "False"
@@ -246,7 +246,7 @@
           "type": "multiplechoice",
           "question": "In medical terms, the apex of a structure is _________ and the base is _________.",
           "points": 1,
-          "correctAnswer": "Pointed, wide",
+          "correctAnswer": "C",
           "answers": {
             "A": "Wide, pointed",
             "B": "Points up, points down",
@@ -261,7 +261,7 @@
           "type": "multiplechoice",
           "question": "In MRI, the ___________ plane is used for imaging anatomy in the superior/inferior (or inferior/superior) direction.",
           "points": 1,
-          "correctAnswer": "Axial",
+          "correctAnswer": "A",
           "answers": {
             "A": "Axial",
             "B": "Sagittal",
@@ -276,7 +276,7 @@
           "type": "multiplechoice",
           "question": "The abbreviation \"f/u\" means_____________.",
           "points": 1,
-          "correctAnswer": "Follow up",
+          "correctAnswer": "D",
           "answers": {
             "A": "Forward and up",
             "B": "Flu",
@@ -291,7 +291,7 @@
           "type": "multiplechoice",
           "question": "The wrist is ___________ to the elbow.",
           "points": 1,
-          "correctAnswer": "Distal",
+          "correctAnswer": "C",
           "answers": {
             "A": "Medial",
             "B": "Lateral",
