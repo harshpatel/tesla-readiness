@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
@@ -34,6 +34,8 @@ export default async function DocumentPage({ params }: PageProps) {
   if (!user) {
     redirect('/');
   }
+
+  const userIsAdmin = await isAdmin();
 
   // Initialize Supabase client
   const cookieStore = await cookies();
@@ -108,7 +110,8 @@ export default async function DocumentPage({ params }: PageProps) {
         title={`${contentItem.icon} ${contentItem.title}`}
         showAuth 
         showBackButton 
-        userEmail={user.email} 
+        userEmail={user.email}
+        isAdmin={userIsAdmin}
       />
       <div className="flex flex-1">
         {/* Sidebar */}

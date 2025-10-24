@@ -2,7 +2,7 @@ import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
 import ProfileCompletionModal from '@/components/ProfileCompletionModal';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
@@ -20,6 +20,8 @@ export default async function DashboardPage() {
   if (!user) {
     redirect('/');
   }
+
+  const userIsAdmin = await isAdmin();
   
   // Fetch user's progress for each section
   const cookieStore = await cookies();
@@ -138,7 +140,7 @@ export default async function DashboardPage() {
         currentProfile={profileData}
       />
       
-      <Header title="MRI Technologist Curriculum" showAuth={true} userEmail={user?.email} />
+      <Header title="MRI Technologist Curriculum" showAuth={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <div className="flex flex-1">
         {/* Sidebar */}

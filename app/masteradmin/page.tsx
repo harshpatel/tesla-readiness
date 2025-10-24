@@ -1,4 +1,4 @@
-import { requireMasterAdmin, getCurrentUser } from '@/lib/auth';
+import { requireMasterAdmin, getCurrentUser, isAdmin } from '@/lib/auth';
 import { redirect } from 'next/navigation';
 import Header from '@/components/Header';
 import UserRoleManager from '@/components/UserRoleManager';
@@ -11,10 +11,11 @@ export default async function MasterAdminPage() {
   }
 
   const user = await getCurrentUser();
+  const userIsAdmin = await isAdmin();
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title="Master Admin Portal" showAuth showBackButton userEmail={user?.email} />
+      <Header title="Master Admin Portal" showAuth showBackButton userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <main className="flex-1 p-8">
         <div className="max-w-7xl mx-auto">

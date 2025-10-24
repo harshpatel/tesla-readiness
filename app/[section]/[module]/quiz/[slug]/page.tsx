@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 import QuizInterface from '@/components/QuizInterface';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import ModuleSidebar from '@/components/ModuleSidebar';
@@ -65,6 +65,8 @@ export default async function QuizPage({ params }: PageProps) {
     redirect('/');
   }
 
+  const userIsAdmin = await isAdmin();
+
   // Fetch user's profile data for first name
   const cookieStore = await cookies();
   const supabase = createServerClient(
@@ -116,7 +118,7 @@ export default async function QuizPage({ params }: PageProps) {
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title={quizTitle} showAuth showBackButton userEmail={user.email} />
+      <Header title={quizTitle} showAuth showBackButton userEmail={user.email} isAdmin={userIsAdmin} />
       <div className="flex flex-1">
         {/* Sidebar */}
         <ModuleSidebar />

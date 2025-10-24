@@ -7,9 +7,10 @@ interface HeaderProps {
   showAuth?: boolean;
   showBackButton?: boolean;
   userEmail?: string;
+  isAdmin?: boolean;
 }
 
-export default function Header({ title = 'MRI Technologist Curriculum', showAuth = false, showBackButton = false, userEmail }: HeaderProps) {
+export default function Header({ title = 'MRI Technologist Curriculum', showAuth = false, showBackButton = false, userEmail, isAdmin = false }: HeaderProps) {
   return (
     <div className="top-header sticky top-0 z-50 flex items-center justify-between gap-5 px-6 py-4 min-h-[72px]">
       <div className="flex items-center gap-4 flex-1 min-w-0">
@@ -43,6 +44,14 @@ export default function Header({ title = 'MRI Technologist Curriculum', showAuth
       
       {showAuth && (
         <div className="flex items-center gap-3">
+          {isAdmin && (
+            <Link 
+              href="/admin" 
+              className="text-sm font-medium text-[#0A84FF] hover:text-[#0077ED] transition-colors px-3 py-1.5 rounded-md hover:bg-blue-50"
+            >
+              Admin Dashboard
+            </Link>
+          )}
           {userEmail && (
             <span className="text-sm text-slate-600 hidden sm:inline">
               {userEmail}

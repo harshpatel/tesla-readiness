@@ -1,14 +1,15 @@
 import Header from '@/components/Header';
 import Link from 'next/link';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 
 export default async function ResultsPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const user = await getCurrentUser();
+  const userIsAdmin = await isAdmin();
   
   return (
     <div className="min-h-screen flex flex-col">
-      <Header title="Results" showAuth={true} showBackButton={true} userEmail={user?.email} />
+      <Header title="Results" showAuth={true} showBackButton={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <main className="flex-1 flex items-center justify-center p-8">
         <div className="quiz-container max-w-3xl w-full p-8">

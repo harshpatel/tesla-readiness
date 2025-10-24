@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 import AdminTable from '@/components/AdminTable';
 import { redirect } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -17,6 +17,8 @@ export default async function AdminPage() {
   if (!user) {
     redirect('/');
   }
+
+  const userIsAdmin = await isAdmin();
   
   const cookieStore = await cookies();
   
@@ -92,7 +94,7 @@ export default async function AdminPage() {
   
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} />
+      <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <main className="flex-1 p-4">
         <AdminTable
