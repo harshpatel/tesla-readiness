@@ -47,17 +47,17 @@ export async function POST(request: NextRequest) {
       }
     );
 
-    // Get current user
+    // Get current user - use getUser() for security
     const {
-      data: { session },
-    } = await supabase.auth.getSession();
+      data: { user },
+    } = await supabase.auth.getUser();
 
-    if (!session) {
-      console.log('❌ No session found');
+    if (!user) {
+      console.log('❌ No user found');
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const userId = session.user.id;
+    const userId = user.id;
     console.log('✅ User authenticated:', userId);
 
     // Calculate next review date

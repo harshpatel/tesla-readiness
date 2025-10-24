@@ -21,10 +21,10 @@ export async function middleware(req: NextRequest) {
     }
   );
 
-  // Refresh session if expired
+  // Use getUser() instead of getSession() for security - validates with Auth server
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
   // Protected routes that require authentication
   const protectedRoutes = ['/dashboard', '/phase1', '/phase2', '/onboarding', '/clinical', '/registry', '/results', '/admin', '/masteradmin'];
@@ -32,20 +32,20 @@ export async function middleware(req: NextRequest) {
     req.nextUrl.pathname.startsWith(route)
   );
 
-  // If accessing protected route without session, redirect to home page
-  if (isProtectedRoute && !session) {
+  // If accessing protected route without user, redirect to home page
+  if (isProtectedRoute && !user) {
     const redirectUrl = new URL('/', req.url);
     redirectUrl.searchParams.set('redirectTo', req.nextUrl.pathname);
     return NextResponse.redirect(redirectUrl);
   }
 
   // Role-based access control for admin routes
-  if (session && (req.nextUrl.pathname.startsWith('/admin') || req.nextUrl.pathname.startsWith('/masteradmin'))) {
+  if (user && (req.nextUrl.pathname.startsWith('/admin') || req.nextUrl.pathname.startsWith('/masteradmin'))) {
     // Fetch user's role from profiles table
     const { data: profile } = await supabase
       .from('profiles')
       .select('role')
-      .eq('id', session.user.id)
+      .eq('id', user.id)
       .single();
 
     const userRole = profile?.role || 'student';

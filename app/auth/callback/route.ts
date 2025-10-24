@@ -110,6 +110,7 @@ export async function GET(request: NextRequest) {
   }
 
   // After OTP verification or code exchange, check for session
+  // Using getSession() here is safe because we just verified/exchanged above
   const {
     data: { session },
   } = await supabase.auth.getSession();
