@@ -49,38 +49,41 @@ export default async function UserDetailPage({ params }: UserDetailPageProps) {
     redirect('/admin');
   }
   
-  // Fetch all section progress for this user
+  // Fetch all sections and modules
+  const { data: sections } = await supabase
+    .from('sections')
+    .select('*')
+    .order('order_index');
+    
+  const { data: modules } = await supabase
+    .from('modules')
+    .select('*')
+    .order('order_index');
+  
+  // Fetch all content items
+  const { data: contentItems } = await supabase
+    .from('content_items')
+    .select('*')
+    .order('order_index');
+  
+  // Fetch progress data for this user
+  const { data: moduleProgress } = await supabase
+    .from('user_module_progress')
+    .select('*')
+    .eq('user_id', userId);
+  
+  const { data: contentProgress } = await supabase
+    .from('user_content_progress')
+    .select('*')
+    .eq('user_id', userId);
+  
   const { data: sectionProgress } = await supabase
     .from('user_section_progress')
     .select('*')
     .eq('user_id', userId);
   
-  // Fetch all question progress for this user
-  const { data: questionProgress } = await supabase
-    .from('user_quiz_progress')
-    .select('*')
-    .eq('user_id', userId)
-    .order('last_attempt_date', { ascending: false });
-  
-  // Fetch all quiz questions to get full question details
-  const { data: allQuestions } = await supabase
-    .from('quiz_questions')
-    .select('*');
-  
-  // Fetch all quiz sections
-  const { data: allSections } = await supabase
-    .from('quiz_sections')
-    .select('*');
-  
-  // Calculate total questions
-  const { count: totalQuestionsCount } = await supabase
-    .from('quiz_questions')
-    .select('id', { count: 'exact', head: true });
-  
-  const totalQuestions = totalQuestionsCount || 88;
-  
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-gray-50">
       <Header 
         title="User Details" 
         showAuth={true} 
@@ -88,14 +91,15 @@ export default async function UserDetailPage({ params }: UserDetailPageProps) {
         userEmail={currentUser?.email} 
       />
       
-      <main className="flex-1 p-8">
+      <main className="flex-1 p-4">
         <UserDetailView
           userProfile={userProfile}
+          sections={sections || []}
+          modules={modules || []}
+          contentItems={contentItems || []}
+          moduleProgress={moduleProgress || []}
+          contentProgress={contentProgress || []}
           sectionProgress={sectionProgress || []}
-          questionProgress={questionProgress || []}
-          allQuestions={allQuestions || []}
-          allSections={allSections || []}
-          totalQuestions={totalQuestions}
         />
       </main>
     </div>
