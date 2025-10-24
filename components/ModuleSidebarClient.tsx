@@ -198,23 +198,27 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                           const progressPercent = module.progress?.progressPercent || 0;
                           const completedItems = module.progress?.completedItems || 0;
                           const totalItems = module.progress?.totalItems || 0;
+                          
+                          // Check if we're on the module overview page
+                          const moduleHref = `/${section.slug}/${module.slug}`;
+                          const isModuleActive = pathname === moduleHref;
 
                           return (
-                            <div key={module.id} className={`bg-white rounded-md border border-gray-200 overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
+                            <div key={module.id} className={`bg-white rounded-md border ${isModuleActive ? 'border-blue-500 shadow-sm' : 'border-gray-200'} overflow-hidden ${module.isLocked ? 'opacity-60' : ''}`}>
                               {/* Module Header - Compact */}
                               <div>
                                 {module.isPublished && !module.isLocked ? (
                                   <div className="flex items-stretch">
                                     <Link
-                                      href={`/${section.slug}/${module.slug}`}
+                                      href={moduleHref}
                                       onClick={() => setIsOpen(false)}
-                                      className="flex-1 px-2.5 py-2 hover:bg-gray-50 transition-colors"
+                                      className={`flex-1 px-2.5 py-2 transition-colors ${isModuleActive ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
                                     >
                                       <div className="flex items-center gap-2 min-w-0">
                                         <span className="text-base flex-shrink-0">{module.icon}</span>
                                         <div className="flex-1 min-w-0">
                                           <div className="flex items-center gap-1.5 mb-0.5">
-                                            <span className="font-semibold text-xs text-gray-900 truncate">
+                                            <span className={`font-semibold text-xs truncate ${isModuleActive ? 'text-blue-700' : 'text-gray-900'}`}>
                                               {module.title}
                                             </span>
                                             {progressPercent === 100 && (
