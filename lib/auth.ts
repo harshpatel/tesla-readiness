@@ -150,7 +150,7 @@ export async function requireAdmin() {
 export async function requireMasterAdmin() {
   const user = await getCurrentUser();
   
-  if (!user || user.role !== 'masteradmin') {
+  if (!user || user.role !== 'master_admin') {
     throw new Error('Forbidden - Master Admin access required');
   }
   

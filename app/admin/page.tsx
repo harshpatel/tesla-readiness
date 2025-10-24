@@ -48,7 +48,7 @@ export default async function AdminPage() {
 
   const userRole = profile?.role || 'student';
   
-  if (userRole !== 'admin' && userRole !== 'masteradmin') {
+  if (userRole !== 'admin' && userRole !== 'master_admin') {
     redirect('/dashboard');
   }
   

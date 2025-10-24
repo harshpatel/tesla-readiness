@@ -52,15 +52,15 @@ export async function middleware(req: NextRequest) {
 
     // Check if trying to access /masteradmin
     if (req.nextUrl.pathname.startsWith('/masteradmin')) {
-      if (userRole !== 'masteradmin') {
-        // Redirect to dashboard if not masteradmin
+      if (userRole !== 'master_admin') {
+        // Redirect to dashboard if not master_admin
         return NextResponse.redirect(new URL('/dashboard', req.url));
       }
     }
     // Check if trying to access /admin
     else if (req.nextUrl.pathname.startsWith('/admin')) {
-      if (userRole !== 'admin' && userRole !== 'masteradmin') {
-        // Redirect to dashboard if not admin or masteradmin
+      if (userRole !== 'admin' && userRole !== 'master_admin') {
+        // Redirect to dashboard if not admin or master_admin
         return NextResponse.redirect(new URL('/dashboard', req.url));
       }
     }
