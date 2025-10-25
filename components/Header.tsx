@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoutButton from '@/components/LogoutButton';
+import ThemeToggle from '@/components/ThemeToggle';
 
 interface HeaderProps {
   title?: string;
@@ -36,30 +37,33 @@ export default function Header({ title = 'MRI Technologist Curriculum', showAuth
         </Link>
         
         {title && (
-          <div className="text-[22px] font-bold text-[#1a1a1a] leading-tight tracking-tight hidden sm:block">
+          <div className="text-[22px] font-bold text-[#1a1a1a] dark:text-white leading-tight tracking-tight hidden sm:block">
             {title}
           </div>
         )}
       </div>
       
-      {showAuth && (
-        <div className="flex items-center gap-3">
-          {isAdmin && (
-            <Link 
-              href="/admin" 
-              className="text-sm font-medium text-[#0A84FF] hover:text-[#0077ED] transition-colors px-3 py-1.5 rounded-md hover:bg-blue-50"
-            >
-              Admin Dashboard
-            </Link>
-          )}
-          {userEmail && (
-            <span className="text-sm text-slate-600 hidden sm:inline">
-              {userEmail}
-            </span>
-          )}
-          <LogoutButton />
-        </div>
-      )}
+      <div className="flex items-center gap-3">
+        <ThemeToggle />
+        {showAuth && (
+          <>
+            {isAdmin && (
+              <Link 
+                href="/admin" 
+                className="text-sm font-medium text-[#0A84FF] hover:text-[#0077ED] transition-colors px-3 py-1.5 rounded-md hover:bg-blue-50 dark:hover:bg-blue-900/30"
+              >
+                Admin Dashboard
+              </Link>
+            )}
+            {userEmail && (
+              <span className="text-sm text-slate-600 dark:text-slate-400 hidden sm:inline">
+                {userEmail}
+              </span>
+            )}
+            <LogoutButton />
+          </>
+        )}
+      </div>
     </div>
   );
 }
