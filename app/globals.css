@@ -169,15 +169,30 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   }
   
+  .dark .top-header {
+    background: linear-gradient(to bottom, #1a1a1a 0%, #222222 100%);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
   /* TeslaMR Container */
   .quiz-container {
     @apply bg-white rounded-xl shadow-sm border border-gray-100;
     transition: all 0.3s ease;
   }
   
+  .dark .quiz-container {
+    @apply bg-slate-800/80 border-slate-700;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  }
+  
   .quiz-container:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     transform: translateY(-2px);
+  }
+  
+  .dark .quiz-container:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
   }
 }
 

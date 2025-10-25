@@ -151,10 +151,10 @@ export default async function DashboardPage() {
           <div className="max-w-4xl mx-auto">
           {/* Welcome Section */}
           <div className="mb-8 animate-[fadeIn_0.6s_ease-out]">
-            <h1 className="text-4xl font-bold text-[#1a1a1a] mb-3 tracking-tight">
+            <h1 className="text-4xl font-bold text-[#1a1a1a] dark:text-white mb-3 tracking-tight">
               Welcome back{profileData?.first_name ? `, ${profileData.first_name}` : ''}! 👋
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-gray-600 dark:text-gray-300">
               Ready to continue your MRI technologist training?
             </p>
           </div>
@@ -168,17 +168,16 @@ export default async function DashboardPage() {
             ].map((stat, index) => (
               <div
                 key={stat.label}
-                className="p-6 rounded-xl border border-gray-200 text-center"
+                className="p-6 rounded-xl border border-gray-200 dark:border-slate-700 text-center bg-gradient-to-br from-gray-50 to-white dark:from-slate-800/80 dark:to-slate-800/60"
                 style={{
-                  background: 'linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%)',
                   animation: `fadeIn 0.6s ease-out ${0.2 + index * 0.1}s backwards`
                 }}
               >
                 <div className="text-3xl mb-2">{stat.emoji}</div>
-                <div className="text-2xl font-bold text-[#1a1a1a] mb-1">
+                <div className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">
+                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -187,7 +186,7 @@ export default async function DashboardPage() {
 
           {/* What to Complete Next */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-[#1a1a1a] mb-4">What to complete next:</h2>
+            <h2 className="text-2xl font-bold text-[#1a1a1a] dark:text-white mb-4">What to complete next:</h2>
             <div className="grid gap-4">
               {nextIncompleteItems.length > 0 ? (
                 nextIncompleteItems.map((item: any) => {
@@ -202,23 +201,23 @@ export default async function DashboardPage() {
                     <Link
                       key={item.id}
                       href={itemUrl}
-                      className="block bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 hover:border-[#0A84FF]"
+                      className="block bg-white dark:bg-slate-800/80 rounded-xl shadow-sm hover:shadow-md transition-all p-6 border border-gray-100 dark:border-slate-700 hover:border-[#0A84FF]"
                     >
                       <div className="flex items-center gap-4">
                         <span className="text-4xl">{item.icon}</span>
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
-                            <span className="text-xs font-medium text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                            <span className="text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-slate-700 px-2 py-1 rounded">
                               {item.module.section.title} → {item.module.title}
                             </span>
                             <span className="text-xs font-medium text-[#0A84FF]">
                               {contentTypeLabel}
                             </span>
                           </div>
-                          <h3 className="text-xl font-semibold text-[#1a1a1a] mb-1">
+                          <h3 className="text-xl font-semibold text-[#1a1a1a] dark:text-white mb-1">
                             {item.title}
                           </h3>
-                          <p className="text-sm text-gray-600">{item.description}</p>
+                          <p className="text-sm text-gray-600 dark:text-gray-300">{item.description}</p>
                         </div>
                         <div className="text-[#0A84FF]">
                           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -230,12 +229,12 @@ export default async function DashboardPage() {
                   );
                 })
               ) : (
-                <div className="bg-white rounded-xl shadow-sm p-8 border border-gray-100 text-center">
+                <div className="bg-white dark:bg-slate-800/80 rounded-xl shadow-sm p-8 border border-gray-100 dark:border-slate-700 text-center">
                   <span className="text-5xl mb-4 block">🎉</span>
-                  <h3 className="text-xl font-semibold text-[#1a1a1a] mb-2">
+                  <h3 className="text-xl font-semibold text-[#1a1a1a] dark:text-white mb-2">
                     All caught up!
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-gray-600 dark:text-gray-300">
                     You've completed all available content. Great work!
                   </p>
                 </div>
