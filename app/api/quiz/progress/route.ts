@@ -1,9 +1,17 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
+import { checkMutationAllowed } from '@/lib/auth';
 
 export async function POST(request: NextRequest) {
   console.log('📝 Progress API called');
+  
+  // Check if mutations are allowed (block if impersonating)
+  const mutationCheck = await checkMutationAllowed();
+  if (mutationCheck.blocked) {
+    return NextResponse.json({ error: mutationCheck.error }, { status: 403 });
+  }
+  
   try {
     const body = await request.json();
     console.log('📦 Raw body:', body);

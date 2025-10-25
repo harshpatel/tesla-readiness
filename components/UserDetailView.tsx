@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import ViewAsButton from '@/components/ViewAsButton';
 
 interface UserProfile {
   id: string;
@@ -239,19 +240,28 @@ export default function UserDetailView({
               {roleStyle.label}
             </span>
           </div>
-          <div className="flex items-center gap-4 text-xs">
-            <div>
-              <span className="text-gray-500 dark:text-gray-400">Joined:</span>
-              <span className="ml-1 font-medium text-gray-900 dark:text-white">{formatDate(userProfile.created_at)}</span>
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 text-xs">
+              <div>
+                <span className="text-gray-500 dark:text-gray-400">Joined:</span>
+                <span className="ml-1 font-medium text-gray-900 dark:text-white">{formatDate(userProfile.created_at)}</span>
+              </div>
+              <div>
+                <span className="text-gray-500 dark:text-gray-400">Streak:</span>
+                <span className="ml-1 font-semibold text-orange-600 dark:text-orange-400">{userProfile.current_streak}🔥</span>
+              </div>
+              <div>
+                <span className="text-gray-500 dark:text-gray-400">Last Active:</span>
+                <span className="ml-1 font-medium text-gray-900 dark:text-white">{formatDate(userProfile.last_activity_date)}</span>
+              </div>
             </div>
-            <div>
-              <span className="text-gray-500 dark:text-gray-400">Streak:</span>
-              <span className="ml-1 font-semibold text-orange-600 dark:text-orange-400">{userProfile.current_streak}🔥</span>
-            </div>
-            <div>
-              <span className="text-gray-500 dark:text-gray-400">Last Active:</span>
-              <span className="ml-1 font-medium text-gray-900 dark:text-white">{formatDate(userProfile.last_activity_date)}</span>
-            </div>
+            <ViewAsButton 
+              userId={userProfile.id}
+              userName={userProfile.first_name && userProfile.last_name 
+                ? `${userProfile.first_name} ${userProfile.last_name}` 
+                : userProfile.full_name || userProfile.email}
+              isStudent={userProfile.role === 'student'}
+            />
           </div>
         </div>
       </div>

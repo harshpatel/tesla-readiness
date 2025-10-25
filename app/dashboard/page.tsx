@@ -140,7 +140,12 @@ export default async function DashboardPage() {
         currentProfile={profileData}
       />
       
-      <Header title="MRI Technologist Curriculum" showAuth={true} userEmail={user?.email} isAdmin={userIsAdmin} />
+      <Header 
+        title="MRI Technologist Curriculum" 
+        showAuth={true} 
+        userEmail={user?.email} 
+        isAdmin={userIsAdmin}
+      />
       
       <div className="flex flex-1">
         {/* Sidebar */}

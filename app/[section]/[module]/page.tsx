@@ -164,7 +164,7 @@ export default async function ModulePage({ params }: PageProps) {
         <ModuleSidebar />
         
         {/* Main Content */}
-        <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
           <div className="max-w-5xl mx-auto px-6 py-12">
           {/* Breadcrumb */}
           <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
@@ -202,7 +202,7 @@ export default async function ModulePage({ params }: PageProps) {
                       {progressPercent}%
                     </span>
                   </div>
-                  <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div className="h-3 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
                     <div
                       className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
                       style={{ width: `${progressPercent}%` }}
@@ -234,7 +234,7 @@ export default async function ModulePage({ params }: PageProps) {
                 <Link
                   key={item.id}
                   href={href}
-                  className="block bg-gray-50 dark:bg-slate-900 rounded-xl hover:bg-gray-100 dark:bg-slate-700 transition-all p-6 border border-gray-200 dark:border-slate-700 hover:border-[#0A84FF]"
+                  className="block bg-gray-50 dark:bg-slate-900 rounded-xl hover:bg-gray-100 dark:hover:bg-slate-700 transition-all p-6 border border-gray-200 dark:border-slate-700 hover:border-[#0A84FF]"
                 >
                   <div className="flex items-center gap-4">
                     <span className="text-3xl">{item.icon || '📄'}</span>

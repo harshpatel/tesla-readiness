@@ -53,6 +53,7 @@ export async function getSession() {
 /**
  * Get the current user's profile
  * Uses getUser() to validate the session with Supabase Auth server
+ * If impersonating, returns the impersonated user's profile
  */
 export async function getCurrentUser() {
   const cookieStore = await cookies();
@@ -88,10 +89,14 @@ export async function getCurrentUser() {
     return null;
   }
   
+  // Check if we're impersonating another user
+  const impersonatingUserId = cookieStore.get('impersonating_user_id')?.value;
+  const userId = impersonatingUserId || user.id;
+  
   const { data: profile, error } = await supabase
     .from('profiles')
     .select('*')
-    .eq('id', user.id)
+    .eq('id', userId)
     .single();
   
   if (error) {
@@ -155,6 +160,111 @@ export async function requireMasterAdmin() {
   }
   
   return user;
+}
+
+/**
+ * Check if currently impersonating another user
+ */
+export async function getImpersonationState() {
+  const cookieStore = await cookies();
+  const impersonatingUserId = cookieStore.get('impersonating_user_id')?.value;
+  const originalAdminId = cookieStore.get('original_admin_id')?.value;
+  
+  return {
+    isImpersonating: !!impersonatingUserId,
+    impersonatedUserId: impersonatingUserId || null,
+    originalAdminId: originalAdminId || null,
+  };
+}
+
+/**
+ * Get the real admin user (even when impersonating)
+ */
+export async function getRealUser() {
+  const cookieStore = await cookies();
+  
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll();
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            );
+          } catch {}
+        },
+      },
+    }
+  );
+  
+  const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser();
+  
+  if (userError || !user) {
+    return null;
+  }
+  
+  const { data: profile, error } = await supabase
+    .from('profiles')
+    .select('*')
+    .eq('id', user.id)
+    .single();
+  
+  if (error) {
+    return null;
+  }
+  
+  return profile as Profile;
+}
+
+/**
+ * Check if mutations should be blocked (when impersonating)
+ * Returns an error response if mutations are blocked, null otherwise
+ */
+export async function checkMutationAllowed() {
+  const { isImpersonating } = await getImpersonationState();
+  
+  if (isImpersonating) {
+    return {
+      blocked: true,
+      error: 'Mutations are not allowed while impersonating a user. This is read-only mode.',
+    };
+  }
+  
+  return { blocked: false };
+}
+
+/**
+ * Get impersonation data for Header component
+ * Returns undefined if not impersonating
+ */
+export async function getImpersonationDataForHeader() {
+  const impersonationState = await getImpersonationState();
+  
+  if (!impersonationState.isImpersonating) {
+    return undefined;
+  }
+  
+  const user = await getCurrentUser();
+  
+  if (!user) {
+    return undefined;
+  }
+  
+  return {
+    isImpersonating: true,
+    impersonatedUserName: user.first_name && user.last_name 
+      ? `${user.first_name} ${user.last_name}`
+      : user.full_name || user.email,
+    impersonatedUserEmail: user.email,
+  };
 }
 
 
