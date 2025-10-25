@@ -4,7 +4,13 @@ export interface Profile {
   id: string;
   email: string;
   full_name?: string;
+  first_name?: string;
+  last_name?: string;
+  phone?: string;
+  date_of_birth?: string;
   role: UserRole;
+  current_streak?: number;
+  last_activity_date?: string;
   created_at: string;
   updated_at: string;
 }
