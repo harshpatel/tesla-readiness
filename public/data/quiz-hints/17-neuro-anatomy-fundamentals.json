@@ -1,0 +1,1095 @@
+{
+  "neuro-q1": {
+    "question_type": "multiplechoice",
+    "question_text": "The three orthogonal planes mainly used in MRI are Axial, Sagittal and",
+    "answers": {
+      "A": "Coronal",
+      "B": "Oblique",
+      "C": "Simple Oblique",
+      "D": "Complex Oblique"
+    },
+    "correct_answer": "A",
+    "hint": "Think of the three perpendicular planes - like the corner of a room!",
+    "explanation": "**Coronal** - the third orthogonal plane! ✈️\n\n💡 **Remember it:** The three ORTHOGONAL (perpendicular) planes are like the corner of a room - floor, left wall, back wall all meet at 90°! **AXIAL** (horizontal slices), **SAGITTAL** (left-right dividing), and **CORONAL** (front-back dividing like a crown/corona on your head). Oblique planes are angled, not orthogonal!"
+  },
+  "neuro-q2": {
+    "question_type": "multiplechoice",
+    "question_text": "If an Axial stack of images is acquired from inferior to superior, the slice direction is in the ___________ direction.",
+    "answers": {
+      "A": "X",
+      "B": "Y",
+      "C": "Z",
+      "D": "None of the above"
+    },
+    "correct_answer": "C",
+    "hint": "Z is the vertical axis - up and down!",
+    "explanation": "**Z direction** - the vertical axis! 📏\n\n💡 **Remember it:** In standard imaging coordinates: **X = left-right**, **Y = anterior-posterior**, **Z = inferior-superior (up-down)**. Think of it like a building: X is which apartment (left/right), Y is how far back you walk, Z is which FLOOR (up/down). Axial slices going from feet to head = moving in the Z direction!"
+  },
+  "neuro-q3": {
+    "question_type": "multiplechoice",
+    "question_text": "A simple oblique is an image that is prescribed from a(n) __________ image.",
+    "answers": {
+      "A": "simple oblique",
+      "B": "complex oblique",
+      "C": "orthogonal view",
+      "D": "localizing or scout"
+    },
+    "correct_answer": "C",
+    "hint": "You need a straight plane to angle from!",
+    "explanation": "**Orthogonal view** - start with a straight plane! 🎯\n\n💡 **Remember it:** Think of it like giving directions - you start from a MAIN STREET (orthogonal plane) then turn at an angle. A **simple oblique** is angled from ONE orthogonal plane (like axial). A **complex oblique** is angled from TWO planes (like angled from both axial AND sagittal). You can't give directions from an angle - you need a straight reference first!"
+  },
+  "neuro-q4": {
+    "question_type": "multiplechoice",
+    "question_text": "The pathology circled is most likely __________?",
+    "answers": {
+      "A": "metastasis",
+      "B": "multiple sclerosis",
+      "C": "infection",
+      "D": "stroke"
+    },
+    "correct_answer": "B",
+    "hint": "Look for multiple small lesions in white matter - classic MS pattern!",
+    "explanation": "**Multiple Sclerosis (MS)** - scattered white matter lesions! 🎯\n\n💡 **Remember it:** MS causes MULTIPLE (hence the name!) small, oval-shaped lesions in the WHITE MATTER. They're called 'plaques' and show up bright on T2/FLAIR. Classic locations: periventricular (around ventricles), corpus callosum, and perpendicular to ventricles (Dawson's fingers). Think MULTIPLE scattered spots = Multiple Sclerosis! Stroke would be vascular territory, metastases are usually at gray-white junction."
+  },
+  "neuro-q5": {
+    "question_type": "multiplechoice",
+    "question_text": "The circled area seen here is ___________.",
+    "answers": {
+      "A": "tumor",
+      "B": "ischemia",
+      "C": "multiple sclerosis",
+      "D": "migraine"
+    },
+    "correct_answer": "B",
+    "hint": "Follows a vascular territory - lack of blood flow!",
+    "explanation": "**Ischemia** - restricted blood flow causing tissue damage! 🩸\n\n💡 **Remember it:** ISCHEMIA = restricted blood supply (from Greek 'to hold back blood'). On MRI, acute stroke/ischemia shows up as a wedge-shaped area following a specific artery's territory (MCA, ACA, PCA). It's BRIGHT on DWI (diffusion weighted imaging) and DARK on ADC map. Think of it like a river drying up - everything downstream dies in that specific area!"
+  },
+  "neuro-q6": {
+    "question_type": "multiplechoice",
+    "question_text": "The disk herniation seen here is at the level of ___________.",
+    "answers": {
+      "A": "C2-C3",
+      "B": "C3-C4",
+      "C": "C4-C5",
+      "D": "C5-C6"
+    },
+    "correct_answer": "D",
+    "hint": "Count the vertebrae from top down - C1 is the atlas under the skull!",
+    "explanation": "**C5-C6 disc level** - count carefully! 🔢\n\n💡 **Remember it:** To count cervical levels on sagittal MRI: C1 (atlas) is the ring under the skull, C2 (axis) has the dens/odontoid pointing up. Then count down: C3, C4, C5, C6, C7. The DISC is named for the vertebrae above and below it. So C5-C6 disc sits between the C5 and C6 vertebral bodies. Herniated discs most commonly occur at C5-C6 and C6-C7 in the cervical spine!"
+  },
+  "neuro-q7": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Caudate Nucleus",
+      "B": "Lateral ventricle",
+      "C": "Cerebellum",
+      "D": "Frontal Sinus"
+    },
+    "correct_answer": "B",
+    "hint": "Dark CSF-filled space in the center of the brain!",
+    "explanation": "**Lateral Ventricle** - CSF reservoir in the brain! 💧\n\n💡 **Remember it:** The lateral ventricles are the two largest ventricles in the brain (one in each hemisphere). They're filled with cerebrospinal fluid (CSF) so they appear DARK on T1 and BRIGHT on T2. They have horns: frontal (anterior), body, occipital (posterior), and temporal (inferior). Think of them like the brain's LAKES - dark fluid-filled spaces on imaging!"
+  },
+  "neuro-q8": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Caudate Nucleus",
+      "B": "Lateral ventricle",
+      "C": "Cerebellum",
+      "D": "Frontal Sinus"
+    },
+    "correct_answer": "A",
+    "hint": "C-shaped structure hugging the lateral ventricle - part of basal ganglia!",
+    "explanation": "**Caudate Nucleus** - important for movement control! 🧠\n\n💡 **Remember it:** The CAUDATE nucleus is C-shaped (CAUDATE = has a TAIL, cauda = tail in Latin) and wraps around the lateral ventricle. It's part of the basal ganglia which control voluntary movement. It has a big HEAD near the frontal horn and a long TAIL that follows the ventricle back. Damage causes movement disorders like Huntington's disease!"
+  },
+  "neuro-q9": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Caudate Nucleus",
+      "B": "Lateral ventricle",
+      "C": "Cerebellum",
+      "D": "Frontal Sinus"
+    },
+    "correct_answer": "D",
+    "hint": "Air-filled sinus in the forehead area!",
+    "explanation": "**Frontal Sinus** - air-filled cavity in your forehead! 💨\n\n💡 **Remember it:** The frontal sinuses are air-filled spaces in the frontal bone (forehead). They appear BLACK (like air) on MRI. We have several paranasal sinuses: FRONTAL (forehead), MAXILLARY (cheeks), ETHMOID (between eyes), SPHENOID (behind nose). Think F-M-E-S = From My Eye Socket! They lighten the skull and warm/humidify air."
+  },
+  "neuro-q10": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Caudate Nucleus",
+      "B": "Lateral ventricle",
+      "C": "Cerebellum",
+      "D": "Frontal Sinus"
+    },
+    "correct_answer": "C",
+    "hint": "Little brain at the back - coordinates movement!",
+    "explanation": "**Cerebellum** - the 'little brain' for coordination! 🎯\n\n💡 **Remember it:** CEREBELLUM means 'little brain' in Latin. It sits in the POSTERIOR FOSSA (back of skull) below the occipital lobes. It looks like a wrinkled ball with distinct folia (folds). Its job: COORDINATION, BALANCE, FINE MOTOR CONTROL. If you're drunk or have cerebellar damage, you can't walk straight or touch your nose! Think of it as your body's GPS for smooth movement!"
+  },
+  "neuro-q11": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Fourth Ventricle",
+      "B": "Thalamus",
+      "C": "Sphenoid Sinus",
+      "D": "Genu of the Corpus Callosum"
+    },
+    "correct_answer": "D",
+    "hint": "Front part of the white matter bridge connecting hemispheres!",
+    "explanation": "**Genu of the Corpus Callosum** - the 'knee' of the brain bridge! 🌉\n\n💡 **Remember it:** The corpus callosum is the huge white matter tract connecting left and right hemispheres. GENU = KNEE in Latin (think GENUFLECT = bend your knee). The genu is the FRONT curved part (like a bent knee). Then comes the BODY (middle), then the SPLENIUM (back thickened part). It's the brain's information HIGHWAY between hemispheres!"
+  },
+  "neuro-q12": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Fourth Ventricle",
+      "B": "Corpus Callosum",
+      "C": "Sphenoid Sinus",
+      "D": "Genu of the Corpus Callosum"
+    },
+    "correct_answer": "C",
+    "hint": "Air-filled space behind the nose!",
+    "explanation": "**Sphenoid Sinus** - butterfly bone air pocket! 🦋\n\n💡 **Remember it:** The SPHENOID bone is shaped like a BUTTERFLY in the middle of the skull base. Its air-filled sinus sits right behind your nose, below the pituitary gland (sella turcica). It appears BLACK (air) on MRI. The sphenoid is centrally located - think of it as the KEYSTONE of the skull base. Infections here can spread to the brain!"
+  },
+  "neuro-q13": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Pons",
+      "B": "Thalamus",
+      "C": "Corpus Callosum",
+      "D": "Genu of the Corpus Callosum"
+    },
+    "correct_answer": "C",
+    "hint": "The entire white matter bridge - larger than just the genu!",
+    "explanation": "**Corpus Callosum** (entire structure) - the brain's communication superhighway! 🛣️\n\n💡 **Remember it:** CORPUS CALLOSUM = 'hard body' in Latin. It's the LARGEST white matter tract in the brain - about 200 MILLION nerve fibers! Connects left and right hemispheres so they can communicate. Has 3 parts: GENU (front/knee), BODY (middle), SPLENIUM (back/thickened). If you cut it (split-brain surgery), the hemispheres can't talk - each hand acts independently!"
+  },
+  "neuro-q14": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Pons",
+      "B": "Thalamus",
+      "C": "Corpus Callosum",
+      "D": "Genu of the Corpus Callosum"
+    },
+    "correct_answer": "B",
+    "hint": "Relay station in the center - all sensory info passes through!",
+    "explanation": "**Thalamus** - the brain's sensory relay station! 📡\n\n💡 **Remember it:** The THALAMUS is like GRAND CENTRAL STATION - ALL sensory info (except smell) passes through it before reaching the cortex. It's a paired gray matter structure on each side of the third ventricle. Think of it as the brain's SWITCHBOARD - it decides what info is important enough to send upstairs to consciousness. Stroke here causes contralateral sensory loss!"
+  },
+  "neuro-q15": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Fourth Ventricle",
+      "B": "Thalamus",
+      "C": "Sphenoid Sinus",
+      "D": "Genu of the Corpus Callosum"
+    },
+    "correct_answer": "A",
+    "hint": "Tent-shaped CSF space between brainstem and cerebellum!",
+    "explanation": "**Fourth Ventricle** - CSF channel in the posterior fossa! 💧\n\n💡 **Remember it:** The fourth ventricle is a CSF-filled space shaped like a TENT or DIAMOND. It sits BETWEEN the brainstem (front) and cerebellum (back). CSF flows: lateral ventricles → third ventricle (via foramen of Monro) → cerebral aqueduct → FOURTH VENTRICLE → exits to subarachnoid space. Blockage here causes HYDROCEPHALUS!"
+  },
+  "neuro-q16": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Pons",
+      "B": "Fourth Ventricle",
+      "C": "Thalamus",
+      "D": "Sphenoid Sinus"
+    },
+    "correct_answer": "A",
+    "hint": "Bridge of the brainstem - literally means 'bridge' in Latin!",
+    "explanation": "**Pons** - the brainstem bridge! 🌉\n\n💡 **Remember it:** PONS literally means BRIDGE in Latin. It's the middle bulge of the brainstem (between midbrain above and medulla below). It connects the cerebellum to the rest of the brain and contains cranial nerve nuclei (V, VI, VII, VIII). Think of it as the BRIDGE between your brain and body. Damage causes 'locked-in syndrome' - conscious but paralyzed!"
+  },
+  "neuro-q17": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Optic Nerve",
+      "C": "Basilar Artery",
+      "D": "Orbital Globe"
+    },
+    "correct_answer": "D",
+    "hint": "The eyeball itself!",
+    "explanation": "**Orbital Globe** - your eyeball! 👁️\n\n💡 **Remember it:** The GLOBE is literally your EYEBALL - a sphere filled with vitreous humor. On MRI it appears as a round structure in the orbit (eye socket). The lens is in front, vitreous gel fills the back. The optic nerve exits posteriorly. Think GLOBE = EYEBALL (both round spheres!). Normal globes should be symmetric - asymmetry suggests pathology!"
+  },
+  "neuro-q18": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Optic Nerve",
+      "C": "Basilar Artery",
+      "D": "Orbital Globe"
+    },
+    "correct_answer": "A",
+    "hint": "Major artery bringing blood to the brain - runs through carotid canal!",
+    "explanation": "**Internal Carotid Artery (ICA)** - major brain blood supply! 🩸\n\n💡 **Remember it:** The ICA is one of two main arteries feeding the brain (along with vertebral arteries). It runs through the CAROTID CANAL in the skull base, makes an S-shaped curve (carotid siphon), then branches into anterior and middle cerebral arteries. On MRI angiography it shows FLOW VOID (appears dark). Think: INTERNAL carotid goes INSIDE skull to brain; EXTERNAL carotid stays outside for face/scalp!"
+  },
+  "neuro-q19": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Optic Nerve",
+      "C": "Basilar Artery",
+      "D": "Orbital Globe"
+    },
+    "correct_answer": "B",
+    "hint": "CN II - transmits vision from eye to brain!",
+    "explanation": "**Optic Nerve (CN II)** - your vision cable! 📸\n\n💡 **Remember it:** The optic nerve (cranial nerve II) carries visual information from the retina to the brain. It exits the back of the eyeball through the optic disc (blind spot) and travels through the orbit to the optic canal. Both optic nerves meet at the OPTIC CHIASM where half the fibers cross. On MRI it appears as a thin structure behind the globe. MS and optic neuritis commonly affect it!"
+  },
+  "neuro-q20": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Basilar Artery",
+      "C": "Cerebral Peduncle",
+      "D": "Cerebral Aqueduct"
+    },
+    "correct_answer": "B",
+    "hint": "Formed by joining of vertebral arteries - feeds posterior brain!",
+    "explanation": "**Basilar Artery** - posterior circulation powerhouse! 🔋\n\n💡 **Remember it:** The BASILAR artery forms when the two vertebral arteries JOIN at the base (BASIS) of the brainstem. It runs up the front of the pons and branches into posterior cerebral arteries. Supplies: brainstem, cerebellum, occipital lobes. Basilar strokes are DEVASTATING - can cause locked-in syndrome. Think: BASILAR = at the BASE of the brain!"
+  },
+  "neuro-q21": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Basilar Artery",
+      "C": "Cerebral Peduncle",
+      "D": "Cerebral Aqueduct"
+    },
+    "correct_answer": "C",
+    "hint": "Motor tracts running through the midbrain - like pedals for movement!",
+    "explanation": "**Cerebral Peduncle** - motor highway through the midbrain! 🛣️\n\n💡 **Remember it:** PEDUNCLE = little FOOT/PEDAL in Latin. The cerebral peduncles are the front part of the midbrain containing MOTOR tracts (corticospinal and corticobulbar) going DOWN to control movement. Think of them as the PEDALS of the brain - carrying motor commands from cortex to spinal cord. There's one on each side of the midbrain. Damage causes contralateral weakness!"
+  },
+  "neuro-q22": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Internal Carotid Artery",
+      "B": "Basilar Artery",
+      "C": "Cerebral Peduncle",
+      "D": "Cerebral Aqueduct"
+    },
+    "correct_answer": "D",
+    "hint": "Narrow CSF channel connecting 3rd and 4th ventricles!",
+    "explanation": "**Cerebral Aqueduct (of Sylvius)** - CSF pipeline through midbrain! 💧\n\n💡 **Remember it:** The cerebral aqueduct (also called Aqueduct of Sylvius) is a NARROW channel through the midbrain connecting the third ventricle to the fourth ventricle. Think of it like a WATER PIPE - CSF flows through it. It's the narrowest part of the ventricular system, so it's prone to BLOCKAGE → causing obstructive hydrocephalus. If blocked, pressure builds up like a clogged drain!"
+  },
+  "neuro-q23": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Pituitary Gland",
+      "B": "Medial Rectus Muscle",
+      "C": "Ethmoid Sinus",
+      "D": "Lateral Rectus Muscle"
+    },
+    "correct_answer": "D",
+    "hint": "Pulls eye outward (abduction) - lateral means 'to the side'!",
+    "explanation": "**Lateral Rectus Muscle** - pulls your eye outward! ↔️\n\n💡 **Remember it:** There are 6 extraocular muscles. The LATERAL RECTUS pulls the eye LATERALLY (outward/away from nose). It's innervated by CN VI (abducens nerve). If paralyzed, you can't look to the side → diplopia (double vision). Remember: LR6 (Lateral Rectus, CN VI, goes to the Side = 6 letters in LATERAL). All other rectus muscles are CN III!"
+  },
+  "neuro-q24": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Pituitary Gland",
+      "B": "Medial Rectus Muscle",
+      "C": "Ethmoid Sinus",
+      "D": "Lateral Rectus Muscle"
+    },
+    "correct_answer": "C",
+    "hint": "Air cells between your eyes - part of paranasal sinuses!",
+    "explanation": "**Ethmoid Sinus** - honeycomb air cells between eyes! 🍯\n\n💡 **Remember it:** The ethmoid sinuses are a labyrinth of small AIR CELLS in the ethmoid bone between your eyes (behind bridge of nose). They look like a HONEYCOMB on imaging. ETHM = sieve in Greek - the ethmoid bone has holes (cribriform plate) where olfactory nerves pass through. These sinuses are involved in chronic sinusitis and polyps!"
+  },
+  "neuro-q25": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Pituitary Gland",
+      "B": "Medial Rectus Muscle",
+      "C": "Ethmoid Sinus",
+      "D": "Lateral Rectus Muscle"
+    },
+    "correct_answer": "B",
+    "hint": "Pulls eye inward (adduction) - medial means 'toward midline'!",
+    "explanation": "**Medial Rectus Muscle** - pulls your eye inward! ↔️\n\n💡 **Remember it:** The MEDIAL RECTUS pulls the eye MEDIALLY (inward/toward the nose) - for CONVERGENCE when reading or looking at something close. Innervated by CN III (oculomotor). When paralyzed, the eye deviates OUTWARD (lateral rectus wins) → diplopia. Think: MEDIAL = toward MIDDLE/nose. MR3 (Medial Rectus, CN III, pulls INward = 3 letters each!)"
+  },
+  "neuro-q26": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Sagittal Sinus",
+      "B": "Vermis",
+      "C": "Pituitary Gland",
+      "D": "Ethmoid Sinus"
+    },
+    "correct_answer": "C",
+    "hint": "Master endocrine gland sitting in sella turcica!",
+    "explanation": "**Pituitary Gland** - the master hormone controller! 🎛️\n\n💡 **Remember it:** The PITUITARY is the MASTER GLAND - it controls other endocrine glands. Sits in the SELLA TURCICA (Turkish saddle) of the sphenoid bone. Size: about a PEA (smaller in men, larger in pregnant women). Makes hormones: GH (growth), TSH (thyroid), ACTH (adrenal), FSH/LH (sex), Prolactin (milk), ADH (water balance). Tumors here cause vision problems (optic chiasm right above) or hormone issues!"
+  },
+  "neuro-q27": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Sagittal Sinus",
+      "B": "Vermis",
+      "C": "Pituitary Gland",
+      "D": "Ethmoid Sinus"
+    },
+    "correct_answer": "B",
+    "hint": "Worm-like midline part of cerebellum!",
+    "explanation": "**Vermis** - the cerebellar 'worm' in the middle! 🪱\n\n💡 **Remember it:** VERMIS = WORM in Latin. It's the narrow MIDLINE part of the cerebellum connecting the two hemispheres. Controls AXIAL (trunk/midline) movements and GAIT. Damage causes TRUNCAL ATAXIA - can't sit or stand without wobbling, but limbs work fine! The cerebellar hemispheres (on sides) control LIMB coordination. Think: WORM down the MIDDLE = VERMIS!"
+  },
+  "neuro-q28": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Sagittal Sinus",
+      "B": "Vermis",
+      "C": "Pituitary Gland",
+      "D": "Ethmoid Sinus"
+    },
+    "correct_answer": "A",
+    "hint": "Major venous channel running along top of brain in the midline!",
+    "explanation": "**Sagittal Sinus (Superior)** - brain's blood drain at the top! 🩸\n\n💡 **Remember it:** The superior sagittal sinus is a large venous channel running in the midline at the TOP of the brain (in the falx cerebri). It drains blood from the brain → jugular veins. SAGITTAL = ARROW in Latin (runs straight like an arrow). It appears as a bright triangle on MRI. Thrombosis here → seizures, stroke. Think: SAGITTAL SINUS = highway for blood draining from the SUMMIT!"
+  },
+  "neuro-q29": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "White Matter",
+      "B": "Splenium of Corpus Callosum",
+      "C": "Caudate Nucleus",
+      "D": "Choroid Plexus"
+    },
+    "correct_answer": "C",
+    "hint": "C-shaped basal ganglia structure with a head and tail!",
+    "explanation": "**Caudate Nucleus** - the tailed nucleus! 🧠\n\n💡 **Remember it:** Already covered in neuro-q8, but here's more: The caudate is part of the STRIATUM (with putamen). STRIATUM controls VOLUNTARY MOVEMENT and is affected in Parkinson's and Huntington's disease. The caudate HEAD bulges into the frontal horn of the lateral ventricle. Its TAIL curves around following the ventricle. On axial images, look for it hugging the lateral ventricle!"
+  },
+  "neuro-q30": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "White Matter",
+      "B": "Posterior Horn - Lat Ventricle",
+      "C": "Caudate Nucleus",
+      "D": "Choroid Plexus"
+    },
+    "correct_answer": "D",
+    "hint": "Vascular structure that makes CSF - looks bright on T1!",
+    "explanation": "**Choroid Plexus** - the CSF factory! 🏭\n\n💡 **Remember it:** The choroid plexus is a network of capillaries that MAKES CSF! Located in the ventricles (mainly in atria/trigones and fourth ventricle). Produces about 500ml CSF per day (total volume is only 150ml - constantly recycling!). Appears BRIGHT on T1 images because of blood flow. Can calcify with age (normal). Think: PLEXUS = FACTORY making brain juice!"
+  },
+  "neuro-q31": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "White Matter",
+      "B": "Posterior Horn - Lat Ventricle",
+      "C": "Caudate Nucleus",
+      "D": "Choroid Plexus"
+    },
+    "correct_answer": "A",
+    "hint": "Myelinated axons - the brain's wiring!",
+    "explanation": "**White Matter** - brain's communication cables! 📡\n\n💡 **Remember it:** WHITE MATTER gets its color from MYELIN (fatty insulation on axons). It's the WIRING of the brain - connecting different regions. Appears DARK on T2, BRIGHT on T1. GRAY MATTER (cell bodies) is on the outside (cortex), WHITE MATTER (axons) is on the inside. Think: WHITE = WIRES (W for W!). MS damages myelin → white matter lesions!"
+  },
+  "neuro-q32": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Posterior Horn - Lat Ventricle",
+      "B": "Splenium of Corpus Callosum",
+      "C": "Caudate Nucleus",
+      "D": "Choroid Plexus"
+    },
+    "correct_answer": "A",
+    "hint": "Back part of the lateral ventricle extending into occipital lobe!",
+    "explanation": "**Posterior Horn of Lateral Ventricle (Occipital Horn)** - back extension into occipital lobe! 💧\n\n💡 **Remember it:** The lateral ventricle has several parts: FRONTAL HORN (front), BODY (middle), ATRIUM/TRIGONE (junction), OCCIPITAL/POSTERIOR HORN (back), and TEMPORAL/INFERIOR HORN (down). The posterior horn extends back into the occipital lobe. On axial images it appears as two dark CSF-filled spaces posteriorly. Usually smaller than frontal horns. Enlargement suggests atrophy!"
+  },
+  "neuro-q33": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Posterior Horn - Lat Ventricle",
+      "B": "Splenium of Corpus Callosum",
+      "C": "Caudate Nucleus",
+      "D": "Choroid Plexus"
+    },
+    "correct_answer": "B",
+    "hint": "Back thickened part of corpus callosum!",
+    "explanation": "**Splenium of Corpus Callosum** - the thickened back end! 🛣️\n\n💡 **Remember it:** The corpus callosum has 3 parts: GENU (front/knee), BODY (middle), SPLENIUM (back). SPLENIUM = 'bandage' in Greek - it's the thickest part! It connects the occipital and temporal lobes between hemispheres. On sagittal MRI, it's the bulbous back part of the corpus callosum. MS lesions commonly occur here. Think: SPLENIUM = SPLENDID thick ending!"
+  },
+  "neuro-q34": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Internal Auditory Canal",
+      "B": "Gray Matter",
+      "C": "Splenium of Corpus Callosum",
+      "D": "Third Ventricle"
+    },
+    "correct_answer": "C",
+    "hint": "Already covered - thick back part of the brain bridge!",
+    "explanation": "**Splenium of Corpus Callosum** - (repeat from neuro-q33) 🛣️\n\n💡 **Remember it:** The SPLENIUM is the BULBOUS back portion of the corpus callosum, connecting posterior parts of both hemispheres. It's involved in visual information transfer between hemispheres. Lesions here can cause ALEXIA WITHOUT AGRAPHIA (can write but can't read!). On this axial view, you're seeing it in cross-section as it arches over the ventricles!"
+  },
+  "neuro-q35": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Pons",
+      "B": "Internal Auditory Canal",
+      "C": "Gray Matter",
+      "D": "Third Ventricle"
+    },
+    "correct_answer": "D",
+    "hint": "Narrow CSF space between the two thalami!",
+    "explanation": "**Third Ventricle** - midline CSF channel between thalami! 💧\n\n💡 **Remember it:** The third ventricle is a narrow SLIT-like CSF space in the MIDLINE between the two thalami. It connects to lateral ventricles above (via foramina of Monro) and to the fourth ventricle below (via cerebral aqueduct). The hypothalamus forms its floor, thalamus forms walls. Colloid cysts can block the foramina of Monro → sudden hydrocephalus!"
+  },
+  "neuro-q36": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Pons",
+      "B": "Internal Auditory Canal",
+      "C": "Gray Matter",
+      "D": "Third Ventricle"
+    },
+    "correct_answer": "B",
+    "hint": "Canal where facial and vestibulocochlear nerves pass through!",
+    "explanation": "**Internal Auditory Canal (IAC)** - highway for CN VII and VIII! 👂\n\n💡 **Remember it:** The IAC is a bony canal in the temporal bone where cranial nerves VII (facial) and VIII (vestibulocochlear/hearing-balance) travel from the brainstem to the inner ear. On MRI it appears as a tube-like structure. ACOUSTIC NEUROMAS (vestibular schwannomas) grow here → hearing loss, tinnitus, balance problems. Think: AUDITORY canal = AUDIO nerves!"
+  },
+  "neuro-q37": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Pons",
+      "B": "Internal Auditory Canal",
+      "C": "Gray Matter",
+      "D": "Third Ventricle"
+    },
+    "correct_answer": "C",
+    "hint": "Neuronal cell bodies - makes up the cortex!",
+    "explanation": "**Gray Matter** - where the neurons live! 🧠\n\n💡 **Remember it:** GRAY MATTER contains neuronal CELL BODIES, dendrites, and synapses. It's where processing happens! Found in: cerebral CORTEX (outside), deep nuclei (basal ganglia, thalamus), and brainstem nuclei. Appears GRAY on pathology specimens (darker on T1, brighter on T2 than white matter). WHITE matter is myelin-wrapped axons. Think: GRAY = COMPUTING (like your BRAIN cells), WHITE = WIRING!"
+  },
+  "neuro-q38": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Pons",
+      "B": "Internal Auditory Canal",
+      "C": "Gray Matter",
+      "D": "Third Ventricle"
+    },
+    "correct_answer": "A",
+    "hint": "Middle bulge of brainstem - bridge connecting cerebellum!",
+    "explanation": "**Pons** - (repeat from neuro-q16) the brainstem bridge! 🌉\n\n💡 **Remember it:** The PONS is the bulging middle part of the brainstem. BRAINSTEM from top to bottom: MIDBRAIN → PONS → MEDULLA. The pons contains: cranial nerve nuclei (V-trigeminal, VI-abducens, VII-facial, VIII-vestibulocochlear), pontine nuclei (relay to cerebellum), and ascending/descending tracts. Central pontine myelinolysis can occur with rapid sodium correction!"
+  },
+  "neuro-q39": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Clivus",
+      "B": "C2",
+      "C": "Cerebellar Tonsil",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "A",
+    "hint": "Sloped bone at skull base anterior to brainstem!",
+    "explanation": "**Clivus** - the skull base slope! 🏔️\n\n💡 **Remember it:** CLIVUS = SLOPE in Latin. It's the sloped bone at the base of the skull (parts of sphenoid and occipital bones) that the brainstem rests on. On sagittal MRI, it's the bright bony structure anterior to the pons/medulla. Tumors: chordomas (notochord remnant). Think: CLIVUS = CLIFF/SLOPE where the brain sits!"
+  },
+  "neuro-q40": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Clivus",
+      "B": "C2",
+      "C": "Cerebellar Tonsil",
+      "D": "Medulla"
+    },
+    "correct_answer": "D",
+    "hint": "Lowest part of brainstem - continues into spinal cord!",
+    "explanation": "**Medulla (Medulla Oblongata)** - where brain meets spinal cord! 🧠➡️\n\n💡 **Remember it:** The MEDULLA is the LOWEST part of the brainstem (below pons). It's critical for life: controls BREATHING, HEART RATE, BLOOD PRESSURE. Contains cranial nerves IX (glossopharyngeal), X (vagus), XI (accessory), XII (hypoglossal). The pyramids (motor tracts) decussate here (cross over). Damage = instant death! Think: MEDULLA = MUST have it to live!"
+  },
+  "neuro-q41": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Clivus",
+      "B": "C2",
+      "C": "Cerebellar Tonsil",
+      "D": "Medulla"
+    },
+    "correct_answer": "B",
+    "hint": "Second cervical vertebra with the dens/odontoid process!",
+    "explanation": "**C2 Vertebra (Axis)** - the vertebra with the peg! 📌\n\n💡 **Remember it:** C2 is called the AXIS because C1 (atlas) ROTATES around it. C2's unique feature: the DENS (or ODONTOID PROCESS) - a bony peg that sticks UP into C1. This allows you to shake your head 'NO'. Jefferson fracture = C1, Hangman's = C2, Odontoid fracture = C2 dens. Think: C2 = the AXIS with a PEG on top!"
+  },
+  "neuro-q42": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "C2",
+      "B": "Spinous Process",
+      "C": "C5/C6 disc",
+      "D": "Spinal Cord"
+    },
+    "correct_answer": "C",
+    "hint": "Intervertebral disc between C5 and C6 vertebrae!",
+    "explanation": "**C5/C6 Intervertebral Disc** - cushion between vertebrae! 🛞\n\n💡 **Remember it:** Intervertebral DISCS are fibrocartilage cushions between vertebral bodies. They have: ANNULUS FIBROSUS (tough outer ring) and NUCLEUS PULPOSUS (jelly center). C5/C6 and C6/C7 are the most common levels for cervical disc herniation. Herniated disc → nerve root compression → radiculopathy (arm pain, weakness). Think: DISC = DONUT cushion for your spine!"
+  },
+  "neuro-q43": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Clivus",
+      "B": "C2",
+      "C": "Cerebellar Tonsil",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "C",
+    "hint": "Inferior part of cerebellum that can herniate downward!",
+    "explanation": "**Cerebellar Tonsils** - can herniate through foramen magnum! ⚠️\n\n💡 **Remember it:** The cerebellar tonsils are the most INFERIOR part of the cerebellum, sitting just above the foramen magnum. In CHIARI I MALFORMATION, they herniate DOWN through the foramen magnum (>5mm below). This causes: headaches (worse with cough/strain), neck pain, syringomyelia. Normal tonsils should stay ABOVE the foramen magnum line!"
+  },
+  "neuro-q44": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Medulla",
+      "B": "C5/C6 disc",
+      "C": "Spinal Cord",
+      "D": "Ligamentum Flavum"
+    },
+    "correct_answer": "C",
+    "hint": "Neural tissue running through the spinal canal - continuous with medulla!",
+    "explanation": "**Spinal Cord** - your body's information highway! 🛣️\n\n💡 **Remember it:** The spinal cord is the continuation of the medulla, running through the spinal canal. It's protected by: DURA (tough outer layer), ARACHNOID (middle), PIA (inner layer). The cord ends at L1-L2 (conus medullaris), then becomes cauda equina (nerve roots). On MRI: cord is gray (neural tissue), CSF around it is dark/bright. Injury causes paralysis below that level!"
+  },
+  "neuro-q45": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled G:",
+    "answers": {
+      "A": "Clivus",
+      "B": "C2",
+      "C": "Cerebellar Tonsil",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "D",
+    "hint": "Posterior bony projection you can feel along your spine!",
+    "explanation": "**Spinous Process** - the bump you can feel on your back! 👆\n\n💡 **Remember it:** The spinous process is the bony projection pointing BACKWARD from each vertebra - the bumps you can FEEL down someone's spine! Muscles and ligaments attach here. C2-C6 are bifid (split in two) in cervical spine. C7 is prominent (vertebra prominens - you can really feel it). Think: SPINOUS = SPINE bumps you can POKE!"
+  },
+  "neuro-q46": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled H:",
+    "answers": {
+      "A": "Cerebellar Tonsil",
+      "B": "C5/C6 disc",
+      "C": "Spinal Cord",
+      "D": "Ligamentum Flavum"
+    },
+    "correct_answer": "D",
+    "hint": "Yellow ligament connecting laminae - can thicken and cause stenosis!",
+    "explanation": "**Ligamentum Flavum** - the yellow ligament! 💛\n\n💡 **Remember it:** FLAVUM = YELLOW in Latin (high elastin content makes it yellow). This ligament connects the LAMINAE of adjacent vertebrae, running along the BACK of the spinal canal. It can THICKEN with age → spinal STENOSIS → back/leg pain. On MRI it appears dark. Think: FLAVUM = FLAVOR of YELLOW (like banana FLAVORING)!"
+  },
+  "neuro-q47": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Lamina",
+      "B": "Spinal Cord",
+      "C": "Jugular Vein",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "C",
+    "hint": "Major vein draining blood from brain!",
+    "explanation": "**Jugular Vein (Internal)** - brain's blood drain! 🩸\n\n💡 **Remember it:** The internal jugular veins are the main drainage system for the brain. Blood flows: brain → dural sinuses → sigmoid sinus → INTERNAL JUGULAR VEIN → superior vena cava → heart. Located in the neck lateral to carotid arteries. On imaging they can be confused with pathology if asymmetric (normal variant). Think: JUGULAR = blood JUGGLING out of the brain!"
+  },
+  "neuro-q48": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Lamina",
+      "B": "Spinal Cord",
+      "C": "Spinous Process",
+      "D": "Vertebral Body"
+    },
+    "correct_answer": "B",
+    "hint": "Neural tissue in the center of the spinal canal!",
+    "explanation": "**Spinal Cord** - (repeat from neuro-q44) information superhighway! 🛣️\n\n💡 **Remember it:** On AXIAL (cross-sectional) views, the spinal cord appears as a gray oval structure in the CENTER of the spinal canal, surrounded by CSF (appearing dark or bright depending on sequence). Cervical cord is largest (supplies arms), thoracic cord is smallest, lumbar enlargement supplies legs. Cord ends at L1-L2 level!"
+  },
+  "neuro-q49": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Lamina",
+      "B": "Spinal Cord",
+      "C": "Spinous Process",
+      "D": "Vertebral Body"
+    },
+    "correct_answer": "A",
+    "hint": "Flat posterior arch of vertebra connecting pedicles to spinous process!",
+    "explanation": "**Lamina** - the roof of the spinal canal! 🏠\n\n💡 **Remember it:** The lamina is the flat plate of bone on each side connecting the PEDICLE (side walls) to the SPINOUS PROCESS (back bump). Two laminae form the ROOF of the spinal canal. In LAMINECTOMY surgery, they're removed to decompress the spinal cord. Think: LAMINA = LAMINATE flooring (flat surface) of the spine's roof!"
+  },
+  "neuro-q50": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Lamina",
+      "B": "Spinal Cord",
+      "C": "Spinous Process",
+      "D": "Vertebral Body"
+    },
+    "correct_answer": "D",
+    "hint": "Large anterior weight-bearing part of vertebra!",
+    "explanation": "**Vertebral Body** - the spine's weight-bearing pillar! 🏛️\n\n💡 **Remember it:** The vertebral body is the large CYLINDRICAL front part of each vertebra that bears WEIGHT. Intervertebral discs sit between bodies. Fractures: compression (most common), burst, chance. Metastases commonly affect vertebral bodies. On axial images, it's the large structure ANTERIOR to the spinal canal. Think: BODY = BULK/BUILDING that holds you up!"
+  },
+  "neuro-q51": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Lamina",
+      "B": "Spinal Cord",
+      "C": "Spinous Process",
+      "D": "Vertebral Body"
+    },
+    "correct_answer": "C",
+    "hint": "Posterior bony bump - already covered!",
+    "explanation": "**Spinous Process** - (repeat from neuro-q45) the palpable spine bump! 👆\n\n💡 **Remember it:** On AXIAL images, the spinous process is the most POSTERIOR bony projection pointing backwards. It's the bump you can FEEL. Interspinous ligaments connect adjacent spinous processes. Think of it as the SPINE'S SPIKE pointing backward!"
+  },
+  "neuro-q52": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Doral Nerve Root",
+      "B": "Posterior Longitudinal Ligament",
+      "C": "Vertebral Artery",
+      "D": "CSF"
+    },
+    "correct_answer": "C",
+    "hint": "Paired arteries running through transverse foramina in cervical spine!",
+    "explanation": "**Vertebral Artery** - posterior circulation to brain! 🩸\n\n💡 **Remember it:** The VERTEBRAL arteries run UP through the TRANSVERSE FORAMINA of C6-C1 (unique to cervical spine!). They enter the skull through foramen magnum, join to form the BASILAR artery. They supply: brainstem, cerebellum, posterior brain. On axial C-spine MRI, look for two dark circles (flow voids) in the transverse foramina. Dissection → posterior circulation stroke!"
+  },
+  "neuro-q53": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Doral Nerve Root",
+      "B": "Posterior Longitudinal Ligament",
+      "C": "Vertebral Artery",
+      "D": "CSF"
+    },
+    "correct_answer": "D",
+    "hint": "Cerebrospinal fluid surrounding the spinal cord!",
+    "explanation": "**CSF (Cerebrospinal Fluid)** - cushion for the nervous system! 💧\n\n💡 **Remember it:** CSF is clear fluid that CUSHIONS and NOURISHES the brain and spinal cord. Made by choroid plexus (~500ml/day), total volume ~150ml. On MRI: DARK on T1, BRIGHT on T2. Surrounds the spinal cord in the subarachnoid space. Sampled in lumbar puncture (L3-L4 or L4-L5). Blockage → hydrocephalus. Think: CSF = CUSHION SURROUNDING FOREVER!"
+  },
+  "neuro-q54": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Doral Nerve Root",
+      "B": "Posterior Longitudinal Ligament",
+      "C": "Vertebral Artery",
+      "D": "CSF"
+    },
+    "correct_answer": "B",
+    "hint": "Ligament running along back of vertebral bodies inside spinal canal!",
+    "explanation": "**Posterior Longitudinal Ligament (PLL)** - the inside spine ligament! 📏\n\n💡 **Remember it:** The PLL runs along the BACK (posterior) surface of vertebral bodies INSIDE the spinal canal. It's weaker than the anterior longitudinal ligament (outside). Disc herniations usually push POSTEROLATERALLY (where PLL is weakest) → nerve root compression. On MRI it appears as a thin dark line. Think: POSTERIOR = INSIDE canal, ANTERIOR = OUTSIDE front!"
+  },
+  "neuro-q55": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Doral Nerve Root",
+      "B": "Posterior Longitudinal Ligament",
+      "C": "Vertebral Artery",
+      "D": "CSF"
+    },
+    "correct_answer": "A",
+    "hint": "Sensory nerve root entering spinal cord posteriorly!",
+    "explanation": "**Dorsal (Posterior) Nerve Root** - sensory input to spinal cord! 📡\n\n💡 **Remember it:** Each spinal nerve has TWO roots: DORSAL/POSTERIOR (sensory IN) and VENTRAL/ANTERIOR (motor OUT). Think: **D**orsal = **D**etects (sensory), **V**entral = **V**oluntary movement (motor). The dorsal root has a ganglion (DRG = dorsal root ganglion) containing sensory neuron cell bodies. Dorsal root enters BACK of cord, ventral root exits FRONT. Mnemonic: SAME = Sensory Afferent Motor Efferent!"
+  },
+  "neuro-q56": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Spinal Cord",
+      "C": "CSF",
+      "D": "Supraspinatus ligament"
+    },
+    "correct_answer": "D",
+    "hint": "Ligament connecting tips of spinous processes along the back!",
+    "explanation": "**Supraspinous Ligament** - connects spine bumps on the outside! 🪢\n\n💡 **Remember it:** The SUPRASPINOUS ligament runs along the TIPS of the spinous processes (the bumps), connecting them together SUPERFICIALLY (closest to skin). SUPRA = ABOVE/SUPERFICIAL. There's also the INTERspinous ligament (BETWEEN adjacent spinous processes) and ligamentum flavum (deeper, inside canal). Think: SUPRASPINOUS = SUPER-ficial (on top)!"
+  },
+  "neuro-q57": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Spinal Cord",
+      "C": "CSF",
+      "D": "Supraspinatus ligament"
+    },
+    "correct_answer": "C",
+    "hint": "Fluid cushioning the spinal cord - already covered!",
+    "explanation": "**CSF** - (repeat from neuro-q53) the spinal cushion! 💧\n\n💡 **Remember it:** On sagittal MRI, CSF appears as the DARK (T1) or BRIGHT (T2) space surrounding the spinal cord. The subarachnoid space is widest in cervical region (more CSF cushion for the important cervical cord). Cervical puncture can be done at C1-C2 if lumbar puncture fails. CSF pulsates with heartbeat - you can see it on phase-contrast MRI!"
+  },
+  "neuro-q58": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Spinal Cord",
+      "C": "CSF",
+      "D": "Supraspinatus ligament"
+    },
+    "correct_answer": "B",
+    "hint": "Neural tissue in the center - information highway!",
+    "explanation": "**Spinal Cord** - (repeat from neuro-q44) the body's data cable! 🛣️\n\n💡 **Remember it:** On sagittal images, the spinal cord appears as a continuous gray structure running through the spinal canal. Look for: normal lordosis (cervical/lumbar curve in), kyphosis (thoracic curve out). The cord should be smooth and uniform in thickness (not too thin = atrophy, not too thick = swelling/tumor). Normal cervical cord diameter: ~10-13mm!"
+  },
+  "neuro-q59": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Spinal Cord",
+      "C": "CSF",
+      "D": "Supraspinatus ligament"
+    },
+    "correct_answer": "A",
+    "hint": "Front weight-bearing part of spine!",
+    "explanation": "**Vertebral Body** - (repeat from neuro-q50) the spine's foundation! 🏛️\n\n💡 **Remember it:** On sagittal MRI, vertebral bodies appear as rectangular boxes stacked on top of each other with discs (darker) in between. Normal vertebral body marrow: BRIGHT on T1 (fatty marrow in adults). DARK T1 marrow = red marrow (normal in kids) or pathology (metastases, myeloma, infection). Height loss = compression fracture!"
+  },
+  "neuro-q60": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Facet Joint",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Root",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "B",
+    "hint": "Large back muscles that keep you upright!",
+    "explanation": "**Erector Spinae Muscles** - your posture powerhouses! 💪\n\n💡 **Remember it:** The erector spinae are a group of muscles running along both sides of the spine that ERECT (straighten) your back and maintain posture. Main components: ILIOCOSTALIS, LONGISSIMUS, SPINALIS (ILS = I Love Spine!). They're the big bulges on either side of the spine on axial images. Low back pain often involves these muscles. Think: ERECTOR = ERECTS your spine!"
+  },
+  "neuro-q61": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Facet Joint",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Root",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "A",
+    "hint": "Posterior joint between vertebrae - allows movement!",
+    "explanation": "**Facet Joint (Zygapophyseal Joint)** - spine's movement joints! 🔄\n\n💡 **Remember it:** FACET joints are the paired POSTERIOR joints between adjacent vertebrae (between superior and inferior articular processes). They guide and limit spinal motion. Orientation varies by region: cervical = 45° (rotation), thoracic = 60° (lateral bend), lumbar = 90° (flexion/extension). FACET ARTHROPATHY (arthritis) causes back pain. Facet injections treat pain. Think: FACET = FACE-to-face joints!"
+  },
+  "neuro-q62": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Facet Joint",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Root",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "C",
+    "hint": "Neural structure exiting spinal canal to body!",
+    "explanation": "**Nerve Root** - spinal nerves exiting to the body! 📡\n\n💡 **Remember it:** Nerve roots exit the spinal cord and travel through the neural foramen to reach the body. Each spinal nerve: 1 DORSAL root (sensory) + 1 VENTRAL root (motor) = 1 spinal nerve. Nerve roots are named for the vertebra ABOVE in cervical spine (C5 root exits above C5), but BELOW in lumbar spine (L5 root exits below L5). Disc herniation → nerve root compression → radiculopathy!"
+  },
+  "neuro-q63": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Costovertebral Articulation",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Large anterior weight-bearing cylinder - already covered!",
+    "explanation": "**Vertebral Body** - (repeat from neuro-q50) the foundation! 🏛️\n\n💡 **Remember it:** Thoracic vertebral bodies are unique - they have FACETS for rib articulation! The rib head articulates with TWO adjacent vertebral bodies (upper and lower). This is why thoracic spine is RIGID (ribs limit motion). Compression fractures are most common in thoracic spine due to kyphosis (forward curve) creating wedge compression forces!"
+  },
+  "neuro-q64": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Costovertebral Articulation",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "B",
+    "hint": "Joint where rib meets vertebral body!",
+    "explanation": "**Costovertebral Articulation** - where ribs meet spine! 🦴\n\n💡 **Remember it:** COSTO = RIB, VERTEBRAL = SPINE. This is the joint where the RIB HEAD meets the VERTEBRAL BODY. Each rib head typically articulates with TWO vertebral bodies (upper and lower) and the disc between them. There's also the costotransverse joint (rib tubercle meets transverse process). Think: COSTOVERTEBRAL = RIB-to-VERTEBRA joint!"
+  },
+  "neuro-q65": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Costovertebral Articulation",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "C",
+    "hint": "Lateral bony projection where muscles attach!",
+    "explanation": "**Transverse Process** - lateral wings for muscle attachment! 🦅\n\n💡 **Remember it:** The transverse processes project LATERALLY (sideways) from each vertebra - one on each side. Muscles attach here for lateral bending and rotation. In CERVICAL spine, they have holes (transverse foramina) for vertebral arteries. In LUMBAR spine, they're large and horizontal. Think: TRANSVERSE = ACROSS/SIDEWAYS projection!"
+  },
+  "neuro-q66": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Vertebral Body",
+      "B": "Costovertebral Articulation",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "D",
+    "hint": "Flat roof plates of spinal canal - already covered!",
+    "explanation": "**Lamina** - (repeat from neuro-q49) the canal roof! 🏠\n\n💡 **Remember it:** On this thoracic spine axial view, you can see the laminae forming the posterior wall of the spinal canal. The ligamentum flavum attaches between laminae. In spinal stenosis, thickened ligamentum flavum and lamina hypertrophy narrow the canal → laminectomy removes lamina to decompress!"
+  },
+  "neuro-q67": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Spinal Cord",
+      "B": "Vertebral Body",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Neural tissue in center of canal - information highway!",
+    "explanation": "**Spinal Cord** - (repeat from neuro-q44) the body's data cable! 🛣️\n\n💡 **Remember it:** In the THORACIC region, the spinal cord is at its SMALLEST diameter (less neural tissue needed for chest wall vs arms/legs). This makes it more vulnerable to compression. The thoracic cord supplies intercostal muscles and trunk. Injury here → paraplegia (leg paralysis) but arms still work!"
+  },
+  "neuro-q68": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Rib",
+      "B": "Vertebral Body",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Curved bone protecting thoracic organs!",
+    "explanation": "**Rib** - thoracic cage protector! 🛡️\n\n💡 **Remember it:** Ribs articulate with thoracic vertebrae at TWO points: RIB HEAD → vertebral body (costovertebral joint), RIB TUBERCLE → transverse process (costotransverse joint). There are 12 pairs: ribs 1-7 = true ribs (attach to sternum directly), 8-10 = false ribs (attach via cartilage), 11-12 = floating ribs (don't attach to sternum). Think: RIBS = CAGE protecting your organs!"
+  },
+  "neuro-q69": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled G:",
+    "answers": {
+      "A": "Ligamentum Flavum",
+      "B": "Vertebral Body",
+      "C": "Transverse Process",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Yellow ligament - can thicken and cause stenosis!",
+    "explanation": "**Ligamentum Flavum** - (repeat from neuro-q46) the yellow ligament! 💛\n\n💡 **Remember it:** On axial images, the ligamentum flavum appears as a thin dark band along the posterior aspect of the spinal canal, connecting the laminae. With aging, it can HYPERTROPHY (thicken) → narrowing the spinal canal → STENOSIS → neurogenic claudication (leg pain with walking). Seen well on MRI as it's darker than surrounding structures!"
+  },
+  "neuro-q70": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "L4-L5 disc",
+      "B": "Cauda Equina",
+      "C": "L2 Vertebral Body",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "B",
+    "hint": "Horse's tail - nerve roots below the conus!",
+    "explanation": "**Cauda Equina** - the horse's tail of nerves! 🐴\n\n💡 **Remember it:** CAUDA EQUINA = HORSE'S TAIL in Latin. The spinal cord ENDS at L1-L2 (conus medullaris). Below that, it's just NERVE ROOTS floating in CSF, looking like a horse's tail. Contains lumbar and sacral nerve roots heading to their exit levels. CAUDA EQUINA SYNDROME (CES) = emergency! Massive disc herniation → bilateral leg weakness, saddle anesthesia, bladder/bowel dysfunction!"
+  },
+  "neuro-q71": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "L4-L5 disc",
+      "B": "Cauda Equina",
+      "C": "L2 Vertebral Body",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "C",
+    "hint": "Second lumbar vertebral body!",
+    "explanation": "**L2 Vertebral Body** - second lumbar vertebra! 📍\n\n💡 **Remember it:** Lumbar vertebrae are the LARGEST vertebral bodies (bear the most weight). To count lumbar levels on sagittal MRI: find the L5-S1 disc (lowest disc above sacrum), count up: L5, L4, L3, L2, L1. The conus medullaris (spinal cord ending) is typically at L1-L2 level. Lumbar vertebrae have large horizontal transverse processes (no ribs in lumbar region!)"
+  },
+  "neuro-q72": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "L4-L5 disc",
+      "B": "S1 Vertebral Body",
+      "C": "L2 Vertebral Body",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "D",
+    "hint": "Posterior bony projection - already covered!",
+    "explanation": "**Spinous Process** - (repeat from neuro-q45) the palpable bump! 👆\n\n💡 **Remember it:** Lumbar spinous processes are LARGE, THICK, and project straight POSTERIORLY (not angled down like thoracic). This allows better access for lumbar puncture! The interspinous space is wider in lumbar spine. On sagittal MRI, they appear as rectangular projections pointing backward."
+  },
+  "neuro-q73": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "L4-L5 disc",
+      "B": "S1 Vertebral Body",
+      "C": "Cauda Equina",
+      "D": "L2 Vertebral Body"
+    },
+    "correct_answer": "A",
+    "hint": "Most common lumbar disc herniation level!",
+    "explanation": "**L4-L5 Intervertebral Disc** - most common herniation site! ⚠️\n\n💡 **Remember it:** L4-L5 and L5-S1 are the TWO most common levels for lumbar disc herniation (bear the most stress). L4-L5 herniation typically affects the L5 nerve root (exits below). Symptoms: foot drop (L5 weakness), lateral leg/dorsal foot numbness. On sagittal MRI, discs should be bright (hydrated). DARK disc = degenerated/desiccated!"
+  },
+  "neuro-q74": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "L4-L5 disc",
+      "B": "S1 Vertebral Body",
+      "C": "L2 Vertebral Body",
+      "D": "Spinous Process"
+    },
+    "correct_answer": "B",
+    "hint": "First sacral vertebral body - fused segment!",
+    "explanation": "**S1 Vertebral Body** - top of the fused sacrum! 🔩\n\n💡 **Remember it:** The SACRUM is formed by FUSION of 5 sacral vertebrae (S1-S5). S1 is the topmost segment, articulating with L5 above at the L5-S1 disc. The sacrum is wedge-shaped, connects to the iliac bones at the sacroiliac joints. On sagittal MRI, you can see the individual sacral segments fused together. Sacral fractures commonly occur in elderly osteoporotic patients!"
+  },
+  "neuro-q75": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Nerve Roots",
+      "B": "Left Iliac Artery",
+      "C": "Psoas Muscle",
+      "D": "Neural Foramen"
+    },
+    "correct_answer": "D",
+    "hint": "Opening where nerve exits spinal canal!",
+    "explanation": "**Neural Foramen (Intervertebral Foramen)** - nerve exit tunnel! 🚇\n\n💡 **Remember it:** The neural foramen (also called intervertebral foramen) is the opening where NERVE ROOTS EXIT the spinal canal to reach the body. Bordered by: pedicles (top/bottom), vertebral body and disc (front), facet joint (back). FORAMINAL STENOSIS (narrowing) → nerve root compression → radiculopathy. On axial MRI, look for the nerve root within the foramen. Think: FORAMEN = doorway FOR A MEN-ingeal nerve!"
+  },
+  "neuro-q76": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Nerve Roots",
+      "B": "Spinous Process",
+      "C": "Facet articulation",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Neural structures in the thecal sac - part of cauda equina!",
+    "explanation": "**Nerve Roots (Cauda Equina)** - floating nerves in CSF! 🎋\n\n💡 **Remember it:** Below the conus medullaris (L1-L2), the spinal canal contains only NERVE ROOTS (no spinal cord). These roots float in CSF within the THECAL SAC (dural tube). Each root travels down to its exit foramen. On axial images, they appear as small dots within the bright (T2) or dark (T1) CSF. Central disc herniation here → cauda equina syndrome!"
+  },
+  "neuro-q77": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Spinous Process",
+      "B": "Psoas Muscle",
+      "C": "Facet articulation",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Posterior bony bump - already covered multiple times!",
+    "explanation": "**Spinous Process** - (repeat) the spine's posterior projection! 👆\n\n💡 **Remember it:** On axial lumbar images, the spinous process is the most posterior structure, projecting backward in the midline. Lumbar spinous processes are SHORT, THICK, and QUADRILATERAL (rectangular). This is different from thoracic (long, angled down) and cervical (bifid, short). The interspinous space is wide → easier lumbar puncture access!"
+  },
+  "neuro-q78": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled D:",
+    "answers": {
+      "A": "Left Iliac Artery",
+      "B": "Psoas Muscle",
+      "C": "Facet articulation",
+      "D": "Lamina"
+    },
+    "correct_answer": "A",
+    "hint": "Major artery to the leg - bifurcates from aorta!",
+    "explanation": "**Iliac Artery (Common/External)** - leg's blood supply! 🩸\n\n💡 **Remember it:** The abdominal aorta BIFURCATES (splits) at L4 level into LEFT and RIGHT COMMON ILIAC ARTERIES. Each common iliac then splits into EXTERNAL iliac (leg) and INTERNAL iliac (pelvis). On lumbar MRI, you'll see the iliac arteries as dark circles (flow voids) anterolateral to the vertebral bodies. Aneurysms can occur here. Think: ILIAC = going to the ILIUM (pelvis) and leg!"
+  },
+  "neuro-q79": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled E:",
+    "answers": {
+      "A": "Spinous Process",
+      "B": "Psoas Muscle",
+      "C": "Facet articulation",
+      "D": "Lamina"
+    },
+    "correct_answer": "B",
+    "hint": "Hip flexor muscle running along vertebral bodies!",
+    "explanation": "**Psoas Muscle** - the primary hip flexor! 💪\n\n💡 **Remember it:** The PSOAS MAJOR muscle originates from lumbar vertebrae (T12-L5) and runs DOWN lateral to the vertebral bodies, joining with iliacus muscle → ILIOPSOAS → inserts on lesser trochanter of femur. It's the primary HIP FLEXOR (lift your knee up). On axial lumbar MRI, it appears as two large muscles flanking the spine. PSOAS ABSCESS appears as fluid collection within/around muscle!"
+  },
+  "neuro-q80": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled F:",
+    "answers": {
+      "A": "Psoas Muscle",
+      "B": "Facet articulation",
+      "C": "Lamina",
+      "D": "Neural Foramen"
+    },
+    "correct_answer": "B",
+    "hint": "Posterior joint between vertebrae - already covered!",
+    "explanation": "**Facet Joint (Zygapophyseal Joint)** - (repeat from neuro-q61) spine's hinge! 🔄\n\n💡 **Remember it:** LUMBAR facet joints are oriented nearly VERTICALLY (sagittal, ~90°) which allows flexion/extension (bending forward/back) but LIMITS rotation. This is opposite to cervical facets (45°, allow rotation). Facet arthritis is a major cause of chronic low back pain. On axial MRI, they appear as the paired joints at the back of the spine!"
+  },
+  "neuro-q81": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled G:",
+    "answers": {
+      "A": "Spinous Process",
+      "B": "Facet articulation",
+      "C": "Lamina",
+      "D": "Neural Foramen"
+    },
+    "correct_answer": "C",
+    "hint": "Flat roof plate of spinal canal - already covered!",
+    "explanation": "**Lamina** - (repeat from neuro-q49) the canal roof! 🏠\n\n💡 **Remember it:** On lumbar axial images, the laminae form the posterior-lateral walls of the spinal canal. Lumbar laminae are THICK and STRONG. In spinal stenosis, thickened laminae and ligamentum flavum narrow the canal. LAMINECTOMY removes lamina to create more space. The lamina connects the pedicle (side wall) to the spinous process (back projection)!"
+  },
+  "neuro-q82": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled A:",
+    "answers": {
+      "A": "Transverse Process",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Roots",
+      "D": "Pedicle"
+    },
+    "correct_answer": "B",
+    "hint": "Large back extensor muscles - already covered!",
+    "explanation": "**Erector Spinae Muscles** - (repeat from neuro-q60) posture muscles! 💪\n\n💡 **Remember it:** On lumbar axial images, the erector spinae muscles appear as large bilateral paraspinal muscle groups flanking the spine posteriorly. They're critical for maintaining upright posture and extending the back. Muscle spasm here causes acute low back pain. On MRI, muscles should appear homogeneous gray - bright signal suggests edema or fatty atrophy!"
+  },
+  "neuro-q83": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled B:",
+    "answers": {
+      "A": "Transverse Process",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Roots",
+      "D": "Pedicle"
+    },
+    "correct_answer": "A",
+    "hint": "Lateral bony wings - already covered!",
+    "explanation": "**Transverse Process** - (repeat from neuro-q65) lateral projection! 🦅\n\n💡 **Remember it:** LUMBAR transverse processes are long, thin, and project LATERALLY and slightly POSTERIORLY. They're attachment sites for back muscles (multifidus, longissimus). On axial images, they appear as lateral bony projections from the vertebra. Transverse process fractures are usually benign (unlike vertebral body fractures) but painful!"
+  },
+  "neuro-q84": {
+    "question_type": "multiplechoice",
+    "question_text": "Identify the structure labeled C:",
+    "answers": {
+      "A": "Transverse Process",
+      "B": "Erector spinae muscle",
+      "C": "Nerve Roots",
+      "D": "Pedicle"
+    },
+    "correct_answer": "C",
+    "hint": "Neural structures in the thecal sac - cauda equina!",
+    "explanation": "**Nerve Roots (Cauda Equina)** - (repeat from neuro-q76) floating nerve cables! 🎋\n\n💡 **Remember it:** In the lumbar region, these are the nerve roots of the cauda equina floating within the thecal sac. On T2 axial images, they appear as small dark dots within the bright CSF. Normal: they should be loose and separated. Abnormal: clumped together (arachnoiditis), displaced (disc herniation), or compressed (stenosis). Lumbar puncture is safe here - needle hits nerve roots, not cord!"
+  }
+}
+

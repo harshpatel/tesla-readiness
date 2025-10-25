@@ -1,0 +1,259 @@
+{
+  "pc-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Privacy and Confidentiality, Informed Consent, and Respect and Nondiscrimination are all examples of:",
+    "answers": {
+      "A": "Patients' Rights",
+      "B": "Medical Malpractice",
+      "C": "HIPAA guidelines",
+      "D": "The Privacy Rule"
+    },
+    "correct_answer": "A",
+    "hint": "PATIENTS' RIGHTS! The foundation of ethical healthcare!",
+    "explanation": "**Patients' Rights** - the ethical foundation! 🛡️\n\n💡 **Remember it:** These are FUNDAMENTAL PATIENTS' RIGHTS! Every patient has the RIGHT to: (1) PRIVACY & CONFIDENTIALITY - their health info stays private, (2) INFORMED CONSENT - they must agree to procedures after understanding risks/benefits, (3) RESPECT & NONDISCRIMINATION - equal treatment regardless of race, gender, age, religion, etc. HIPAA (C) and Privacy Rule (D) are specific LAWS that PROTECT these rights, but the rights themselves existed before the laws! Malpractice (B) is when rights are VIOLATED. Know your patients' rights! 📋"
+  },
+  "pc-2": {
+    "question_type": "multiplechoice",
+    "question_text": "HIPAA stands for:",
+    "answers": {
+      "A": "Health Insurance Privacy and Access",
+      "B": "Health Inpatient Privacy and Accounting Act",
+      "C": "Health Insurance Portability and Accountability Act",
+      "D": "Hospital Insured Patient Access Act"
+    },
+    "correct_answer": "C",
+    "hint": "Health Insurance PORTABILITY and ACCOUNTABILITY Act!",
+    "explanation": "**Health Insurance Portability and Accountability Act** - memorize this! 📜\n\n💡 **Remember it:** HIPAA = HIP-AA! Think: Health Insurance PORTABILITY (you can keep insurance when changing jobs) and ACCOUNTABILITY (healthcare providers are accountable for protecting patient data). Passed in 1996! The two key parts: (1) PORTABILITY - ensures people don't lose coverage when changing/losing jobs, (2) ACCOUNTABILITY - sets national standards for protecting PHI (Protected Health Information). This is THE law you must know for patient privacy! PORTABILITY + ACCOUNTABILITY! 🔒"
+  },
+  "pc-3": {
+    "question_type": "multiplechoice",
+    "question_text": "HIPAA is U.S. federal law designed to provide privacy standards to protect patients' medical records and other health information otherwise known as PHI and stands for:",
+    "answers": {
+      "A": "Patient Health Information",
+      "B": "Patient Hospital Intersection",
+      "C": "Protected or Private Health Information",
+      "D": "Proactive Healthcare for Inpatients"
+    },
+    "correct_answer": "C",
+    "hint": "PROTECTED Health Information! It's legally protected!",
+    "explanation": "**Protected or Private Health Information (PHI)** - the guarded data! 🔐\n\n💡 **Remember it:** PHI = PROTECTED Health Information! This includes ANY identifiable patient data: name, DOB, address, SSN, medical record number, diagnosis, treatment, images, test results, insurance info. It's PROTECTED by law - you can't share it without authorization! Even saying \"I scanned Mrs. Smith today\" is a HIPAA violation if overheard! PHI is like gold - LOCK IT DOWN! Only access PHI for legitimate work purposes. Breach = fines up to $50,000 per violation! PROTECTED = legally guarded! 🛡️"
+  },
+  "pc-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The difference between \"negligence\" and \"malpractice\" is that negligence can be committed by anyone. Malpractice is a type of negligence and is committed:",
+    "answers": {
+      "A": "In a professional context that holds a standard of practice and conduct.",
+      "B": "Knowingly and willingly",
+      "C": "Without the immediate knowledge of the injured person",
+      "D": "Only in the medical field by licensed physicians"
+    },
+    "correct_answer": "A",
+    "hint": "PROFESSIONAL context with standards! That's what makes it malpractice!",
+    "explanation": "**Professional context with standards** - the key difference! ⚖️\n\n💡 **Remember it:** MALPRACTICE = \"MAL\" (bad) + \"PRACTICE\" (professional conduct)! Anyone can commit NEGLIGENCE (careless driving, dropping something on someone). But MALPRACTICE requires: (1) PROFESSIONAL RELATIONSHIP (doctor-patient, tech-patient), (2) BREACH OF STANDARD OF CARE (doing something wrong that a reasonable professional wouldn't do), (3) HARM/DAMAGE resulted. Example: Scanning a patient without screening for metal = malpractice (professional standard violated). It's not just \"knowingly\" (B) - you can commit malpractice through ignorance! Not just physicians (D) - techs, nurses, anyone with professional standards! PROFESSIONAL = malpractice! ⚠️"
+  },
+  "pc-5": {
+    "question_type": "multiplechoice",
+    "question_text": "Differences in language, cognitive impairments, and emotional status are all examples of:",
+    "answers": {
+      "A": "Patients that are difficult",
+      "B": "Patients that need modifications to their test",
+      "C": "Patients that need physician intervention",
+      "D": "Communication barriers"
+    },
+    "correct_answer": "D",
+    "hint": "COMMUNICATION BARRIERS! Things that block clear communication!",
+    "explanation": "**Communication barriers** - obstacles to understanding! 🚧\n\n💡 **Remember it:** These are BARRIERS (walls) between you and the patient! LANGUAGE differences = can't understand words. COGNITIVE impairments (dementia, stroke, brain injury) = can't process information. EMOTIONAL status (anxiety, anger, fear) = can't focus/hear you. Other barriers: hearing/vision loss, pain, cultural differences, health literacy. Your job? OVERCOME the barriers! Use interpreters, visual aids, simple language, patience, empathy. Never call patients \"difficult\" (A) - that's unprofessional! Recognize the BARRIER and adapt! 🗣️"
+  },
+  "pc-6": {
+    "question_type": "multiplechoice",
+    "question_text": "Taking a patient's vital signs includes all listed below except:",
+    "answers": {
+      "A": "Blood pressure",
+      "B": "Respiratory rate",
+      "C": "Pulse rate",
+      "D": "Temperature"
+    },
+    "correct_answer": "B",
+    "hint": "Respiratory rate is NOT typically taken in MRI! BP, pulse, temp are!",
+    "explanation": "**Respiratory rate** - not a standard MRI vital sign! 🫁\n\n💡 **Remember it:** In MRI, we typically measure THREE vital signs: (1) BLOOD PRESSURE - check for hypertension/hypotension, (2) PULSE RATE - heart rate and rhythm, (3) TEMPERATURE - especially important for contrast reactions, sedation. RESPIRATORY RATE (breaths per minute) is less commonly monitored in routine MRI - it's more for ICU/anesthesia cases. However, you DO monitor for respiratory DISTRESS (patient struggling to breathe in the bore)! But routine vital signs? BP, Pulse, Temp! Remember: BPT (Blood Pressure, Pulse, Temperature)! 📊"
+  },
+  "pc-7": {
+    "question_type": "multiplechoice",
+    "question_text": "The diastolic reading in taking a blood pressure is when:",
+    "answers": {
+      "A": "The blood pressure exerted on the vessel walls is the greatest",
+      "B": "The blood pressure exerted on the vessel walls is the lowest",
+      "C": "The blood flow is at peak velocity",
+      "D": "The blood flood is at the lowest velocity"
+    },
+    "correct_answer": "B",
+    "hint": "DIASTOLIC = LOWEST pressure! When the heart RELAXES!",
+    "explanation": "**Blood pressure is lowest** - the relaxation phase! 💓\n\n💡 **Remember it:** BP reading = SYSTOLIC / DIASTOLIC (like 120/80). SYSTOLIC (top number) = HIGHEST pressure = heart CONTRACTING (squeezing blood out). DIASTOLIC (bottom number) = LOWEST pressure = heart RELAXING (filling with blood). Think: DIE-astolic = heart is \"dying down\" (relaxing)! When you take BP: pump up cuff → release slowly → first sound = SYSTOLIC → last sound = DIASTOLIC. High diastolic? Heart never fully relaxes = bad! Normal: <80. DIASTOLIC = relaxation = LOWEST! 📉"
+  },
+  "pc-8": {
+    "question_type": "multiplechoice",
+    "question_text": "For children and adults, any temperature above ____________ is considered a fever.",
+    "answers": {
+      "A": "98.6 degrees",
+      "B": "99.9 degrees",
+      "C": "100.4 degrees",
+      "D": "101.0 degrees"
+    },
+    "correct_answer": "C",
+    "hint": "100.4°F! That's the fever cutoff!",
+    "explanation": "**100.4 degrees Fahrenheit** - the fever threshold! 🌡️\n\n💡 **Remember it:** NORMAL body temp = 98.6°F (37°C), but varies 97-99°F. FEVER = 100.4°F (38°C) or higher! Why 100.4? That's when the body is actively fighting infection! 98.6°F (A) is normal. 99.9°F (B) is \"low-grade\" but not technically fever yet. 101°F (D) is already INTO fever territory. The cutoff is 100.4°F! This matters for MRI - fever could indicate infection, contrast reaction, or medical emergency. Always report fever to the radiologist! 100.4 = FEVER! 🔥"
+  },
+  "pc-9": {
+    "question_type": "multiplechoice",
+    "question_text": "True/False: Any finger can be used to detect and record a radial pulse.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "FALSE! Use your INDEX and MIDDLE fingers, NOT your thumb!",
+    "explanation": "**FALSE!** ❌ Use index and middle fingers ONLY! 👆\n\n💡 **Remember it:** NEVER use your THUMB to take a pulse! Why? Your THUMB has its OWN PULSE (it has a large radial artery) - you'll feel YOUR pulse, not the patient's! Use your INDEX and MIDDLE fingers (together) to palpate the RADIAL ARTERY (thumb side of wrist). Press gently, count beats for 30 seconds × 2 (or 15 seconds × 4). Normal adult pulse: 60-100 bpm. Also can check CAROTID pulse (neck), BRACHIAL (arm), FEMORAL (groin). But NEVER your thumb! INDEX + MIDDLE fingers! 🫀"
+  },
+  "pc-10": {
+    "question_type": "multiplechoice",
+    "question_text": "When lifting heavy items from the floor it is best to:",
+    "answers": {
+      "A": "Bend at the knees and lift with the legs",
+      "B": "Bend at the waist and keep the knees locked",
+      "C": "Always ask for help lifting heavy items",
+      "D": "Slide the item away from heavy traffic areas"
+    },
+    "correct_answer": "A",
+    "hint": "BEND YOUR KNEES! Lift with your LEGS, not your back!",
+    "explanation": "**Bend at knees, lift with legs** - save your back! 🦵💪\n\n💡 **Remember it:** PROPER LIFTING TECHNIQUE: (1) Get CLOSE to object, (2) SQUAT down (bend KNEES, not waist), (3) Keep BACK STRAIGHT, (4) Grip firmly, (5) Lift with LEG MUSCLES (straighten legs). NEVER bend at waist with locked knees (B) - that's how you herniate a disc! Your LEG muscles (quads, glutes) are STRONGER than back muscles. Think: LEGS are STRONG, back is FRAGILE! While asking for help (C) is good practice for very heavy items, the question asks for the BEST lifting technique. KNEES bend, LEGS lift! 🏋️"
+  },
+  "pc-11": {
+    "question_type": "multiplechoice",
+    "question_text": "When helping a patient to a standing position, first:",
+    "answers": {
+      "A": "Bend your knees slightly to avoid back injuries",
+      "B": "Always ask for help getting a patient to stand",
+      "C": "Ask the patient to place their hands on your shoulders or around your waist",
+      "D": "Check the patient's ability and willingness to stand"
+    },
+    "correct_answer": "D",
+    "hint": "FIRST = ASSESS! Check if they CAN and WANT to stand!",
+    "explanation": "**Check patient's ability and willingness** - assess first! 🤔\n\n💡 **Remember it:** FIRST = ASSESS! Before ANY transfer: (1) Can they PHYSICALLY stand? (Check balance, strength, mobility, pain level), (2) Are they WILLING to stand? (Some patients are scared, dizzy, or refuse). If they can't or won't - DON'T FORCE IT! Ask: \"Do you feel steady enough to stand?\" \"Any dizziness?\" \"Ready to stand?\" THEN do A, B, C (bend knees, get help if needed, position hands). Trying to lift an unwilling/unable patient = FALLS = injuries = lawsuits! ASSESSMENT comes FIRST! Always! 📋"
+  },
+  "pc-12": {
+    "question_type": "multiplechoice",
+    "question_text": "When helping a patient to the floor to prevent a fall:",
+    "answers": {
+      "A": "Gently guide the patient to a sitting position",
+      "B": "Protect the patient's head",
+      "C": "Stay calm and reassuring to the patient",
+      "D": "All the above"
+    },
+    "correct_answer": "D",
+    "hint": "ALL OF THE ABOVE! Do everything to protect them!",
+    "explanation": "**All the above** - comprehensive fall prevention! 🛡️\n\n💡 **Remember it:** When a patient is FALLING, you CAN'T always stop it - but you CAN minimize injury! (1) GENTLY GUIDE to sitting - control the descent, don't try to \"catch\" them (you'll both fall), ease them down along your leg. (2) PROTECT THE HEAD - most critical! Use your body/arms to cushion head from hitting floor. Head injury = worst outcome! (3) STAY CALM & REASSURING - they're scared! Say \"I've got you, I'm lowering you down, you're safe.\" Panic makes it worse! After they're down: call for help, assess injuries, don't move them until checked. ALL THREE = best fall management! 🚑"
+  },
+  "pc-13": {
+    "question_type": "multiplechoice",
+    "question_text": "The practice of implementing techniques that reduce or prevent the spread of pathogens that can cause illness is referred to as:",
+    "answers": {
+      "A": "Sterile procedures",
+      "B": "Safety Policies and Procedures",
+      "C": "Infection Control",
+      "D": "Soiled material disposal"
+    },
+    "correct_answer": "C",
+    "hint": "INFECTION CONTROL! Stopping pathogen spread!",
+    "explanation": "**Infection Control** - preventing pathogen transmission! 🦠🛑\n\n💡 **Remember it:** INFECTION CONTROL = all practices to PREVENT pathogen (bacteria, viruses, fungi) spread! Includes: hand hygiene, PPE, cleaning/disinfection, waste disposal, isolation protocols, standard precautions. STERILE procedures (A) are part of infection control but not the whole thing. Safety policies (B) are broader. Soiled disposal (D) is just one piece. INFECTION CONTROL is the umbrella term! In MRI: clean coils between patients, disinfect bore/table, change linens, hand hygiene before/after every patient. Healthcare-associated infections (HAIs) kill thousands yearly - YOUR practices make the difference! 🧼"
+  },
+  "pc-14": {
+    "question_type": "multiplechoice",
+    "question_text": "When donning sterile gloves use the ____________ hand to place the glove on the other hand.",
+    "answers": {
+      "A": "Left hand",
+      "B": "Right hand",
+      "C": "Non-dominate hand",
+      "D": "Dominate hand"
+    },
+    "correct_answer": "C",
+    "hint": "NON-DOMINANT hand! It touches the INSIDE of the glove!",
+    "explanation": "**Non-dominant hand** - the clean hand technique! 🧤\n\n💡 **Remember it:** Sterile gloving technique: (1) Pick up FIRST glove with BARE (non-sterile) NON-DOMINANT hand - touch INSIDE of glove only! (2) Put glove on DOMINANT hand. (3) Now GLOVED DOMINANT hand picks up SECOND glove by sliding fingers under the CUFF (sterile touches sterile!). (4) Put second glove on non-dominant hand. Why non-dominant first? Your DOMINANT hand is more skilled - you want it gloved and sterile first for procedures! INSIDE of glove = non-sterile (touches your skin). OUTSIDE = sterile (touches patient/field). NON-DOMINANT → DOMINANT! 👍"
+  },
+  "pc-15": {
+    "question_type": "multiplechoice",
+    "question_text": "Personal Protective Equipment (PPE) includes:",
+    "answers": {
+      "A": "Gloves",
+      "B": "Goggles / Face mask",
+      "C": "Gowns",
+      "D": "All the above"
+    },
+    "correct_answer": "D",
+    "hint": "ALL OF IT! Gloves, goggles, masks, gowns - complete PPE!",
+    "explanation": "**All the above** - full PPE protection! 🦺\n\n💡 **Remember it:** PPE = PERSONAL PROTECTIVE EQUIPMENT! Everything that creates a BARRIER between you and pathogens: (1) GLOVES - protect hands from blood/body fluids, (2) GOGGLES/FACE SHIELDS - protect eyes/face from splashes, (3) MASKS - protect nose/mouth from droplets/aerosols (surgical masks, N95 for TB/COVID), (4) GOWNS - protect body/clothing. Also includes: shoe covers, hair nets (for OR). Order: put ON from top to bottom (mask → goggles → gown → gloves). Take OFF from dirtiest to cleanest (gloves → gown → goggles → mask). PPE = your armor! 🛡️"
+  },
+  "pc-16": {
+    "question_type": "multiplechoice",
+    "question_text": "The most important step in performing infection control is:",
+    "answers": {
+      "A": "Proper hand hygiene",
+      "B": "Cleaning all surfaces that the patient contacts",
+      "C": "Wearing masks",
+      "D": "Wearing PPE"
+    },
+    "correct_answer": "A",
+    "hint": "HAND HYGIENE! Washing hands is #1!",
+    "explanation": "**Proper hand hygiene** - the foundation of infection control! 🧼\n\n💡 **Remember it:** HAND HYGIENE is THE SINGLE MOST IMPORTANT infection control measure! Your hands touch EVERYTHING - patients, equipment, your face. Wash hands: (1) Before/after every patient, (2) Before donning gloves, (3) After removing gloves, (4) After touching contaminated surfaces, (5) Before eating. Use soap + water (20 seconds) or alcohol-based hand sanitizer (60%+ alcohol). Hand hygiene prevents MORE infections than ANY other intervention - even more than masks or gowns! It's simple, cheap, and SAVES LIVES. Surfaces (B), masks (C), PPE (D) are all important, but HANDS are #1! 🙌"
+  },
+  "pc-17": {
+    "question_type": "multiplechoice",
+    "question_text": "When inserting and IV into the arm, the blood vessel to palpate is the:",
+    "answers": {
+      "A": "Radial artery",
+      "B": "Median cubital vein",
+      "C": "Cephalic vein",
+      "D": "Pronator teres vein"
+    },
+    "correct_answer": "B",
+    "hint": "MEDIAN CUBITAL VEIN! The big one in the elbow pit!",
+    "explanation": "**Median cubital vein** - the IV sweet spot! 💉\n\n💡 **Remember it:** MEDIAN CUBITAL VEIN is the PREFERRED IV site! It's the large superficial vein in the ANTECUBITAL FOSSA (inner elbow/elbow pit). Why preferred? (1) Large and easy to see/feel, (2) Superficial (close to skin), (3) Relatively immobile (anchored by tissue), (4) Less painful than hand veins. RADIAL ARTERY (A) is an ARTERY (not vein) - never use for routine IV (arterial sticks are special procedures)! CEPHALIC vein (C) is an option but smaller/harder. \"Pronator teres vein\" (D) doesn't exist - pronator teres is a MUSCLE! MEDIAN CUBITAL = first choice! 🎯"
+  },
+  "pc-18": {
+    "question_type": "multiplechoice",
+    "question_text": "When disposing of soiled linens and other fabrics, always:",
+    "answers": {
+      "A": "Wear PPE",
+      "B": "Carefully place items in specifically designated bags or containers",
+      "C": "Securely seal the bags or containers",
+      "D": "All the above"
+    },
+    "correct_answer": "D",
+    "hint": "ALL! PPE, designated bags, seal it up!",
+    "explanation": "**All the above** - complete biohazard handling! 🧺\n\n💡 **Remember it:** Soiled linens = BIOHAZARD! They're contaminated with blood, body fluids, or pathogens! (1) WEAR PPE - gloves minimum, gown if heavily soiled (protects you from exposure), (2) Use DESIGNATED BAGS - usually RED or YELLOW bags marked \"BIOHAZARD\" or \"INFECTIOUS\" (separates contaminated from regular laundry), (3) SECURELY SEAL - prevents leakage during transport, protects laundry workers. NEVER shake soiled linens (aerosolizes pathogens)! NEVER overfill bags! Handle carefully, dispose properly. Each step protects YOU and the next person! ALL THREE = safe disposal! ☣️"
+  },
+  "pc-19": {
+    "question_type": "multiplechoice",
+    "question_text": "Which statements below best displays empathy?",
+    "answers": {
+      "A": "I understand that you must feel badly.",
+      "B": "I have a solution for how you are feeling.",
+      "C": "I can feel what you must be feeling.",
+      "D": "It's ok… you'll be fine."
+    },
+    "correct_answer": "C",
+    "hint": "\"I can FEEL what you're feeling\" - that's TRUE empathy!",
+    "explanation": "**\"I can feel what you must be feeling\"** - genuine empathy! 💝\n\n💡 **Remember it:** EMPATHY = feeling WITH someone, SYMPATHY = feeling FOR someone! (A) \"I understand you feel badly\" = SYMPATHY (acknowledging from outside). (B) \"I have a solution\" = PROBLEM-SOLVING (dismisses feelings). (D) \"You'll be fine\" = MINIMIZING (invalidates feelings). But (C) \"I can FEEL what you're feeling\" = TRUE EMPATHY! You're putting yourself in THEIR emotional shoes, sharing their experience! Empathy builds trust, reduces anxiety, improves patient cooperation. It's not about FIXING - it's about FEELING WITH. Put yourself there: \"If I were scared/in pain/confused, how would I feel?\" That's empathy! ❤️"
+  },
+  "pc-20": {
+    "question_type": "multiplechoice",
+    "question_text": "True/False: Empathy is a skill that can be taught and mastered.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "TRUE! Empathy is a LEARNABLE SKILL!",
+    "explanation": "**TRUE!** ✅ Empathy CAN be learned and improved! 📚\n\n💡 **Remember it:** Empathy is NOT just something you're \"born with\" - it's a SKILL you can DEVELOP! How to build empathy: (1) ACTIVE LISTENING - focus fully on the patient, don't interrupt, (2) ASK QUESTIONS - \"How does this make you feel?\" \"What concerns you most?\", (3) OBSERVE body language - facial expressions, posture reveal emotions, (4) PRACTICE perspective-taking - imagine their situation, (5) REFLECT back - \"It sounds like you're feeling...\" Some people are naturally empathetic, but EVERYONE can get better with practice! Healthcare training includes empathy development. You can MASTER this skill! Keep practicing! 💪"
+  }
+}
+

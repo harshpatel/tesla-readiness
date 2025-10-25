@@ -22,6 +22,8 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'mri-safety-magnetic-fields-fundamentals': '13',
   'mri-safety-rf-gradient-fundamentals': '14',
   'msk-procedures-fundamentals': '15',
+  'patient-care-fundamentals': '16',
+  'neuro-anatomy-fundamentals': '17',
 };
 
 export default async function AdminQuizzesPage() {
