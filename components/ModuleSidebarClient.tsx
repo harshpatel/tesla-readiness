@@ -285,7 +285,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
 
                               {/* Content Items - Compact List */}
                               {isModuleExpanded && hasContent && (
-                                <div className="border-t border-gray-200 bg-gray-50 px-2 py-1.5 space-y-0.5">
+                                <div className="border-t border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 px-2 py-1.5 space-y-0.5">
                                   {module.contentItems.map((item) => {
                                     const itemHref = `/${section.slug}/${module.slug}/${item.type}/${item.slug}`;
                                     const isActive = pathname === itemHref;
@@ -300,7 +300,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                           block px-2 py-1.5 rounded transition-all text-xs
                                           ${isActive
                                             ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-sm font-semibold'
-                                            : 'hover:bg-white text-gray-700 font-medium'
+                                            : 'hover:bg-white dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 font-medium'
                                           }
                                         `}
                                       >
@@ -327,7 +327,7 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                     )}
                   </div>
                 ) : (
-                  <div className="px-2.5 py-2 rounded-lg border border-gray-200 bg-gray-50 opacity-60">
+                  <div className="px-2.5 py-2 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 opacity-60">
                     <div className="flex items-center gap-2">
                       <span className="text-base flex-shrink-0">{section.icon}</span>
                       <span className="font-medium text-xs text-gray-600 flex-1 truncate">
@@ -343,9 +343,9 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
         </div>
 
         {/* Sidebar Footer - Compact */}
-        <div className="px-3 py-2.5 border-t border-gray-200 mt-auto bg-gray-50">
-          <div className="text-xs text-gray-600 text-center">
-            <div className="font-bold text-gray-900">
+        <div className="px-3 py-2.5 border-t border-gray-200 dark:border-slate-700 mt-auto bg-gray-50 dark:bg-slate-800">
+          <div className="text-xs text-gray-600 dark:text-gray-400 text-center">
+            <div className="font-bold text-gray-900 dark:text-white">
               {sections.reduce((sum, s) => sum + (s.progress?.completedModules || 0), 0)} / {sections.reduce((sum, s) => sum + (s.progress?.totalModules || 0), 0)} Modules
             </div>
             <div className="text-gray-500 mt-0.5 text-[10px]">
