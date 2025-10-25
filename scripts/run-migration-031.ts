@@ -56,17 +56,17 @@ async function runMigration() {
     // Verify the changes
     console.log('📊 Verifying module...\n');
     
-    const { data: section } = await supabase
+    const { data: verifySection } = await supabase
       .from('sections')
       .select('id')
       .eq('slug', 'phase1')
       .single();
 
-    if (section) {
+    if (verifySection) {
       const { data: module } = await supabase
         .from('modules')
         .select('id, title, slug, is_published, is_locked')
-        .eq('section_id', section.id)
+        .eq('section_id', verifySection.id)
         .eq('slug', 'subatomic-principles-mri')
         .single();
 
