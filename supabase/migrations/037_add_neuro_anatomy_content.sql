@@ -23,35 +23,45 @@ BEGIN
   WHERE section_id = v_section_id AND slug = 'cross-sectional-anatomy-neuro'
   RETURNING id INTO v_module_id;
   
-  -- Insert video content
-  INSERT INTO content_items (module_id, slug, title, description, type, icon, order_index, metadata, is_published)
-  VALUES (
-    v_module_id, 
-    'introduction', 
-    'Cross Sectional Anatomy: Neuro Overview', 
-    'Comprehensive video covering brain and spine anatomy across all three orthogonal planes.', 
-    'video', 
-    '🎥', 
-    1, 
-    '{"videoUrl": "https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/12%20-%20Cross%20Sectional%20Anatomy%20I%20-%20Neuro.mp4"}', 
-    true
-  )
-  RETURNING id INTO v_video_content_id;
+  -- Get or insert video content
+  SELECT id INTO v_video_content_id FROM content_items 
+  WHERE module_id = v_module_id AND slug = 'introduction';
   
-  -- Insert quiz content
-  INSERT INTO content_items (module_id, slug, title, description, type, icon, order_index, metadata, is_published)
-  VALUES (
-    v_module_id, 
-    'neuro-anatomy-fundamentals', 
-    'Neuro Anatomy Fundamentals', 
-    'Test your knowledge of brain and spine anatomy through image-based identification.', 
-    'quiz', 
-    '📝', 
-    2, 
-    '{}', 
-    true
-  )
-  RETURNING id INTO v_quiz_content_id;
+  IF v_video_content_id IS NULL THEN
+    INSERT INTO content_items (module_id, slug, title, description, type, icon, order_index, metadata, is_published)
+    VALUES (
+      v_module_id, 
+      'introduction', 
+      'Cross Sectional Anatomy: Neuro Overview', 
+      'Comprehensive video covering brain and spine anatomy across all three orthogonal planes.', 
+      'video', 
+      '🎥', 
+      1, 
+      '{"videoUrl": "https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/12%20-%20Cross%20Sectional%20Anatomy%20I%20-%20Neuro.mp4"}', 
+      true
+    )
+    RETURNING id INTO v_video_content_id;
+  END IF;
+  
+  -- Get or insert quiz content
+  SELECT id INTO v_quiz_content_id FROM content_items 
+  WHERE module_id = v_module_id AND slug = 'neuro-anatomy-fundamentals';
+  
+  IF v_quiz_content_id IS NULL THEN
+    INSERT INTO content_items (module_id, slug, title, description, type, icon, order_index, metadata, is_published)
+    VALUES (
+      v_module_id, 
+      'neuro-anatomy-fundamentals', 
+      'Neuro Anatomy Fundamentals', 
+      'Test your knowledge of brain and spine anatomy through image-based identification.', 
+      'quiz', 
+      '📝', 
+      2, 
+      '{}', 
+      true
+    )
+    RETURNING id INTO v_quiz_content_id;
+  END IF;
   
   -- Insert or update quiz_sections
   INSERT INTO quiz_sections (key, title, description, icon, order_index)
