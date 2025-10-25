@@ -25,6 +25,7 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'patient-care-fundamentals': '16',
   'neuro-anatomy-fundamentals': '17',
   'contrast-fundamentals': '18',
+  'final-exam': '19',
 };
 
 export default async function AdminQuizzesPage() {

@@ -36,6 +36,7 @@ const QUIZ_ICONS: Record<string, string> = {
   'patient-care-fundamentals': '🩺',
   'neuro-anatomy-fundamentals': '🧠',
   'contrast-fundamentals': '🎨',
+  'final-exam': '🎓',
 };
 
 // Mapping of quiz slug to numbered hint file
@@ -58,6 +59,7 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'patient-care-fundamentals': '16',
   'neuro-anatomy-fundamentals': '17',
   'contrast-fundamentals': '18',
+  'final-exam': '19',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
