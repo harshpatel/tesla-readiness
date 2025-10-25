@@ -246,7 +246,7 @@ export default function QuizInterface({
 
   return (
     <div className="flex flex-col h-full">
-      <main className="flex-1 p-4 md:p-8 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      <main className="flex-1 p-4 md:p-8 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
         <div className="max-w-3xl mx-auto">
           {/* Progress Section */}
           <div className="mb-6 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm">
@@ -254,7 +254,7 @@ export default function QuizInterface({
               <span>{progress} mastered</span>
               <span>{remaining} remaining</span>
             </div>
-            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
               <div
                 className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED] transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
@@ -270,7 +270,7 @@ export default function QuizInterface({
                 </span>
               </div>
               <span className="text-gray-600 dark:text-gray-400">
-                Score: <strong className="text-[#1a1a1a]">
+                Score: <strong className="text-[#1a1a1a] dark:text-white">
                   {correctCount + incorrectCount > 0 
                     ? Math.round((correctCount / (correctCount + incorrectCount)) * 100) 
                     : 0}%
@@ -283,7 +283,7 @@ export default function QuizInterface({
           <div className="quiz-container p-6 md:p-8 mb-6 relative">
             {/* Question Type Badge */}
             <div className="mb-4">
-              <span className="inline-block px-3 py-1 bg-blue-50 text-[#0A84FF] text-xs font-semibold uppercase tracking-wide rounded">
+              <span className="inline-block px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-[#0A84FF] dark:text-blue-400 text-xs font-semibold uppercase tracking-wide rounded">
                 {currentQuestion.question_type === 'multiplechoice' ? 'Multiple Choice' : 'True/False'}
               </span>
             </div>
@@ -301,7 +301,7 @@ export default function QuizInterface({
             )}
 
             {/* Question Text */}
-            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] dark:text-white mb-6 leading-tight">
               {currentQuestion.question_text}
             </h2>
 
@@ -314,9 +314,9 @@ export default function QuizInterface({
                   let buttonClass = 'w-full p-4 rounded-xl border-2 transition-all text-left flex items-center gap-3 ';
                   
                   if (isSelected) {
-                    buttonClass += 'bg-gradient-to-r from-blue-50 to-blue-100 border-[#0A84FF]';
+                    buttonClass += 'bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 border-[#0A84FF]';
                   } else {
-                    buttonClass += 'bg-white border-gray-300 hover:border-[#0A84FF] hover:bg-blue-50';
+                    buttonClass += 'bg-white dark:bg-slate-800 border-gray-300 dark:border-slate-600 hover:border-[#0A84FF] hover:bg-blue-50 dark:hover:bg-slate-700';
                   }
 
                   return (
@@ -334,7 +334,7 @@ export default function QuizInterface({
                       `}>
                         {letter}
                       </div>
-                      <span className="flex-1 font-medium text-[#1a1a1a]">{text}</span>
+                      <span className="flex-1 font-medium text-[#1a1a1a] dark:text-white">{text}</span>
                     </button>
                   );
                 })}

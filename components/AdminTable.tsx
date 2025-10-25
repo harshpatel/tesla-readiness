@@ -272,13 +272,13 @@ export default function AdminTable({
             <tr>
               {/* Basic Info */}
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('name')}
               >
                 Name <SortIcon columnKey="name" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('email')}
               >
                 Email <SortIcon columnKey="email" />
@@ -290,13 +290,13 @@ export default function AdminTable({
                 DOB
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('role')}
               >
                 Role <SortIcon columnKey="role" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('joined')}
               >
                 Joined <SortIcon columnKey="joined" />
@@ -304,13 +304,13 @@ export default function AdminTable({
               
               {/* Activity */}
               <th 
-                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('streak')}
               >
                 Streak <SortIcon columnKey="streak" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('lastActivity')}
               >
                 Last Active <SortIcon columnKey="lastActivity" />
@@ -318,13 +318,13 @@ export default function AdminTable({
               
               {/* Overall Progress */}
               <th 
-                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50"
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50 dark:bg-slate-700"
                 onClick={() => handleSort('overall')}
               >
                 Overall % <SortIcon columnKey="overall" />
               </th>
               
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50 dark:bg-slate-700">
                 Total Items
               </th>
               
@@ -341,29 +341,29 @@ export default function AdminTable({
               
               {/* All Sections Progress */}
               {sections.map(section => (
-                <th key={section.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-purple-50">
+                <th key={section.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-purple-50 dark:bg-slate-700">
                   {section.icon} {section.title}
                 </th>
               ))}
               
               {/* ALL Modules Progress */}
               {modules.map(module => (
-                <th key={module.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-green-50">
+                <th key={module.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-green-50 dark:bg-slate-700">
                   {module.icon} {module.title}
                 </th>
               ))}
               
               {/* Additional Metadata Columns */}
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50 dark:bg-slate-700">
                 Total Attempts
               </th>
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50 dark:bg-slate-700">
                 Avg Score
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50 dark:bg-slate-700">
                 Account Created
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50 dark:bg-slate-700">
                 Full Name
               </th>
             </tr>
@@ -381,7 +381,7 @@ export default function AdminTable({
               return (
                 <tr 
                   key={user.id}
-                  className={`hover:bg-blue-50 cursor-pointer transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+                  className={`hover:bg-blue-50 dark:hover:bg-slate-700 cursor-pointer transition-colors ${idx % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50 dark:bg-slate-900'}`}
                   onClick={() => router.push(`/admin/user/${user.id}`)}
                 >
                   {/* Basic Info */}

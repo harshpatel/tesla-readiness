@@ -355,7 +355,7 @@ export default function UserDetailView({
                       return (
                         <React.Fragment key={module.id}>
                           {/* Module Row */}
-                          <tr className={`${sectionIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-yellow-50 border-b border-gray-200`}>
+                          <tr className={`${sectionIdx % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50 dark:bg-slate-900'} hover:bg-yellow-50 dark:hover:bg-slate-700 border-b border-gray-200 dark:border-slate-700`}>
                             <td className="px-3 py-2 border-r border-gray-300 dark:border-slate-600"></td>
                             <td className="px-3 py-2 pl-6 font-semibold text-gray-800 dark:text-gray-200 border-r border-gray-300 dark:border-slate-600">
                               <span className="mr-2">{module.icon}</span>
@@ -394,7 +394,7 @@ export default function UserDetailView({
                             const contentProg = contentProgress.find(cp => cp.content_item_id === content.id);
                             
                             return (
-                              <tr key={content.id} className={`${sectionIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-green-50 border-b border-gray-100`}>
+                              <tr key={content.id} className={`${sectionIdx % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50 dark:bg-slate-900'} hover:bg-green-50 dark:hover:bg-slate-700 border-b border-gray-100 dark:border-slate-700`}>
                                 <td className="px-3 py-2 border-r border-gray-300 dark:border-slate-600"></td>
                                 <td className="px-3 py-2 pl-12 text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-slate-600">
                                   <span className="mr-2">{content.icon}</span>
