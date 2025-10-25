@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import ViewAsButton from '@/components/ViewAsButton';
+import ModuleAccessManager from '@/components/ModuleAccessManager';
 
 interface UserProfile {
   id: string;
@@ -282,6 +283,14 @@ export default function UserDetailView({
           </div>
         ))}
       </div>
+
+      {/* Module Access Management */}
+      {userProfile.role === 'student' && (
+        <ModuleAccessManager 
+          userId={userProfile.id}
+          modules={modules}
+        />
+      )}
 
       {/* Detailed Progress Table */}
       <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden">

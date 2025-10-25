@@ -7,6 +7,11 @@ export interface ModuleAccessStatus {
   canAccess: boolean;
   isLocked: boolean;
   reason?: string;
+  unlockedByAdmin?: boolean;
+  adminUnlockInfo?: {
+    unlockedBy: string;
+    unlockedAt: string;
+  };
   previousModuleRequired?: {
     id: string;
     title: string;
@@ -24,22 +29,30 @@ export interface ModuleAccessStatus {
 /**
  * Check if a user can access a specific module based on sequential completion requirements
  * Admins bypass restrictions UNLESS they are impersonating (to see true student experience)
+ * 
+ * @param userId - The user ID to check access for
+ * @param moduleId - The module ID to check
+ * @param bypassAdminCheck - If true, don't check if the user is an admin (used when admin is checking another user's status)
  */
 export async function getModuleAccessStatus(
   userId: string,
-  moduleId: string
+  moduleId: string,
+  bypassAdminCheck = false
 ): Promise<ModuleAccessStatus> {
-  // Check if admin is impersonating - if so, apply restrictions
-  const { isImpersonating } = await getImpersonationState();
-  
-  // Admins bypass all restrictions (but not during impersonation)
-  if (!isImpersonating) {
-    const userIsAdmin = await isAdmin();
-    if (userIsAdmin) {
-      return {
-        canAccess: true,
-        isLocked: false,
-      };
+  // Only check admin status if not bypassed
+  if (!bypassAdminCheck) {
+    // Check if admin is impersonating - if so, apply restrictions
+    const { isImpersonating } = await getImpersonationState();
+    
+    // Admins bypass all restrictions (but not during impersonation)
+    if (!isImpersonating) {
+      const userIsAdmin = await isAdmin();
+      if (userIsAdmin) {
+        return {
+          canAccess: true,
+          isLocked: false,
+        };
+      }
     }
   }
 
@@ -138,6 +151,37 @@ export async function getModuleAccessStatus(
   const previousModuleComplete = await isModuleComplete(userId, previousModule.id);
 
   if (!previousModuleComplete.isComplete) {
+    // Module would be locked - check for admin override
+    const { data: override } = await supabase
+      .from('user_module_overrides')
+      .select('is_unlocked, unlocked_by, created_at, unlocked_by_profile:profiles!user_module_overrides_unlocked_by_fkey(first_name, last_name, email)')
+      .eq('user_id', userId)
+      .eq('module_id', moduleId)
+      .eq('is_unlocked', true)
+      .single();
+
+    if (override) {
+      // Admin has unlocked this module
+      const unlockerProfile = Array.isArray(override.unlocked_by_profile) 
+        ? override.unlocked_by_profile[0] 
+        : override.unlocked_by_profile;
+      
+      const unlockerName = unlockerProfile?.first_name && unlockerProfile?.last_name
+        ? `${unlockerProfile.first_name} ${unlockerProfile.last_name}`
+        : unlockerProfile?.email || 'Admin';
+
+      return {
+        canAccess: true,
+        isLocked: false,
+        unlockedByAdmin: true,
+        adminUnlockInfo: {
+          unlockedBy: unlockerName,
+          unlockedAt: override.created_at,
+        },
+      };
+    }
+
+    // No override, module is locked
     const prevSection = Array.isArray(previousModule.section) 
       ? previousModule.section[0] 
       : previousModule.section;
@@ -156,7 +200,7 @@ export async function getModuleAccessStatus(
     };
   }
 
-  // All checks passed
+  // All checks passed - legitimately unlocked
   return {
     canAccess: true,
     isLocked: false,
