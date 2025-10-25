@@ -34,6 +34,7 @@ export default function LockedModuleModal({
 
   const handleGoToPreviousModule = () => {
     if (previousModuleRequired) {
+      onClose(); // Close the modal first
       router.push(`/${previousModuleRequired.sectionSlug}/${previousModuleRequired.slug}`);
     }
   };
@@ -133,17 +134,17 @@ export default function LockedModuleModal({
 
         {/* Actions */}
         <div className="px-6 pb-6 flex gap-3">
-            {previousModuleRequired && (
-              <button
-                onClick={handleGoToPreviousModule}
-                className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 transition-all shadow-md hover:shadow-lg"
-              >
-                Complete Required Module
-              </button>
-            )}
+          {previousModuleRequired && (
+            <button
+              onClick={handleGoToPreviousModule}
+              className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 transition-all shadow-md hover:shadow-lg cursor-pointer"
+            >
+              Complete Required Module
+            </button>
+          )}
           <button
             onClick={onClose}
-            className={`${previousModuleRequired ? 'px-4' : 'flex-1 px-4'} py-3 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors`}
+            className={`${previousModuleRequired ? 'px-4' : 'flex-1 px-4'} py-3 bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg font-medium hover:bg-gray-300 dark:hover:bg-slate-600 transition-colors cursor-pointer`}
           >
             Close
           </button>
