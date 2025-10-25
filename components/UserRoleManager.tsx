@@ -102,21 +102,21 @@ export default function UserRoleManager() {
 
       <div className="overflow-x-auto">
         <table className="w-full">
-          <thead className="bg-gray-50 border-b border-gray-200">
+          <thead className="bg-gray-50 dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700">
             <tr>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Email
               </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Name
               </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Current Role
               </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Change Role
               </th>
-              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide">
                 Joined
               </th>
             </tr>
@@ -125,10 +125,10 @@ export default function UserRoleManager() {
             {users.map((user) => (
               <tr 
                 key={user.id}
-                className="hover:bg-gray-50 transition-colors"
+                className="hover:bg-gray-50 dark:hover:bg-slate-800 transition-colors"
               >
-                <td className="px-6 py-4 font-medium text-[#1a1a1a]">{user.email}</td>
-                <td className="px-6 py-4 text-sm text-gray-600">{user.full_name || '-'}</td>
+                <td className="px-6 py-4 font-medium text-[#1a1a1a] dark:text-white">{user.email}</td>
+                <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">{user.full_name || '-'}</td>
                 <td className="px-6 py-4">
                   <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getRoleBadgeClass(user.role)}`}>
                     {getRoleDisplayName(user.role)}

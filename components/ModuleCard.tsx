@@ -26,8 +26,8 @@ export default function ModuleCard({
       href={isLocked ? '#' : `/${section}/${mod.slug}`}
       className={`block rounded-xl transition-all p-6 border ${
         isLocked
-          ? 'bg-gray-100 opacity-60 cursor-not-allowed border-gray-300'
-          : 'bg-gray-50 hover:bg-gray-100 border-gray-200 hover:border-[#0A84FF]'
+          ? 'bg-gray-100 dark:bg-slate-800 opacity-60 cursor-not-allowed border-gray-300 dark:border-slate-700'
+          : 'bg-gray-50 dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border-gray-200 dark:border-slate-700 hover:border-[#0A84FF]'
       }`}
       onClick={(e) => {
         if (isLocked) {
@@ -39,7 +39,7 @@ export default function ModuleCard({
         <span className="text-4xl">{mod.icon || '📚'}</span>
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1">
-            <h3 className={`text-2xl font-semibold ${isLocked ? 'text-gray-500' : 'text-[#1a1a1a]'}`}>
+            <h3 className={`text-2xl font-semibold ${isLocked ? 'text-gray-500 dark:text-gray-400' : 'text-[#1a1a1a] dark:text-white'}`}>
               {mod.title}
             </h3>
             {isLocked && (
@@ -49,7 +49,7 @@ export default function ModuleCard({
               <span className="text-green-600 text-xl">✓</span>
             )}
           </div>
-          <p className={`text-sm mb-3 ${isLocked ? 'text-gray-500' : 'text-gray-600'}`}>
+          <p className={`text-sm mb-3 ${isLocked ? 'text-gray-500 dark:text-gray-400' : 'text-gray-600 dark:text-gray-400'}`}>
             {mod.description}
           </p>
           
@@ -57,14 +57,14 @@ export default function ModuleCard({
           {!isLocked && totalItems > 0 && (
             <div className="mt-3">
               <div className="flex items-center justify-between mb-1.5 text-xs">
-                <span className="text-gray-600">
+                <span className="text-gray-600 dark:text-gray-400">
                   {completedItems} / {totalItems} completed
                 </span>
                 <span className="font-bold text-[#0A84FF]">
                   {progressPercent}%
                 </span>
               </div>
-              <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+              <div className="h-2 bg-gray-200 dark:bg-slate-700 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
                   style={{ width: `${progressPercent}%` }}

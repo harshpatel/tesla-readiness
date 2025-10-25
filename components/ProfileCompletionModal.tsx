@@ -126,14 +126,14 @@ export default function ProfileCompletionModal({ userId, currentProfile }: Profi
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 animate-[fadeIn_0.3s_ease-out]">
+      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-2xl max-w-md w-full p-8 animate-[fadeIn_0.3s_ease-out]">
         {/* Header */}
         <div className="text-center mb-6">
           <div className="text-5xl mb-4">👋</div>
-          <h2 className="text-3xl font-bold text-[#1a1a1a] mb-2">
+          <h2 className="text-3xl font-bold text-[#1a1a1a] dark:text-white mb-2">
             Complete Your Profile
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-400">
             We need a few more details to personalize your experience
           </p>
         </div>
@@ -142,7 +142,7 @@ export default function ProfileCompletionModal({ userId, currentProfile }: Profi
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* First Name */}
           <div>
-            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               First Name *
             </label>
             <input
@@ -160,7 +160,7 @@ export default function ProfileCompletionModal({ userId, currentProfile }: Profi
 
           {/* Last Name */}
           <div>
-            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Last Name *
             </label>
             <input
@@ -178,7 +178,7 @@ export default function ProfileCompletionModal({ userId, currentProfile }: Profi
 
           {/* Phone Number */}
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
+            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
               Cell Phone Number *
             </label>
             <input

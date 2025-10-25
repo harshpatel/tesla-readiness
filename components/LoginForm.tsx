@@ -72,7 +72,7 @@ export default function LoginForm() {
             onChange={(e) => setEmail(e.target.value)}
             required
             disabled={isLoading}
-            className="w-full h-12 text-base bg-white"
+            className="w-full h-12 text-base bg-white dark:bg-slate-800 dark:text-white dark:border-slate-600"
           />
 
             {error && (
