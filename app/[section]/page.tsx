@@ -7,6 +7,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
+import ModuleCard from '@/components/ModuleCard';
 
 interface PageProps {
   params: Promise<{
@@ -91,7 +92,7 @@ export default async function SectionPage({ params }: PageProps) {
     notFound();
   }
 
-  // Fetch modules for this section
+  // Fetch modules for this section (published only, including locked ones)
   const { data: modules, error: modulesError } = await supabase
     .from('modules')
     .select('*')
@@ -210,53 +211,19 @@ export default async function SectionPage({ params }: PageProps) {
               const progressPercent = mod.progress?.progressPercent || 0;
               const completedItems = mod.progress?.completedItems || 0;
               const totalItems = mod.progress?.totalItems || 0;
+              const isLocked = mod.is_locked;
 
               return (
-                <Link
+                <ModuleCard
                   key={mod.id}
-                  href={`/${section}/${mod.slug}`}
-                  className="block bg-gray-50 rounded-xl hover:bg-gray-100 transition-all p-6 border border-gray-200 hover:border-[#0A84FF]"
-                >
-                  <div className="flex items-start gap-4">
-                    <span className="text-4xl">{mod.icon || '📚'}</span>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <h3 className="text-2xl font-semibold text-[#1a1a1a]">
-                          {mod.title}
-                        </h3>
-                        {isCompleted && (
-                          <span className="text-green-600 text-xl">✓</span>
-                        )}
-                      </div>
-                      <p className="text-sm text-gray-600 mb-3">{mod.description}</p>
-                      
-                      {/* Module Progress Bar */}
-                      {totalItems > 0 && (
-                        <div className="mt-3">
-                          <div className="flex items-center justify-between mb-1.5 text-xs">
-                            <span className="text-gray-600">
-                              {completedItems} / {totalItems} completed
-                            </span>
-                            <span className="font-bold text-[#0A84FF]">
-                              {progressPercent}%
-                            </span>
-                          </div>
-                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                              className="h-full bg-gradient-to-r from-[#0A84FF] to-[#0077ED]"
-                              style={{ width: `${progressPercent}%` }}
-                            />
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                    <div className="text-[#0A84FF]">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                </Link>
+                  mod={mod}
+                  section={section}
+                  isCompleted={isCompleted}
+                  progressPercent={progressPercent}
+                  completedItems={completedItems}
+                  totalItems={totalItems}
+                  isLocked={isLocked}
+                />
               );
             })}
               </div>
