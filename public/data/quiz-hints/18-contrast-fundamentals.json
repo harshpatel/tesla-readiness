@@ -1,0 +1,282 @@
+{
+  "contrast-q1": {
+    "question_type": "multiplechoice",
+    "question_text": "Which characteristic below is not an attribute to defining image quality?",
+    "answers": {"A": "Spatial resolution", "B": "Signal-to-Noise Ratio (SNR)", "C": "Image contrast", "D": "Scan time"},
+    "correct_answer": "D",
+    "hint": "Think about what makes an image LOOK good, not how long it takes!",
+    "explanation": "**Scan time** is NOT an image quality parameter! ⏱️\n\n💡 **Remember it:** The three pillars of IMAGE QUALITY are: **SPATIAL RESOLUTION** (detail/sharpness), **SNR** (signal vs noise), and **CONTRAST** (tissue differentiation). SCAN TIME affects patient comfort and throughput, but doesn't define how GOOD the image looks. You can have a fast scan with terrible quality or a slow scan with excellent quality!"
+  },
+  "contrast-q2": {
+    "question_type": "multiplechoice",
+    "question_text": "Image sharpness or detail best describes ___________ ?",
+    "answers": {"A": "Spatial resolution", "B": "Signal-to-Noise Ratio (SNR)", "C": "Image contrast", "D": "None above"},
+    "correct_answer": "A",
+    "hint": "Can you see fine details clearly? That's SPATIAL!",
+    "explanation": "**Spatial Resolution** - how sharp and detailed the image is! 🔍\n\n💡 **Remember it:** SPATIAL RESOLUTION = SHARPNESS = DETAIL. Can you see small structures? Are edges crisp? Think of it like your phone camera resolution (12MP vs 2MP). High spatial resolution = sharp image with fine detail. Low spatial resolution = blurry image. SPATIAL = SPACE = how well you resolve things in SPACE!"
+  },
+  "contrast-q3": {
+    "question_type": "truefalse",
+    "question_text": "An image with high SNR but poor spatial resolution can be considered a \"good\" image.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "A",
+    "hint": "It depends on what you're looking for - sometimes a clean blurry image beats a noisy sharp one!",
+    "explanation": "**TRUE!** ✅ Context matters!\n\n💡 **Remember it:** An image with HIGH SNR (clean, low noise) but POOR spatial resolution (blurry) CAN still be diagnostic and \"good\" depending on the clinical question. For example, if you're looking for a LARGE tumor or edema, you don't need fine detail - a clean, blurry image works fine! Think: Would you rather have a BLURRY but CLEAN photo, or a SHARP but GRAINY/NOISY photo? Sometimes blurry wins!"
+  },
+  "contrast-q4": {
+    "question_type": "truefalse",
+    "question_text": "An image with high spatial resolution always as high SNR as well.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "B",
+    "hint": "High resolution often COSTS you SNR - they're a trade-off!",
+    "explanation": "**FALSE!** ❌ High resolution ≠ High SNR!\n\n💡 **Remember it:** Spatial resolution and SNR are often INVERSELY related! When you increase spatial resolution (smaller voxels for more detail), you DECREASE SNR (less signal per voxel = more noise). It's like splitting a pizza into MORE slices - each slice gets SMALLER. You CAN have a super sharp image that's GRAINY/NOISY (high resolution, low SNR). Trade-offs everywhere in MRI!"
+  },
+  "contrast-q5": {
+    "question_type": "truefalse",
+    "question_text": "An image with low spatial resolution always needs to be repeated.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "B",
+    "hint": "Sometimes low resolution is INTENTIONAL for certain exams!",
+    "explanation": "**FALSE!** ❌ Low resolution isn't always bad!\n\n💡 **Remember it:** Low spatial resolution is sometimes DELIBERATE and APPROPRIATE! For example: screening exams, large FOV surveys, breath-hold sequences where speed matters more than detail, or when looking for LARGE pathology. You wouldn't repeat a chest X-ray just because it's not as detailed as a CT! Clinical context determines if resolution is adequate."
+  },
+  "contrast-q6": {
+    "question_type": "multiplechoice",
+    "question_text": "Which of the following does not contribute to an image's spatial resolution?",
+    "answers": {"A": "Slice thickness", "B": "Voxel number", "C": "Field-of-View (FOV)", "D": "SNR"},
+    "correct_answer": "D",
+    "hint": "Think about what determines voxel SIZE and dimensions!",
+    "explanation": "**SNR** does NOT contribute to spatial resolution! 📏\n\n💡 **Remember it:** Spatial resolution is determined by VOXEL SIZE: **Slice thickness** (z-dimension), **Matrix/Voxel number** (how many pixels), and **FOV** (field size). Smaller FOV + more voxels = smaller voxels = better resolution. SNR is about SIGNAL STRENGTH vs NOISE, not about detail/sharpness. Think: SNR = how CLEAN the image is, Resolution = how SHARP/DETAILED it is!"
+  },
+  "contrast-q7": {
+    "question_type": "multiplechoice",
+    "question_text": "Which of the following contributes to an image's contrast? (select all that apply)",
+    "answers": {"A": "SNR", "B": "TE", "C": "TR", "D": "Phase and Frequency encoding"},
+    "correct_answer": "B,C",
+    "hint": "What controls T1/T2 weighting? It's the timing parameters!",
+    "explanation": "**TE and TR** control image contrast! 🎨\n\n💡 **Remember it:** IMAGE CONTRAST is determined by tissue relaxation times (T1, T2, PD) and how we sample them using **TR** (controls T1 weighting) and **TE** (controls T2 weighting). SNR affects image quality but not contrast. Phase/frequency encoding are spatial encoding methods, not contrast mechanisms. Think: **T**R controls **T**1, **T**E controls **T**2!"
+  },
+  "contrast-q8": {
+    "question_type": "multiplechoice",
+    "question_text": "Maximizing one type of contrast while minimizing the other two is best described as:",
+    "answers": {"A": "High spatial resolution", "B": "High SNR", "C": "Image Weighting", "D": "Image Contrast"},
+    "correct_answer": "C",
+    "hint": "When you emphasize T1, T2, or PD specifically, that's...",
+    "explanation": "**Image Weighting** - emphasizing one contrast type! ⚖️\n\n💡 **Remember it:** IMAGE WEIGHTING means making the image primarily influenced by ONE type of contrast (T1, T2, or PD) while minimizing the others. **T1-WEIGHTED** = fat bright, CSF dark. **T2-WEIGHTED** = CSF bright, fat intermediate. **PD-WEIGHTED** = minimal T1/T2 influence. Think of WEIGHTING like adjusting the WEIGHT/emphasis on different characteristics!"
+  },
+  "contrast-q9": {
+    "question_type": "multiplechoice",
+    "question_text": "A tissue's T1 is defined as the time is takes for ____% of its __________ magnetization to recovery (or relax).",
+    "answers": {"A": "63%, transverse", "B": "63%, longitudinal", "C": "37%, T2", "D": "37%, T1"},
+    "correct_answer": "B",
+    "hint": "T1 = longitudinal recovery, and it's about GROWING BACK to 63%!",
+    "explanation": "**63% longitudinal** magnetization recovery! 📈\n\n💡 **Remember it:** **T1** = time for **63%** of **LONGITUDINAL** (z-axis) magnetization to RECOVER/REGROW after RF pulse. Think: After the RF pulse knocks spins down, T1 is how fast they STAND BACK UP (longitudinal). Why 63%? It's 1 time constant (1-e^-1 ≈ 0.63). Fat recovers FAST (short T1), CSF recovers SLOW (long T1). T1 = LONGITUDINAL RECOVERY!"
+  },
+  "contrast-q10": {
+    "question_type": "multiplechoice",
+    "question_text": "A tissue's T2 is defined as the time is takes for ____% of its __________ magnetization to decay (or relax).",
+    "answers": {"A": "63%, transverse", "B": "63%, longitudinal", "C": "37%, T2", "D": "37%, T1"},
+    "correct_answer": "A",
+    "hint": "T2 = transverse decay, and it's about LOSING 63% (down to 37%)!",
+    "explanation": "**63% transverse** magnetization decay! 📉\n\n💡 **Remember it:** **T2** = time for **63%** of **TRANSVERSE** (xy-plane) magnetization to DECAY/DISAPPEAR. After RF excites spins into transverse plane, T2 is how fast they DEPHASE and lose signal. 63% decays means 37% remains (e^-1 ≈ 0.37). CSF has LONG T2 (stays bright long), muscle has SHORT T2 (loses signal fast). T2 = TRANSVERSE DECAY!"
+  },
+  "contrast-q11": {
+    "question_type": "multiplechoice",
+    "question_text": "The number of a tissue's mobile protons that can contribute to signal is described as the tissue's:",
+    "answers": {"A": "T1", "B": "T2", "C": "Proton Density", "D": "Image Contrast"},
+    "correct_answer": "C",
+    "hint": "How MANY hydrogen atoms are available? That's DENSITY!",
+    "explanation": "**Proton Density (PD)** - how many mobile protons! 🧲\n\n💡 **Remember it:** PROTON DENSITY = NUMBER of MOBILE hydrogen protons available to create signal. More protons = more potential signal. Fat and water have HIGH PD (lots of hydrogen). Bone has LOW PD (few mobile protons). PD is the MAXIMUM possible signal from a tissue. T1/T2 describe how fast signal recovers/decays. Think: PD = how many PLAYERS you have, T1/T2 = how FAST they play!"
+  },
+  "contrast-q12": {
+    "question_type": "multiplechoice",
+    "question_text": "What is the most likely contrast of this image?",
+    "answers": {"A": "T1 weighting", "B": "T2 weighting", "C": "Proton Density Weighting", "D": "High SNR"},
+    "correct_answer": "A",
+    "hint": "Is fat bright? Is CSF dark? That's T1!",
+    "explanation": "**T1 Weighting** - fat bright, CSF dark! 🧈\n\n💡 **Remember it:** On **T1-WEIGHTED** images: **FAT is BRIGHT** (short T1 = fast recovery = high signal), **CSF/WATER is DARK** (long T1 = slow recovery = low signal). Gray matter is gray, white matter is slightly brighter. Think: T**ONE** = B**ONE** marrow is bright (fatty), T**ONE** = W**ONE** derful FAT is bright!"
+  },
+  "contrast-q13": {
+    "question_type": "multiplechoice",
+    "question_text": "What is the most likely contrast of this image?",
+    "answers": {"A": "T1 weighting", "B": "T2 weighting", "C": "Proton density weighting", "D": "High SNR"},
+    "correct_answer": "B",
+    "hint": "Is CSF bright? Is fat less bright? That's T2!",
+    "explanation": "**T2 Weighting** - CSF bright, fat intermediate! 💧\n\n💡 **Remember it:** On **T2-WEIGHTED** images: **CSF/WATER is BRIGHT** (long T2 = slow decay = keeps signal), **FAT is INTERMEDIATE** (shorter T2 than CSF). Edema/fluid shows up BRIGHT. Think: T**TWO** = Water is **TOO** bright! T2 = WATER BRIGHT! Pathology (edema, inflammation) appears BRIGHT on T2."
+  },
+  "contrast-q14": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 1: Referring to Fig 1, this is a _____________ curve.",
+    "answers": {"A": "T1", "B": "T2", "C": "Proton Density", "D": "All of the Above"},
+    "correct_answer": "A",
+    "hint": "Is the curve going UP (recovery)? That's T1!",
+    "explanation": "**T1 Curve** - magnetization recovery going UP! 📈\n\n💡 **Remember it:** **T1 RECOVERY CURVES** show magnetization GROWING BACK UP over time after an RF pulse. They start at ZERO and RISE toward maximum (asymptotic curve). **T2 DECAY CURVES** start at MAXIMUM and FALL DOWN. Think: T1 = RISE (recovery), T2 = FALL (decay). The curve shows LONGITUDINAL magnetization recovering after being tipped down!"
+  },
+  "contrast-q15": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 1: Referring to Fig 1, which tissue has the greater proton density?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "Tissue Density is the same"},
+    "correct_answer": "A",
+    "hint": "The curve that reaches HIGHER = more available protons!",
+    "explanation": "**Tissue A** has greater proton density! 🎯\n\n💡 **Remember it:** On a T1 recovery curve, the MAXIMUM HEIGHT (asymptote) represents PROTON DENSITY - how many mobile protons are available. The curve that reaches HIGHER has MORE protons. The SPEED of the curve (how fast it rises) represents T1 time. FAST curve = short T1, SLOW curve = long T1. Height = HOW MANY protons, Speed = HOW FAST they recover!"
+  },
+  "contrast-q16": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 1: Referring to Fig 1, which tissue has the shorter T1?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "Tissue Density is the same"},
+    "correct_answer": "A",
+    "hint": "Which curve recovers FASTER? That's the shorter T1!",
+    "explanation": "**Tissue A** has shorter T1! ⚡\n\n💡 **Remember it:** SHORT T1 = FAST recovery = curve rises QUICKLY. LONG T1 = SLOW recovery = curve rises SLOWLY. On the graph, tissue A reaches 63% recovery SOONER than tissue B. Think: FAT has short T1 (fast recovery), CSF has long T1 (slow recovery). The STEEPER the initial rise, the SHORTER the T1!"
+  },
+  "contrast-q17": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 1: Referring to Fig 1, which tissue has the shorter T2?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "Tissue Density is the same"},
+    "correct_answer": "C",
+    "hint": "This is a T1 curve - it tells you NOTHING about T2!",
+    "explanation": "**Cannot be determined** from a T1 curve! ❌\n\n💡 **Remember it:** T1 and T2 are INDEPENDENT properties! A T1 RECOVERY CURVE (longitudinal magnetization) tells you about T1 times and proton density, but gives NO information about T2 (transverse decay). You'd need a T2 DECAY CURVE to determine T2 times. Think: T1 curve = vertical (z-axis), T2 curve = horizontal (xy-plane). Different measurements!"
+  },
+  "contrast-q18": {
+    "question_type": "multiplechoice",
+    "question_text": "Referring to Fig 2, this is a _____________ curve.",
+    "answers": {"A": "T1", "B": "T2", "C": "Proton Density", "D": "All of the Above"},
+    "correct_answer": "B",
+    "hint": "Is the curve going DOWN (decay)? That's T2!",
+    "explanation": "**T2 Curve** - magnetization decay going DOWN! 📉\n\n💡 **Remember it:** **T2 DECAY CURVES** show transverse magnetization FALLING DOWN over time. They start at MAXIMUM and DECAY toward ZERO (exponential decay). **T1 RECOVERY CURVES** start at zero and rise up. Think: T2 = DROP (decay/dephasing), T1 = GROW (recovery). The curve shows TRANSVERSE magnetization losing coherence!"
+  },
+  "contrast-q19": {
+    "question_type": "multiplechoice",
+    "question_text": "Referring to Fig 2, which tissue has the shorter T1?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "T1 time is the same"},
+    "correct_answer": "C",
+    "hint": "This is a T2 curve - it tells you NOTHING about T1!",
+    "explanation": "**Cannot be determined** from a T2 curve! ❌\n\n💡 **Remember it:** T1 and T2 are INDEPENDENT! A T2 DECAY CURVE shows transverse magnetization decay but gives NO information about T1 (longitudinal recovery). You need a T1 recovery curve to determine T1 times. Think: T2 measures xy-plane dephasing, T1 measures z-axis recovery - totally different processes!"
+  },
+  "contrast-q20": {
+    "question_type": "multiplechoice",
+    "question_text": "Referring to Fig 2, which tissue has the longer T2?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "T2 time is the same"},
+    "correct_answer": "B",
+    "hint": "Which curve decays SLOWER? That's the longer T2!",
+    "explanation": "**Tissue B** has longer T2! 🐢\n\n💡 **Remember it:** LONG T2 = SLOW decay = curve falls SLOWLY (signal persists longer). SHORT T2 = FAST decay = curve falls QUICKLY. On the graph, tissue B reaches 37% remaining signal LATER than tissue A. Think: CSF has LONG T2 (slow decay, stays bright), muscle has SHORT T2 (fast decay, loses signal fast). Flatter curve = LONGER T2!"
+  },
+  "contrast-q21": {
+    "question_type": "multiplechoice",
+    "question_text": "Referring to Fig 2, which tissue has the greater proton density?",
+    "answers": {"A": "A", "B": "B", "C": "Cannot be determined by this graph", "D": "Proton density is the same"},
+    "correct_answer": "C",
+    "hint": "T2 curves don't directly show PD - they're already normalized!",
+    "explanation": "**Cannot be determined** reliably from this T2 curve! ⚠️\n\n💡 **Remember it:** T2 decay curves often start at the SAME maximum (normalized) making it hard to determine proton density. The STARTING HEIGHT would indicate PD, but if both curves start at 100%, you can't tell. PD is best seen on T1 recovery curves (the asymptotic maximum) or on actual PD-weighted images. T2 curves primarily show DECAY RATE, not initial signal!"
+  },
+  "contrast-q22": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 3: Referring to Fig 3, at what point in time is the least contrast between the 2 tissues?",
+    "answers": {"A": "A", "B": "B", "C": "C", "D": "Cannot be determined"},
+    "correct_answer": "C",
+    "hint": "When are the two curves CLOSEST together? That's minimum contrast!",
+    "explanation": "**Point C** - where curves are CLOSEST! 🎯\n\n💡 **Remember it:** IMAGE CONTRAST = DIFFERENCE in signal between tissues. When T1 recovery curves are FARTHEST APART = maximum contrast. When curves are CLOSEST TOGETHER = minimum contrast. Point C is where both tissues have recovered to similar levels, so they look nearly the same on the image. Think: No difference = no contrast = tissues look identical!"
+  },
+  "contrast-q23": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 3: Referring to Fig 3, given your answer to Q22, what is the most likely contrast weighting of the obtained image?",
+    "answers": {"A": "T1W", "B": "T2W", "C": "PDW", "D": "Cannot be determined"},
+    "correct_answer": "C",
+    "hint": "At minimum contrast point, T1 differences are minimized = PD weighted!",
+    "explanation": "**Proton Density Weighted (PDW)** - minimal T1 contrast! ⚖️\n\n💡 **Remember it:** **PD-WEIGHTED** images sample at a point where T1 RECOVERY CURVES CONVERGE (least T1 contrast). Use LONG TR (tissues fully recover, T1 effects minimal) and SHORT TE (minimal T2 decay). Result: signal reflects PROTON DENSITY, not T1 or T2. Think: PDW = T1 and T2 are CANCELLED OUT, only PD matters. All tissues recovered, none decayed much!"
+  },
+  "contrast-q24": {
+    "question_type": "multiplechoice",
+    "question_text": "Fig 3: To sample the signal in MRI, the spins must be in the ___________ plane.",
+    "answers": {"A": "Longitudinal", "B": "Transverse", "C": "either", "D": "neither"},
+    "correct_answer": "B",
+    "hint": "The receive coil detects PRECESSING magnetization in the xy-plane!",
+    "explanation": "**Transverse plane** - where we detect signal! 📡\n\n💡 **Remember it:** MRI signal comes from spins PRECESSING in the TRANSVERSE (xy) plane. Longitudinal magnetization (z-axis) is INVISIBLE to the receiver coil - it's like a stationary magnet. Only ROTATING/PRECESSING magnetization in the xy-plane induces current in the coil. That's why we use RF pulses to TIP spins from longitudinal (z) into transverse (xy) plane. No transverse = NO SIGNAL!"
+  },
+  "contrast-q25": {
+    "question_type": "multiplechoice",
+    "question_text": "TR is: (Mark all that apply)",
+    "answers": {"A": "Repetition Time", "B": "The time allowed to T1 recovery", "C": "The time allowed for T2 decay", "D": "The time from the beginning of one pulse sequence to the beginning of the next."},
+    "correct_answer": "A,B,D",
+    "hint": "TR = Time to REPEAT = controls T1 recovery!",
+    "explanation": "**TR = Repetition Time** = controls T1! 🔄\n\n💡 **Remember it:** **TR (REPETITION TIME)** is the time from one RF pulse to the next. It controls how much T1 RECOVERY occurs between pulses. SHORT TR = less recovery time = T1 contrast. LONG TR = full recovery = no T1 contrast. TR does NOT control T2 decay (that's TE). Think: **T**R controls **T**1, **T**E controls **T**2!"
+  },
+  "contrast-q26": {
+    "question_type": "multiplechoice",
+    "question_text": "TE is: (Mark all that apply)",
+    "answers": {"A": "Time to Echo", "B": "The time allowed to T1 recovery", "C": "The time allowed for T2 decay", "D": "The time from the beginning of a pulse sequence until the generated echo signal."},
+    "correct_answer": "A,C,D",
+    "hint": "TE = Time to ECHO = controls T2 decay!",
+    "explanation": "**TE = Time to Echo** = controls T2! ⏱️\n\n💡 **Remember it:** **TE (TIME TO ECHO)** is the time from RF excitation to echo signal measurement. It controls how much T2 DECAY occurs before we sample. SHORT TE = less decay = less T2 contrast. LONG TE = more decay = strong T2 contrast. TE does NOT control T1 recovery. Think: **T**E controls **T**2, **T**R controls **T**1!"
+  },
+  "contrast-q27": {
+    "question_type": "truefalse",
+    "question_text": "As TE increases, signal-to-noise ratio decreases.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "A",
+    "hint": "Longer TE = more T2 decay = less signal!",
+    "explanation": "**TRUE!** ✅ Longer TE = lower SNR!\n\n💡 **Remember it:** As TE increases, MORE T2 DECAY occurs, so SIGNAL DECREASES. Less signal with same noise = LOWER SNR. Think: Wait longer (long TE) = more signal dies (T2 decay) = lower SNR. Short TE = less decay = more signal = higher SNR. That's why T2-weighted images (long TE) are often noisier than T1-weighted (short TE)!"
+  },
+  "contrast-q28": {
+    "question_type": "truefalse",
+    "question_text": "As TR increases, signal-to-noise ratio decreases.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "B",
+    "hint": "Longer TR = more T1 recovery = MORE signal!",
+    "explanation": "**FALSE!** ❌ Longer TR = HIGHER SNR!\n\n💡 **Remember it:** As TR increases, MORE T1 RECOVERY occurs, so SIGNAL INCREASES. More signal with same noise = HIGHER SNR. Think: Wait longer (long TR) = more time to recover (T1) = more signal = higher SNR. Short TR = less recovery = less signal = lower SNR. That's why T1-weighted images (short TR) can be noisier!"
+  },
+  "contrast-q29": {
+    "question_type": "truefalse",
+    "question_text": "As TR increases, T1 weighting increases.",
+    "answers": {"A": "True", "B": "False"},
+    "correct_answer": "B",
+    "hint": "Longer TR lets everything recover fully = LESS T1 contrast!",
+    "explanation": "**FALSE!** ❌ Longer TR = LESS T1 weighting!\n\n💡 **Remember it:** SHORT TR = T1-WEIGHTED (tissues differ in recovery). LONG TR = NOT T1-weighted (all tissues fully recovered). When TR is long, both fat and CSF recover completely, so there's NO T1 CONTRAST. Think: To see T1 DIFFERENCES, you need SHORT TR to 'catch' tissues mid-recovery. Long TR eliminates T1 weighting!"
+  },
+  "contrast-q30": {
+    "question_type": "multiplechoice",
+    "question_text": "Fat is bright on a T1W image because it has a _______________ T1 time.",
+    "answers": {"A": "Short", "B": "Long", "C": "Moderate", "D": "No"},
+    "correct_answer": "A",
+    "hint": "Fat recovers FAST = ready to go quickly!",
+    "explanation": "**Short T1** - fat recovers FAST! ⚡\n\n💡 **Remember it:** FAT has SHORT T1 (~250ms @ 1.5T) = FAST recovery. On T1W images (short TR), fat RECOVERS QUICKLY and appears BRIGHT. CSF has LONG T1 (~4000ms) = slow recovery = appears DARK. Think: SHORT T1 = SHORT recovery time = BRIGHT on T1W. Fat is your SPEEDY FRIEND who recovers fast!"
+  },
+  "contrast-q31": {
+    "question_type": "multiplechoice",
+    "question_text": "Cerebral Spinal Fluid (CSF) is dark on a T1W image because it has a ________ T1 time.",
+    "answers": {"A": "Short", "B": "Long", "C": "Moderate", "D": "No"},
+    "correct_answer": "B",
+    "hint": "CSF is SLOW to recover - like water taking forever to heat up!",
+    "explanation": "**Long T1** - CSF recovers SLOWLY! 🐌\n\n💡 **Remember it:** CSF has LONG T1 (~4000ms @ 1.5T) = SLOW recovery. On T1W images (short TR), CSF hasn't recovered much yet = appears DARK. Think: LONG T1 = LONG recovery time = DARK on T1W. CSF is pure water - water molecules interact weakly = slow T1 recovery. CSF = SLOWPOKE on T1!"
+  },
+  "contrast-q32": {
+    "question_type": "multiplechoice",
+    "question_text": "Cerebral Spinal Fluid (CSF) is bright on a T2W image because it has a ________ T2 time.",
+    "answers": {"A": "Short", "B": "Long", "C": "Moderate", "D": "No"},
+    "correct_answer": "B",
+    "hint": "CSF holds onto signal FOREVER - slow to decay!",
+    "explanation": "**Long T2** - CSF decays SLOWLY! ⏳\n\n💡 **Remember it:** CSF has LONG T2 (~2000ms @ 1.5T) = SLOW decay. On T2W images (long TE), CSF RETAINS SIGNAL while other tissues have lost theirs = appears VERY BRIGHT. Think: LONG T2 = LONG signal persistence = BRIGHT on T2W. Pure water = spins stay coherent longer = slow dephasing = long T2!"
+  },
+  "contrast-q33": {
+    "question_type": "multiplechoice",
+    "question_text": "Compact bone is dark on both T1W and T2W imaging because: (Mark all that apply.)",
+    "answers": {"A": "It has no mobile protons", "B": "It has no water", "C": "It has an exceptionally long T2", "D": "It has an exceptionally long T1"},
+    "correct_answer": "A,B",
+    "hint": "Bone is SOLID calcium - no water, no mobile hydrogen!",
+    "explanation": "**No mobile protons & no water** = no MRI signal! 🦴\n\n💡 **Remember it:** COMPACT BONE (cortical bone) has NO MOBILE PROTONS because it's mostly CALCIUM HYDROXYAPATITE (solid mineral). The few protons that exist are BOUND in crystal structure = can't move = can't create signal. No mobile protons = NO SIGNAL on ANY sequence. Dark on T1, dark on T2, dark on everything! Think: BONE = PHONE (off) = no signal!"
+  },
+  "contrast-q34": {
+    "question_type": "multiplechoice",
+    "question_text": "Choose the three main types of image contrast in MRI:",
+    "answers": {"A": "Dark CSF, Bright Fat, Spatial resolution", "B": "T1, T2, Spatial resolution", "C": "TR, TE, Phase encoding", "D": "T1, T2, Proton Density"},
+    "correct_answer": "D",
+    "hint": "What are the THREE tissue properties that create contrast?",
+    "explanation": "**T1, T2, and Proton Density** - the three contrast mechanisms! 🎨\n\n💡 **Remember it:** The THREE FUNDAMENTAL CONTRAST MECHANISMS in MRI are based on tissue properties: **T1** (longitudinal recovery), **T2** (transverse decay), and **PROTON DENSITY** (number of mobile protons). We manipulate TR and TE to weight images by these properties. Think: **T**hree **T**ypes = **T**1, **T**2, and **P**roton **D**ensity!"
+  },
+  "contrast-q35": {
+    "question_type": "multiplechoice",
+    "question_text": "Choose the correct list of the four parts of any MRI pulse sequence.",
+    "answers": {"A": "TR, TE, Phase encoding, Frequency Encoding", "B": "Slice excitation, Phase encoding, Echo generation, Frequency encoding", "C": "TR, TE, NEX/NSA, Echo generation", "D": "900 , 1800 , Phase encoding, Frequency encoding"},
+    "correct_answer": "B",
+    "hint": "What are the STEPS in the sequence? Excite, encode, echo, encode!",
+    "explanation": "**Slice excitation, Phase encoding, Echo generation, Frequency encoding!** 🔄\n\n💡 **Remember it:** Every MRI pulse sequence has 4 KEY STEPS: 1) **SLICE EXCITATION** (RF pulse tips spins), 2) **PHASE ENCODING** (gradient encodes y-axis), 3) **ECHO GENERATION** (create the signal/echo), 4) **FREQUENCY ENCODING** (readout gradient encodes x-axis). Think: **S**lice, **P**hase, **E**cho, **F**requency = **SPEF** = the STEPS to make an image! TR/TE are timing parameters, not sequence parts."
+  }
+}
