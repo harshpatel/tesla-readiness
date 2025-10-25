@@ -7,14 +7,269 @@
 ## Required Info
 
 **Module Name:**
+05 - Instrumentation I - Magnets
 
 **Section:**
+Phase 1
 
 **Position:**
+After 04
+
 
 **Video URL:**
+https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/05%20-%20Instrumentation%20I%20-%20Magnets.mp4
 
 **Quiz Questions:**
+
+(Note: For questions with images, use format: https://0cm.classmarker.com/10742032_TNJF0ZXE.png - replace the slug with what's referenced in [cmimg] tags)
+(Type): multiplechoice
+(Category): 3
+(Random answers): 0
+(Question): 10,000 Gauss is equivalent to:
+(A): 0.5 Tesla 
+(B): 1.0 Tesla
+(C): 1.5 Tesla
+(D): 10 Tesla
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 0
+(Question): In the absence of a magnetic field, the orientation, or “spins” of hydrogen protons are all:
+(A): aligned 
+(B): Parallel and anti-parallel 
+(C): random
+(D): fixed 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): As magnetic field strength increases, the number of protons that align in the parallel direction of the magnetic field vs the anti-parallel direction:
+(A): remains the same
+(B): increases 
+(C): decreases 
+(D): goes to zero 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The summation of all the magnetic moments of individual spins along the same plane as the magnetic field is referred to as the:
+(A): Longitudinal magnetization vector
+(B): Transverse magnetization vector
+(C): Parallel vector
+(D): Anti-parallel vector
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, the one that is used the most is:
+(A): Superconductive 
+(B): Permanent 
+(C): Resistive (or electro)
+(D): Bar
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which can be routinely turned on and off?
+(A): Superconductive
+(B): Permanent 
+(C): Resistive (or electro) 
+(D): Bar
+(Correct): C
+(Points): 1
+
+
+(Type): truefalse
+(Category): 3
+(Random answers): 0
+(Question): True or False: The magnetic field strength of an MRI system can be determined by looking at its size.
+(A): True
+(B): False
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which is mostly used in “open” designs?
+(A): Superconductive 
+(B): Permanent 
+(C): Resistive (or electro) 
+(D): Bar
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which can yield the highest magnetic field strength?
+(A): Superconductive 
+(B): Permanent 
+(C): Resistive (or electro) 
+(D): Bar 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which is heaviest?
+(A): Superconductive 
+(B): Permanent 
+(C): Resistive (or electro) 
+(D): Bar
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which accommodates the highest performance levels in image quality and speed?
+(A): Superconductive 
+(B): Permanent 
+(C): Resistive (or electro) 
+(D): Bar 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Of the 3 magnet types used in MRI, which requires special cooling to maintain its magnetic field?
+(A): Superconductive 
+(B): Permanent 
+(C): Resisitve (or electro) 
+(D): Bar
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): In a superconductive magnet, electrical current flowing through the magnetic experiences:
+(A): virtually no resistance 
+(B): no change on resistance 
+(C): extreme resistance 
+(D): extreme heat
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The medium used to make a conductor superconductive is called a:
+(A): Dewar
+(B): Gradient 
+(C): Alloy 
+(D): Cryogen 
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The strong magnetic field produced by heavy electric current passing through a conductor is an example of:
+(A): Tesla's Law 
+(B): Faraday's Law 
+(C): Magnetic resonance 
+(D): Electromagnetic resistance
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): Helium liquifies at -453[sup]0[/sup]F (-2690C) which is equivalent to:
+(A): 0 degrees Kelvin
+(B): 4 degrees Kelvin
+(C): 10 degrees Kelvin 
+(D): 2.69 degrees Kelvin 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): 0[size=1][sup]0[/sup][/size] Kelvin, the theoretical point where all molecular motion stops, is also referred to as:
+(A): 0 degrees Celsius 
+(B): null point 
+(C): absolute zero 
+(D): superconductivity 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The process of liquid helium explosively turning gaseous is referred to as a:
+(A): quench 
+(B): superconductivity 
+(C): dephasing 
+(D): ramping 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): All MRI systems have a transmitting antenna surrounding the patient referred to as the:
+(A): Cold Head 
+(B): Body Coil 
+(C): Array Processor 
+(D): Surface Coil 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The computer component that performs the mathematical reconstruction of MRI images is called the:
+(A): Fourier Transformation module
+(B): Array processor
+(C): Body coil
+(D): Gradient Subsystem
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 3
+(Random answers): 1
+(Question): The mathematical reconstruction of an MRI image uses the ________________ process to create the image.
+(A): Fourier Transformation
+(B): Array Processing
+(C): RF Coil Subsystem
+(D): Cold Head
+(Correct): A
+(Points): 1
 
 **Document URL:**
 

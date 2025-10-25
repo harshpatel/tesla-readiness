@@ -7,14 +7,390 @@
 ## Required Info
 
 **Module Name:**
+04 - Subatomic Principles of MRI
 
 **Section:**
+Phase 1
 
 **Position:**
+After 03
+
 
 **Video URL:**
+https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/04%20-%20Subatomic%20Principles%20of%20MRI.mp4
 
 **Quiz Questions:**
+
+(Note: For questions with images, use format: https://0cm.classmarker.com/10742032_TNJF0ZXE.png - replace the slug with what's referenced in [cmimg] tags)
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Magnetism arises from:
+(A): Protons 
+(B): Neutrons 
+(C): Electrons
+(D): Faraday's Law
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): A subatomic magnetic field is:
+(A): strong and large 
+(B): weak but large 
+(C): strong but small
+(D): weak and small
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): Which is an example of a ferromagnetic?
+(A): Iron 
+(B): Aluminum
+(C): Copper
+(D): Gadolinium
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): Which is an example of a paramagnetic?
+(A): Iron 
+(B): Aluminum 
+(C): Copper
+(D): Colbalt 
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): Which is an example of a diamagnetic?
+(A): Iron 
+(B): Aluminum 
+(C): Copper
+(D): Nickel 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): “The ability of a material to become magnetized” is the definition of:
+(A): Superconductivity
+(B): Susceptibility
+(C): Slice excitation
+(D): Spectroscopy
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 1
+(Question): Faraday’s Law says that:
+(A): A magnetic field moving across a conductor produces resonance
+(B): Current is induced when a magnetic field is removed
+(C): A magnetic field moving across a conductor produces electrical current
+(D): The magnetic fields and electrical current are separate and distinct
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): One “Hertz” is defined as:
+(A): One cycle per milli-second
+(B): One cycle per second
+(C): One cycle per minute
+(D): One cycle per hour
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): One cycle of a radio wave is referred to as its:
+(A): Frequency
+(B): Amplitude 
+(C): Strength 
+(D): Phase Coherence 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In addition to the answer above, one cycle of a radio wave is also its:
+(A): Source
+(B): Wave Coherence 
+(C): Wavelength
+(D): Oscillation 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): If two signals or waves have the same _____________ they are considered to be “in phase”:
+(A): Frequency
+(B): Amplitude
+(C): Source
+(D): Power
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): The transmitted radio frequency that is perfectly matched to the frequencies of a set of protons is referred to as the:
+(A): Resonant Frequency 
+(B): In-phase frequency
+(C): Rotational frequency
+(D): Oscillation frequency
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In MRI, when the radio transmission is turned off, protons that absorbed the radio frequency energy:
+(A): Transfer the energy to electrons
+(B): Hold on to the energy until the next transmission
+(C): Release the energy in the form of a radio wave
+(D): Absorb more energy in the form of heat
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In MRI, a rotating proton will have a type of inertia referred as ______________ or simply, “spin”.
+(A): Angular momentum
+(B): Magnetic resonance
+(C): Spin-spin momentum
+(D): gyromagnetic ratio
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): What causes a spinning top to wobble?
+(A): Resonant frequency
+(B): RF transmission
+(C): Angular momentum
+(D): Gravity
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In MRI, the “wobble” of a proton is referred to as:
+(A): Wobble 
+(B): Angular Momentum 
+(C): Frequency 
+(D): Precession 
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): The fundamental equation that determines the required frequency to obtain resonance is the Lamour Equation. Which below is the equation?
+(A): [cmimg]0/10742032_XRUWWK2K.png[/cmimg]
+(B): [cmimg]0/10742032_01ZDQ42K.png[/cmimg]
+(C): [cmimg]0/10742032_8D2PM4LV.png[/cmimg]
+(D): [cmimg]0/10742032_30DKB3IV.png[/cmimg]
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In determining the Larmor Frequency in MRI, the only thing that is needed to know about hydrogen is its
+(A): Resonant frequency
+(B): Proton density
+(C): Gyromagnetic Ratio
+(D): The strength of B[sub]o[/sub] field
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): A “vector” is a graphical illustration showing
+(A): Direction and magnitude
+(B): Transverse magnetization
+(C): Longitudinal magnetization
+(D): Distance and magnitude
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Vectors that are equal but opposite have their forces:
+(A): Cancel each other
+(B): Add together
+(C): Combine into one
+(D): Reach resonance
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Considering the answer above, those forces would be considered to be:
+(A): In-phase
+(B): Out-of-Phase
+(C): In resonance 
+(D): Phase coherent
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Looking at the front of a high-field cylindrical MRI system, the Z direction is:
+(A): Across the face of the magnet
+(B): Top-bottom of the magnet
+(C): Down the bore of the magnet
+(D): Cannot be determined but looking at the magnet
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): When all the vectors of the spins pointing in the Z-direction are added together, the result is the _______________ vector:
+(A): Longitudinal Magnetization (Mz)
+(B): Transverse Magnetization (Mxy)
+(C): Resonant (Mr)
+(D): Phase Coherent
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Considering the answer above, those individual spins are considered to be precessing:
+(A): In-Phase 
+(B): Randomly 
+(C): Coherently 
+(D): Together
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question):  In MRI, we refer to a radio-frequency transmission as a “radio-frequency…. _____________”.
+(A): Vector 
+(B): Spin Transmission 
+(C): Pulse 
+(D): Flip 
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Spins placed in the XY transverse plane are initially:
+(A): Out-of-phase with each other
+(B): Phase coherent with each other
+(C): Precessing randomly
+(D): In the Z-direction
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Spins that absorbed the transmitted RF energy are termed:
+(A): Precessing 
+(B): Wobbling
+(C): Excited 
+(D): Dephased
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): Spins in the _____________ plane can produce a radio signal that can be detected.
+(A): Transverse 
+(B): Longitudinal 
+(C): Anterior-Posterior
+(D): Left-Right
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): In MRI, the resonant frequency and the Larmor frequency are:
+(A): The same
+(B): Opposite
+(C): Not related 
+(D): Always weaker than the transmission frequency 
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 4
+(Random answers): 0
+(Question): If the gyromagnetic ration of hydrogen is 42.6mHz and the resonant frequency transmitted to is 127.8mHz, the field strength of your MRI system is ________________.
+(A): 0.5T
+(B): 1.0T
+(C): 1.5T
+(D): 3.0T
+(Correct): D
+(Points): 1
+
+
+(Type): truefalse
+(Category): 4
+(Random answers): 0
+(Question): If two signals or waves are “in phase” they produce a stronger signal than individually.
+(A): True
+(B): False
+(Correct): A
+(Points): 1
+
 
 **Document URL:**
 
@@ -347,45 +723,23 @@ END $$;
 4. Include ALL question context (question_text, answers, correct_answer) for easy editing
 5. Write fun, memorable hints and explanations following the style guide above
 
-### Step 7: Update Quiz Mappings
-**CRITICAL:** Add the new quiz to the icon and file number mappings in:
-1. `/app/[section]/[module]/quiz/[slug]/page.tsx`:
-   - Add to `QUIZ_ICONS` object with appropriate emoji
-   - Add to `QUIZ_FILE_NUMBERS` object with the numbered file (e.g., '11')
-2. `/app/admin/quizzes/page.tsx`:
-   - Add to `QUIZ_FILE_NUMBERS` object with the same number
-
-Example:
-```typescript
-const QUIZ_ICONS: Record<string, string> = {
-  // ... existing quizzes
-  'subatomic-principles-fundamentals': '⚛️',
-};
-
-const QUIZ_FILE_NUMBERS: Record<string, string> = {
-  // ... existing quizzes
-  'subatomic-principles-fundamentals': '11',
-};
-```
-
-### Step 8: Execute Migration
+### Step 7: Execute Migration
 1. Save the SQL migration file
 2. Ask user to confirm before running
 3. Run the migration: Connect to Supabase and execute SQL
 4. Verify: Query to confirm module, content_items, quiz_sections, and quiz_questions were created
 
-### Step 9: Verify Everything Works
+### Step 8: Verify Everything Works
 1. Check that module appears in sidebar
 2. Verify video page loads (if exists)
 3. Verify quiz page loads with questions FROM DATABASE (if exists)
-4. **Verify quiz answers display as text, not JSON characters** (check for JSON parsing)
-5. Check server logs to confirm questions are loading from DB
-6. Check that hints/explanations are loading from JSON file
-7. Verify document page loads (if exists)
-8. Test navigation between content items
-9. Confirm progress tracking works in admin dashboard
+4. Check server logs to confirm questions are loading from DB
+5. Check that hints/explanations are loading from JSON file
+6. Verify document page loads (if exists)
+7. Test navigation between content items
+8. Confirm progress tracking works in admin dashboard
 
-### Step 10: Report Back
+### Step 9: Report Back
 Provide summary:
 - ✅ Module created: [name]
 - ✅ Position: [section] at order_index [X]
@@ -408,11 +762,8 @@ Provide summary:
 - Include hints and explanations for EVERY quiz question in the fun, memorable style shown above
 - Create numbered JSON hint files (01-slug.json, 02-slug.json, etc.) in correct order
 - Include full question context in JSON files for easy editing by admins
-- **ALWAYS update quiz mappings** in both quiz page and admin page (QUIZ_ICONS and QUIZ_FILE_NUMBERS)
-- **Database answers are JSON strings** - they're already parsed in the quiz page code, so just insert as JSON strings in SQL
 - Verify quiz questions load from database (check server logs)
 - Verify hints/explanations load from JSON files
-- **Verify quiz answers display as text, not raw JSON characters**
 - Test everything before confirming completion
 - If anything is unclear, ASK the user before proceeding
 

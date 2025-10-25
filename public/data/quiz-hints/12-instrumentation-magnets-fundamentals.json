@@ -1,0 +1,274 @@
+{
+  "inst-mag-1": {
+    "question_type": "multiplechoice",
+    "question_text": "10,000 Gauss is equivalent to:",
+    "answers": {
+      "A": "0.5 Tesla",
+      "B": "1.0 Tesla",
+      "C": "1.5 Tesla",
+      "D": "10 Tesla"
+    },
+    "correct_answer": "B",
+    "hint": "Just divide by 10,000! 10,000 Gauss = 1.0 Tesla!",
+    "explanation": "**1.0 Tesla** - simple conversion! 🧲\n\n💡 **Remember it:** 10,000 Gauss = 1 Tesla! Just divide Gauss by 10,000 to get Tesla. It's like converting cents to dollars - 10,000 cents = $100... wait, that's different. But for magnets: 10,000 G = 1 T! So 15,000 Gauss = 1.5T, 30,000 Gauss = 3.0T. The math is EASY - just move the decimal 4 places! Most clinical MRIs are 1.5T (15,000 Gauss) or 3T (30,000 Gauss). 🔢"
+  },
+  "inst-mag-2": {
+    "question_type": "multiplechoice",
+    "question_text": "In the absence of a magnetic field, the orientation, or \"spins\" of hydrogen protons are all:",
+    "answers": {
+      "A": "aligned",
+      "B": "Parallel and anti-parallel",
+      "C": "random",
+      "D": "fixed"
+    },
+    "correct_answer": "C",
+    "hint": "No magnet = total chaos! They're pointing every which way!",
+    "explanation": "**Random** - complete chaos without a magnetic field! 🎲\n\n💡 **Remember it:** NO MAGNET = RANDOM CHAOS! Think of a crowd of people with no leader - everyone's facing different directions, doing their own thing. Protons are the same - without a magnetic field (B₀) to organize them, they spin in RANDOM directions. Once you turn on the magnet, they start to align (slightly more parallel than anti-parallel), creating net magnetization. Random → Organized = how MRI works! 🧭"
+  },
+  "inst-mag-3": {
+    "question_type": "multiplechoice",
+    "question_text": "As magnetic field strength increases, the number of protons that align in the parallel direction of the magnetic field vs the anti-parallel direction:",
+    "answers": {
+      "A": "remains the same",
+      "B": "increases",
+      "C": "decreases",
+      "D": "goes to zero"
+    },
+    "correct_answer": "B",
+    "hint": "Stronger magnet = more protons line up WITH the field!",
+    "explanation": "**Increases** - stronger field = more alignment! 📈\n\n💡 **Remember it:** HIGHER FIELD = MORE PARALLEL PROTONS! At 0.5T, you get a small excess of parallel protons. At 3T, you get MORE excess parallel protons! This is WHY higher field strength gives better signal (SNR) - more protons aligned = stronger net magnetization = stronger signal! Think of it like a magnet attracting paper clips - stronger magnet pulls more clips into alignment! 🧲"
+  },
+  "inst-mag-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The summation of all the magnetic moments of individual spins along the same plane as the magnetic field is referred to as the:",
+    "answers": {
+      "A": "Longitudinal magnetization vector",
+      "B": "Transverse magnetization vector",
+      "C": "Parallel vector",
+      "D": "Anti-parallel vector"
+    },
+    "correct_answer": "A",
+    "hint": "SAME PLANE as B₀ = LONGITUDINAL (Z-direction)!",
+    "explanation": "**Longitudinal magnetization vector** - the Z-axis alignment! 📏\n\n💡 **Remember it:** LONGITUDINAL = LONG axis = Z-direction = SAME plane as B₀! When protons are at equilibrium (relaxed), they align along the Z-axis (longitudinal direction), slightly more parallel than anti-parallel. This creates net LONGITUDINAL magnetization (Mz). The TRANSVERSE plane (Mxy) is PERPENDICULAR to B₀. Longitudinal = with the field, Transverse = across the field! 🎯"
+  },
+  "inst-mag-5": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, the one that is used the most is:",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "A",
+    "hint": "SUPER common! Most hospitals use superconductive magnets!",
+    "explanation": "**Superconductive** - the industry standard! ❄️\n\n💡 **Remember it:** SUPERCONDUCTIVE = SUPER COMMON! About 80-90% of clinical MRI scanners use superconductive magnets because they can achieve high field strengths (1.5T, 3T, 7T+) with stable, homogeneous fields. They're cooled with liquid helium to near absolute zero, allowing current to flow with virtually NO resistance. Permanent magnets (low field, open MRI) and resistive magnets (rarely used anymore) can't compete with superconductive performance! 🏆"
+  },
+  "inst-mag-6": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which can be routinely turned on and off?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "C",
+    "hint": "RESISTIVE = like a light switch - turn it on and off!",
+    "explanation": "**Resistive (or electro)** - the switchable magnet! 💡\n\n💡 **Remember it:** RESISTIVE = SWITCH ON/OFF! Resistive electromagnets use standard electrical current through copper wire coils. Turn power on = magnetic field. Turn power off = no field! Easy! Superconductive magnets are ALWAYS ON (current loops indefinitely). Permanent magnets are ALWAYS ON (it's a magnet, duh!). Only resistive can be routinely switched. But they're heavy, expensive to run (high power consumption), and can't reach high field strengths. That's why they're rarely used! 🔌"
+  },
+  "inst-mag-7": {
+    "question_type": "truefalse",
+    "question_text": "True or False: The magnetic field strength of an MRI system can be determined by looking at its size.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "Size doesn't matter! Can't judge field strength by appearance!",
+    "explanation": "**FALSE!** ❌ Size ≠ Field Strength! 📏\n\n💡 **Remember it:** You CAN'T tell field strength by looking at the magnet! A small 3T scanner can be MORE powerful than a giant 0.3T open MRI. Field strength depends on the TYPE of magnet (superconductive vs permanent), coil design, and current - NOT physical size. Even \"short bore\" 1.5T and 3T scanners look similar from outside. The ONLY way to know field strength is to CHECK THE SPECS or read the label! Don't judge a magnet by its cover! 🎩"
+  },
+  "inst-mag-8": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which is mostly used in \"open\" designs?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "B",
+    "hint": "PERMANENT magnets = OPEN designs for claustrophobic patients!",
+    "explanation": "**Permanent** - the claustrophobia-friendly option! 🤗\n\n💡 **Remember it:** PERMANENT = OPEN MRI! Permanent magnets (made from ferromagnetic materials like neodymium) are used in open/vertical field MRI systems. They're positioned above and below the patient (vertical field) instead of surrounding them (horizontal bore). This creates an OPEN design - great for claustrophobic patients, kids, and obese patients! Trade-off? Lower field strength (0.2-0.7T typically), longer scan times, and lower image quality. But hey, at least you can see the sky! 🌤️"
+  },
+  "inst-mag-9": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which can yield the highest magnetic field strength?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "A",
+    "hint": "SUPER strong! Superconductive can go up to 7T, 10T, even higher!",
+    "explanation": "**Superconductive** - the heavyweight champion! 💪\n\n💡 **Remember it:** SUPERCONDUCTIVE = SUPER STRONG FIELDS! Clinical superconductive MRIs range from 0.5T to 3T (most common: 1.5T and 3T). Research superconductive scanners go up to 7T, 10.5T, and even 14T! Permanent magnets max out around 0.7T. Resistive magnets can't exceed 0.3-0.4T (they'd overheat and consume massive power). Superconductive wins because liquid helium cooling allows HUGE currents with NO resistance = MASSIVE field strength! 🏆"
+  },
+  "inst-mag-10": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which is heaviest?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "C",
+    "hint": "RESISTIVE = SO heavy you can't move it! Tons of copper wire!",
+    "explanation": "**Resistive (or electro)** - the heavyweight brick! 🏋️\n\n💡 **Remember it:** RESISTIVE = RIDICULOUSLY HEAVY! Resistive magnets use TONS (literally) of copper wire coils to generate the magnetic field. All that copper = MASSIVE weight! They also need huge power supplies and water cooling systems (even more weight). Superconductive magnets are lighter because they use thin superconducting wire. Permanent magnets are heavy too (ferromagnetic materials), but not as bad as resistive. Resistive magnets: strong like bull, heavy like... well, BULL! 🐂"
+  },
+  "inst-mag-11": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which accommodates the highest performance levels in image quality and speed?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resistive (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "A",
+    "hint": "SUPER performance! High field = fast scans & beautiful images!",
+    "explanation": "**Superconductive** - the performance king! 👑\n\n💡 **Remember it:** SUPERCONDUCTIVE = SUPER PERFORMANCE! High field strength (1.5T-3T) = better SNR = higher resolution images, faster scanning, better contrast, more sequences available (fMRI, spectroscopy, diffusion, perfusion). Permanent and resistive magnets (low field) can't compete - they have lower SNR, longer scan times, limited pulse sequences. Want the best images in the least time? Superconductive all the way! Speed + Quality = Superconductive wins! 🚀"
+  },
+  "inst-mag-12": {
+    "question_type": "multiplechoice",
+    "question_text": "Of the 3 magnet types used in MRI, which requires special cooling to maintain its magnetic field?",
+    "answers": {
+      "A": "Superconductive",
+      "B": "Permanent",
+      "C": "Resisitve (or electro)",
+      "D": "Bar"
+    },
+    "correct_answer": "A",
+    "hint": "SUPER cold! Needs liquid helium at 4 Kelvin!",
+    "explanation": "**Superconductive** - the ice queen! ❄️\n\n💡 **Remember it:** SUPERCONDUCTIVE = SUPER COLD! These magnets need liquid HELIUM (4 Kelvin = -269°C = -452°F) to maintain superconductivity. At this temperature, electrical resistance drops to ZERO, allowing current to flow indefinitely without energy loss. The helium is stored in a CRYOSTAT (vacuum-insulated container). Permanent magnets don't need cooling (they're just... magnets). Resistive magnets need WATER cooling but not cryogenic temperatures. Only superconductive needs that EXTREME cold! 🧊"
+  },
+  "inst-mag-13": {
+    "question_type": "multiplechoice",
+    "question_text": "In a superconductive magnet, electrical current flowing through the magnetic experiences:",
+    "answers": {
+      "A": "virtually no resistance",
+      "B": "no change on resistance",
+      "C": "extreme resistance",
+      "D": "extreme heat"
+    },
+    "correct_answer": "A",
+    "hint": "SUPER smooth! Current flows forever with almost ZERO resistance!",
+    "explanation": "**Virtually no resistance** - smooth like butter! 🧈\n\n💡 **Remember it:** SUPERCONDUCTIVE = NO RESISTANCE! At 4 Kelvin, niobium-titanium wire becomes SUPERCONDUCTIVE - electrical resistance drops to essentially ZERO! This means current can flow INDEFINITELY without losing energy to heat. Once you \"ramp up\" (start) the current, it just keeps flowing in a loop - FOREVER! That's why superconductive magnets stay on 24/7. The field never drops because resistance never stops the current! It's like a frictionless wheel that spins forever! 🎡"
+  },
+  "inst-mag-14": {
+    "question_type": "multiplechoice",
+    "question_text": "The medium used to make a conductor superconductive is called a:",
+    "answers": {
+      "A": "Dewar",
+      "B": "Gradient",
+      "C": "Alloy",
+      "D": "Cryogen"
+    },
+    "correct_answer": "D",
+    "hint": "CRYO = COLD! Cryogen = super-cold liquid (like liquid helium)!",
+    "explanation": "**Cryogen** - the super-cooler! 🧊\n\n💡 **Remember it:** CRYOGEN = CRYO (cold) + GEN (generator/agent)! A cryogen is any substance used for extreme cooling. In MRI, the cryogen is liquid HELIUM (sometimes liquid nitrogen as a buffer layer). The helium CRYOGEN cools the superconducting wire to 4 Kelvin, making it superconductive. A DEWAR is the vacuum flask that HOLDS the cryogen. An ALLOY is the wire material (niobium-titanium). But the COOLING MEDIUM itself? That's the CRYOGEN! ❄️"
+  },
+  "inst-mag-15": {
+    "question_type": "multiplechoice",
+    "question_text": "The strong magnetic field produced by heavy electric current passing through a conductor is an example of:",
+    "answers": {
+      "A": "Tesla's Law",
+      "B": "Faraday's Law",
+      "C": "Magnetic resonance",
+      "D": "Electromagnetic resistance"
+    },
+    "correct_answer": "B",
+    "hint": "FARADAY! Moving electricity creates magnetism (and vice versa)!",
+    "explanation": "**Faraday's Law** - electricity ⚡ and magnetism 🧲 are best friends! 🤝\n\n💡 **Remember it:** FARADAY'S LAW = electromagnetic induction! Current through a wire creates a magnetic field (electromagnet principle). Changing magnetic field induces current (MRI signal detection principle). Michael Faraday discovered this fundamental relationship: electricity and magnetism are TWO SIDES OF THE SAME COIN! This is how MRI works - we use electrical current to create B₀ (main field), then detect changing magnetic fields from relaxing protons as electrical signals! Faraday = Foundation of MRI! 🎓"
+  },
+  "inst-mag-16": {
+    "question_type": "multiplechoice",
+    "question_text": "Helium liquifies at -453°F (-2690C) which is equivalent to:",
+    "answers": {
+      "A": "0 degrees Kelvin",
+      "B": "4 degrees Kelvin",
+      "C": "10 degrees Kelvin",
+      "D": "2.69 degrees Kelvin"
+    },
+    "correct_answer": "B",
+    "hint": "4 Kelvin! Super cold, but not absolute zero!",
+    "explanation": "**4 degrees Kelvin** - just 4 degrees above absolute zero! 🌡️\n\n💡 **Remember it:** HELIUM = 4K! Liquid helium exists at 4 Kelvin (4K), which is -269°C or -452°F. That's ALMOST absolute zero (0K = -273°C), but not quite! This ultra-low temperature is perfect for superconductivity. Fun fact: 4K is SO cold that if you touch liquid helium, it doesn't feel wet - it boils INSTANTLY from your body heat! This is the temperature inside your MRI magnet RIGHT NOW! ❄️"
+  },
+  "inst-mag-17": {
+    "question_type": "multiplechoice",
+    "question_text": "0° Kelvin, the theoretical point where all molecular motion stops, is also referred to as:",
+    "answers": {
+      "A": "0 degrees Celsius",
+      "B": "null point",
+      "C": "absolute zero",
+      "D": "superconductivity"
+    },
+    "correct_answer": "C",
+    "hint": "ABSOLUTE ZERO = the coldest temperature theoretically possible!",
+    "explanation": "**Absolute zero** - the ultimate cold! 🥶\n\n💡 **Remember it:** ABSOLUTE ZERO = 0 Kelvin = -273.15°C = -459.67°F! This is the theoretical temperature where ALL molecular motion STOPS - atoms freeze completely, no vibration, no movement, nothing! It's IMPOSSIBLE to actually reach absolute zero (third law of thermodynamics), but we can get close! Liquid helium at 4K is pretty darn close. At absolute zero, everything would have zero thermal energy. It's the COLDEST cold can possibly get! 🧊"
+  },
+  "inst-mag-18": {
+    "question_type": "multiplechoice",
+    "question_text": "The process of liquid helium explosively turning gaseous is referred to as a:",
+    "answers": {
+      "A": "quench",
+      "B": "superconductivity",
+      "C": "dephasing",
+      "D": "ramping"
+    },
+    "correct_answer": "A",
+    "hint": "QUENCH! It's an emergency - helium boils off explosively!",
+    "explanation": "**Quench** - the magnet's worst nightmare! 💥\n\n💡 **Remember it:** QUENCH = EMERGENCY BOIL-OFF! If superconducting wire warms up (damage, loss of cooling), resistance returns, current creates heat, heat boils helium, boiling helium creates MORE heat - BOOM! Chain reaction! Hundreds of liters of liquid helium turn to gas in seconds, venting through emergency pipes. The magnetic field COLLAPSES (magnet goes from ON to OFF). Cost to fix? $50,000-$200,000+. Quench = VERY BAD DAY! Prevention: maintain cryogen levels, don't drop things on the magnet! 😱"
+  },
+  "inst-mag-19": {
+    "question_type": "multiplechoice",
+    "question_text": "All MRI systems have a transmitting antenna surrounding the patient referred to as the:",
+    "answers": {
+      "A": "Cold Head",
+      "B": "Body Coil",
+      "C": "Array Processor",
+      "D": "Surface Coil"
+    },
+    "correct_answer": "B",
+    "hint": "BODY COIL! It surrounds the whole body and transmits RF!",
+    "explanation": "**Body Coil** - the built-in broadcaster! 📡\n\n💡 **Remember it:** BODY COIL = built-in RF TRANSMITTER that surrounds the patient! It's integrated into the magnet bore and transmits the RF pulses that excite protons. It can also RECEIVE signal (body coil imaging), but specialized surface coils receive better. Every MRI has a body coil - it's standard equipment! COLD HEAD is part of the cryogen cooling system. ARRAY PROCESSOR is the computer. SURFACE COILS are specialized external coils. But the BODY COIL? That's the main transmitter! 📻"
+  },
+  "inst-mag-20": {
+    "question_type": "multiplechoice",
+    "question_text": "The computer component that performs the mathematical reconstruction of MRI images is called the:",
+    "answers": {
+      "A": "Fourier Transformation module",
+      "B": "Array processor",
+      "C": "Body coil",
+      "D": "Gradient Subsystem"
+    },
+    "correct_answer": "B",
+    "hint": "ARRAY PROCESSOR! It's the computing muscle that crunches the numbers!",
+    "explanation": "**Array processor** - the math muscle! 💪🧮\n\n💡 **Remember it:** ARRAY PROCESSOR = the COMPUTER CHIP that does the heavy lifting! It performs the Fast Fourier Transform (FFT) calculations that convert raw k-space data into images you can see. Modern MRI array processors are super-powerful - they handle millions of calculations per second! FOURIER TRANSFORMATION is the MATH METHOD used, but the ARRAY PROCESSOR is the HARDWARE that performs it. Think of it as: Fourier = recipe, Array Processor = chef! 👨‍🍳"
+  },
+  "inst-mag-21": {
+    "question_type": "multiplechoice",
+    "question_text": "The mathematical reconstruction of an MRI image uses the ________________ process to create the image.",
+    "answers": {
+      "A": "Fourier Transformation",
+      "B": "Array Processing",
+      "C": "RF Coil Subsystem",
+      "D": "Cold Head"
+    },
+    "correct_answer": "A",
+    "hint": "FOURIER TRANSFORMATION! It converts frequency data to spatial images!",
+    "explanation": "**Fourier Transformation** - from frequencies to pictures! 🎵➡️🖼️\n\n💡 **Remember it:** FOURIER TRANSFORM (FFT) = the MAGIC that turns raw MRI signal (frequencies) into images (anatomy)! MRI collects data in \"k-space\" (frequency domain), then uses FFT to convert it to \"image space\" (spatial domain). Think of it like converting music sheet notes (frequencies) into actual sound you hear. Named after Jean-Baptiste Joseph Fourier (French mathematician). Without Fourier transforms, MRI wouldn't exist! It's the KEY mathematical tool that makes everything work! 🔑"
+  }
+}
+

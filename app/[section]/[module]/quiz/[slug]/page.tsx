@@ -28,6 +28,9 @@ const QUIZ_ICONS: Record<string, string> = {
   'anatomy-fundamentals': '🫀',
   'neuro-procedures-fundamentals': '🧠',
   'body-msk-fundamentals': '🦴',
+  'subatomic-principles-fundamentals': '⚛️',
+  'instrumentation-magnets-fundamentals': '🧲',
+  'mri-safety-magnetic-fields-fundamentals': '⚠️',
 };
 
 // Mapping of quiz slug to numbered hint file
@@ -42,6 +45,9 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'anatomy-fundamentals': '08',
   'neuro-procedures-fundamentals': '09',
   'body-msk-fundamentals': '10',
+  'subatomic-principles-fundamentals': '11',
+  'instrumentation-magnets-fundamentals': '12',
+  'mri-safety-magnetic-fields-fundamentals': '13',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -155,7 +161,7 @@ export default async function QuizPage({ params }: PageProps) {
     question_id: q.question_id,
     question_type: q.question_type as 'multiplechoice' | 'truefalse',
     question_text: q.question_text,
-    answers: q.answers as Record<string, string>,
+    answers: typeof q.answers === 'string' ? JSON.parse(q.answers) : q.answers,
     correct_answer: q.correct_answer,
     points: q.points || 1,
     order_index: q.order_index,

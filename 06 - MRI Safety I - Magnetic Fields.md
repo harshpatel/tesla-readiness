@@ -7,14 +7,246 @@
 ## Required Info
 
 **Module Name:**
+06 - MRI Safety I - Magnetic Fields
 
 **Section:**
+Phase 1
 
 **Position:**
+After 05
+
 
 **Video URL:**
+https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/06%20-%20MRI%20Safety%20I%20-%20Magnetic%20Fields.mp4
 
 **Quiz Questions:**
+
+(Note: For questions with images, use format: https://0cm.classmarker.com/10742032_TNJF0ZXE.png - replace the slug with what's referenced in [cmimg] tags)
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): When used properly, MRI has:
+(A): No adverse biological effects
+(B): Minimal ionizing radiation
+(C): Several known adverse biological effects
+(D): The same adverse biological effects as radiography
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): The amount of force a magnet exerts on an object depends on the:
+(A): Mass of an object and distance to the center of the magnet
+(B): Mass of an object and distance to the fringe field of the magnet
+(C): Amount of ferrous material of the object and the distance to the center of the magnet
+(D): Amount of ferrous material of the object and the distance to the fringe
+field of the magnet
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): As the distance of an object to the magnet decreases by 1/2, the force exerted on the object increases by:
+(A): 2x
+(B): 4x
+(C): 10x
+(D): No effect
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Lines of magnetic force in a magnetic field diagram indicate the:
+(A): Magnet field strength
+(B): Change in the magnetic field strength over a given distance
+(C): Distance to isocenter
+(D): Magnetic field homogeneity over a given distance
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): The force exerted on an object by a magnetic field that results in the object accelerating toward the magnet is a:
+(A): Lenz force
+(B): Rotational force
+(C): Magnetic field force
+(D): Translational force
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): MRI-related injuries are:
+(A): Rare
+(B): Common
+(C): Never fatal
+(D): Always the fault of the technologist
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Superconductive magnets use a ____________ to hold liquid helium.
+(A): Gradient coil
+(B): RF coil
+(C): Cryostat
+(D): Cryogen
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Helium liquifies at -453 Degrees Farhenheit or ______________.
+(A): 0 Degrees Celsius
+(B): 0 Degrees Kelvin
+(C): -4 Degrees Celsius
+(D): 4 Degrees Kelvin
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): An explosive conversion of liquid helium to gaseous helium is called a:
+(A): radio frequency burn
+(B): Dewar
+(C): RF pulse
+(D): quench
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): A release of helium into the magnet room can lead to death caused by:
+(A): A cold burn
+(B): burned lungs
+(C): anaphylactic shock
+(D): asphyxiation
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): In the case of a sudden release of gaseous helium into the magnet room, the very first action the technologist takes is:
+(A): Call a supervisor
+(B): Call 911
+(C): Finish the exam immediately
+(D): Remove the patient from the magnet bore and magnet room
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Anyone entering the Zones III or IV must be screened by:
+(A): A qualified MRI Professional
+(B): The referring physician
+(C): The attending radiologist
+(D): The Radiology supervisor
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 0
+(Question): All pacemakers are contraindicated for an MRI exam:
+(A): "True"
+(B): "False"
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): It is essential to get the patients accurate weight because the weight:
+(A): Determines the limits of the Specific Absorption Rate or SAR
+(B): Determines if the patient will fit in the magnet bore
+(C): Determines the length of the scan time
+(D): Determines the imaging protocol
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): It is important to ask a female patient if there is a possibility of pregnancy because:
+(A): MRI is contraindicated for a pregnant patient
+(B): Special imaging parameters are needed for a pregnant patient
+(C): Acoustic noise is damaging to the fetus
+(D): IV contrast agents may be contraindicated for a pregnant patient
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Zone III is which area?
+(A): Magnet room
+(B): Facility lobby/Check-in area/Facility waiting room
+(C): Patient holding area
+(D): Public area or any area outside the facility entrance
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Zone IV is the:
+(A): Waiting room
+(B): Magnet room
+(C): Control room
+(D): The patient screening area
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): Patients are screened in
+(A): Zone I
+(B): Zone II
+(C): Zone III
+(D): Zone IV
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 24
+(Random answers): 1
+(Question): __________________ is contraindicated for an MRI
+(A): An uncleared metallic foreign body
+(B): An artificial hip replacement
+(C): Any implant controlled by a battery
+(D): A verified prior history of an allergenic reaction to IV contrast agents
+(Correct): A
+(Points): 1
 
 **Document URL:**
 

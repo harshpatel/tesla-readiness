@@ -1,0 +1,404 @@
+{
+  "sub-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Magnetism arises from:",
+    "answers": {
+      "A": "Protons",
+      "B": "Neutrons",
+      "C": "Electrons",
+      "D": "Faraday's Law"
+    },
+    "correct_answer": "C",
+    "hint": "Think about what moves and spins in an atom - the tiny particles orbiting around!",
+    "explanation": "**Electrons** create magnetism! ⚡\n\n💡 **Remember it:** ELECTRONS are always MOVING - spinning and orbiting around the nucleus. When they move, they create tiny magnetic fields! Protons sit still in the nucleus (boring!), and neutrons have no charge. But electrons? They're the party animals of the atom - constantly moving and generating those magnetic fields that make MRI possible! 🎉"
+  },
+  "sub-2": {
+    "question_type": "multiplechoice",
+    "question_text": "A subatomic magnetic field is:",
+    "answers": {
+      "A": "strong and large",
+      "B": "weak but large",
+      "C": "strong but small",
+      "D": "weak and small"
+    },
+    "correct_answer": "C",
+    "hint": "Sub-atomic means TINY, but these little fields pack a punch!",
+    "explanation": "**Strong but small** - like a tiny superhero! 💪\n\n💡 **Remember it:** SUB-ATOMIC = SUB-miniature! These magnetic fields are MICROSCOPIC (smaller than you can see), but they're POWERFUL for their size. Think of it like a firecracker - tiny package, big bang! That's why we need millions of hydrogen atoms aligned to create enough signal for MRI. Each one is strong for its size, but you need LOTS of them!"
+  },
+  "sub-3": {
+    "question_type": "multiplechoice",
+    "question_text": "Which is an example of a ferromagnetic?",
+    "answers": {
+      "A": "Iron",
+      "B": "Aluminum",
+      "C": "Copper",
+      "D": "Gadolinium"
+    },
+    "correct_answer": "A",
+    "hint": "FERRO = IRON in Latin! The answer is literally in the name! 🧲",
+    "explanation": "**Iron** - the OG ferromagnetic! 🔨\n\n💡 **Remember it:** FERRO means IRON in Latin (think Ferrari = 'little iron')! Ferromagnetic materials are STRONGLY attracted to magnets and can become permanent magnets themselves. Iron is THE classic example - think refrigerator magnets, steel, horseshoes. In MRI, ferromagnetic objects are SUPER dangerous because they're projectile risks! Never bring iron/steel into the MR room! 🚫"
+  },
+  "sub-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Which is an example of a paramagnetic?",
+    "answers": {
+      "A": "Iron",
+      "B": "Aluminum",
+      "C": "Copper",
+      "D": "Colbalt"
+    },
+    "correct_answer": "B",
+    "hint": "PARA = beside/alongside. These materials are weakly attracted. Think of aluminum cans!",
+    "explanation": "**Aluminum** - the weak attraction guy! 🥫\n\n💡 **Remember it:** PARA = PARTIAL attraction (not super strong). Aluminum (soda cans, foil) is weakly attracted to magnets - you can barely feel it. It's not dangerous in MRI like ferromagnetic iron. Think of paramagnetic as 'meh, I guess I'll be attracted' vs ferromagnetic's 'OMG I MUST GO TO THE MAGNET NOW!' Gadolinium contrast is also paramagnetic - that's why it enhances MRI images! ✨"
+  },
+  "sub-5": {
+    "question_type": "multiplechoice",
+    "question_text": "Which is an example of a diamagnetic?",
+    "answers": {
+      "A": "Iron",
+      "B": "Aluminum",
+      "C": "Copper",
+      "D": "Nickel"
+    },
+    "correct_answer": "C",
+    "hint": "DIA = AGAINST. This material actually repels magnets slightly. Think of copper pipes!",
+    "explanation": "**Copper** - the magnet hater! 🚫🧲\n\n💡 **Remember it:** DIA = AGAINST (like diabetes = against sweet processing). Copper is WEAKLY REPELLED by magnets - it's like 'nah, I'm good.' Most materials are diamagnetic (water, plastic, wood). They're MRI-safe because they don't want anything to do with magnets! Copper pipes, wiring - all diamagnetic. They're the introverts of the magnetic world! 😌"
+  },
+  "sub-6": {
+    "question_type": "multiplechoice",
+    "question_text": "\"The ability of a material to become magnetized\" is the definition of:",
+    "answers": {
+      "A": "Superconductivity",
+      "B": "Susceptibility",
+      "C": "Slice excitation",
+      "D": "Spectroscopy"
+    },
+    "correct_answer": "B",
+    "hint": "Think SUSCEPTIBLE - like being susceptible to catching a cold!",
+    "explanation": "**Susceptibility** - how easily you catch the magnet bug! 🦠🧲\n\n💡 **Remember it:** SUSCEPTIBLE = easily affected! Magnetic susceptibility is how easily a material becomes magnetized when exposed to a magnetic field. High susceptibility (iron) = easily magnetized. Low susceptibility (copper) = hard to magnetize. Think of it like catching a cold - some people are highly susceptible (catch every bug), others aren't! Same with materials and magnetism! 🤧"
+  },
+  "sub-7": {
+    "question_type": "multiplechoice",
+    "question_text": "Faraday's Law says that:",
+    "answers": {
+      "A": "A magnetic field moving across a conductor produces resonance",
+      "B": "Current is induced when a magnetic field is removed",
+      "C": "A magnetic field moving across a conductor produces electrical current",
+      "D": "The magnetic fields and electrical current are separate and distinct"
+    },
+    "correct_answer": "C",
+    "hint": "It's all about movement! Moving magnets create electricity!",
+    "explanation": "**A magnetic field moving across a conductor produces electrical current** - the magic of induction! ⚡✨\n\n💡 **Remember it:** FARADAY discovered that MOVING magnetic fields create electricity! That's how we detect the MRI signal - when protons relax and their magnetic fields change, they induce current in the receiver coils! This is also how generators work (spinning magnets create electricity) and how your wireless charging works! Movement = electricity! 🔌"
+  },
+  "sub-8": {
+    "question_type": "multiplechoice",
+    "question_text": "One \"Hertz\" is defined as:",
+    "answers": {
+      "A": "One cycle per milli-second",
+      "B": "One cycle per second",
+      "C": "One cycle per minute",
+      "D": "One cycle per hour"
+    },
+    "correct_answer": "B",
+    "hint": "Hertz = cycles per SECOND. Like your heart beating!",
+    "explanation": "**One cycle per second** - the basic unit of frequency! ⏱️\n\n💡 **Remember it:** Named after Heinrich HERTZ! One Hertz (Hz) = one complete cycle per second. Your heart beats at about 1 Hz (60 beats per minute). Radio stations broadcast in MegaHertz (millions of cycles per second). In MRI, we use frequencies like 63.8 MHz at 1.5T - that's 63.8 MILLION cycles per second! Think of it as how many times something happens per second! 📻"
+  },
+  "sub-9": {
+    "question_type": "multiplechoice",
+    "question_text": "One cycle of a radio wave is referred to as its:",
+    "answers": {
+      "A": "Frequency",
+      "B": "Amplitude",
+      "C": "Strength",
+      "D": "Phase Coherence"
+    },
+    "correct_answer": "A",
+    "hint": "How FREQUENTLY does it happen? That's the frequency!",
+    "explanation": "**Frequency** - how often it happens! 📡\n\n💡 **Remember it:** FREQUENCY = how FREQUENTLY something repeats! One cycle = one complete wave up and down. The number of cycles per second = frequency (measured in Hertz). High frequency = lots of cycles per second (think chipmunk voices). Low frequency = few cycles per second (think deep bass). In MRI, we match our RF frequency to the Larmor frequency of hydrogen! 🎵"
+  },
+  "sub-10": {
+    "question_type": "multiplechoice",
+    "question_text": "In addition to the answer above, one cycle of a radio wave is also its:",
+    "answers": {
+      "A": "Source",
+      "B": "Wave Coherence",
+      "C": "Wavelength",
+      "D": "Oscillation"
+    },
+    "correct_answer": "C",
+    "hint": "One complete wave = one LENGTH of the wave!",
+    "explanation": "**Wavelength** - the physical length of one complete wave! 🌊\n\n💡 **Remember it:** WAVELENGTH = LENGTH of one WAVE! Measure from peak to peak or trough to trough. High frequency = SHORT wavelength (waves squished together). Low frequency = LONG wavelength (waves spread out). Think of ocean waves - if they come fast (high frequency), they're close together (short wavelength). If they come slow (low frequency), they're far apart (long wavelength)! 🏄"
+  },
+  "sub-11": {
+    "question_type": "multiplechoice",
+    "question_text": "If two signals or waves have the same _____________ they are considered to be \"in phase\":",
+    "answers": {
+      "A": "Frequency",
+      "B": "Amplitude",
+      "C": "Source",
+      "D": "Power"
+    },
+    "correct_answer": "A",
+    "hint": "In phase means they're synced up - beating at the same rate!",
+    "explanation": "**Frequency** - same rhythm, in sync! 🎵\n\n💡 **Remember it:** IN PHASE = IN SYNC! Two waves with the same frequency can be in phase (peaks line up) or out of phase (peaks and troughs misaligned). But they MUST have the same frequency to even talk about phase! Think of dancers - they need the same tempo (frequency) to dance in sync (in phase). In MRI, when we excite protons, we put them in phase so their signals ADD UP instead of canceling out! 💃🕺"
+  },
+  "sub-12": {
+    "question_type": "multiplechoice",
+    "question_text": "The transmitted radio frequency that is perfectly matched to the frequencies of a set of protons is referred to as the:",
+    "answers": {
+      "A": "Resonant Frequency",
+      "B": "In-phase frequency",
+      "C": "Rotational frequency",
+      "D": "Oscillation frequency"
+    },
+    "correct_answer": "A",
+    "hint": "RESONANCE = perfect match! Like hitting the right note to shatter glass!",
+    "explanation": "**Resonant Frequency** - the perfect match! 🎯\n\n💡 **Remember it:** RESONANCE = when frequencies MATCH perfectly and energy transfers efficiently! Like pushing someone on a swing at just the right moment - PUSH at the swing's natural frequency and they go HIGHER! In MRI, we transmit RF at the protons' resonant frequency (Larmor frequency) so they absorb maximum energy. Wrong frequency? Nothing happens. Right frequency? BOOM - resonance! 💥"
+  },
+  "sub-13": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, when the radio transmission is turned off, protons that absorbed the radio frequency energy:",
+    "answers": {
+      "A": "Transfer the energy to electrons",
+      "B": "Hold on to the energy until the next transmission",
+      "C": "Release the energy in the form of a radio wave",
+      "D": "Absorb more energy in the form of heat"
+    },
+    "correct_answer": "C",
+    "hint": "What goes up must come down! They give back what they borrowed!",
+    "explanation": "**Release the energy in the form of a radio wave** - they give it back! 📻\n\n💡 **Remember it:** Like a bouncy ball! You throw energy AT the protons (RF pulse), they catch it and get EXCITED, then when you stop pushing, they RELEASE it back as they relax. This released energy IS the MRI signal we detect! Protons can't hold onto that energy forever - they MUST relax back to their normal state, releasing radio waves as they do. That's what the receiver coils pick up! 📡"
+  },
+  "sub-14": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, a rotating proton will have a type of inertia referred as ______________ or simply, \"spin\".",
+    "answers": {
+      "A": "Angular momentum",
+      "B": "Magnetic resonance",
+      "C": "Spin-spin momentum",
+      "D": "gyromagnetic ratio"
+    },
+    "correct_answer": "A",
+    "hint": "Momentum but in a circle! ANGULAR because it's rotating!",
+    "explanation": "**Angular momentum** - rotational inertia! 🌀\n\n💡 **Remember it:** ANGULAR = rotation/spinning! Regular momentum = straight line motion. ANGULAR momentum = spinning/rotating motion! Think of a figure skater spinning - they have angular momentum. Pull arms in = spin faster (conservation of angular momentum)! Protons spin like tiny tops, and that spinning creates angular momentum. This is fundamental to MRI - without proton spin, no magnetic moment, no MRI! 🎢"
+  },
+  "sub-15": {
+    "question_type": "multiplechoice",
+    "question_text": "What causes a spinning top to wobble?",
+    "answers": {
+      "A": "Resonant frequency",
+      "B": "RF transmission",
+      "C": "Angular momentum",
+      "D": "Gravity"
+    },
+    "correct_answer": "D",
+    "hint": "What pulls everything down? Good old gravity!",
+    "explanation": "**Gravity** - always pulling down! 🌍\n\n💡 **Remember it:** Spinning tops wobble because GRAVITY pulls them down while angular momentum keeps them spinning! This wobble is called PRECESSION. Same with protons in MRI - the main magnetic field (B₀) acts like gravity, pulling on the spinning protons and making them wobble (precess) around the magnetic field direction. No gravity = no wobble on the top. No B₀ = no precession of protons! 🔝"
+  },
+  "sub-16": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, the \"wobble\" of a proton is referred to as:",
+    "answers": {
+      "A": "Wobble",
+      "B": "Angular Momentum",
+      "C": "Frequency",
+      "D": "Precession"
+    },
+    "correct_answer": "D",
+    "hint": "Fancy word for wobble! Starts with P!",
+    "explanation": "**Precession** - the fancy wobble! 🌀\n\n💡 **Remember it:** PRECESSION = PRE-cessing around the magnetic field! Like a spinning top wobbling before it falls, protons PRECESS (wobble) around the direction of the main magnetic field (B₀). This precession happens at a specific frequency called the Larmor frequency. The RATE of precession depends on the magnetic field strength. Strong field = faster precession! This precession IS what creates the signal in MRI! 🎯"
+  },
+  "sub-17": {
+    "question_type": "multiplechoice",
+    "question_text": "The fundamental equation that determines the required frequency to obtain resonance is the Lamour Equation. Which below is the equation?",
+    "answers": {
+      "A": "ω = γ × B₀",
+      "B": "f = γ / 2π",
+      "C": "B₀ = ω / γ",
+      "D": "γ = B₀ × 2π"
+    },
+    "correct_answer": "A",
+    "hint": "Larmor frequency = Gyromagnetic ratio × Magnetic field strength!",
+    "explanation": "**ω = γ × B₀** - the golden equation of MRI! 🏆\n\n💡 **Remember it:** LARMOR equation: **Frequency = Gyromagnetic ratio × Magnetic field strength!** ω (omega) = Larmor frequency, γ (gamma) = gyromagnetic ratio (constant for each nucleus, 42.6 MHz/T for hydrogen), B₀ = main magnetic field strength. So at 1.5T: 42.6 × 1.5 = 63.9 MHz! This tells you what RF frequency to transmit to get resonance! It's THE most important equation in MRI! 📐"
+  },
+  "sub-18": {
+    "question_type": "multiplechoice",
+    "question_text": "In determining the Larmor Frequency in MRI, the only thing that is needed to know about hydrogen is its",
+    "answers": {
+      "A": "Resonant frequency",
+      "B": "Proton density",
+      "C": "Gyromagnetic Ratio",
+      "D": "The strength of Bₒ field"
+    },
+    "correct_answer": "C",
+    "hint": "It's a constant unique to hydrogen! Starts with G!",
+    "explanation": "**Gyromagnetic Ratio** - hydrogen's unique constant! 🎯\n\n💡 **Remember it:** GYROMAGNETIC RATIO (γ) = 42.6 MHz/Tesla for hydrogen! It's hydrogen's \"ID number\" - every element has a different one. You need TWO things for Larmor equation: γ (hydrogen's constant) and B₀ (your magnet's strength). γ tells you how fast hydrogen precesses at a given field strength. It's like hydrogen's DNA - constant and unique! Without knowing γ, you can't calculate the Larmor frequency! 🧬"
+  },
+  "sub-19": {
+    "question_type": "multiplechoice",
+    "question_text": "A \"vector\" is a graphical illustration showing",
+    "answers": {
+      "A": "Direction and magnitude",
+      "B": "Transverse magnetization",
+      "C": "Longitudinal magnetization",
+      "D": "Distance and magnitude"
+    },
+    "correct_answer": "A",
+    "hint": "Arrows show which way AND how strong! Think GPS navigation!",
+    "explanation": "**Direction and magnitude** - it's an arrow with meaning! ➡️\n\n💡 **Remember it:** VECTOR = ARROW showing WHERE (direction) and HOW MUCH (magnitude/size)! Like a GPS arrow - it points the way (direction) and shows distance (magnitude). In MRI, we use vectors to show magnetization: arrow direction = which way spins point, arrow length = how many spins/how strong. Vector math lets us add magnetizations and understand phase! Think of it as a super-arrow! 🏹"
+  },
+  "sub-20": {
+    "question_type": "multiplechoice",
+    "question_text": "Vectors that are equal but opposite have their forces:",
+    "answers": {
+      "A": "Cancel each other",
+      "B": "Add together",
+      "C": "Combine into one",
+      "D": "Reach resonance"
+    },
+    "correct_answer": "A",
+    "hint": "Tug of war with equal teams - nobody moves!",
+    "explanation": "**Cancel each other** - perfectly balanced, as all things should be! ⚖️\n\n💡 **Remember it:** EQUAL but OPPOSITE = ZERO! Like tug-of-war with equal teams, or pushing a door while someone pulls with equal force - nothing moves! In MRI, at equilibrium (no RF pulse), protons precess randomly so their transverse (XY) vectors cancel out - net transverse magnetization = ZERO. Only the longitudinal (Z) vectors add up because they're all pointing the same direction! Vector addition is KEY to understanding MRI physics! 🎯"
+  },
+  "sub-21": {
+    "question_type": "multiplechoice",
+    "question_text": "Considering the answer above, those forces would be considered to be:",
+    "answers": {
+      "A": "In-phase",
+      "B": "Out-of-Phase",
+      "C": "In resonance",
+      "D": "Phase coherent"
+    },
+    "correct_answer": "B",
+    "hint": "Opposite = not in sync = OUT of phase!",
+    "explanation": "**Out-of-Phase** - not in sync! 🔄\n\n💡 **Remember it:** OPPOSITE = OUT-OF-PHASE! If two vectors point opposite directions, they're 180° out of phase - perfectly OUT OF SYNC. Like two people pushing opposite sides of a door - out of phase! In phase = pointing same direction (adding up). Out of phase = pointing different/opposite directions (subtracting/canceling). Phase is ALL about timing and direction! In MRI, dephasing (losing phase coherence) is why signal decays! ⏰"
+  },
+  "sub-22": {
+    "question_type": "multiplechoice",
+    "question_text": "Looking at the front of a high-field cylindrical MRI system, the Z direction is:",
+    "answers": {
+      "A": "Across the face of the magnet",
+      "B": "Top-bottom of the magnet",
+      "C": "Down the bore of the magnet",
+      "D": "Cannot be determined but looking at the magnet"
+    },
+    "correct_answer": "C",
+    "hint": "Where does the patient go? That's Z! Into the tunnel!",
+    "explanation": "**Down the bore of the magnet** - where the patient goes! 🎯\n\n💡 **Remember it:** Z = ZOOM direction (into the bore)! The main magnetic field (B₀) runs down the Z-axis - the LONG axis of the cylinder, through the bore. If you're standing at the front, Z points straight back into the tunnel. X and Y are perpendicular to Z (transverse plane). At equilibrium, all magnetization is in the Z direction (longitudinal). This coordinate system is CRUCIAL for understanding pulse sequences! 📍"
+  },
+  "sub-23": {
+    "question_type": "multiplechoice",
+    "question_text": "When all the vectors of the spins pointing in the Z-direction are added together, the result is the _______________ vector:",
+    "answers": {
+      "A": "Longitudinal Magnetization (Mz)",
+      "B": "Transverse Magnetization (Mxy)",
+      "C": "Resonant (Mr)",
+      "D": "Phase Coherent"
+    },
+    "correct_answer": "A",
+    "hint": "Z-direction = LONGITUDINAL! Like the long axis of the magnet!",
+    "explanation": "**Longitudinal Magnetization (Mz)** - magnetization along Z! 📏\n\n💡 **Remember it:** LONGITUDINAL = LONG axis = Z-axis! When protons are at equilibrium (chilling, no RF pulse), they precess randomly but slightly more align WITH the B₀ field (Z direction). Add up all those Z-components = net longitudinal magnetization (Mz). This is your STARTING magnetization - fully relaxed, maximum Mz, zero Mxy. RF pulses FLIP Mz into the transverse plane (Mxy) where we can detect it! 🔄"
+  },
+  "sub-24": {
+    "question_type": "multiplechoice",
+    "question_text": "Considering the answer above, those individual spins are considered to be precessing:",
+    "answers": {
+      "A": "In-Phase",
+      "B": "Randomly",
+      "C": "Coherently",
+      "D": "Together"
+    },
+    "correct_answer": "B",
+    "hint": "At equilibrium, everyone's doing their own thing - total chaos!",
+    "explanation": "**Randomly** - complete chaos at equilibrium! 🎲\n\n💡 **Remember it:** EQUILIBRIUM = RANDOM precession! Before the RF pulse, protons precess at Larmor frequency but at RANDOM phases - like a crowd clapping with no rhythm. Their transverse (XY) components cancel out (random = no net Mxy). Only Z-components add up (Mz). RF pulse ORGANIZES them - puts them in phase (coherent) so their signals ADD UP instead of canceling. Random = no signal. In phase = detectable signal! 🎵"
+  },
+  "sub-25": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, we refer to a radio-frequency transmission as a \"radio-frequency…. _____________\".",
+    "answers": {
+      "A": "Vector",
+      "B": "Spin Transmission",
+      "C": "Pulse",
+      "D": "Flip"
+    },
+    "correct_answer": "C",
+    "hint": "Short bursts of energy - like your pulse/heartbeat!",
+    "explanation": "**Pulse** - a quick burst of RF energy! ⚡\n\n💡 **Remember it:** RF PULSE = short burst of radiofrequency energy (not continuous)! Like a drummer hitting drums - BOOM - short pulse of sound. We transmit RF pulses at Larmor frequency to excite protons. Common types: 90° pulse (flip Mz into XY plane), 180° pulse (inversion), etc. The pulse duration and strength determine the flip angle. We use PULSES (not continuous transmission) to control timing and contrast! 🥁"
+  },
+  "sub-26": {
+    "question_type": "multiplechoice",
+    "question_text": "Spins placed in the XY transverse plane are initially:",
+    "answers": {
+      "A": "Out-of-phase with each other",
+      "B": "Phase coherent with each other",
+      "C": "Precessing randomly",
+      "D": "In the Z-direction"
+    },
+    "correct_answer": "B",
+    "hint": "Right after the RF pulse, they're perfectly in sync!",
+    "explanation": "**Phase coherent with each other** - perfectly synchronized! 🎵\n\n💡 **Remember it:** Right after RF pulse = MAXIMUM phase coherence! The RF pulse organizes the chaos - takes randomly precessing spins and puts them IN SYNC (in phase). Like a conductor starting an orchestra - suddenly everyone's playing together! This phase coherence is WHY we get signal - their vectors ADD UP instead of canceling. But this doesn't last - they quickly DEPHASE (lose coherence) due to T2* decay. Phase coherence = signal! 🎼"
+  },
+  "sub-27": {
+    "question_type": "multiplechoice",
+    "question_text": "Spins that absorbed the transmitted RF energy are termed:",
+    "answers": {
+      "A": "Precessing",
+      "B": "Wobbling",
+      "C": "Excited",
+      "D": "Dephased"
+    },
+    "correct_answer": "C",
+    "hint": "Like getting excited about your birthday - energy boost!",
+    "explanation": "**Excited** - protons with extra energy! 🎉\n\n💡 **Remember it:** EXCITED = received energy from RF pulse! Like getting pumped up before a game - you absorbed energy and you're EXCITED! Excited protons moved from low-energy (aligned with B₀) to high-energy (opposed to B₀) state. They want to RELAX back to low-energy state, and when they do, they release energy (the MRI signal). Excitation is the first step - we EXCITE them with RF, then DETECT them as they relax! ⚡"
+  },
+  "sub-28": {
+    "question_type": "multiplechoice",
+    "question_text": "Spins in the _____________ plane can produce a radio signal that can be detected.",
+    "answers": {
+      "A": "Transverse",
+      "B": "Longitudinal",
+      "C": "Anterior-Posterior",
+      "D": "Left-Right"
+    },
+    "correct_answer": "A",
+    "hint": "Not along Z, but ACROSS from it - the XY plane!",
+    "explanation": "**Transverse** - the magic signal plane! ✨\n\n💡 **Remember it:** TRANSVERSE = XY plane = where the SIGNAL lives! Mz (longitudinal) is invisible to receiver coils - it's like a spinning top perfectly upright (no wobble to detect). But Mxy (transverse) is like a wobbling top - that wobble creates CHANGING magnetic fields that INDUCE current in receiver coils (Faraday's Law!). RF pulses FLIP Mz INTO transverse plane so we can detect it. No Mxy = no signal = no image! 📡"
+  },
+  "sub-29": {
+    "question_type": "multiplechoice",
+    "question_text": "In MRI, the resonant frequency and the Larmor frequency are:",
+    "answers": {
+      "A": "The same",
+      "B": "Opposite",
+      "C": "Not related",
+      "D": "Always weaker than the transmission frequency"
+    },
+    "correct_answer": "A",
+    "hint": "Two names, same thing! Like soda and pop!",
+    "explanation": "**The same** - synonyms in MRI! 🎯\n\n💡 **Remember it:** LARMOR FREQUENCY = RESONANT FREQUENCY! Just different names for the same thing. Larmor frequency is the NATURAL precession frequency of protons in a magnetic field (calculated by Larmor equation). Resonant frequency is the frequency at which protons will ABSORB RF energy. They're the SAME because resonance occurs when transmitted frequency MATCHES natural precession frequency! Like pushing a swing at its natural frequency! 🔊"
+  },
+  "sub-30": {
+    "question_type": "multiplechoice",
+    "question_text": "If the gyromagnetic ration of hydrogen is 42.6mHz and the resonant frequency transmitted to is 127.8mHz, the field strength of your MRI system is ________________.",
+    "answers": {
+      "A": "0.5T",
+      "B": "1.0T",
+      "C": "1.5T",
+      "D": "3.0T"
+    },
+    "correct_answer": "D",
+    "hint": "Use Larmor equation! Divide frequency by gyromagnetic ratio!",
+    "explanation": "**3.0T** - simple math using Larmor equation! 🧮\n\n💡 **Remember it:** ω = γ × B₀, so B₀ = ω / γ! Given: γ = 42.6 MHz/T, ω = 127.8 MHz. Calculate: B₀ = 127.8 ÷ 42.6 = **3.0 Tesla!** This is why different field strengths need different RF frequencies: 1.5T = 63.9 MHz, 3T = 127.8 MHz, 7T = 298.2 MHz. Higher field = higher frequency needed for resonance! Always remember the Larmor equation - it's your best friend! 📐"
+  },
+  "sub-31": {
+    "question_type": "truefalse",
+    "question_text": "If two signals or waves are \"in phase\" they produce a stronger signal than individually.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "In sync = adding up = BIGGER!",
+    "explanation": "**TRUE!** ✅ In phase = constructive interference! 💪\n\n💡 **Remember it:** IN PHASE = vectors ADD UP = STRONGER! Think of pushing a swing together at the same time vs randomly - synchronized pushing makes it go HIGHER! When waves are in phase, their peaks align and ADD together (constructive interference). Two 1V signals in phase = 2V combined! This is WHY phase coherence matters in MRI - in-phase spins produce STRONG signal. Dephased spins cancel out = WEAK signal. Phase = everything in MRI! 🌊"
+  }
+}
+

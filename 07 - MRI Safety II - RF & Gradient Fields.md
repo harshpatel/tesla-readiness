@@ -7,14 +7,256 @@
 ## Required Info
 
 **Module Name:**
+07 - MRI Safety II - RF & Gradient Fields
 
 **Section:**
+Phase 1
 
 **Position:**
+After 06
+
 
 **Video URL:**
+https://cffhrzzfhyotkbuuoayc.supabase.co/storage/v1/object/public/videos/07%20-%20MRI%20Safety%20II%20-%20RF%20&%20Gradient%20Fields.mp4
 
 **Quiz Questions:**
+
+(Note: For questions with images, use format: https://0cm.classmarker.com/10742032_TNJF0ZXE.png - replace the slug with what's referenced in [cmimg] tags)
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The most common MRI-related injury is:
+(A): Hearing damage
+(B): Radio-frequency burns
+(C): Cryogen burns
+(D): Ferrous objects accelerating into the magnet bore
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): Which of the following is not a type of radio frequency burn seen in MRI?
+(A): Looped cables
+(B): Skin contact with a transmitting antenna
+(C): Skin-to-Skin large contact loops
+(D): Electrical conductor arcing
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 0
+(Question): True or False: Burns caused by looped cables burns may be delayed.
+(A): "True"
+(B): "False"
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): A best practice for any cables is the magnet bore is to _____________.
+(A): Keep as much of the cable in the bore as possible
+(B): Loop the cable to shorten the overall length
+(C): Leave the cable unplugged
+(D): Keep the amount of cable in the bore to a minimum and plugged in
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): Skin contact with the inside of the bore is unsafe because it
+(A): Comes in to contact with a transmitting antenna leading to a burn.
+(B): Degrades image quality
+(C): Increases SAR
+(D): Decreases signal-to-noise ratio
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): Non-ferrous implants may be unsafe if they are _____________.
+(A): Large
+(B): Near large nerves
+(C): Mechanically or electrically activated
+(D): Made primarily of iron
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): Ferrous implants are dangerous because they may ____________.
+(A): Be strongly attracted to the magnetic field accelerating the object
+into the magnet
+(B): Create poor image quality
+(C): Damage the implant
+(D): Increase magnetic field inhomogeneity
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): All metallic implants _______________ though may pose little or no risk to the patient.
+(A): Distort the magnetic field causing artifacts if located in the area of interest.
+(B): Cause radio-frequency burns
+(C): Are unsafe
+(D): Must be removed before the exam
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The Magnetic Resonance Medical Director (MRMD) is a ________________.
+(A): Certified MRI technologist
+(B): A physicist trained in MRI Safety
+(C): Physician trained in MRI Safety
+(D): MRI Department Manager
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The primary role of the Magnetic Resonance Safety Officer (MRSO) is to___________:
+(A): Advise and execute orders from the MRMD
+(B): Advise and execute orders from the MRSE
+(C): Give orders to a scanning MR technologist
+(D): Give orders to the MRSE
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The radio-frequency energy transmitted to the patient over time is referred to as ____________ , or SAR.
+(A): Signal Absorption Rate
+(B): Safe Absorption Rate
+(C): Selective Absorption Rate
+(D): Specific Absorption Rate
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): SAR is measured in___________.
+(A): Watts/milligram
+(B): Watts/Hertz
+(C): Watts/pound
+(D): Watts/kilogram
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The maximum SAR for whole body imaging in NORMAL MODE is ___________________.
+(A): No more than 3.2 Watts/kilogram
+(B): No more than 2.0 Watts/kilogram
+(C): No more than 4.0 Watts/kilogram
+(D): No more than 8.0 Watts/kilogram
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): One method of reducing SAR is to________________;
+(A): Reduce TR
+(B): Reduce TE
+(C): Increase flip angle in GRE pulse sequence
+(D): Increase the TR
+(Correct): D
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): The noise of an MRI system while scanning arises from ___________________.
+(A): The rise and fall of the gradients
+(B): radio-frequency transmission
+(C): radio-frequency absorption
+(D): circulating cryogens
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): Acoustic noise levels are measured in decibels, or dB. dB levels are a function of the______________ of the noise:
+(A): Volume and duration
+(B): Frequency and duration
+(C): Volume and the distance
+(D): Time and iteration
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): dB levels above _________dB can cause hearing damage and loss.
+(A): 60
+(B): 75
+(C): 85
+(D): 90
+(Correct): C
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 0
+(Question): True or False: Acoustic noise levels in MRI are a function of the MRI system performance levels and magnetic field strength.
+(A): "True"
+(B): "False"
+(Correct): A
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 0
+(Question): True or False: Non-patients in the magnet during scanning are not required to have hearing protection.
+(A): "True"
+(B): "False"
+(Correct): B
+(Points): 1
+
+
+(Type): multiplechoice
+(Category): 26
+(Random answers): 1
+(Question): A high-performance 3.0T MRI system can reach dB levels as high as_________.
+(A): 85db
+(B): 97dB
+(C): 110dB
+(D): 125dB
+(Correct): D
+(Points): 1
+
+
 
 **Document URL:**
 

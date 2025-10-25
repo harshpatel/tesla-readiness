@@ -1,0 +1,248 @@
+{
+  "safety-1": {
+    "question_type": "multiplechoice",
+    "question_text": "When used properly, MRI has:",
+    "answers": {
+      "A": "No adverse biological effects",
+      "B": "Minimal ionizing radiation",
+      "C": "Several known adverse biological effects",
+      "D": "The same adverse biological effects as radiography"
+    },
+    "correct_answer": "A",
+    "hint": "MRI is super safe! NO radiation, NO adverse effects when used properly!",
+    "explanation": "**No adverse biological effects** - MRI is one of the safest imaging modalities! ✅\n\n💡 **Remember it:** MRI uses MAGNETS and RADIO WAVES - no ionizing radiation at all! Unlike X-ray, CT, or nuclear medicine, MRI has NO cancer risk, NO DNA damage, NO cumulative radiation exposure. When used PROPERLY (following safety protocols), MRI has NO known adverse biological effects! The dangers come from NOT following safety rules (projectiles, burns, implant heating) - but the MRI physics itself? Totally safe! That's why we can scan pregnant women and babies! 👶"
+  },
+  "safety-2": {
+    "question_type": "multiplechoice",
+    "question_text": "The amount of force a magnet exerts on an object depends on the:",
+    "answers": {
+      "A": "Mass of an object and distance to the center of the magnet",
+      "B": "Mass of an object and distance to the fringe field of the magnet",
+      "C": "Amount of ferrous material of the object and the distance to the center of the magnet",
+      "D": "Amount of ferrous material of the object and the distance to the fringe field of the magnet"
+    },
+    "correct_answer": "C",
+    "hint": "FERROUS material + DISTANCE TO CENTER = projectile force!",
+    "explanation": "**Amount of ferrous material + distance to center** - the projectile equation! 🧲➡️💥\n\n💡 **Remember it:** TWO factors determine projectile risk: (1) How much FERROUS (iron-containing) material is in the object, and (2) How CLOSE it is to the MAGNET CENTER (isocenter). Mass doesn't matter if it's not ferromagnetic (aluminum is light but safe). Distance to FRINGE FIELD doesn't matter - it's distance to the MAGNET CENTER that counts! A small steel paper clip close to isocenter = DEADLY PROJECTILE. A heavy aluminum wheelchair = safe! Know your ferromagnetic materials! 🎯"
+  },
+  "safety-3": {
+    "question_type": "multiplechoice",
+    "question_text": "As the distance of an object to the magnet decreases by 1/2, the force exerted on the object increases by:",
+    "answers": {
+      "A": "2x",
+      "B": "4x",
+      "C": "10x",
+      "D": "No effect"
+    },
+    "correct_answer": "B",
+    "hint": "Inverse square law! Half the distance = FOUR times the force!",
+    "explanation": "**4x - quadruple the force!** 📈💥\n\n💡 **Remember it:** INVERSE SQUARE LAW! Magnetic force follows r² (distance squared). Cut distance in HALF → force increases by 2² = 4x! This is WHY projectiles ACCELERATE as they get closer - the closer they get, the STRONGER the pull, the FASTER they go! Example: At 10 feet, small pull. At 5 feet (half distance), 4x stronger. At 2.5 feet (half again), 16x the original! This exponential increase is what makes the \"missile effect\" so dangerous! Stay back! 🚫"
+  },
+  "safety-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Lines of magnetic force in a magnetic field diagram indicate the:",
+    "answers": {
+      "A": "Magnet field strength",
+      "B": "Change in the magnetic field strength over a given distance",
+      "C": "Distance to isocenter",
+      "D": "Magnetic field homogeneity over a given distance"
+    },
+    "correct_answer": "B",
+    "hint": "Lines show how fast the field CHANGES - the gradient!",
+    "explanation": "**Change in field strength over distance** - visualizing the gradient! 📊\n\n💡 **Remember it:** Lines close together = RAPID change in field (steep gradient = strong spatial gradient force). Lines far apart = slow change (gentle gradient). The GRADIENT (rate of change) determines projectile acceleration! This is why the 5-gauss line is important - it marks where the field gradient becomes significant. Inside the 5-gauss line, ferromagnetic objects experience strong translational forces. Field LINE DENSITY = danger level! 🌊"
+  },
+  "safety-5": {
+    "question_type": "multiplechoice",
+    "question_text": "The force exerted on an object by a magnetic field that results in the object accelerating toward the magnet is a:",
+    "answers": {
+      "A": "Lenz force",
+      "B": "Rotational force",
+      "C": "Magnetic field force",
+      "D": "Translational force"
+    },
+    "correct_answer": "D",
+    "hint": "TRANSLATIONAL = TRANSLATION = moving from one place to another!",
+    "explanation": "**Translational force** - the projectile force! 🚀\n\n💡 **Remember it:** TRANSLATIONAL = MOVING (translating) from point A to point B! This is the force that accelerates ferromagnetic objects TOWARD the magnet bore. It's the \"missile effect\" - oxygen tanks, wheelchairs, scissors flying across the room! ROTATIONAL force is different (makes objects spin/align). TRANSLATIONAL = linear motion = PROJECTILE DANGER! This is the #1 cause of MRI accidents. Always secure ferromagnetic objects BEFORE they enter the fringe field! 💥"
+  },
+  "safety-6": {
+    "question_type": "multiplechoice",
+    "question_text": "MRI-related injuries are:",
+    "answers": {
+      "A": "Rare",
+      "B": "Common",
+      "C": "Never fatal",
+      "D": "Always the fault of the technologist"
+    },
+    "correct_answer": "A",
+    "hint": "Thankfully RARE! But when they happen, they're serious!",
+    "explanation": "**Rare** - but preventable! 🛡️\n\n💡 **Remember it:** MRI injuries ARE rare (thanks to proper training and protocols), BUT they DO happen and can be FATAL! Famous cases: oxygen tank projectile killed a 6-year-old boy (2001), gun pulled from cop's holster shot patient, aneurysm clips heated/moved. Injuries are RARE because we follow safety protocols religiously! They're NOT \"never fatal\" - deaths HAVE occurred. And they're NOT always the tech's fault - sometimes patients lie on screening forms, or maintenance staff enters unauthorized. Stay vigilant! 👀"
+  },
+  "safety-7": {
+    "question_type": "multiplechoice",
+    "question_text": "Superconductive magnets use a ____________ to hold liquid helium.",
+    "answers": {
+      "A": "Gradient coil",
+      "B": "RF coil",
+      "C": "Cryostat",
+      "D": "Cryogen"
+    },
+    "correct_answer": "C",
+    "hint": "CRYOSTAT = the vacuum flask that HOLDS the cryogen!",
+    "explanation": "**Cryostat** - the super-thermos! 🧊\n\n💡 **Remember it:** CRYOSTAT = CRYO (cold) + STAT (stationary container)! It's a vacuum-insulated vessel (like a giant thermos) that HOLDS the liquid helium. The CRYOGEN is the helium itself. The CRYOSTAT is the CONTAINER. Think: soda (cryogen) vs can (cryostat). The cryostat has multiple layers - liquid helium inner layer, sometimes liquid nitrogen outer layer, vacuum insulation between. Keeps helium at 4K for YEARS! Without the cryostat, helium would boil off instantly! ❄️"
+  },
+  "safety-8": {
+    "question_type": "multiplechoice",
+    "question_text": "Helium liquifies at -453 Degrees Farhenheit or ______________.",
+    "answers": {
+      "A": "0 Degrees Celsius",
+      "B": "0 Degrees Kelvin",
+      "C": "-4 Degrees Celsius",
+      "D": "4 Degrees Kelvin"
+    },
+    "correct_answer": "D",
+    "hint": "4 Kelvin! The same answer as in the Instrumentation module!",
+    "explanation": "**4 Degrees Kelvin** - super cold again! 🌡️\n\n💡 **Remember it:** Helium liquifies at 4K (-269°C or -452°F) - just 4 degrees above absolute zero! This is the operating temperature inside your MRI magnet. At this temperature, the superconducting wire has virtually NO electrical resistance. If the temperature rises (quench, loss of cooling), resistance returns, current creates heat, helium boils, magnet loses field. 4K = critical temperature for superconductivity! Same number, same importance! ❄️"
+  },
+  "safety-9": {
+    "question_type": "multiplechoice",
+    "question_text": "An explosive conversion of liquid helium to gaseous helium is called a:",
+    "answers": {
+      "A": "radio frequency burn",
+      "B": "Dewar",
+      "C": "RF pulse",
+      "D": "quench"
+    },
+    "correct_answer": "D",
+    "hint": "QUENCH! The magnet emergency everyone fears!",
+    "explanation": "**Quench** - the emergency scenario! 🚨\n\n💡 **Remember it:** QUENCH = rapid loss of superconductivity → helium boils EXPLOSIVELY! Liquid helium expands 760:1 when it turns to gas. A quench can vent 1000+ liters of helium in MINUTES, filling the room with gas, displacing oxygen. Triggers: power loss, physical damage, cryostat failure, foreign object in bore. Signs: loud hissing/roaring, white fog/clouds, magnet field drops. Action: EVACUATE IMMEDIATELY! Helium gas can cause ASPHYXIATION (no oxygen to breathe). Never stay in a quenching magnet room! 💨"
+  },
+  "safety-10": {
+    "question_type": "multiplechoice",
+    "question_text": "A release of helium into the magnet room can lead to death caused by:",
+    "answers": {
+      "A": "A cold burn",
+      "B": "burned lungs",
+      "C": "anaphylactic shock",
+      "D": "asphyxiation"
+    },
+    "correct_answer": "D",
+    "hint": "ASPHYXIATION! Helium displaces oxygen - you can't breathe!",
+    "explanation": "**Asphyxiation** - death by oxygen displacement! 💀\n\n💡 **Remember it:** Helium is NOT toxic - it's INERT! But when hundreds of liters fill a room, it DISPLACES OXYGEN. You breathe helium instead of air → NO OXYGEN → brain damage in 4-6 minutes → death in 8-10 minutes. You won't even notice - helium is odorless, colorless. You'll just feel dizzy, then pass out, then die. Cold burns CAN happen (frostbite from -269°C helium), but ASPHYXIATION is the main killer. This is why quench pipes vent OUTSIDE! If you see fog/vapor - GET OUT! 🏃"
+  },
+  "safety-11": {
+    "question_type": "multiplechoice",
+    "question_text": "In the case of a sudden release of gaseous helium into the magnet room, the very first action the technologist takes is:",
+    "answers": {
+      "A": "Call a supervisor",
+      "B": "Call 911",
+      "C": "Finish the exam immediately",
+      "D": "Remove the patient from the magnet bore and magnet room"
+    },
+    "correct_answer": "D",
+    "hint": "PATIENT FIRST! Get them out of the room immediately!",
+    "explanation": "**Remove the patient from the magnet bore and magnet room** - save the patient! 🦸\n\n💡 **Remember it:** PATIENT SAFETY FIRST! In a quench/helium release: (1) Pull patient out of bore, (2) Evacuate patient from room, (3) Evacuate yourself, (4) THEN call for help from outside. Don't finish the scan - you'll both die! Don't call anyone first - every second counts! You have MINUTES before oxygen levels become dangerous. GET OUT, then deal with everything else. The patient can't save themselves - YOU must act immediately! Practice this scenario! 🚨"
+  },
+  "safety-12": {
+    "question_type": "multiplechoice",
+    "question_text": "Anyone entering the Zones III or IV must be screened by:",
+    "answers": {
+      "A": "A qualified MRI Professional",
+      "B": "The referring physician",
+      "C": "The attending radiologist",
+      "D": "The Radiology supervisor"
+    },
+    "correct_answer": "A",
+    "hint": "MRI Professional! Only trained MRI staff can screen!",
+    "explanation": "**A qualified MRI Professional** - trained screening is essential! 🔍\n\n💡 **Remember it:** ONLY an MRI-trained professional can properly screen for Zone III/IV access! They know what questions to ask, what implants are safe, what's ferromagnetic. Physicians don't have this training. Radiologists might not. Supervisors might not be MRI-certified. The MRI TECHNOLOGIST is the gatekeeper! Every person, every time, no exceptions. Even hospital staff, janitors, family members - EVERYONE gets screened. No shortcuts! Your screening might save someone's life! 🛡️"
+  },
+  "safety-13": {
+    "question_type": "multiplechoice",
+    "question_text": "All pacemakers are contraindicated for an MRI exam:",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "FALSE! MRI-conditional pacemakers exist now!",
+    "explanation": "**FALSE!** ❌ Modern MRI-conditional pacemakers CAN be scanned! 🎉\n\n💡 **Remember it:** As of ~2011, MRI-CONDITIONAL pacemakers and ICDs are FDA-approved! They have non-ferromagnetic materials and special programming to handle MRI fields. HOWEVER: (1) Verify it's truly MRI-conditional (not just \"MRI-compatible\"), (2) Follow manufacturer protocols EXACTLY, (3) Have cardiology/device rep available, (4) Monitor patient continuously. Legacy pacemakers (pre-2011) are still contraindicated! So the statement \"ALL pacemakers\" is FALSE, but many still can't be scanned. Always check! ✔️"
+  },
+  "safety-14": {
+    "question_type": "multiplechoice",
+    "question_text": "It is essential to get the patients accurate weight because the weight:",
+    "answers": {
+      "A": "Determines the limits of the Specific Absorption Rate or SAR",
+      "B": "Determines if the patient will fit in the magnet bore",
+      "C": "Determines the length of the scan time",
+      "D": "Determines the imaging protocol"
+    },
+    "correct_answer": "A",
+    "hint": "SAR! Weight determines how much RF energy they can safely absorb!",
+    "explanation": "**Determines SAR limits** - RF safety! ⚡\n\n💡 **Remember it:** SAR (Specific Absorption Rate) measures RF energy absorbed per kg of body tissue (Watts/kg). Heavier patients can absorb more total energy before reaching dangerous temperatures. The scanner uses weight to calculate safe RF power limits! If you enter wrong weight (too high), scanner might exceed safe SAR for the actual patient → burns, tissue heating! Too low? Scanner limits power unnecessarily → poor image quality. ACCURATE weight = safe SAR limits! This is about RF SAFETY, not whether they fit! 🔥"
+  },
+  "safety-15": {
+    "question_type": "multiplechoice",
+    "question_text": "It is important to ask a female patient if there is a possibility of pregnancy because:",
+    "answers": {
+      "A": "MRI is contraindicated for a pregnant patient",
+      "B": "Special imaging parameters are needed for a pregnant patient",
+      "C": "Acoustic noise is damaging to the fetus",
+      "D": "IV contrast agents may be contraindicated for a pregnant patient"
+    },
+    "correct_answer": "D",
+    "hint": "It's about CONTRAST SAFETY, not MRI safety!",
+    "explanation": "**IV contrast may be contraindicated** - gadolinium and pregnancy! 🤰\n\n💡 **Remember it:** MRI itself is SAFE during pregnancy (especially after 1st trimester)! But GADOLINIUM contrast is FDA Pregnancy Category C - it crosses the placenta and is found in amniotic fluid. We AVOID gadolinium in pregnancy unless absolutely necessary (life/death). The MRI magnetic field, RF, and gradients won't harm the fetus. Acoustic noise is loud but won't damage fetal hearing. But that contrast? Only if mom's life depends on it! We ask about pregnancy to make CONTRAST decisions, not MRI decisions! 💉"
+  },
+  "safety-16": {
+    "question_type": "multiplechoice",
+    "question_text": "Zone III is which area?",
+    "answers": {
+      "A": "Magnet room",
+      "B": "Facility lobby/Check-in area/Facility waiting room",
+      "C": "Patient holding area",
+      "D": "Public area or any area outside the facility entrance"
+    },
+    "correct_answer": "C",
+    "hint": "Zone III = patient HOLDING area where patients are prepped!",
+    "explanation": "**Patient holding area** - the screening and prep zone! 📋\n\n💡 **Remember it:** **Zone III = PATIENT HOLDING/PREP AREA** - where patients change, get screened, wait before scan. Free of ferromagnetic objects, access restricted to screened individuals only. This is where you remove ALL metal, review screening forms, answer questions. It's the buffer between Zone II (control room, unrestricted access) and Zone IV (magnet room). Zone III is controlled access - only MRI personnel and properly screened patients/family. Think: locker room + screening + prep! 🚪"
+  },
+  "safety-17": {
+    "question_type": "multiplechoice",
+    "question_text": "Zone IV is the:",
+    "answers": {
+      "A": "Waiting room",
+      "B": "Magnet room",
+      "C": "Control room",
+      "D": "The patient screening area"
+    },
+    "correct_answer": "B",
+    "hint": "Zone IV = MAGNET ROOM! The most restricted zone!",
+    "explanation": "**Magnet room** - the danger zone! 🧲⚠️\n\n💡 **Remember it:** **Zone IV = MAGNET ROOM = INNER SANCTUM!** This is where the magnet is - highest restriction, most dangerous! Only the patient and essential MRI personnel enter. ALWAYS ON magnetic field (even when not scanning), projectile danger 24/7, highest SAR exposure, loudest noise. Everyone entering Zone IV must be thoroughly screened EVERY TIME. No phones, no keys, no pens, no scissors. Zone IV = treat it like there's a loaded gun pointing at you at all times. Because there is - a magnetic gun! 🎯"
+  },
+  "safety-18": {
+    "question_type": "multiplechoice",
+    "question_text": "Patients are screened in",
+    "answers": {
+      "A": "Zone I",
+      "B": "Zone II",
+      "C": "Zone III",
+      "D": "Zone IV"
+    },
+    "correct_answer": "B",
+    "hint": "Zone II! Screen them BEFORE they enter restricted areas!",
+    "explanation": "**Zone II** - the screening checkpoint! ✋\n\n💡 **Remember it:** **Zone II = SCREENING ZONE** (control room, tech area). Screen patients in Zone II BEFORE they enter Zone III (holding) or Zone IV (magnet room)! Zone I is public (waiting room) - no screening needed. Zone II is where you meet the patient, review forms, ask detailed questions, explain the exam. Once they pass screening in Zone II, they can enter Zone III to prep. NEVER let someone skip from Zone I directly to Zone III/IV! Zone II is your last line of defense! 🛡️"
+  },
+  "safety-19": {
+    "question_type": "multiplechoice",
+    "question_text": "__________________ is contraindicated for an MRI",
+    "answers": {
+      "A": "An uncleared metallic foreign body",
+      "B": "An artificial hip replacement",
+      "C": "Any implant controlled by a battery",
+      "D": "A verified prior history of an allergenic reaction to IV contrast agents"
+    },
+    "correct_answer": "A",
+    "hint": "UNCLEARED foreign body! We don't know if it's safe!",
+    "explanation": "**An uncleared metallic foreign body** - unknown = unsafe! ❓➡️🚫\n\n💡 **Remember it:** UNCLEARED = we don't know what it is or if it's ferromagnetic! Metal shrapnel, bullet fragments, metal in eyes from welding/grinding - these can be DEADLY if ferromagnetic! They can move, heat up, cause tissue damage, hemorrhage, blindness. Hip replacements are usually titanium (safe). Battery implants need checking but aren't absolute contraindications. Contrast allergy? Relevant for contrast studies, but not a contraindication for MRI itself. But an UNKNOWN metal fragment? ABSOLUTE CONTRAINDICATION until proven safe! Get X-rays, verify composition, clear it! 🔍"
+  }
+}
+

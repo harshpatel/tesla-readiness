@@ -17,6 +17,9 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'anatomy-fundamentals': '08',
   'neuro-procedures-fundamentals': '09',
   'body-msk-fundamentals': '10',
+  'subatomic-principles-fundamentals': '11',
+  'instrumentation-magnets-fundamentals': '12',
+  'mri-safety-magnetic-fields-fundamentals': '13',
 };
 
 export default async function AdminQuizzesPage() {
