@@ -65,6 +65,25 @@ interface SectionProgress {
   progress_percent: number;
 }
 
+interface QuizProgress {
+  user_id: string;
+  question_id: string;
+  easiness_factor: number;
+  interval: number;
+  repetitions: number;
+  next_review_date: string;
+  last_reviewed_at: string | null;
+  total_attempts: number;
+  correct_attempts: number;
+}
+
+interface QuizQuestion {
+  id: string;
+  section_key: string;
+  question_id: string;
+  question_type: string;
+}
+
 interface AdminTableProps {
   users: User[];
   sections: Section[];
@@ -73,11 +92,14 @@ interface AdminTableProps {
   moduleProgress: ModuleProgress[];
   contentProgress: ContentProgress[];
   sectionProgress: SectionProgress[];
+  quizProgress: QuizProgress[];
+  quizQuestions: QuizQuestion[];
   error: any;
 }
 
-type SortKey = 'name' | 'email' | 'role' | 'joined' | 'overall' | 'streak' | 'lastActivity';
+type SortKey = 'name' | 'email' | 'role' | 'joined' | 'overall' | 'streak' | 'lastActivity' | 'quizAccuracy' | 'status';
 type SortDirection = 'asc' | 'desc';
+type StatusFilter = 'all' | 'active' | 'inactive' | 'at-risk' | 'struggling';
 
 export default function AdminTable({
   users,
@@ -87,11 +109,15 @@ export default function AdminTable({
   moduleProgress,
   contentProgress,
   sectionProgress,
+  quizProgress,
+  quizQuestions,
   error
 }: AdminTableProps) {
   const router = useRouter();
   const [sortKey, setSortKey] = useState<SortKey>('joined');
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
 
   // Calculate total content items
   const totalContentItems = contentItems.length;
@@ -133,6 +159,40 @@ export default function AdminTable({
       const quizzesCompleted = quizItems.filter(qi => completedContentIds.has(qi.id)).length;
       const documentsCompleted = documentItems.filter(di => completedContentIds.has(di.id)).length;
 
+      // Quiz performance metrics
+      const userQuizProgress = quizProgress.filter(qp => qp.user_id === user.id);
+      const totalQuizAttempts = userQuizProgress.reduce((sum, qp) => sum + qp.total_attempts, 0);
+      const totalCorrectAttempts = userQuizProgress.reduce((sum, qp) => sum + qp.correct_attempts, 0);
+      const quizAccuracy = totalQuizAttempts > 0 
+        ? Math.round((totalCorrectAttempts / totalQuizAttempts) * 100)
+        : 0;
+      const questionsAttempted = userQuizProgress.length;
+      const totalQuestions = quizQuestions.length;
+      
+      // Average easiness factor (indicates difficulty/mastery)
+      const avgEasinessFactor = userQuizProgress.length > 0
+        ? userQuizProgress.reduce((sum, qp) => sum + qp.easiness_factor, 0) / userQuizProgress.length
+        : 0;
+
+      // Student status determination
+      const lastActive = user.last_activity_date ? new Date(user.last_activity_date) : null;
+      const daysSinceActive = lastActive ? (Date.now() - lastActive.getTime()) / (1000 * 60 * 60 * 24) : 999;
+      
+      let status: 'active' | 'inactive' | 'at-risk' | 'struggling' | 'new';
+      if (overallProgress === 0 && daysSinceActive > 7) {
+        status = 'inactive';
+      } else if (overallProgress > 0 && overallProgress < 30 && daysSinceActive > 14) {
+        status = 'at-risk';
+      } else if (quizAccuracy > 0 && quizAccuracy < 50 && totalQuizAttempts > 10) {
+        status = 'struggling';
+      } else if (daysSinceActive <= 7) {
+        status = 'active';
+      } else if (overallProgress === 0 && daysSinceActive <= 7) {
+        status = 'new';
+      } else {
+        status = 'inactive';
+      }
+
       return {
         ...user,
         overallProgress,
@@ -144,13 +204,44 @@ export default function AdminTable({
         quizzesTotal: quizItems.length,
         documentsCompleted,
         documentsTotal: documentItems.length,
+        quizAccuracy,
+        totalQuizAttempts,
+        questionsAttempted,
+        totalQuestions,
+        avgEasinessFactor,
+        status,
+        daysSinceActive: Math.round(daysSinceActive),
       };
     });
-  }, [users, sections, modules, contentItems, moduleProgress, contentProgress, sectionProgress]);
+  }, [users, sections, modules, contentItems, moduleProgress, contentProgress, sectionProgress, quizProgress, quizQuestions]);
+
+  // Filtering and searching
+  const filteredUsers = useMemo(() => {
+    let filtered = enrichedUsers;
+
+    // Apply search filter
+    if (searchTerm) {
+      const term = searchTerm.toLowerCase();
+      filtered = filtered.filter(user => 
+        user.email.toLowerCase().includes(term) ||
+        user.full_name?.toLowerCase().includes(term) ||
+        user.first_name?.toLowerCase().includes(term) ||
+        user.last_name?.toLowerCase().includes(term) ||
+        user.phone?.toLowerCase().includes(term)
+      );
+    }
+
+    // Apply status filter
+    if (statusFilter !== 'all') {
+      filtered = filtered.filter(user => user.status === statusFilter);
+    }
+
+    return filtered;
+  }, [enrichedUsers, searchTerm, statusFilter]);
 
   // Sorting
   const sortedUsers = useMemo(() => {
-    const sorted = [...enrichedUsers].sort((a, b) => {
+    const sorted = [...filteredUsers].sort((a, b) => {
       let aVal: any, bVal: any;
 
       switch (sortKey) {
@@ -182,6 +273,16 @@ export default function AdminTable({
           aVal = a.last_activity_date ? new Date(a.last_activity_date).getTime() : 0;
           bVal = b.last_activity_date ? new Date(b.last_activity_date).getTime() : 0;
           break;
+        case 'quizAccuracy':
+          aVal = a.quizAccuracy;
+          bVal = b.quizAccuracy;
+          break;
+        case 'status':
+          // Status priority: struggling > at-risk > inactive > new > active
+          const statusPriority = { 'struggling': 0, 'at-risk': 1, 'inactive': 2, 'new': 3, 'active': 4 };
+          aVal = statusPriority[a.status];
+          bVal = statusPriority[b.status];
+          break;
         default:
           return 0;
       }
@@ -192,7 +293,7 @@ export default function AdminTable({
     });
 
     return sorted;
-  }, [enrichedUsers, sortKey, sortDirection]);
+  }, [filteredUsers, sortKey, sortDirection]);
 
   const handleSort = (key: SortKey) => {
     if (sortKey === key) {
@@ -216,9 +317,9 @@ export default function AdminTable({
 
   const getRoleColor = (role: string) => {
     switch (role) {
-      case 'master_admin': return 'bg-purple-100 text-purple-800 border-purple-200';
-      case 'admin': return 'bg-blue-100 text-blue-800 border-blue-200';
-      case 'student': return 'bg-green-100 text-green-800 border-green-200';
+      case 'master_admin': return 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 border-purple-200 dark:border-purple-700';
+      case 'admin': return 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 border-blue-200 dark:border-blue-700';
+      case 'student': return 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 border-green-200 dark:border-green-700';
       default: return 'bg-gray-100 dark:bg-slate-700 text-gray-800 dark:text-gray-300 border-gray-200 dark:border-slate-600';
     }
   };
@@ -237,6 +338,28 @@ export default function AdminTable({
     if (percent >= 50) return 'text-blue-700 font-medium';
     if (percent >= 20) return 'text-orange-600';
     return 'text-gray-600';
+  };
+
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case 'active':
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 border border-green-200 dark:border-green-700">🟢 Active</span>;
+      case 'inactive':
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600">⚪ Inactive</span>;
+      case 'at-risk':
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 border border-yellow-200 dark:border-yellow-700">⚠️ At Risk</span>;
+      case 'struggling':
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 border border-red-200 dark:border-red-700">🔴 Struggling</span>;
+      case 'new':
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 border border-blue-200 dark:border-blue-700">✨ New</span>;
+      default:
+        return <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600">-</span>;
+    }
+  };
+
+  const getStatusCount = (status: StatusFilter) => {
+    if (status === 'all') return enrichedUsers.length;
+    return enrichedUsers.filter(u => u.status === status).length;
   };
 
   if (error) {
@@ -259,10 +382,81 @@ export default function AdminTable({
 
   return (
     <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden">
-      {/* Header */}
-      <div className="bg-gray-50 dark:bg-slate-900 px-4 py-3 border-b border-gray-200 dark:border-slate-700">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white">User Progress Overview</h2>
-        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{sortedUsers.length} total users • Click column headers to sort</p>
+      {/* Header with Search and Filters */}
+      <div className="bg-gray-50 dark:bg-slate-900 px-4 py-4 border-b border-gray-200 dark:border-slate-700 space-y-3">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white">User Progress Overview</h2>
+            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+              {sortedUsers.length} {sortedUsers.length === 1 ? 'user' : 'users'} shown • Click column headers to sort
+            </p>
+          </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="flex gap-3 items-center flex-wrap">
+          <input
+            type="text"
+            placeholder="Search by name, email, or phone..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="flex-1 min-w-[200px] px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-slate-800 text-gray-900 dark:text-white"
+          />
+          
+          {/* Status Filter Buttons */}
+          <div className="flex gap-2 flex-wrap">
+            <button
+              onClick={() => setStatusFilter('all')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                statusFilter === 'all'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              All ({getStatusCount('all')})
+            </button>
+            <button
+              onClick={() => setStatusFilter('active')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                statusFilter === 'active'
+                  ? 'bg-green-600 text-white'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              🟢 Active ({getStatusCount('active')})
+            </button>
+            <button
+              onClick={() => setStatusFilter('at-risk')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                statusFilter === 'at-risk'
+                  ? 'bg-yellow-600 text-white'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              ⚠️ At Risk ({getStatusCount('at-risk')})
+            </button>
+            <button
+              onClick={() => setStatusFilter('struggling')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                statusFilter === 'struggling'
+                  ? 'bg-red-600 text-white'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              🔴 Struggling ({getStatusCount('struggling')})
+            </button>
+            <button
+              onClick={() => setStatusFilter('inactive')}
+              className={`px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                statusFilter === 'inactive'
+                  ? 'bg-gray-600 text-white'
+                  : 'bg-gray-200 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-slate-600'
+              }`}
+            >
+              ⚪ Inactive ({getStatusCount('inactive')})
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Table */}
@@ -314,6 +508,25 @@ export default function AdminTable({
                 onClick={() => handleSort('lastActivity')}
               >
                 Last Active <SortIcon columnKey="lastActivity" />
+              </th>
+              
+              {/* Status */}
+              <th 
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50 dark:bg-slate-700"
+                onClick={() => handleSort('status')}
+              >
+                Status <SortIcon columnKey="status" />
+              </th>
+              
+              {/* Quiz Performance */}
+              <th 
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-600 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-orange-50 dark:bg-slate-700"
+                onClick={() => handleSort('quizAccuracy')}
+              >
+                Quiz Accuracy <SortIcon columnKey="quizAccuracy" />
+              </th>
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-orange-50 dark:bg-slate-700">
+                Quiz Progress
               </th>
               
               {/* Overall Progress */}
@@ -416,6 +629,22 @@ export default function AdminTable({
                   </td>
                   <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {formatDate(user.last_activity_date)}
+                  </td>
+                  
+                  {/* Status */}
+                  <td className="px-3 py-2 text-center border-r border-gray-200 dark:border-slate-700">
+                    {getStatusBadge(user.status)}
+                  </td>
+                  
+                  {/* Quiz Performance */}
+                  <td className={`px-3 py-2 text-center font-medium border-r border-gray-200 dark:border-slate-700 ${getProgressColor(user.quizAccuracy)}`}>
+                    {user.totalQuizAttempts > 0 ? `${user.quizAccuracy}%` : '-'}
+                  </td>
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
+                    <span className={user.questionsAttempted === user.totalQuestions ? 'text-green-700 font-semibold' : ''}>
+                      {user.questionsAttempted}
+                    </span>
+                    <span className="text-gray-400">/{user.totalQuestions}</span>
                   </td>
                   
                   {/* Overall Progress */}

@@ -92,13 +92,94 @@ export default async function AdminPage() {
     .from('user_section_progress')
     .select('*');
   
+  // Fetch quiz progress for all users
+  const { data: quizProgress } = await supabase
+    .from('user_quiz_progress')
+    .select('*');
+    
+  // Fetch all quiz questions for metrics
+  const { data: quizQuestions } = await supabase
+    .from('quiz_questions')
+    .select('*');
+  
+  // Calculate summary statistics
+  const totalUsers = allUsers?.length || 0;
+  const activeUsers = allUsers?.filter(u => {
+    const lastActive = u.last_activity_date ? new Date(u.last_activity_date) : null;
+    const daysSinceActive = lastActive ? (Date.now() - lastActive.getTime()) / (1000 * 60 * 60 * 24) : 999;
+    return daysSinceActive <= 7;
+  }).length || 0;
+  
+  const totalContentItems = contentItems?.length || 0;
+  const totalQuizQuestions = quizQuestions?.length || 0;
+  
+  // Calculate average completion rate
+  const usersWithProgress = allUsers?.filter(u => {
+    return sectionProgress?.some(sp => sp.user_id === u.id && sp.progress_percent > 0);
+  }) || [];
+  
+  const avgCompletionRate = usersWithProgress.length > 0
+    ? Math.round(
+        usersWithProgress.reduce((sum, user) => {
+          const userSectionProg = sectionProgress?.filter(sp => sp.user_id === user.id) || [];
+          const userAvg = userSectionProg.length > 0
+            ? userSectionProg.reduce((s, sp) => s + sp.progress_percent, 0) / userSectionProg.length
+            : 0;
+          return sum + userAvg;
+        }, 0) / usersWithProgress.length
+      )
+    : 0;
+  
   return (
     <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900">
       <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
-      <main className="flex-1 p-4">
+      <main className="flex-1 p-4 space-y-6">
+        {/* Summary Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4">
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400">Total Users</div>
+            <div className="text-3xl font-bold text-gray-900 dark:text-white mt-1">{totalUsers}</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              {allUsers?.filter(u => u.role === 'student').length || 0} students
+            </div>
+          </div>
+          
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4">
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400">Active Users (7d)</div>
+            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mt-1">{activeUsers}</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              {totalUsers > 0 ? Math.round((activeUsers / totalUsers) * 100) : 0}% of total
+            </div>
+          </div>
+          
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4">
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400">Avg Completion</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mt-1">{avgCompletionRate}%</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              {usersWithProgress.length} users with progress
+            </div>
+          </div>
+          
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4">
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400">Content Items</div>
+            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mt-1">{totalContentItems}</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              {modules?.length || 0} modules • {sections?.length || 0} sections
+            </div>
+          </div>
+          
+          <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 p-4">
+            <div className="text-sm font-medium text-gray-600 dark:text-gray-400">Quiz Questions</div>
+            <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mt-1">{totalQuizQuestions}</div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              Across all modules
+            </div>
+          </div>
+        </div>
+
         {/* Quick Actions */}
-        <div className="mb-6 flex gap-4">
+        <div className="flex gap-4">
           <a
             href="/admin/quizzes"
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 transition-all shadow-md hover:shadow-lg"
@@ -115,6 +196,8 @@ export default async function AdminPage() {
           moduleProgress={moduleProgress || []}
           contentProgress={contentProgress || []}
           sectionProgress={sectionProgress || []}
+          quizProgress={quizProgress || []}
+          quizQuestions={quizQuestions || []}
           error={error}
         />
       </main>
