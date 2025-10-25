@@ -1,5 +1,5 @@
 import { notFound, redirect } from 'next/navigation';
-import { getCurrentUser } from '@/lib/auth';
+import { getCurrentUser, isAdmin } from '@/lib/auth';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
@@ -64,6 +64,8 @@ export default async function ModulePage({ params }: PageProps) {
   if (!user) {
     redirect('/');
   }
+
+  const userIsAdmin = await isAdmin();
 
   const cookieStore = await cookies();
   const supabase = createServerClient(
@@ -158,7 +160,12 @@ export default async function ModulePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Header />
+      <Header 
+        title="MRI Technologist Curriculum"
+        showAuth={true}
+        userEmail={user?.email}
+        isAdmin={userIsAdmin}
+      />
       <div className="flex flex-1">
         {/* Sidebar */}
         <ModuleSidebar />
