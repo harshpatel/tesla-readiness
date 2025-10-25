@@ -117,7 +117,7 @@ export default async function VideoPage({ params }: PageProps) {
         <ModuleSidebar />
         
         {/* Main Content */}
-        <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+        <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
           <div className="max-w-5xl mx-auto px-6 py-12">
             {/* Breadcrumb */}
             <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
@@ -131,7 +131,7 @@ export default async function VideoPage({ params }: PageProps) {
             </nav>
 
             {/* Combined Card with Header and Video */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-100 dark:border-slate-700 overflow-hidden">
               {/* Content Header */}
               <div className="p-8">
                 <div className="flex items-start gap-4 mb-4">
@@ -147,9 +147,9 @@ export default async function VideoPage({ params }: PageProps) {
                 </div>
 
                 {userProgress?.completed && (
-                  <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2">
-                    <span className="text-green-600">✓</span>
-                    <span className="text-sm font-medium text-green-700">Completed</span>
+                  <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg flex items-center gap-2">
+                    <span className="text-green-600 dark:text-green-400">✓</span>
+                    <span className="text-sm font-medium text-green-700 dark:text-green-400">Completed</span>
                   </div>
                 )}
               </div>
