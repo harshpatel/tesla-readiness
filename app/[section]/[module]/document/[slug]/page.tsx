@@ -121,27 +121,27 @@ export default async function DocumentPage({ params }: PageProps) {
         <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50">
           <div className="max-w-5xl mx-auto px-6 py-12">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-gray-600">
+            <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
               <Link href="/dashboard" className="hover:text-[#0A84FF]">Dashboard</Link>
               <span className="mx-2">/</span>
               <Link href={`/${section}`} className="hover:text-[#0A84FF]">{sectionData.title}</Link>
               <span className="mx-2">/</span>
               <Link href={`/${section}/${module}`} className="hover:text-[#0A84FF]">{moduleData.title}</Link>
               <span className="mx-2">/</span>
-              <span className="text-gray-900 font-medium">{contentItem.title}</span>
+              <span className="text-gray-900 dark:text-white font-medium">{contentItem.title}</span>
             </nav>
 
             {/* Combined Card with Header and Content */}
-            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               {/* Content Header */}
               <div className="p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <span className="text-6xl">{contentItem.icon}</span>
                   <div className="flex-1">
-                    <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
+                    <h1 className="text-4xl font-bold text-[#1a1a1a] dark:text-white mb-2">
                       {contentItem.title}
                     </h1>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-lg text-gray-600 dark:text-gray-400">
                       {contentItem.description}
                     </p>
                   </div>
@@ -156,7 +156,7 @@ export default async function DocumentPage({ params }: PageProps) {
               </div>
 
               {/* Dashed Divider */}
-              <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
+              <div className="border-t-2 border-dashed border-gray-300 dark:border-slate-600 mx-8"></div>
 
               {/* Document Viewer Content (without outer container) */}
               <DocumentViewer

@@ -61,10 +61,10 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
 
   if (!videoId && !isDirectVideoUrl) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg p-12 text-center border border-gray-100">
+      <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-12 text-center border border-gray-100">
         <div className="text-6xl mb-4">📹</div>
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Video Coming Soon</h2>
-        <p className="text-gray-600">The video for this lesson will be available shortly.</p>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Video Coming Soon</h2>
+        <p className="text-gray-600 dark:text-gray-400">The video for this lesson will be available shortly.</p>
       </div>
     );
   }
@@ -98,7 +98,7 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
 
       {/* Mark as Complete Button */}
       {!hasWatched && (
-        <div className="p-6 border-t border-gray-200">
+        <div className="p-6 border-t border-gray-200 dark:border-slate-700">
           <button
             onClick={handleMarkComplete}
             disabled={isMarking}
@@ -106,14 +106,14 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
           >
             {isMarking ? 'Marking Complete...' : 'Mark as Complete ✓'}
           </button>
-          <p className="text-sm text-gray-500 text-center mt-3">
+          <p className="text-sm text-gray-500 dark:text-gray-400 text-center mt-3">
             Click after watching the video to track your progress
           </p>
         </div>
       )}
 
       {hasWatched && (
-        <div className="p-6 border-t border-gray-200 bg-green-50">
+        <div className="p-6 border-t border-gray-200 dark:border-slate-700 bg-green-50">
           <div className="flex items-center justify-center gap-2 text-green-700">
             <span className="text-2xl">✓</span>
             <span className="font-semibold">You've completed this video!</span>

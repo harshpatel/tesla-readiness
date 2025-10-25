@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import ModuleSidebar from '@/components/ModuleSidebar';
-import VideoPlayer from '@/components/VideoPlayer';
+import DocumentViewer from '@/components/DocumentViewer';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 
 interface PageProps {
@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { section, module, slug } = await params;
   
   return {
-    title: `Video: ${slug} | TeslaMR`,
-    description: 'Video content for Tesla MRI Training',
+    title: `Document: ${slug} | TeslaMR`,
+    description: 'Document content for Tesla MRI Training',
   };
 }
 
-export default async function VideoPage({ params }: PageProps) {
+export default async function DocumentPage({ params }: PageProps) {
   const { section, module, slug } = await params;
   
   // Auth check
@@ -79,7 +79,7 @@ export default async function VideoPage({ params }: PageProps) {
     .select('*')
     .eq('slug', slug)
     .eq('module_id', moduleData.id)
-    .eq('type', 'video')
+    .eq('type', 'document')
     .single();
 
   if (!contentItem) {
@@ -101,7 +101,8 @@ export default async function VideoPage({ params }: PageProps) {
     .eq('id', user.id)
     .single();
 
-  const videoUrl = contentItem.metadata?.videoUrl || '';
+  const documentUrl = contentItem.metadata?.documentUrl || '';
+  const checkboxes = contentItem.metadata?.checkboxes || [];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -120,27 +121,27 @@ export default async function VideoPage({ params }: PageProps) {
         <main className="flex-1 bg-gradient-to-br from-blue-50 via-white to-purple-50">
           <div className="max-w-5xl mx-auto px-6 py-12">
             {/* Breadcrumb */}
-            <nav className="mb-6 text-sm text-gray-600 dark:text-gray-400">
+            <nav className="mb-6 text-sm text-gray-600">
               <Link href="/dashboard" className="hover:text-[#0A84FF]">Dashboard</Link>
               <span className="mx-2">/</span>
               <Link href={`/${section}`} className="hover:text-[#0A84FF]">{sectionData.title}</Link>
               <span className="mx-2">/</span>
               <Link href={`/${section}/${module}`} className="hover:text-[#0A84FF]">{moduleData.title}</Link>
               <span className="mx-2">/</span>
-              <span className="text-gray-900 dark:text-white font-medium">{contentItem.title}</span>
+              <span className="text-gray-900 font-medium">{contentItem.title}</span>
             </nav>
 
-            {/* Combined Card with Header and Video */}
-            <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+            {/* Combined Card with Header and Content */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
               {/* Content Header */}
               <div className="p-8">
                 <div className="flex items-start gap-4 mb-4">
                   <span className="text-6xl">{contentItem.icon}</span>
                   <div className="flex-1">
-                    <h1 className="text-4xl font-bold text-[#1a1a1a] dark:text-white mb-2">
+                    <h1 className="text-4xl font-bold text-[#1a1a1a] mb-2">
                       {contentItem.title}
                     </h1>
-                    <p className="text-lg text-gray-600 dark:text-gray-400">
+                    <p className="text-lg text-gray-600">
                       {contentItem.description}
                     </p>
                   </div>
@@ -155,11 +156,12 @@ export default async function VideoPage({ params }: PageProps) {
               </div>
 
               {/* Dashed Divider */}
-              <div className="border-t-2 border-dashed border-gray-300 dark:border-slate-600 mx-8"></div>
+              <div className="border-t-2 border-dashed border-gray-300 mx-8"></div>
 
-              {/* Video Player */}
-              <VideoPlayer
-                videoUrl={videoUrl}
+              {/* Document Viewer Content (without outer container) */}
+              <DocumentViewer
+                documentUrl={documentUrl}
+                checkboxes={checkboxes}
                 userId={user.id}
                 contentItemId={contentItem.id}
                 isCompleted={userProgress?.completed || false}
