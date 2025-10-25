@@ -26,12 +26,24 @@ export default function Header({ title = 'MRI Technologist Curriculum', showAuth
         )}
         
         <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
+          {/* Light mode logo */}
           <Image
-            src="/logo.png"
+            src="/teslamr-logo.svg"
             alt="TeslaMR"
-            width={144}
-            height={36}
-            style={{ height: 'auto', width: 'auto', maxHeight: '36px' }}
+            width={180}
+            height={49}
+            style={{ height: 'auto', width: 'auto', maxHeight: '49px' }}
+            className="dark:hidden"
+            priority
+          />
+          {/* Dark mode logo */}
+          <Image
+            src="/teslamr-logo-dark.svg"
+            alt="TeslaMR"
+            width={180}
+            height={49}
+            style={{ height: 'auto', width: 'auto', maxHeight: '49px' }}
+            className="hidden dark:block"
             priority
           />
         </Link>
