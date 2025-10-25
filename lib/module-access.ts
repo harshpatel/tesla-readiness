@@ -51,6 +51,11 @@ export async function getModuleAccessStatus(
         return {
           canAccess: true,
           isLocked: false,
+          reason: undefined,
+          unlockedByAdmin: undefined,
+          adminUnlockInfo: undefined,
+          previousModuleRequired: undefined,
+          completionStatus: undefined,
         };
       }
     }
@@ -133,6 +138,11 @@ export async function getModuleAccessStatus(
     return {
       canAccess: true,
       isLocked: false,
+      reason: undefined,
+      unlockedByAdmin: undefined,
+      adminUnlockInfo: undefined,
+      previousModuleRequired: undefined,
+      completionStatus: undefined,
     };
   }
 
@@ -143,6 +153,10 @@ export async function getModuleAccessStatus(
       canAccess: false,
       isLocked: true,
       reason: 'Module not found in curriculum',
+      unlockedByAdmin: undefined,
+      adminUnlockInfo: undefined,
+      previousModuleRequired: undefined,
+      completionStatus: undefined,
     };
   }
 
@@ -173,11 +187,14 @@ export async function getModuleAccessStatus(
       return {
         canAccess: true,
         isLocked: false,
+        reason: undefined,
         unlockedByAdmin: true,
         adminUnlockInfo: {
           unlockedBy: unlockerName,
           unlockedAt: override.created_at,
         },
+        previousModuleRequired: undefined,
+        completionStatus: undefined,
       };
     }
 
@@ -190,6 +207,8 @@ export async function getModuleAccessStatus(
       canAccess: false,
       isLocked: true,
       reason: `You must complete "${previousModule.title}" before accessing this module.`,
+      unlockedByAdmin: undefined,
+      adminUnlockInfo: undefined,
       previousModuleRequired: {
         id: previousModule.id,
         title: previousModule.title,
@@ -204,6 +223,11 @@ export async function getModuleAccessStatus(
   return {
     canAccess: true,
     isLocked: false,
+    reason: undefined,
+    unlockedByAdmin: undefined,
+    adminUnlockInfo: undefined,
+    previousModuleRequired: undefined,
+    completionStatus: undefined,
   };
 }
 

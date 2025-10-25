@@ -1,7 +1,7 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { getCurrentUser } from '@/lib/auth';
-import { getModuleAccessStatus } from '@/lib/module-access';
+import { getModuleAccessStatus, ModuleAccessStatus } from '@/lib/module-access';
 import ModuleSidebarClient from './ModuleSidebarClient';
 
 export default async function ModuleSidebar() {
@@ -99,7 +99,10 @@ export default async function ModuleSidebar() {
       });
 
       // Check module access status
-      let accessStatus = { canAccess: true, isLocked: false };
+      let accessStatus: ModuleAccessStatus = { 
+        canAccess: true, 
+        isLocked: false,
+      };
       if (user) {
         accessStatus = await getModuleAccessStatus(user.id, module.id);
       }
