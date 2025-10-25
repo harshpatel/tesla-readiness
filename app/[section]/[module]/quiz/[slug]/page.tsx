@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation';
 import { getCurrentUser, isAdmin } from '@/lib/auth';
+import { getModuleAccessStatus } from '@/lib/module-access';
 import QuizInterface from '@/components/QuizInterface';
 import ElevenLabsWidget from '@/components/ElevenLabsWidget';
 import ModuleSidebar from '@/components/ModuleSidebar';
@@ -125,16 +126,23 @@ export default async function QuizPage({ params }: PageProps) {
     .eq('id', user.id)
     .single();
 
-  // Get content item (quiz) from database
+  // Get content item (quiz) from database with module info
   const { data: contentItem } = await supabase
     .from('content_items')
-    .select('id, title, description, slug')
+    .select('id, title, description, slug, module_id')
     .eq('slug', slug)
     .eq('type', 'quiz')
     .single();
 
   if (!contentItem) {
     notFound();
+  }
+
+  // Check module access
+  const accessStatus = await getModuleAccessStatus(user.id, contentItem.module_id);
+  if (accessStatus.isLocked) {
+    // Redirect to module page where they'll see the lock modal
+    redirect(`/${section}/${module}`);
   }
 
   // Fetch quiz questions from database

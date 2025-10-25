@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import { getCurrentUser } from '@/lib/auth';
+import { getModuleAccessStatus } from '@/lib/module-access';
 import ModuleSidebarClient from './ModuleSidebarClient';
 
 export default async function ModuleSidebar() {
@@ -73,11 +74,11 @@ export default async function ModuleSidebar() {
   }
 
   // Build hierarchical structure
-  const sectionsWithData = sections.map((section) => {
+  const sectionsWithData = await Promise.all(sections.map(async (section) => {
     const sectionModules = (modules || []).filter((m) => m.section_id === section.id);
     const sectionProgressData = userSectionProgress.find((p) => p.section_id === section.id);
 
-    const modulesWithContent = sectionModules.map((module) => {
+    const modulesWithContent = await Promise.all(sectionModules.map(async (module) => {
       const moduleContentItems = (contentItems || []).filter((ci) => ci.module_id === module.id);
       const moduleProgressData = userModuleProgress.find((p) => p.module_id === module.id);
 
@@ -97,6 +98,12 @@ export default async function ModuleSidebar() {
         };
       });
 
+      // Check module access status
+      let accessStatus = { canAccess: true, isLocked: false };
+      if (user) {
+        accessStatus = await getModuleAccessStatus(user.id, module.id);
+      }
+
       return {
         id: module.id,
         slug: module.slug,
@@ -104,7 +111,10 @@ export default async function ModuleSidebar() {
         icon: module.icon || '📚',
         sectionSlug: section.slug,
         isPublished: module.is_published,
-        isLocked: module.is_locked || false,
+        isLocked: accessStatus.isLocked,
+        lockReason: accessStatus.reason,
+        previousModuleRequired: accessStatus.previousModuleRequired,
+        completionStatus: accessStatus.completionStatus,
         contentItems: itemsWithProgress,
         progress: moduleProgressData
           ? {
@@ -114,7 +124,7 @@ export default async function ModuleSidebar() {
             }
           : undefined,
       };
-    });
+    }));
 
     return {
       id: section.id,
@@ -131,7 +141,7 @@ export default async function ModuleSidebar() {
           }
         : undefined,
     };
-  });
+  }));
 
   return <ModuleSidebarClient sections={sectionsWithData} />;
 }

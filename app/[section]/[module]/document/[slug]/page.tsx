@@ -1,5 +1,6 @@
 import { notFound, redirect } from 'next/navigation';
 import { getCurrentUser, isAdmin } from '@/lib/auth';
+import { getModuleAccessStatus } from '@/lib/module-access';
 import { createServerClient } from '@supabase/ssr';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
@@ -71,6 +72,13 @@ export default async function DocumentPage({ params }: PageProps) {
 
   if (!moduleData) {
     notFound();
+  }
+
+  // Check module access
+  const accessStatus = await getModuleAccessStatus(user.id, moduleData.id);
+  if (accessStatus.isLocked) {
+    // Redirect to module page where they'll see the lock modal
+    redirect(`/${section}/${module}`);
   }
 
   // Fetch content item

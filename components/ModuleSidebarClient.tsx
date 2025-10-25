@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import LockedModuleModal from './LockedModuleModal';
 
 interface ContentItem {
   id: string;
@@ -23,6 +24,19 @@ interface Module {
   sectionSlug: string;
   isPublished: boolean;
   isLocked: boolean;
+  lockReason?: string;
+  previousModuleRequired?: {
+    id: string;
+    title: string;
+    slug: string;
+    sectionSlug: string;
+  };
+  completionStatus?: {
+    contentComplete: boolean;
+    quizComplete: boolean;
+    contentProgress: number;
+    quizAccuracy: number;
+  };
   contentItems: ContentItem[];
   progress?: {
     completedItems: number;
@@ -52,6 +66,25 @@ interface ModuleSidebarClientProps {
 export default function ModuleSidebarClient({ sections }: ModuleSidebarClientProps) {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [lockedModuleModal, setLockedModuleModal] = useState<{
+    isOpen: boolean;
+    reason: string;
+    previousModuleRequired?: {
+      id: string;
+      title: string;
+      slug: string;
+      sectionSlug: string;
+    };
+    completionStatus?: {
+      contentComplete: boolean;
+      quizComplete: boolean;
+      contentProgress: number;
+      quizAccuracy: number;
+    };
+  }>({
+    isOpen: false,
+    reason: '',
+  });
   
   // Automatically expand sections and modules based on current path
   const getInitialExpandedState = () => {
@@ -78,6 +111,15 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
   
   const [expandedSections, setExpandedSections] = useState<Set<string>>(initialSections);
   const [expandedModules, setExpandedModules] = useState<Set<string>>(initialModules);
+
+  const handleLockedModuleClick = (module: Module) => {
+    setLockedModuleModal({
+      isOpen: true,
+      reason: module.lockReason || 'This module is locked',
+      previousModuleRequired: module.previousModuleRequired,
+      completionStatus: module.completionStatus,
+    });
+  };
 
   const toggleSection = (sectionSlug: string) => {
     setExpandedSections((prev) => {
@@ -259,15 +301,18 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
                                     )}
                                   </div>
                                 ) : module.isLocked ? (
-                                  <div className="px-2.5 py-2 cursor-not-allowed">
+                                  <button
+                                    onClick={() => handleLockedModuleClick(module)}
+                                    className="w-full px-2.5 py-2 cursor-pointer hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors text-left"
+                                  >
                                     <div className="flex items-center gap-2">
                                       <span className="text-base">{module.icon}</span>
-                                      <span className="font-semibold text-xs text-gray-600 flex-1 truncate">
+                                      <span className="font-semibold text-xs text-gray-600 dark:text-gray-400 flex-1 truncate text-left">
                                         {module.title}
                                       </span>
-                                      <span className="text-gray-400 text-sm">🔒</span>
+                                      <span className="text-gray-400 dark:text-gray-500 text-sm">🔒</span>
                                     </div>
-                                  </div>
+                                  </button>
                                 ) : (
                                   <div className="px-2.5 py-2">
                                     <div className="flex items-center gap-2">
@@ -354,6 +399,15 @@ export default function ModuleSidebarClient({ sections }: ModuleSidebarClientPro
           </div>
         </div>
       </aside>
+
+      {/* Locked Module Modal */}
+      <LockedModuleModal
+        isOpen={lockedModuleModal.isOpen}
+        onClose={() => setLockedModuleModal({ isOpen: false, reason: '' })}
+        reason={lockedModuleModal.reason}
+        previousModuleRequired={lockedModuleModal.previousModuleRequired}
+        completionStatus={lockedModuleModal.completionStatus}
+      />
     </>
   );
 }
