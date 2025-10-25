@@ -1,0 +1,257 @@
+{
+  "rf-safety-1": {
+    "question_type": "multiplechoice",
+    "question_text": "The most common MRI-related injury is:",
+    "answers": {
+      "A": "Hearing damage",
+      "B": "Radio-frequency burns",
+      "C": "Cryogen burns",
+      "D": "Ferrous objects accelerating into the magnet bore"
+    },
+    "correct_answer": "B",
+    "hint": "RF burns are #1! They happen way more often than projectiles!",
+    "explanation": "**Radio-frequency burns** - the most common MRI injury! 🔥\n\n💡 **Remember it:** While projectile accidents get all the media attention (dramatic, scary), RF BURNS are actually the MOST COMMON injury! They happen quietly, often go unreported, and can be DELAYED (patient doesn't notice until hours later). Common causes: looped cables, skin-to-skin contact, skin touching bore, tattoos, medication patches. EVERY scan has RF exposure, so RF burns are statistically way more frequent than rare projectile or quench events. Prevention: proper positioning, no loops, no metal contact! 🩹"
+  },
+  "rf-safety-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Which of the following is not a type of radio frequency burn seen in MRI?",
+    "answers": {
+      "A": "Looped cables",
+      "B": "Skin contact with a transmitting antenna",
+      "C": "Skin-to-Skin large contact loops",
+      "D": "Electrical conductor arcing"
+    },
+    "correct_answer": "D",
+    "hint": "Arcing is from STATIC FIELDS, not RF fields!",
+    "explanation": "**Electrical conductor arcing** - NOT an RF burn! ⚡\n\n💡 **Remember it:** ARCING happens in the STATIC MAGNETIC FIELD when ferromagnetic objects create sparks (like when a wrench gets pulled into the magnet). RF burns are different - they're caused by RF ENERGY heating tissue via: (A) LOOPED CABLES creating antennas, (B) SKIN TOUCHING THE BORE (body coil transmitter), (C) SKIN-TO-SKIN LOOPS (arms crossed, hands clasped, legs touching). All three create electrical loops that convert RF energy to heat. Arcing? That's a magnetic field projectile issue, not RF! Know the difference! 🔥"
+  },
+  "rf-safety-3": {
+    "question_type": "multiplechoice",
+    "question_text": "True or False: Burns caused by looped cables burns may be delayed.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "TRUE! Patient might not feel it until AFTER they leave!",
+    "explanation": "**TRUE!** ✅ Looped cable burns can be DELAYED! ⏰\n\n💡 **Remember it:** RF burns can be SNEAKY! During the scan, the patient might feel nothing (RF heating is gradual). Hours LATER - surprise burns! This is why you ALWAYS follow up with patients post-scan and document any complaints. The burn develops slowly as tissue damage accumulates. By the time they notice (redness, pain, blistering), they're already home! This delay makes RF burns under-reported and dangerous. PREVENTION is key: no cable loops, keep cables straight, minimize bore contact, use padding! 🩹"
+  },
+  "rf-safety-4": {
+    "question_type": "multiplechoice",
+    "question_text": "A best practice for any cables is the magnet bore is to _____________.",
+    "answers": {
+      "A": "Keep as much of the cable in the bore as possible",
+      "B": "Loop the cable to shorten the overall length",
+      "C": "Leave the cable unplugged",
+      "D": "Keep the amount of cable in the bore to a minimum and plugged in"
+    },
+    "correct_answer": "D",
+    "hint": "MINIMAL cable in bore + PLUGGED IN = safe!",
+    "explanation": "**Keep cables minimal in bore AND plugged in** - best practice! 🔌\n\n💡 **Remember it:** TWO rules: (1) MINIMIZE cable length in bore - less cable = less antenna = less heating risk. (2) Keep it PLUGGED IN - unplugged cables can act as antennas and still heat up! Route excess cable OUTSIDE the bore. NEVER loop cables (creates antenna). NEVER coil cables (amplifies RF coupling). NEVER let cables touch patient skin. Think: straight, short, plugged, padded! Check cables EVERY scan - they shift during patient positioning! 📏"
+  },
+  "rf-safety-5": {
+    "question_type": "multiplechoice",
+    "question_text": "Skin contact with the inside of the bore is unsafe because it",
+    "answers": {
+      "A": "Comes in to contact with a transmitting antenna leading to a burn.",
+      "B": "Degrades image quality",
+      "C": "Increases SAR",
+      "D": "Decreases signal-to-noise ratio"
+    },
+    "correct_answer": "A",
+    "hint": "The BORE itself is a transmitting antenna!",
+    "explanation": "**Contact with transmitting antenna = burn!** 📡🔥\n\n💡 **Remember it:** The BODY COIL (inside the bore) is the RF TRANSMITTER! When patient skin touches the bore wall, it's like touching a hot antenna - direct energy transfer into tissue! This creates LOCALIZED HEATING and burns. It DOES degrade images and affect SAR/SNR (B, C, D), but the PRIMARY safety concern is BURNS! Use padding between patient and bore. Common problem areas: shoulders (wide patients), arms raised overhead, feet/ankles, hips. ALWAYS check for bore contact before scanning! 🛏️"
+  },
+  "rf-safety-6": {
+    "question_type": "multiplechoice",
+    "question_text": "Non-ferrous implants may be unsafe if they are _____________.",
+    "answers": {
+      "A": "Large",
+      "B": "Near large nerves",
+      "C": "Mechanically or electrically activated",
+      "D": "Made primarily of iron"
+    },
+    "correct_answer": "C",
+    "hint": "ACTIVE implants = unsafe! Battery-powered, electronically controlled!",
+    "explanation": "**Mechanically or electrically activated** - active implants! 🔋⚠️\n\n💡 **Remember it:** NON-FERROUS = not magnetic (titanium, plastic, ceramic) = no projectile risk! BUT if they're ACTIVE (battery-powered, electronically controlled), they're UNSAFE! Examples: pacemakers, ICDs, neurostimulators, insulin pumps, cochlear implants, drug infusion pumps. WHY unsafe? (1) Magnetic field interferes with electronics, (2) RF heats/damages circuits, (3) Gradients induce currents, (4) Device may malfunction, shock patient, or stop working. Size doesn't matter (A). Nerve proximity doesn't matter (B). Iron would make it ferrous, not non-ferrous (D). ACTIVE = DANGER! 🚫"
+  },
+  "rf-safety-7": {
+    "question_type": "multiplechoice",
+    "question_text": "Ferrous implants are dangerous because they may ____________.",
+    "answers": {
+      "A": "Be strongly attracted to the magnetic field accelerating the object into the magnet",
+      "B": "Create poor image quality",
+      "C": "Damage the implant",
+      "D": "Increase magnetic field inhomogeneity"
+    },
+    "correct_answer": "A",
+    "hint": "FERROUS = MAGNETIC = PROJECTILE RISK!",
+    "explanation": "**Strongly attracted = projectile/movement risk!** 🧲💥\n\n💡 **Remember it:** FERROUS = contains IRON = FERROMAGNETIC! The danger is TRANSLATIONAL FORCE - the implant gets pulled toward isocenter! If it's inside the patient, it can MOVE, MIGRATE, or TEAR TISSUE! Examples: old aneurysm clips (pre-1990s), shrapnel, metal fragments in eyes, some surgical clips/staples. Yes, they also degrade images (B), might damage themselves (C), and affect homogeneity (D) - but the PRIMARY DANGER is MOVEMENT causing internal bleeding, tissue damage, or death! Always verify implants are MR-SAFE or MR-CONDITIONAL! 🩸"
+  },
+  "rf-safety-8": {
+    "question_type": "multiplechoice",
+    "question_text": "All metallic implants _______________ though may pose little or no risk to the patient.",
+    "answers": {
+      "A": "Distort the magnetic field causing artifacts if located in the area of interest.",
+      "B": "Cause radio-frequency burns",
+      "C": "Are unsafe",
+      "D": "Must be removed before the exam"
+    },
+    "correct_answer": "A",
+    "hint": "ALL metal creates ARTIFACTS - but that's usually just an image quality issue!",
+    "explanation": "**All metal distorts the field = artifacts** 📷❌\n\n💡 **Remember it:** EVERY metallic implant (safe or not) causes ARTIFACTS! Metal disrupts B0 homogeneity, creating signal voids, geometric distortion, bright spots. Example: titanium hip replacement is 100% MR-SAFE (no projectile, no heating risk), but it WILL create artifacts in pelvic images. The key phrase: \"may pose LITTLE OR NO RISK to the patient\" - artifacts are an IMAGE QUALITY problem, not a SAFETY problem! Not all metal causes burns (B - only certain sizes/shapes/locations). Not all metal is unsafe (C). Most can't be removed (D). Artifacts? Annoying but harmless! 🎨"
+  },
+  "rf-safety-9": {
+    "question_type": "multiplechoice",
+    "question_text": "The Magnetic Resonance Medical Director (MRMD) is a ________________.",
+    "answers": {
+      "A": "Certified MRI technologist",
+      "B": "A physicist trained in MRI Safety",
+      "C": "Physician trained in MRI Safety",
+      "D": "MRI Department Manager"
+    },
+    "correct_answer": "C",
+    "hint": "MRMD = MD! Medical Director = Physician!",
+    "explanation": "**Physician trained in MRI Safety** - the top doc! 👨‍⚕️\n\n💡 **Remember it:** MRMD = MR MEDICAL DIRECTOR = PHYSICIAN! This is the DOCTOR in charge of MRI safety for the facility. They have ultimate medical authority over: patient screening decisions, implant safety determinations, contrast protocols, emergency responses. They must be a PHYSICIAN (MD or DO) with specialized MRI safety training. NOT a tech (A), NOT a physicist (B - though physicist can be MRSE), NOT a manager (D - admin role). The MRMD is the safety boss! Think: MD = Medical Director! 🏥"
+  },
+  "rf-safety-10": {
+    "question_type": "multiplechoice",
+    "question_text": "The primary role of the Magnetic Resonance Safety Officer (MRSO) is to___________:",
+    "answers": {
+      "A": "Advise and execute orders from the MRMD",
+      "B": "Advise and execute orders from the MRSE",
+      "C": "Give orders to a scanning MR technologist",
+      "D": "Give orders to the MRSE"
+    },
+    "correct_answer": "A",
+    "hint": "MRSO works FOR the MRMD! Executes the doc's orders!",
+    "explanation": "**Advise and execute orders from MRMD** - the safety enforcer! 🛡️\n\n💡 **Remember it:** Chain of command: MRMD (physician) → MRSO (safety officer) → MR Techs. The MRSO is the right hand of the MRMD! They ADVISE the medical director on safety issues and EXECUTE (implement) the MRMD's safety policies. The MRSO doesn't give orders to the MRMD - it's the opposite! MRSE (MR Safety Expert) is typically the physicist - they're peers, not boss/subordinate. The MRSO ensures all safety protocols are followed daily. Think: MRSO = safety enforcer who reports to the doc! 👮"
+  },
+  "rf-safety-11": {
+    "question_type": "multiplechoice",
+    "question_text": "The radio-frequency energy transmitted to the patient over time is referred to as ____________ , or SAR.",
+    "answers": {
+      "A": "Signal Absorption Rate",
+      "B": "Safe Absorption Rate",
+      "C": "Selective Absorption Rate",
+      "D": "Specific Absorption Rate"
+    },
+    "correct_answer": "D",
+    "hint": "SPECIFIC Absorption Rate! Energy absorbed per KG!",
+    "explanation": "**Specific Absorption Rate (SAR)** - the RF heating metric! ⚡🔥\n\n💡 **Remember it:** SAR = SPECIFIC ABSORPTION RATE! It measures how much RF ENERGY is absorbed per KILOGRAM of tissue (Watts/kg). SPECIFIC = per unit mass (not total). This tells us how much HEATING the patient experiences. High SAR = high tissue heating = burn risk! The scanner calculates SAR based on: pulse sequence parameters (TR, flip angle, # of slices), patient weight, body part being scanned. Not \"Signal\" (A), not \"Safe\" (B - there's no safe limit beyond regulations), not \"Selective\" (C). SAR = Safety Absorption Rating in your head! 📊"
+  },
+  "rf-safety-12": {
+    "question_type": "multiplechoice",
+    "question_text": "SAR is measured in___________.",
+    "answers": {
+      "A": "Watts/milligram",
+      "B": "Watts/Hertz",
+      "C": "Watts/pound",
+      "D": "Watts/kilogram"
+    },
+    "correct_answer": "D",
+    "hint": "Watts per kilogram! Power per body mass!",
+    "explanation": "**Watts/kilogram (W/kg)** - power per mass! ⚡\n\n💡 **Remember it:** SAR = WATTS (energy/power) per KILOGRAM (body mass). It's like measuring how many watts of heat go into each kg of your body! Not milligrams (A - way too small). Not Hertz (B - that's frequency). Not pounds (C - we use metric in medicine). Example: 2.0 W/kg whole body SAR for a 70kg patient = 140 watts total! That's like having a bright light bulb heating your body. This is why we need patient WEIGHT - to calculate safe SAR limits! W/kg! ⚖️"
+  },
+  "rf-safety-13": {
+    "question_type": "multiplechoice",
+    "question_text": "The maximum SAR for whole body imaging in NORMAL MODE is ___________________.",
+    "answers": {
+      "A": "No more than 3.2 Watts/kilogram",
+      "B": "No more than 2.0 Watts/kilogram",
+      "C": "No more than 4.0 Watts/kilogram",
+      "D": "No more than 8.0 Watts/kilogram"
+    },
+    "correct_answer": "B",
+    "hint": "2.0 W/kg for NORMAL mode whole body! Know this number!",
+    "explanation": "**2.0 W/kg maximum for NORMAL mode** - the FDA limit! 📋\n\n💡 **Remember it:** FDA limits for WHOLE BODY SAR: NORMAL mode = 2.0 W/kg (15 min average), FIRST LEVEL CONTROLLED = 4.0 W/kg, SECOND LEVEL CONTROLLED = 4.0 W/kg (but requires medical supervision). For HEAD ONLY: NORMAL = 3.2 W/kg. For LOCAL (specific body part): higher limits allowed. Most clinical scanning is NORMAL mode at ≤2.0 W/kg. If you exceed this, scanner alerts you and may require physician approval! Remember: 2.0 = NORMAL whole body! Learn this number - it's on every registry exam! 🎯"
+  },
+  "rf-safety-14": {
+    "question_type": "multiplechoice",
+    "question_text": "One method of reducing SAR is to________________;",
+    "answers": {
+      "A": "Reduce TR",
+      "B": "Reduce TE",
+      "C": "Increase flip angle in GRE pulse sequence",
+      "D": "Increase the TR"
+    },
+    "correct_answer": "D",
+    "hint": "INCREASE TR! Give the tissue more time to cool between RF pulses!",
+    "explanation": "**Increase TR** - more time between pulses! ⏰❄️\n\n💡 **Remember it:** SAR depends on how OFTEN you deliver RF pulses! INCREASE TR (repetition time) = MORE TIME between RF pulses = tissue has time to COOL DOWN = LOWER SAR! Other ways to reduce SAR: decrease flip angle (less RF power per pulse), reduce # of slices, use longer echo trains, switch to GRE from SE (less RF). REDUCING TR (A) makes it WORSE (more frequent pulses = more heating). TE doesn't affect SAR (B). INCREASING flip angle makes it worse (C). Think: longer breaks = cooler patient! 🧊"
+  },
+  "rf-safety-15": {
+    "question_type": "multiplechoice",
+    "question_text": "The noise of an MRI system while scanning arises from ___________________.",
+    "answers": {
+      "A": "The rise and fall of the gradients",
+      "B": "radio-frequency transmission",
+      "C": "radio-frequency absorption",
+      "D": "circulating cryogens"
+    },
+    "correct_answer": "A",
+    "hint": "GRADIENTS! They vibrate the coils and create the banging noise!",
+    "explanation": "**Rise and fall of gradients** - the bang bang bang! 🔊💥\n\n💡 **Remember it:** MRI noise comes from GRADIENT COILS rapidly switching on/off! When gradients pulse (thousands of times per second), they create LORENTZ FORCES - the gradient coils vibrate/shake inside the static magnetic field. This vibration travels through the magnet structure = LOUD BANGING/KNOCKING sounds! Faster gradients (short TR, EPI sequences) = LOUDER noise. RF is silent (B, C). Cryogens circulate quietly (D). The noise IS the gradients doing their job - making spatial encoding! Earplugs = essential! 👂"
+  },
+  "rf-safety-16": {
+    "question_type": "multiplechoice",
+    "question_text": "Acoustic noise levels are measured in decibels, or dB. dB levels are a function of the______________ of the noise:",
+    "answers": {
+      "A": "Volume and duration",
+      "B": "Frequency and duration",
+      "C": "Volume and the distance",
+      "D": "Time and iteration"
+    },
+    "correct_answer": "A",
+    "hint": "Volume (loudness) + Duration (how long)!",
+    "explanation": "**Volume and duration** - loudness × time! 🔊⏰\n\n💡 **Remember it:** dB (decibels) measures SOUND INTENSITY based on TWO factors: (1) VOLUME (how loud - amplitude of sound waves), and (2) DURATION (how long you're exposed). A 100 dB sound for 1 second is less damaging than 100 dB for 30 minutes! MRI scans can be 110-125 dB for 20-40 minutes = HIGH hearing damage risk! Frequency matters for perceived loudness but not for dB calculation (B). Distance affects PERCEIVED volume but dB is measured at a standard distance (C). VOLUME + DURATION = dB danger! 📈"
+  },
+  "rf-safety-17": {
+    "question_type": "multiplechoice",
+    "question_text": "dB levels above _________dB can cause hearing damage and loss.",
+    "answers": {
+      "A": "60",
+      "B": "75",
+      "C": "85",
+      "D": "90"
+    },
+    "correct_answer": "C",
+    "hint": "85 dB! That's the OSHA limit for prolonged exposure!",
+    "explanation": "**85 dB** - the danger threshold! 🔊⚠️\n\n💡 **Remember it:** OSHA says 85 dB for 8 hours = hearing damage risk! That's about as loud as heavy traffic or a lawn mower. MRI scanners can hit 110-125 dB - WAY above the danger zone! At 85 dB, you need hearing protection. At 120 dB, damage can occur in MINUTES. 60 dB (A) = normal conversation (safe). 75 dB (B) = vacuum cleaner (safe for prolonged exposure). 85 dB (C) = THE CUTOFF! 90 dB (D) = already above the limit. Protect your ears at 85+! 🎧"
+  },
+  "rf-safety-18": {
+    "question_type": "multiplechoice",
+    "question_text": "True or False: Acoustic noise levels in MRI are a function of the MRI system performance levels and magnetic field strength.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "A",
+    "hint": "TRUE! Stronger magnets + faster gradients = LOUDER noise!",
+    "explanation": "**TRUE!** ✅ Louder magnets, louder noise! 🔊🧲\n\n💡 **Remember it:** TWO factors increase MRI noise: (1) HIGHER FIELD STRENGTH (3T is louder than 1.5T) - stronger B0 = stronger Lorentz forces on gradients. (2) HIGHER PERFORMANCE gradients (faster switching, stronger gradients) = more vibration. A high-performance 3T scanner with ultra-fast gradients can hit 125 dB! A low-field 0.5T open MRI with slow gradients might only reach 85 dB. Fast sequences (EPI, fast SE) are louder than slow sequences. Better tech = more noise = better earplugs needed! 🎧"
+  },
+  "rf-safety-19": {
+    "question_type": "multiplechoice",
+    "question_text": "True or False: Non-patients in the magnet during scanning are not required to have hearing protection.",
+    "answers": {
+      "A": "True",
+      "B": "False"
+    },
+    "correct_answer": "B",
+    "hint": "FALSE! EVERYONE needs hearing protection during scanning!",
+    "explanation": "**FALSE!** ❌ EVERYONE gets ear protection! 🎧\n\n💡 **Remember it:** If you're in Zone IV during scanning, YOU NEED HEARING PROTECTION - period! This includes: patients, technologists helping during scanning, anesthesiologists, nurses, parents with pediatric patients, researchers. The acoustic noise doesn't discriminate - it damages everyone's ears equally! \"Non-patients\" might be in the bore even LONGER than patients (staff doing multiple scans). ALWAYS use earplugs, headphones, or both. No exceptions! Your hearing = precious! Protect it! 👂"
+  },
+  "rf-safety-20": {
+    "question_type": "multiplechoice",
+    "question_text": "A high-performance 3.0T MRI system can reach dB levels as high as_________.",
+    "answers": {
+      "A": "85db",
+      "B": "97dB",
+      "C": "110dB",
+      "D": "125dB"
+    },
+    "correct_answer": "D",
+    "hint": "125 dB! As loud as a jet engine or rock concert!",
+    "explanation": "**125 dB** - insanely loud! 🚀🔊\n\n💡 **Remember it:** High-performance 3T scanners with ultra-fast gradients can reach 125 dB during aggressive sequences (EPI, DWI, fMRI)! That's as loud as: a jet engine at takeoff, a rock concert front row, a chainsaw next to your ear! At 125 dB, hearing damage can occur in SECONDS. 85 dB (A) = danger threshold. 97 dB (B) = motorcycle. 110 dB (C) = car horn. 125 dB (D) = MAXIMUM MRI noise! This is WHY we use double protection (earplugs + headphones) and WHY acoustic noise reduction tech is so important! ALWAYS protect your patients! 🎧"
+  }
+}
+

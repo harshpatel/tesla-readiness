@@ -20,6 +20,8 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'subatomic-principles-fundamentals': '11',
   'instrumentation-magnets-fundamentals': '12',
   'mri-safety-magnetic-fields-fundamentals': '13',
+  'mri-safety-rf-gradient-fundamentals': '14',
+  'msk-procedures-fundamentals': '15',
 };
 
 export default async function AdminQuizzesPage() {

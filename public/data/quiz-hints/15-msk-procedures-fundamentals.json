@@ -1,0 +1,548 @@
+{
+  "msk-1": {
+    "question_type": "multiplechoice",
+    "question_text": "An image that is T1 Weighted means that T1 contrast is maximized and ___________________ are minimized.",
+    "answers": {
+      "A": "T2 and Proton Density contrast",
+      "B": "T1 and T2 are minimized contrast",
+      "C": "1.5T and 3.0T effects",
+      "D": "Artifacts"
+    },
+    "correct_answer": "A",
+    "hint": "T1W = MAX T1 contrast, MIN everything else (T2 and PD)!",
+    "explanation": "**T2 and Proton Density contrast are minimized** in T1-weighted images! 🎯\n\n💡 **Remember it:** Weighting means ONE contrast is MAXIMIZED while OTHERS are MINIMIZED! T1-weighted = T1 contrast dominates, T2 and PD effects are suppressed. This is done with SHORT TR (to minimize T2) and SHORT TE (to minimize PD). Think: each weighting is like turning up ONE volume knob while turning down the others! T1W = great for anatomy (fat is bright, fluid is dark). Not about field strength (C) or artifacts (D) - it's about which tissue property dominates the contrast! 📊"
+  },
+  "msk-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Proton Density Weighting means the predominant contrast is based on:",
+    "answers": {
+      "A": "A combination of T1 and T2",
+      "B": "T1 contrast",
+      "C": "T2 contrast",
+      "D": "The difference between number of hydrogen-based protons in the tissues being imaged"
+    },
+    "correct_answer": "D",
+    "hint": "PD = Proton Density = NUMBER of hydrogen protons!",
+    "explanation": "**Difference in hydrogen proton count** - pure density! 💧\n\n💡 **Remember it:** PD = PROTON DENSITY = how MANY hydrogen protons are in the tissue! More protons = brighter signal. This is achieved with LONG TR (minimize T1) and SHORT TE (minimize T2). Example: muscle has more water (more protons) than fat, so muscle is brighter on PD! Not a combination (A) - it's specifically about proton COUNT, not relaxation. PD imaging shows DENSITY differences - great for detecting subtle pathology in cartilage, menisci, tendons! 🔬"
+  },
+  "msk-3": {
+    "question_type": "multiplechoice",
+    "question_text": "MSK imaging can be challenging because it requires ________________.",
+    "answers": {
+      "A": "High spatial resolution",
+      "B": "High signal-to-noise ration",
+      "C": "Precise positioning",
+      "D": "All the above"
+    },
+    "correct_answer": "D",
+    "hint": "ALL THE ABOVE! MSK is challenging in EVERY way!",
+    "explanation": "**All the above** - MSK is technically demanding! 🦴💪\n\n💡 **Remember it:** MSK imaging is the TRIPLE THREAT of difficulty! (1) HIGH SPATIAL RESOLUTION needed - small structures like ligaments, cartilage, labrum require tiny pixels. (2) HIGH SNR needed - small FOV + thin slices = low signal, need good SNR to see details. (3) PRECISE POSITIONING needed - wrong angles miss pathology (torn rotator cuff, labral tears). Plus: patient comfort issues (shoulder pain, can't hold still), motion artifacts, multiple planes required. MSK = most technically challenging body part to image! Respect the complexity! 🎯"
+  },
+  "msk-knee-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Indications for MRI of the knee include all the following expect_____.",
+    "answers": {
+      "A": "Internal derangement",
+      "B": "Torn meniscus",
+      "C": "Hip Pain",
+      "D": "Tendon/Ligament tears"
+    },
+    "correct_answer": "C",
+    "hint": "Hip pain? Scan the HIP, not the KNEE!",
+    "explanation": "**Hip pain** - wrong joint! 🚫\n\n💡 **Remember it:** Seems obvious but test-takers mess this up! HIP PAIN → scan the HIP, not the knee! Knee MRI indications: internal derangement (general term for torn stuff inside), meniscal tears (most common), ACL/PCL tears, MCL/LCL injuries, patellar pathology, cartilage damage, Baker's cysts. Hip pain could be from hip labral tears, AVN, DJD - but you're NOT scanning the knee for it! Always match the anatomical location to the symptom! 🎯"
+  },
+  "msk-knee-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Landmarking for a knee MRI is:",
+    "answers": {
+      "A": "At the lateral femoral condyle",
+      "B": "Parallel to both femoral condyles",
+      "C": "At the base of the patella",
+      "D": "At the apex of the patella"
+    },
+    "correct_answer": "D",
+    "hint": "APEX of the patella - the POINTY TOP!",
+    "explanation": "**Apex of the patella** - the superior tip! 🦴\n\n💡 **Remember it:** APEX = TOP/POINTY END! The patella (kneecap) has an APEX (superior point) and a BASE (inferior broad end). Landmark at the APEX (top) to center the FOV over the joint space. This ensures you capture the femoral condyles, menisci, ACL/PCL, and patellar tendon insertion. Lateral condyle (A) is too one-sided. Parallel to condyles (B) is for ANGULATION, not landmarking. Base of patella (C) is too inferior. APEX = landmark! 📍"
+  },
+  "msk-knee-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The axial coverage for a knee MRI is from the __________________.",
+    "answers": {
+      "A": "Top of the patella through the joint space",
+      "B": "Inferior half of the femur to the superior half of the tibia",
+      "C": "Top of the patella to the patellar tendon insertion",
+      "D": "Mid patella through the lateral femoral condyle"
+    },
+    "correct_answer": "C",
+    "hint": "Top of patella DOWN to where patellar tendon inserts!",
+    "explanation": "**Top of patella to patellar tendon insertion** - full coverage! 🦵\n\n💡 **Remember it:** AXIAL KNEE coverage must include: (1) TOP OF PATELLA (to see patellofemoral joint, quad tendon), down to (2) PATELLAR TENDON INSERTION on the TIBIAL TUBEROSITY (to see patellar tendon pathology, Osgood-Schlatter). This covers the entire joint space, menisci, cruciate ligaments, collateral ligaments. Don't stop at joint space (A) - you'll miss the tendon insertion! Cover it ALL! 📏"
+  },
+  "msk-knee-4": {
+    "question_type": "multiplechoice",
+    "question_text": "For a sagittal of the knee, angle ____________.",
+    "answers": {
+      "A": "Parallel to the plane of the femoral condyles",
+      "B": "Perpendicular to the plane of the femoral condyles",
+      "C": "To the plane of the femur",
+      "D": "To the plane of the tibia"
+    },
+    "correct_answer": "B",
+    "hint": "PERPENDICULAR! Sagittal should be 90° to the condyles!",
+    "explanation": "**Perpendicular to the femoral condyles** - true sagittal! 🔄\n\n💡 **Remember it:** Draw a line connecting the POSTERIOR aspects of the MEDIAL and LATERAL femoral condyles (this defines the condylar plane). Your SAGITTAL slices should cut PERPENDICULAR (90°) to this line! This gives you TRUE SAGITTAL anatomy - you'll see ACL/PCL cleanly, menisci in profile, patellar tendon along its length. PARALLEL (A) would give you weird oblique cuts! PERPENDICULAR = proper sagittal! Use your localizer to angle correctly! 📐"
+  },
+  "msk-hip-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Indications for MRI of the Hip include all the following except for ____________.",
+    "answers": {
+      "A": "Generalized pain",
+      "B": "Degenerative Joint Disease (DJD)",
+      "C": "Incontinence",
+      "D": "Avascular necrosis"
+    },
+    "correct_answer": "C",
+    "hint": "Incontinence? That's a BLADDER problem, not a HIP problem!",
+    "explanation": "**Incontinence** - wrong system! 🚫\n\n💡 **Remember it:** INCONTINENCE = inability to control bladder/bowel = UROLOGIC or PELVIC FLOOR issue, NOT a hip joint problem! Hip MRI indications: pain (A), DJD/arthritis (B), AVN/osteonecrosis (D), labral tears, FAI (femoroacetabular impingement), stress fractures, tumors, infection. Incontinence workup? You'd do pelvic floor MRI, not hip MRI! Always think: does the symptom match the anatomy? 🎯"
+  },
+  "msk-hip-2": {
+    "question_type": "multiplechoice",
+    "question_text": "The landmark for a hip MRI is the _________________.",
+    "answers": {
+      "A": "Greater Trochanter",
+      "B": "Symphysis pubis",
+      "C": "Iliac crest",
+      "D": "½ between the iliac crest and the symphysis pubis"
+    },
+    "correct_answer": "A",
+    "hint": "Greater trochanter - the big bump on the femur!",
+    "explanation": "**Greater Trochanter** - the hip landmark! 🦴\n\n💡 **Remember it:** The GREATER TROCHANTER is the large bony prominence on the LATERAL aspect of the proximal femur - you can FEEL it on yourself! Landmark HERE to center your FOV over the HIP JOINT (femoral head + acetabulum). This ensures you capture the labrum, cartilage, femoral neck, and surrounding muscles. Symphysis pubis (B) is too inferior/anterior. Iliac crest (C) is too superior. Greater trochanter = perfect hip landmark! 📍"
+  },
+  "msk-hip-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The coronal coverage for the hip is from the ___________________.",
+    "answers": {
+      "A": "Iliac crest through the symphysis pubis",
+      "B": "Ramus through the symphysis pubis",
+      "C": "Hamstring insertion through the acetabulum",
+      "D": "Ramus through the acetabulum"
+    },
+    "correct_answer": "C",
+    "hint": "Hamstring insertion (inferior) up through acetabulum (superior)!",
+    "explanation": "**Hamstring insertion through acetabulum** - full hip coverage! 🦵\n\n💡 **Remember it:** CORONAL HIP coverage goes from: (1) HAMSTRING INSERTION on the ischial tuberosity (inferior/posterior) up through (2) ACETABULUM (hip socket). This captures the entire femoral head, femoral neck, acetabulum, labrum, and greater trochanter. Iliac crest (A) is too superior. Ramus options (B, D) miss key structures. Cover from hamstrings to acetabulum! 📏"
+  },
+  "msk-hip-4": {
+    "question_type": "multiplechoice",
+    "question_text": "The axial coverage for the hip is from ____________________.",
+    "answers": {
+      "A": "Above the acetabulum through the entire greater trochanter",
+      "B": "The iliac crest through the entire greater trochanter",
+      "C": "Above the acetabulum through the symphysis pubis",
+      "D": "The iliac crest through the symphysis pubis"
+    },
+    "correct_answer": "A",
+    "hint": "Above acetabulum DOWN through the entire greater trochanter!",
+    "explanation": "**Above acetabulum through entire greater trochanter** - complete axial coverage! 🎯\n\n💡 **Remember it:** AXIAL HIP coverage: Start ABOVE the ACETABULUM (superior) to see the roof of the hip socket, slice down through the ENTIRE GREATER TROCHANTER (inferior). This captures the femoral head, acetabulum, labrum, femoral neck, and trochanteric region. Iliac crest (B, D) is too superior. Symphysis pubis (C, D) is too inferior/anterior. ABOVE ACETABULUM → THROUGH TROCHANTER = perfect! 📏"
+  },
+  "msk-hip-anat-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 1:",
+    "answers": {
+      "A": "Obturator internus T.",
+      "B": "Femoral head",
+      "C": "Labrum",
+      "D": "Ramus"
+    },
+    "correct_answer": "C",
+    "hint": "The LABRUM - the ring of cartilage around the hip socket!",
+    "explanation": "**Labrum** - the hip gasket! 🔄\n\n💡 **Remember it:** The LABRUM is the ring of FIBROCARTILAGE that lines the RIM of the acetabulum (hip socket). It's like a gasket that deepens the socket and provides stability! On MRI, it appears as a DARK TRIANGULAR structure at the edge of the acetabulum. Labral TEARS are common in athletes and cause hip pain/clicking. Think: LABRUM = LIP of the socket! It's usually marked at the anterosuperior or posterosuperior acetabular rim! 🎯"
+  },
+  "msk-hip-anat-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 2:",
+    "answers": {
+      "A": "Ligamentum teres",
+      "B": "Obturator internus T.",
+      "C": "Labrum",
+      "D": "Femoral head"
+    },
+    "correct_answer": "D",
+    "hint": "Femoral head - the ball in the ball-and-socket joint!",
+    "explanation": "**Femoral head** - the ball! ⚽\n\n💡 **Remember it:** The FEMORAL HEAD is the round, BALL-shaped end of the femur that articulates with the acetabulum (socket). It's covered with hyaline cartilage and appears as a LARGE ROUNDED structure with intermediate signal on T1. The femoral head is where AVN (avascular necrosis) occurs - loss of blood supply → bone death! It's the biggest, most obvious rounded structure in hip images! BALL = femoral head! 🦴"
+  },
+  "msk-hip-anat-3": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 3:",
+    "answers": {
+      "A": "Ligamentum teres",
+      "B": "Obturator internus T.",
+      "C": "Labrum",
+      "D": "Ramus"
+    },
+    "correct_answer": "A",
+    "hint": "Ligamentum teres - the ligament INSIDE the hip joint!",
+    "explanation": "**Ligamentum teres** - the intracapsular ligament! 🔗\n\n💡 **Remember it:** LIGAMENTUM TERES (ligament of the femoral head) connects the FOVEA of the femoral head to the ACETABULAR FOSSA (pit in the socket). It's INSIDE the joint capsule! It appears as a THIN LINEAR structure running from the femoral head to the acetabulum. It carries a small artery (artery of ligamentum teres) that supplies the femoral head (especially in kids). Not usually clinically significant in adults but can tear! TERES = round/smooth! 📍"
+  },
+  "msk-hip-anat-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 4:",
+    "answers": {
+      "A": "Ligamentum teres",
+      "B": "Obturator internus T.",
+      "C": "Labrum",
+      "D": "Femoral neck"
+    },
+    "correct_answer": "B",
+    "hint": "Obturator internus - the internal hip rotator muscle!",
+    "explanation": "**Obturator internus tendon** - the deep hip muscle! 💪\n\n💡 **Remember it:** OBTURATOR INTERNUS is a deep hip EXTERNAL ROTATOR muscle that originates from the OBTURATOR FORAMEN (hole in the pelvis) and inserts on the GREATER TROCHANTER. Its tendon runs POSTERIOR to the hip joint. On axial images, you'll see it as a ROUND TENDON posterior to the femoral head/neck. \"INTERNUS\" = INTERNAL (inside the pelvis). It helps stabilize the hip and rotate the thigh outward! Think: OB-turt-INTERIOR (inside the pelvis)! 🦴"
+  },
+  "msk-knee-anat-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 1:",
+    "answers": {
+      "A": "Patella",
+      "B": "Anterior Cruciate L.",
+      "C": "Patellar tendon",
+      "D": "Quadriceps Tendon"
+    },
+    "correct_answer": "D",
+    "hint": "QUADRICEPS tendon - ABOVE the patella!",
+    "explanation": "**Quadriceps Tendon** - the kneecap extender! 💪\n\n💡 **Remember it:** QUADRICEPS TENDON connects the QUAD MUSCLES (front of thigh) to the SUPERIOR POLE of the PATELLA. It's ABOVE the kneecap! Rupture = can't extend knee! On sagittal MRI, it appears as a THICK DARK BAND running from the quads to the top of the patella. PATELLAR tendon (C) is BELOW the patella (patella to tibia). Think: QUAD ON TOP, patellar on bottom! QUAD = ABOVE kneecap! 📍"
+  },
+  "msk-knee-anat-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 2:",
+    "answers": {
+      "A": "Quadriceps Tendon",
+      "B": "Anterior Cruciate L.",
+      "C": "Patellar tendon",
+      "D": "Tibia"
+    },
+    "correct_answer": "B",
+    "hint": "ACL! The most commonly torn knee ligament!",
+    "explanation": "**Anterior Cruciate Ligament (ACL)** - the stability hero! 🏈\n\n💡 **Remember it:** ACL runs from ANTERIOR TIBIA → POSTERIOR FEMUR (it CROSSES the knee joint diagonally). It PREVENTS ANTERIOR translation of tibia on femur! On sagittal MRI, it appears as a DARK DIAGONAL BAND running from front-low to back-high. ACL tears are SUPER COMMON in sports (basketball, football, soccer) - often with a \"pop\" and immediate swelling. ANTERIOR = front side of knee! This is THE most important knee ligament! ⚡"
+  },
+  "msk-knee-anat-3": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 3:",
+    "answers": {
+      "A": "Popliteal artery",
+      "B": "Quadriceps Tendon",
+      "C": "Anterior Cruciate L.",
+      "D": "Patellar tendon"
+    },
+    "correct_answer": "D",
+    "hint": "PATELLAR tendon - BELOW the patella!",
+    "explanation": "**Patellar tendon** - the kneecap anchor! ⚓\n\n💡 **Remember it:** PATELLAR TENDON runs from INFERIOR POLE of PATELLA → TIBIAL TUBEROSITY (bump on front of tibia). It's BELOW the kneecap! It's technically a continuation of the quad tendon - together they form the EXTENSOR MECHANISM. Patellar tendinitis = \"jumper's knee\"! On sagittal MRI, it appears as a THICK DARK BAND from bottom of patella to front of tibia. QUAD above, PATELLAR below! 📍"
+  },
+  "msk-knee-anat-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 4:",
+    "answers": {
+      "A": "Femur",
+      "B": "Tibia",
+      "C": "Patellar tendon",
+      "D": "Patella"
+    },
+    "correct_answer": "B",
+    "hint": "TIBIA - the shin bone!",
+    "explanation": "**Tibia** - the weight-bearing shin bone! 🦴\n\n💡 **Remember it:** TIBIA = SHIN BONE = the LARGER of the two lower leg bones (tibia + fibula). It's the MEDIAL bone (inside) and bears MOST of the body weight! The TIBIAL PLATEAU (flat top) articulates with the femoral condyles - menisci sit between them. TIBIAL TUBEROSITY (bump on front) is where the patellar tendon inserts. On sagittal knee MRI, the tibia is the large flat-topped bone below the joint! Remember: TIB = SHIN! 📏"
+  },
+  "msk-shoulder-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Indications for a shoulder MRI include all the following expect _______.",
+    "answers": {
+      "A": "Post operative follow up",
+      "B": "Chest Pain",
+      "C": "Tumor",
+      "D": "Trauma"
+    },
+    "correct_answer": "B",
+    "hint": "Chest pain? That's a HEART/LUNG problem, not SHOULDER!",
+    "explanation": "**Chest pain** - wrong region! 🚫\n\n💡 **Remember it:** CHEST PAIN = cardiac (heart attack!), pulmonary (PE, pneumonia), GI (reflux), NOT shoulder pathology! Shoulder MRI indications: rotator cuff tears (most common), labral tears, post-op assessment (A), impingement syndrome, AC joint arthritis, tumors (C), fractures/trauma (D), instability/dislocation. Chest pain workup? EKG, chest X-ray, cardiac enzymes - NOT shoulder MRI! Match the symptom to the anatomy! 🎯"
+  },
+  "msk-shoulder-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Which of the following is the only indication for an MRI of the shoulder?",
+    "answers": {
+      "A": "Neck pain",
+      "B": "Headache",
+      "C": "Meniscal tear",
+      "D": "Rotator cuff tear"
+    },
+    "correct_answer": "D",
+    "hint": "Rotator cuff tear - that's a SHOULDER problem!",
+    "explanation": "**Rotator cuff tear** - the #1 shoulder pathology! 💪\n\n💡 **Remember it:** ROTATOR CUFF TEAR = SHOULDER injury! The only shoulder-specific option! Neck pain (A) → cervical spine MRI. Headache (B) → brain MRI. Meniscal tear (C) → KNEE MRI! Rotator cuff = 4 muscles/tendons (supraspinatus, infraspinatus, teres minor, subscapularis) that stabilize the shoulder. SUPRASPINATUS tears are most common! Symptoms: shoulder pain, weakness with overhead activities, night pain. MRI is the gold standard! 🎯"
+  },
+  "msk-shoulder-3": {
+    "question_type": "multiplechoice",
+    "question_text": "When positioning a shoulder, the landmark is the _______________.",
+    "answers": {
+      "A": "Humeral head",
+      "B": "Superior aspect of the sternum",
+      "C": "Clavicle",
+      "D": "Mid-humeral shaft"
+    },
+    "correct_answer": "A",
+    "hint": "HUMERAL HEAD - the ball of the shoulder!",
+    "explanation": "**Humeral head** - center on the ball! ⚽\n\n💡 **Remember it:** The HUMERAL HEAD is the BALL in the shoulder's ball-and-socket joint. Landmark HERE to center your FOV over the glenohumeral joint (where pathology lives!). This ensures you capture the rotator cuff, labrum, glenoid, and acromion. Sternum (B) is too medial. Clavicle (C) is too superior. Mid-shaft (D) is too inferior. HUMERAL HEAD = shoulder landmark! 📍"
+  },
+  "msk-shoulder-4": {
+    "question_type": "multiplechoice",
+    "question_text": "When positioning the shoulder, move the patient as far as possible to:",
+    "answers": {
+      "A": "The affected side",
+      "B": "The unaffected side",
+      "C": "Wherever the patient is most comfortable"
+    },
+    "correct_answer": "B",
+    "hint": "Move TOWARD the GOOD side! Get the bad shoulder closer to isocenter!",
+    "explanation": "**Unaffected side** - maximize SNR on the affected side! 🎯\n\n💡 **Remember it:** Move the patient TOWARD THE GOOD SHOULDER so the BAD/PAINFUL shoulder is as close to ISOCENTER as possible! Why? BEST MAGNETIC FIELD HOMOGENEITY at isocenter = BEST SNR = BEST IMAGE QUALITY! The painful shoulder is what we're scanning - prioritize IT! Don't move toward affected side (A) - that puts it farther from center! Patient comfort matters (C) but image quality matters MORE! Move to the GOOD side! 📊"
+  },
+  "msk-shoulder-5": {
+    "question_type": "multiplechoice",
+    "question_text": "When positioning the shoulder, the humerus and forearm should be:",
+    "answers": {
+      "A": "In the same plane as the shoulder",
+      "B": "Slightly anterior to the shoulder",
+      "C": "Slightly posterior to the shoulder",
+      "D": "Left in the most comfortable position for the patient"
+    },
+    "correct_answer": "A",
+    "hint": "Same plane! Keep everything ALIGNED!",
+    "explanation": "**Same plane as the shoulder** - keep it aligned! 📏\n\n💡 **Remember it:** The ARM (humerus + forearm) should be in the SAME CORONAL PLANE as the SHOULDER - not twisted forward or back! This ensures: (1) True anatomical positioning, (2) Proper visualization of rotator cuff tendons, (3) Consistent imaging planes. If the arm is rotated anterior (B) or posterior (C), you'll get oblique anatomy and miss pathology! Use foam pads to support the arm at the same level as the shoulder. Keep it FLAT and ALIGNED! 🎯"
+  },
+  "msk-shoulder-6": {
+    "question_type": "multiplechoice",
+    "question_text": "The angulation for the oblique coronal plane of the shoulder is parallel to the____________________.",
+    "answers": {
+      "A": "Biceps tendon",
+      "B": "Supraspinatus tendon",
+      "C": "Infraspinatus tendon",
+      "D": "Angle of the glenoid"
+    },
+    "correct_answer": "B",
+    "hint": "SUPRASPINATUS tendon! The most commonly torn rotator cuff muscle!",
+    "explanation": "**Supraspinatus tendon** - the critical oblique coronal angle! 💪\n\n💡 **Remember it:** OBLIQUE CORONAL plane should be PARALLEL to the SUPRASPINATUS TENDON (runs from supraspinatus fossa to greater tuberosity). This gives you the BEST view of the rotator cuff - especially the supraspinatus, which is the MOST COMMONLY TORN! On your axial localizer, draw a line along the supraspinatus tendon, then angle your coronal slices PARALLEL to it. This is an OBLIQUE coronal (not true coronal) - angled to match the tendon! SUPRA = most important! 🎯"
+  },
+  "msk-shoulder-7": {
+    "question_type": "multiplechoice",
+    "question_text": "The coverage for an axial of the shoulder must also include the entire:",
+    "answers": {
+      "A": "Shoulder blade",
+      "B": "Acromial-Clavicular (AC) joint",
+      "C": "Sterna-Clavicular (SC) joint",
+      "D": "Superior half the humeral shaft"
+    },
+    "correct_answer": "B",
+    "hint": "AC joint! The acromial-clavicular joint!",
+    "explanation": "**Acromial-Clavicular (AC) joint** - don't forget the AC! 🔗\n\n💡 **Remember it:** AXIAL SHOULDER coverage MUST include the entire AC JOINT (where acromion meets clavicle)! Why? AC JOINT ARTHRITIS/SEPARATION is a common shoulder pain cause! Coverage: start ABOVE the AC joint, slice down through the entire humeral head. Shoulder blade (A) is too large. SC joint (C) is too medial/anterior. Humeral shaft (D) is inferior to the joint. ALWAYS include the AC joint! 📏"
+  },
+  "msk-shoulder-anat-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 1:",
+    "answers": {
+      "A": "Humeral head",
+      "B": "Glenoid",
+      "C": "Acromion process",
+      "D": "Labrum"
+    },
+    "correct_answer": "C",
+    "hint": "ACROMION - the roof of the shoulder!",
+    "explanation": "**Acromion process** - the shoulder roof! 🏠\n\n💡 **Remember it:** ACROMION is the bony PROJECTION off the SCAPULA that forms the ROOF of the shoulder! It articulates with the CLAVICLE (forming the AC joint). The rotator cuff tendons pass UNDERNEATH the acromion - if there's impingement, the acromion rubs/damages the tendons! On coronal images, it's the BONY HOOK structure sitting ABOVE the humeral head. ACROMION = ROOF! Think: ACROnym for TOP! 🦴"
+  },
+  "msk-shoulder-anat-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 2:",
+    "answers": {
+      "A": "Acromion process",
+      "B": "Labrum",
+      "C": "Biceps tendon",
+      "D": "Glenoid"
+    },
+    "correct_answer": "C",
+    "hint": "BICEPS TENDON - the long head that runs through the joint!",
+    "explanation": "**Biceps tendon** - the groove runner! 💪\n\n💡 **Remember it:** LONG HEAD of the BICEPS TENDON runs through the BICIPITAL GROOVE (between greater and lesser tuberosities) then into the joint to attach to the SUPERIOR LABRUM! On axial/sagittal images, it appears as a SMALL ROUND DARK STRUCTURE in the groove or anterior joint. BICEPS TENDINITIS and SLAP tears (superior labrum anterior-posterior) involve this tendon! It's the only tendon that runs THROUGH the glenohumeral joint! BICEPS = in the groove! 🎯"
+  },
+  "msk-shoulder-anat-3": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 3:",
+    "answers": {
+      "A": "Acromion process",
+      "B": "Labrum",
+      "C": "Biceps tendon",
+      "D": "Glenoid"
+    },
+    "correct_answer": "D",
+    "hint": "GLENOID - the socket of the shoulder!",
+    "explanation": "**Glenoid** - the shallow socket! 🥣\n\n💡 **Remember it:** GLENOID is the SOCKET part of the shoulder's ball-and-socket joint - it's the shallow concave surface on the SCAPULA that articulates with the humeral head. It's covered with cartilage and rimmed by the LABRUM. The glenoid is SHALLOW (unlike the deep hip socket) - that's why shoulders DISLOCATE easily! On coronal images, it's the flat/concave bone the humeral head sits on. GLENOID = SOCKET! Think: GLEN-VOID (empty space for the ball)! 🦴"
+  },
+  "msk-shoulder-anat-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 4:",
+    "answers": {
+      "A": "Acromion process",
+      "B": "Labrum",
+      "C": "Biceps tendon",
+      "D": "Glenoid"
+    },
+    "correct_answer": "B",
+    "hint": "LABRUM - the rim of the shoulder socket!",
+    "explanation": "**Labrum** - the shoulder gasket! 🔄\n\n💡 **Remember it:** LABRUM is the ring of FIBROCARTILAGE that RIMS the glenoid (like the hip labrum rims the acetabulum). It DEEPENS the socket and provides stability! On MRI, it appears as a DARK TRIANGULAR structure at the edge of the glenoid. Labral TEARS are common - especially SLAP tears (superior labrum anterior-posterior) in athletes! Think: LABRUM = LIP of the socket! Bankart lesion = anterior-inferior labral tear! 🎯"
+  },
+  "msk-shoulder-anat-5": {
+    "question_type": "multiplechoice",
+    "question_text": "The arrow identifies:",
+    "answers": {
+      "A": "Humeral head",
+      "B": "Glenoid",
+      "C": "Biceps tendon",
+      "D": "Supraspinatus tendon"
+    },
+    "correct_answer": "D",
+    "hint": "SUPRASPINATUS - the most commonly torn rotator cuff tendon!",
+    "explanation": "**Supraspinatus tendon** - the tear magnet! 💪\n\n💡 **Remember it:** SUPRASPINATUS TENDON runs from the SUPRASPINATUS MUSCLE (in the supraspinatus fossa on top of scapula) to the GREATER TUBEROSITY of the humerus. It's the MOST COMMONLY TORN rotator cuff tendon! Why? It passes under the acromion in a tight space - chronic impingement → degeneration → tear! On coronal oblique images, it's the DARK BAND running from muscle to bone, just below the acromion. SUPRA = ON TOP = most vulnerable! ⚡"
+  },
+  "msk-elbow-1": {
+    "question_type": "multiplechoice",
+    "question_text": "The elbow is comprised of the following bones:",
+    "answers": {
+      "A": "Humerus, Ulna, Tibia",
+      "B": "Ulna, Radius, Capitate",
+      "C": "Radius, Ulna, Shoulder",
+      "D": "Humerus, Ulna, Radius"
+    },
+    "correct_answer": "D",
+    "hint": "HUR! Humerus, Ulna, Radius!",
+    "explanation": "**Humerus, Ulna, Radius** - the elbow trio! 🦴\n\n💡 **Remember it:** HUR (like \"her\")! HUMERUS (upper arm bone) articulates with ULNA (medial forearm bone with the olecranon) and RADIUS (lateral forearm bone). Tibia (A) is the shin bone (leg, not arm!). Capitate (B) is a wrist bone. Shoulder (C) is not a bone! The elbow has THREE articulations: humeroulnar, humeroradial, and radioulnar. HUR = elbow bones! 🎯"
+  },
+  "msk-elbow-2": {
+    "question_type": "multiplechoice",
+    "question_text": "An advantage for positioning the elbow by the side is greater patient comfort. A disadvantage is_________________:",
+    "answers": {
+      "A": "Higher SAR",
+      "B": "Respiratory motion artifacts",
+      "C": "Lower magnetic field homogeneity",
+      "D": "Longer scan times"
+    },
+    "correct_answer": "C",
+    "hint": "Lower homogeneity! You're away from isocenter!",
+    "explanation": "**Lower magnetic field homogeneity** - away from the sweet spot! 🧲\n\n💡 **Remember it:** Elbow BY THE SIDE = patient is COMFORTABLE (arm rests naturally), BUT the elbow is FAR FROM ISOCENTER! Away from isocenter = WORSE B0 HOMOGENEITY = lower SNR, more artifacts, worse image quality! Ideal positioning = elbow OVERHEAD (\"Superman position\") at isocenter, but this is UNCOMFORTABLE for patients (can't hold still, painful). Trade-off: comfort vs. image quality! BY SIDE = comfy but lower homogeneity! 📊"
+  },
+  "msk-elbow-3": {
+    "question_type": "multiplechoice",
+    "question_text": "The landmark for the elbow is:",
+    "answers": {
+      "A": "Mid humerus",
+      "B": "Mid radius",
+      "C": "Mid ulna",
+      "D": "Center of the elbow"
+    },
+    "correct_answer": "D",
+    "hint": "CENTER! Right at the joint!",
+    "explanation": "**Center of the elbow** - right at the joint! 🎯\n\n💡 **Remember it:** Landmark at the CENTER OF THE ELBOW JOINT (where humerus meets radius/ulna). This centers your FOV over the most important structures: distal humerus, olecranon, radial head, biceps/triceps tendon insertions, collateral ligaments. Mid-humerus (A) is too proximal. Mid-radius/ulna (B, C) is too distal. CENTER = best coverage! Feel for the bony landmarks and center between them! 📍"
+  },
+  "msk-elbow-4": {
+    "question_type": "multiplechoice",
+    "question_text": "For elbow imaging, it is essential to include the________________.",
+    "answers": {
+      "A": "Triceps muscle",
+      "B": "Biceps muscle",
+      "C": "Biceps tendon insertion",
+      "D": "Triceps ligament insertion"
+    },
+    "correct_answer": "C",
+    "hint": "BICEPS TENDON INSERTION! Where it attaches to the radius!",
+    "explanation": "**Biceps tendon insertion** - the distal biceps attachment! 💪\n\n💡 **Remember it:** The DISTAL BICEPS TENDON inserts on the RADIAL TUBEROSITY (bump on the radius). DISTAL BICEPS RUPTURE is a common injury (\"Popeye deformity\" - biceps bunches up in the arm)! You MUST include this insertion in your FOV to evaluate for tears! Triceps muscle (A) and biceps muscle (B) are too far proximal. There's no \"triceps ligament\" (D). BICEPS TENDON INSERTION = critical! Don't miss it! 🎯"
+  },
+  "msk-elbow-5": {
+    "question_type": "multiplechoice",
+    "question_text": "The angulation for a sagittal elbow is__________________.",
+    "answers": {
+      "A": "Perpendicular to the plane of the lateral and medial condyles",
+      "B": "Parallel to the plane of the lateral and medial condyles",
+      "C": "Parallel to the plane of the humeral shaft",
+      "D": "Perpendicular to the plane of the humeral shaft"
+    },
+    "correct_answer": "A",
+    "hint": "PERPENDICULAR! Sagittal cuts 90° across the condyles!",
+    "explanation": "**Perpendicular to the plane of the condyles** - true sagittal! 📐\n\n💡 **Remember it:** Draw a line connecting the LATERAL and MEDIAL EPICONDYLES (bony bumps on sides of elbow). Your SAGITTAL slices should cut PERPENDICULAR (90°) to this line! This gives you TRUE SAGITTAL anatomy - you'll see the trochlea, olecranon, radial head, biceps/triceps tendons cleanly. PARALLEL (B) would give you weird coronal-ish cuts! PERPENDICULAR = proper sagittal! Use your axial localizer to angle it right! 🎯"
+  },
+  "msk-elbow-anat-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 1:",
+    "answers": {
+      "A": "Biceps tendon insertion",
+      "B": "Trochlea",
+      "C": "Olecranon process",
+      "D": "Triceps tendon"
+    },
+    "correct_answer": "D",
+    "hint": "TRICEPS TENDON - the elbow extender!",
+    "explanation": "**Triceps tendon** - the back-of-arm tendon! 💪\n\n💡 **Remember it:** TRICEPS TENDON inserts on the OLECRANON PROCESS (tip of ulna). It's the EXTENSOR of the elbow - straightens the arm! On sagittal MRI, it appears as a THICK DARK BAND running from the triceps muscle (posterior arm) to the olecranon. TRICEPS RUPTURE is less common than biceps but can occur! The triceps is POSTERIOR, biceps is ANTERIOR! Remember: TRI = 3 heads = back of arm! 🎯"
+  },
+  "msk-elbow-anat-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 2:",
+    "answers": {
+      "A": "Biceps tendon insertion",
+      "B": "Trochlea",
+      "C": "Olecranon process",
+      "D": "Triceps tendon"
+    },
+    "correct_answer": "C",
+    "hint": "OLECRANON - the pointy elbow!",
+    "explanation": "**Olecranon process** - your pointy elbow! 🦴\n\n💡 **Remember it:** OLECRANON PROCESS is the LARGE BONY PROMINENCE at the PROXIMAL END of the ULNA - it's what you feel when you touch your \"elbow point\"! It's where the TRICEPS TENDON inserts. When you flex your elbow, the olecranon fits into the OLECRANON FOSSA on the back of the humerus! On sagittal MRI, it's the large triangular bone at the back of the elbow. OLECRANON = your elbow bump! Feel it on yourself! 📍"
+  },
+  "msk-elbow-anat-3": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 3:",
+    "answers": {
+      "A": "Biceps tendon insertion",
+      "B": "Trochlea",
+      "C": "Olecranon process",
+      "D": "Triceps tendon"
+    },
+    "correct_answer": "B",
+    "hint": "TROCHLEA - the spool-shaped part of the humerus!",
+    "explanation": "**Trochlea** - the spool! 🎡\n\n💡 **Remember it:** TROCHLEA is the MEDIAL, SPOOL-SHAPED part of the DISTAL HUMERUS that articulates with the ULNA (humeroulnar joint). It's shaped like a pulley/spool - the ulna wraps around it when you flex/extend! On sagittal MRI, it appears as a ROUNDED INDENTATION on the distal humerus. TROCHLEA = medial side. CAPITELLUM = lateral side (articulates with radius). Think: TROCHlea = TROLLEY (like a pulley)! 🦴"
+  },
+  "msk-elbow-anat-4": {
+    "question_type": "multiplechoice",
+    "question_text": "Label 4:",
+    "answers": {
+      "A": "Biceps tendon insertion",
+      "B": "Trochlea",
+      "C": "Olecranon process",
+      "D": "Triceps tendon"
+    },
+    "correct_answer": "A",
+    "hint": "BICEPS TENDON INSERTION - where it attaches to the radius!",
+    "explanation": "**Biceps tendon insertion** - the Popeye preventer! 💪\n\n💡 **Remember it:** DISTAL BICEPS TENDON inserts on the RADIAL TUBEROSITY (bump on the proximal radius). It's the FLEXOR and SUPINATOR of the forearm (bends elbow, turns palm up)! When this tears (distal biceps rupture), you get the \"POPEYE DEFORMITY\" - biceps muscle bunches up in the arm! On sagittal MRI, it appears as a DARK BAND running from the biceps to the radius. BICEPS = FRONT/ANTERIOR! Critical to image this insertion! 🎯"
+  },
+  "msk-wrist-1": {
+    "question_type": "multiplechoice",
+    "question_text": "Which indication is specific only to wrist MRI?",
+    "answers": {
+      "A": "Degenerative joint disease (DJD)",
+      "B": "Arthritis",
+      "C": "Trauma",
+      "D": "Carpel tunnel syndrome"
+    },
+    "correct_answer": "D",
+    "hint": "CARPAL TUNNEL! The median nerve compression syndrome!",
+    "explanation": "**Carpal tunnel syndrome** - wrist-specific! ✋\n\n💡 **Remember it:** CARPAL TUNNEL SYNDROME = MEDIAN NERVE compression in the CARPAL TUNNEL (wrist)! This is UNIQUE to the wrist! Symptoms: numbness/tingling in thumb, index, middle fingers, worse at night. MRI shows enlarged median nerve, tenosynovitis, muscle atrophy. DJD (A), arthritis (B), and trauma (C) can occur in ANY joint. But CARPAL TUNNEL? Only happens at the WRIST! Think: CARPal = wrist bones! 🎯"
+  },
+  "msk-wrist-2": {
+    "question_type": "multiplechoice",
+    "question_text": "Landmark the wrist at ________________.",
+    "answers": {
+      "A": "½\" distal to the wrist joint at the capitate bone",
+      "B": "1\" proximal to the wrist joint at the capitate bone",
+      "C": "The wrist joint",
+      "D": "The center of the metacarpal bones"
+    },
+    "correct_answer": "A",
+    "hint": "½ inch DISTAL to the joint, at the CAPITATE!",
+    "explanation": "**½\" distal to wrist joint at capitate** - slightly offset! 🦴\n\n💡 **Remember it:** Landmark ½ INCH (1.3 cm) DISTAL (toward fingers) from the wrist joint, centered on the CAPITATE BONE (largest carpal bone, center of proximal carpal row). This ensures good coverage of: radiocarpal joint, carpal bones, TFCC (triangular fibrocartilage complex), distal radius/ulna, proximal metacarpals. Don't landmark exactly AT the joint (C) - you'll miss distal structures! Don't go proximal (B) - you'll miss the carpals! ½\" DISTAL at CAPITATE = perfect! 📍"
+  }
+}
+

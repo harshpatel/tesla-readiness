@@ -31,6 +31,8 @@ const QUIZ_ICONS: Record<string, string> = {
   'subatomic-principles-fundamentals': '⚛️',
   'instrumentation-magnets-fundamentals': '🧲',
   'mri-safety-magnetic-fields-fundamentals': '⚠️',
+  'mri-safety-rf-gradient-fundamentals': '📡',
+  'msk-procedures-fundamentals': '🦴',
 };
 
 // Mapping of quiz slug to numbered hint file
@@ -48,6 +50,8 @@ const QUIZ_FILE_NUMBERS: Record<string, string> = {
   'subatomic-principles-fundamentals': '11',
   'instrumentation-magnets-fundamentals': '12',
   'mri-safety-magnetic-fields-fundamentals': '13',
+  'mri-safety-rf-gradient-fundamentals': '14',
+  'msk-procedures-fundamentals': '15',
 };
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
