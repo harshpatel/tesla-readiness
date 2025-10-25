@@ -100,7 +100,7 @@ export default function DocumentViewer({
             {checkboxes.map((item, index) => (
               <label
                 key={index}
-                className="flex items-start gap-3 p-4 rounded-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:bg-slate-900 cursor-pointer transition-colors"
+                className="flex items-start gap-3 p-4 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-gray-50 dark:hover:bg-slate-700 cursor-pointer transition-colors"
               >
                 <input
                   type="checkbox"
@@ -136,8 +136,8 @@ export default function DocumentViewer({
 
       {/* Completed State */}
       {isCompleted && (
-        <div className="p-8 bg-green-50">
-          <div className="flex items-center justify-center gap-3 text-green-700 mb-4">
+        <div className="p-8 bg-green-50 dark:bg-green-900/20">
+          <div className="flex items-center justify-center gap-3 text-green-700 dark:text-green-400 mb-4">
             <span className="text-3xl">✓</span>
             <h2 className="text-2xl font-bold">Agreement Completed!</h2>
           </div>

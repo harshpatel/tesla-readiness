@@ -113,8 +113,8 @@ export default function VideoPlayer({ videoUrl, userId, contentItemId, isComplet
       )}
 
       {hasWatched && (
-        <div className="p-6 border-t border-gray-200 dark:border-slate-700 bg-green-50">
-          <div className="flex items-center justify-center gap-2 text-green-700">
+        <div className="p-6 border-t border-gray-200 dark:border-slate-700 bg-green-50 dark:bg-green-900/20">
+          <div className="flex items-center justify-center gap-2 text-green-700 dark:text-green-400">
             <span className="text-2xl">✓</span>
             <span className="font-semibold">You've completed this video!</span>
           </div>
