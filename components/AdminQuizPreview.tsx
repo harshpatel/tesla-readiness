@@ -212,7 +212,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
     <div className="fixed inset-0 bg-black/60 backdrop-blur-[8px] flex items-center justify-center z-50 p-4 animate-[fadeIn_0.3s_ease-out]">
       <div className="bg-white dark:bg-slate-800 rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] w-full max-w-4xl max-h-[95vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
         {/* Header */}
-        <div className="bg-gradient-to-b from-[#f0f8ff] to-white px-8 py-6 border-b border-[#e0e0e0]">
+        <div className="bg-gradient-to-b from-[#f0f8ff] to-white dark:from-slate-700 dark:to-slate-800 px-8 py-6 border-b border-[#e0e0e0] dark:border-slate-700">
           <div className="flex items-center justify-between">
             <div>
               <h2 className="text-[28px] font-bold text-[#1a1a1a] tracking-tight">
@@ -334,14 +334,14 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
               <button
                 onClick={prevQuestion}
                 disabled={currentQuestionIndex === 0}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 disabled:text-gray-400 rounded-lg transition-colors font-medium"
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 dark:hover:bg-slate-600 dark:disabled:bg-slate-800 disabled:text-gray-400 rounded-lg transition-colors font-medium"
               >
                 ← Previous
               </button>
               <button
                 onClick={nextQuestion}
                 disabled={currentQuestionIndex === questions.length - 1}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 disabled:text-gray-400 rounded-lg transition-colors font-medium"
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 dark:hover:bg-slate-600 dark:disabled:bg-slate-800 disabled:text-gray-400 rounded-lg transition-colors font-medium"
               >
                 Next →
               </button>
@@ -372,7 +372,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
               <button
                 onClick={() => setShowConfirmModal(false)}
                 disabled={isSaving}
-                className="flex-1 px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded-lg transition-colors font-medium"
+                className="flex-1 px-4 py-2 bg-gray-200 hover:bg-gray-300 dark:bg-slate-700 dark:hover:bg-slate-600 dark:text-white rounded-lg transition-colors font-medium"
               >
                 Cancel
               </button>
@@ -393,7 +393,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
         <div className="fixed inset-0 bg-black/60 backdrop-blur-[8px] flex items-center justify-center z-[60] animate-[fadeIn_0.3s_ease-out]">
           <div className="bg-white dark:bg-slate-800 rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] max-w-3xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
             {/* Header */}
-            <div className="bg-gradient-to-b from-[#d5f4e6] to-[#b8e5d2] px-8 py-6 border-b border-gray-200 dark:border-slate-700">
+            <div className="bg-gradient-to-b from-[#d5f4e6] to-[#b8e5d2] dark:from-green-900/30 dark:to-green-800/30 px-8 py-6 border-b border-gray-200 dark:border-slate-700">
               <div className="flex items-center gap-3">
                 <span className="text-5xl animate-[celebrate_0.6s_ease]">🎉</span>
                 <div>
@@ -435,7 +435,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
                 {saveResults.map((result, idx) => (
                   <div 
                     key={idx} 
-                    className="border border-[#e0e0e0] rounded-[12px] p-5 bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300"
+                    className="border border-[#e0e0e0] dark:border-slate-700 rounded-[12px] p-5 bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
