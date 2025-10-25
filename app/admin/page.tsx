@@ -93,7 +93,7 @@ export default async function AdminPage() {
     .select('*');
   
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900">
       <Header title="Admin Dashboard" showAuth={true} showBackButton={true} userEmail={user?.email} isAdmin={userIsAdmin} />
       
       <main className="flex-1 p-4">
@@ -101,7 +101,7 @@ export default async function AdminPage() {
         <div className="mb-6 flex gap-4">
           <a
             href="/admin/quizzes"
-            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg"
+            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 dark:hover:from-blue-600 dark:hover:to-indigo-600 transition-all shadow-md hover:shadow-lg"
           >
             📝 View Quiz Data (Source of Truth)
           </a>

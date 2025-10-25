@@ -81,7 +81,7 @@ export default async function AdminQuizzesPage() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900">
       <Header title="Admin - Quiz Data" showAuth userEmail={user?.email} isAdmin={userIsAdmin} />
       <AdminQuizzesClient 
         quizzes={quizzes || []}

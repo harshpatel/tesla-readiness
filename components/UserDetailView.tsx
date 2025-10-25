@@ -207,19 +207,19 @@ export default function UserDetailView({
   return (
     <div className="max-w-[1600px] mx-auto">
       {/* Compact User Header */}
-      <div className="mb-4 p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+      <div className="mb-4 p-3 bg-white dark:bg-slate-800 rounded-lg border border-gray-200 dark:border-slate-700 shadow-sm">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <div className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white text-lg font-bold">
               {(userProfile.first_name || userProfile.full_name || userProfile.email).charAt(0).toUpperCase()}
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">
+              <h1 className="text-xl font-bold text-gray-900 dark:text-white">
                 {userProfile.first_name && userProfile.last_name 
                   ? `${userProfile.first_name} ${userProfile.last_name}` 
                   : userProfile.full_name || userProfile.email}
               </h1>
-              <div className="flex items-center gap-2 text-xs text-gray-600">
+              <div className="flex items-center gap-2 text-xs text-gray-600 dark:text-gray-400">
                 <span>{userProfile.email}</span>
                 {userProfile.phone && (
                   <>
@@ -266,37 +266,37 @@ export default function UserDetailView({
           { label: 'Documents', value: `${documentsCompleted}/${documentItems.length}`, color: documentsCompleted === documentItems.length ? 'text-green-700 font-semibold' : 'text-gray-700' },
           { label: 'Avg Score', value: `${avgScore}%`, color: getProgressColor(avgScore) },
         ].map((stat, index) => (
-          <div key={stat.label} className="p-2 bg-white rounded border border-gray-200">
-            <div className="text-xs text-gray-600 mb-0.5">{stat.label}</div>
+          <div key={stat.label} className="p-2 bg-white dark:bg-slate-800 rounded border border-gray-200 dark:border-slate-700">
+            <div className="text-xs text-gray-600 dark:text-gray-400 mb-0.5">{stat.label}</div>
             <div className={`text-lg font-bold ${stat.color}`}>{stat.value}</div>
           </div>
         ))}
       </div>
 
       {/* Detailed Progress Table */}
-      <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
-        <div className="bg-gray-50 px-3 py-2 border-b border-gray-200">
-          <h2 className="text-sm font-bold text-gray-900">Detailed Progress Breakdown</h2>
+      <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-gray-50 dark:bg-slate-900 px-3 py-2 border-b border-gray-200 dark:border-slate-700">
+          <h2 className="text-sm font-bold text-gray-900 dark:text-white">Detailed Progress Breakdown</h2>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full text-sm border-collapse">
-            <thead className="bg-gray-100 border-b-2 border-gray-400 sticky top-0">
+            <thead className="bg-gray-100 dark:bg-slate-700 border-b-2 border-gray-400 sticky top-0">
               <tr>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap w-10 border-r border-gray-300"></th>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Section / Module / Content</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Type</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Status</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-blue-50">Progress %</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-green-50">Score %</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Attempts</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Items Completed</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">Items Total</th>
-                <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-orange-50">Time Spent (min)</th>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-gray-100">Created</th>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-gray-100">Last Accessed</th>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-gray-100">Completed At</th>
-                <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-gray-100">Updated At</th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap w-10 border-r border-gray-300 dark:border-slate-600"></th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Section / Module / Content</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Type</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Status</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50">Progress %</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-green-50">Score %</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Attempts</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Items Completed</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">Items Total</th>
+                <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-orange-50">Time Spent (min)</th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-gray-100 dark:bg-slate-700">Created</th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-gray-100 dark:bg-slate-700">Last Accessed</th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-gray-100 dark:bg-slate-700">Completed At</th>
+                <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-gray-100 dark:bg-slate-700">Updated At</th>
               </tr>
             </thead>
             <tbody>
@@ -312,15 +312,15 @@ export default function UserDetailView({
                       className={`${sectionIdx % 2 === 0 ? 'bg-blue-50' : 'bg-blue-100'} hover:bg-blue-200 cursor-pointer border-t-2 border-gray-300`}
                       onClick={() => toggleSection(section.id)}
                     >
-                      <td className="px-3 py-2 text-center border-r border-gray-300">
-                        <span className="text-gray-700 font-bold">{isExpanded ? '▼' : '▶'}</span>
+                      <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
+                        <span className="text-gray-700 dark:text-gray-300 font-bold">{isExpanded ? '▼' : '▶'}</span>
                       </td>
-                      <td className="px-3 py-2 font-bold text-gray-900 border-r border-gray-300">
+                      <td className="px-3 py-2 font-bold text-gray-900 dark:text-white border-r border-gray-300 dark:border-slate-600">
                         <span className="mr-2">{section.icon}</span>
                         {section.title}
                       </td>
-                      <td className="px-3 py-2 text-center text-gray-600 font-medium border-r border-gray-300">Section</td>
-                      <td className="px-3 py-2 text-center border-r border-gray-300">
+                      <td className="px-3 py-2 text-center text-gray-600 dark:text-gray-400 font-medium border-r border-gray-300 dark:border-slate-600">Section</td>
+                      <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
                         {sectionProg && sectionProg.completed_modules === sectionProg.total_modules ? (
                           <span className="text-green-700 font-semibold">✓ Complete</span>
                         ) : (
@@ -330,21 +330,21 @@ export default function UserDetailView({
                       <td className={`px-3 py-2 text-center font-semibold border-r border-gray-300 ${getProgressColor(sectionProg?.progress_percent || 0)}`}>
                         {sectionProg?.progress_percent || 0}%
                       </td>
-                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{sectionProg?.completed_modules || 0}</td>
-                      <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{sectionProg?.total_modules || 0}</td>
-                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                      <td className="px-3 py-2 text-center font-medium border-r border-gray-300 dark:border-slate-600">{sectionProg?.completed_modules || 0}</td>
+                      <td className="px-3 py-2 text-center font-medium border-r border-gray-300 dark:border-slate-600">{sectionProg?.total_modules || 0}</td>
+                      <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                      <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                         {sectionProg?.last_accessed_at ? (
                           <span title={formatDateTime(sectionProg.last_accessed_at)} className="cursor-help">
                             {formatRelativeTime(sectionProg.last_accessed_at)}
                           </span>
                         ) : '-'}
                       </td>
-                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
+                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                      <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
                     </tr>
 
                     {/* Module Rows (if expanded) */}
@@ -356,13 +356,13 @@ export default function UserDetailView({
                         <React.Fragment key={module.id}>
                           {/* Module Row */}
                           <tr className={`${sectionIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-yellow-50 border-b border-gray-200`}>
-                            <td className="px-3 py-2 border-r border-gray-300"></td>
-                            <td className="px-3 py-2 pl-6 font-semibold text-gray-800 border-r border-gray-300">
+                            <td className="px-3 py-2 border-r border-gray-300 dark:border-slate-600"></td>
+                            <td className="px-3 py-2 pl-6 font-semibold text-gray-800 dark:text-gray-200 border-r border-gray-300 dark:border-slate-600">
                               <span className="mr-2">{module.icon}</span>
                               {module.title}
                             </td>
-                            <td className="px-3 py-2 text-center text-gray-600 border-r border-gray-300">Module</td>
-                            <td className="px-3 py-2 text-center border-r border-gray-300">
+                            <td className="px-3 py-2 text-center text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">Module</td>
+                            <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
                               {moduleProg && moduleProg.completed_items === moduleProg.total_items ? (
                                 <span className="text-green-700 font-semibold">✓ Complete</span>
                               ) : (
@@ -372,21 +372,21 @@ export default function UserDetailView({
                             <td className={`px-3 py-2 text-center font-medium border-r border-gray-300 ${getProgressColor(moduleProg?.progress_percent || 0)}`}>
                               {moduleProg?.progress_percent || 0}%
                             </td>
-                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{moduleProg?.completed_items || 0}</td>
-                            <td className="px-3 py-2 text-center font-medium border-r border-gray-300">{moduleProg?.total_items || 0}</td>
-                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                            <td className="px-3 py-2 text-center font-medium border-r border-gray-300 dark:border-slate-600">{moduleProg?.completed_items || 0}</td>
+                            <td className="px-3 py-2 text-center font-medium border-r border-gray-300 dark:border-slate-600">{moduleProg?.total_items || 0}</td>
+                            <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                            <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                               {moduleProg?.last_accessed_at ? (
                                 <span title={formatDateTime(moduleProg.last_accessed_at)} className="cursor-help">
                                   {formatRelativeTime(moduleProg.last_accessed_at)}
                                 </span>
                               ) : '-'}
                             </td>
-                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
-                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300">-</td>
+                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                            <td className="px-3 py-2 text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
                           </tr>
 
                           {/* Content Item Rows */}
@@ -395,17 +395,17 @@ export default function UserDetailView({
                             
                             return (
                               <tr key={content.id} className={`${sectionIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-green-50 border-b border-gray-100`}>
-                                <td className="px-3 py-2 border-r border-gray-300"></td>
-                                <td className="px-3 py-2 pl-12 text-gray-700 border-r border-gray-300">
+                                <td className="px-3 py-2 border-r border-gray-300 dark:border-slate-600"></td>
+                                <td className="px-3 py-2 pl-12 text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-slate-600">
                                   <span className="mr-2">{content.icon}</span>
                                   {content.title}
                                 </td>
-                                <td className="px-3 py-2 text-center border-r border-gray-300">
-                                  <span className="inline-block px-2 py-0.5 bg-gray-200 text-gray-700 rounded text-xs font-medium">
+                                <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
+                                  <span className="inline-block px-2 py-0.5 bg-gray-200 text-gray-700 dark:text-gray-300 rounded text-xs font-medium">
                                     {content.type}
                                   </span>
                                 </td>
-                                <td className="px-3 py-2 text-center border-r border-gray-300">
+                                <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.completed ? (
                                     <span className="text-green-700 font-semibold">✓ Complete</span>
                                   ) : contentProg ? (
@@ -414,14 +414,14 @@ export default function UserDetailView({
                                     <span className="text-gray-400">Not Started</span>
                                   )}
                                 </td>
-                                <td className="px-3 py-2 text-center font-medium border-r border-gray-300">
+                                <td className="px-3 py-2 text-center font-medium border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.completed ? (
                                     <span className="text-green-700 font-semibold">100%</span>
                                   ) : (
                                     <span className="text-gray-400">0%</span>
                                   )}
                                 </td>
-                                <td className="px-3 py-2 text-center border-r border-gray-300">
+                                <td className="px-3 py-2 text-center border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.score !== null && contentProg?.score !== undefined ? (
                                     <span className={`font-medium ${getProgressColor(contentProg.score)}`}>
                                       {Math.round(contentProg.score)}%
@@ -430,36 +430,36 @@ export default function UserDetailView({
                                     <span className="text-gray-400">-</span>
                                   )}
                                 </td>
-                                <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-300">
+                                <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.attempts || 0}
                                 </td>
-                                <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                                <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300">-</td>
-                                <td className="px-3 py-2 text-center text-gray-600 border-r border-gray-300">
+                                <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                                <td className="px-3 py-2 text-center text-gray-400 border-r border-gray-300 dark:border-slate-600">-</td>
+                                <td className="px-3 py-2 text-center text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.time_spent_seconds ? Math.round(contentProg.time_spent_seconds / 60) : '-'}
                                 </td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.created_at ? (
                                     <span title={formatDateTime(contentProg.created_at)} className="cursor-help">
                                       {formatRelativeTime(contentProg.created_at)}
                                     </span>
                                   ) : '-'}
                                 </td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.last_accessed_at ? (
                                     <span title={formatDateTime(contentProg.last_accessed_at)} className="cursor-help">
                                       {formatRelativeTime(contentProg.last_accessed_at)}
                                     </span>
                                   ) : '-'}
                                 </td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.completed_at ? (
                                     <span title={formatDateTime(contentProg.completed_at)} className="cursor-help">
                                       {formatRelativeTime(contentProg.completed_at)}
                                     </span>
                                   ) : '-'}
                                 </td>
-                                <td className="px-3 py-2 text-gray-600 border-r border-gray-300">
+                                <td className="px-3 py-2 text-gray-600 dark:text-gray-400 border-r border-gray-300 dark:border-slate-600">
                                   {contentProg?.updated_at ? (
                                     <span title={formatDateTime(contentProg.updated_at)} className="cursor-help">
                                       {formatRelativeTime(contentProg.updated_at)}

@@ -241,62 +241,62 @@ export default function AdminTable({
 
   if (error) {
     return (
-      <div className="bg-white rounded-lg shadow p-6 text-center">
+      <div className="bg-white dark:bg-slate-800 rounded-lg shadow p-6 text-center">
         <div className="text-red-600 mb-2">⚠️ Error loading data</div>
-        <div className="text-sm text-gray-600">{error.message}</div>
+        <div className="text-sm text-gray-600 dark:text-gray-400">{error.message}</div>
       </div>
     );
   }
 
   if (sortedUsers.length === 0) {
     return (
-      <div className="bg-white rounded-lg shadow p-12 text-center">
+      <div className="bg-white dark:bg-slate-800 rounded-lg shadow p-12 text-center">
         <div className="text-5xl mb-4">👥</div>
-        <p className="text-gray-600">No users found</p>
+        <p className="text-gray-600 dark:text-gray-400">No users found</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+    <div className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-gray-200 dark:border-slate-700 overflow-hidden">
       {/* Header */}
-      <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
-        <h2 className="text-lg font-bold text-gray-900">User Progress Overview</h2>
-        <p className="text-xs text-gray-600 mt-1">{sortedUsers.length} total users • Click column headers to sort</p>
+      <div className="bg-gray-50 dark:bg-slate-900 px-4 py-3 border-b border-gray-200 dark:border-slate-700">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white">User Progress Overview</h2>
+        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{sortedUsers.length} total users • Click column headers to sort</p>
       </div>
 
       {/* Table */}
       <div className="overflow-x-auto">
         <table className="w-full text-sm border-collapse">
-          <thead className="bg-gray-100 border-b-2 border-gray-400 sticky top-0">
+          <thead className="bg-gray-100 dark:bg-slate-700 border-b-2 border-gray-400 sticky top-0">
             <tr>
               {/* Basic Info */}
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('name')}
               >
                 Name <SortIcon columnKey="name" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('email')}
               >
                 Email <SortIcon columnKey="email" />
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">
                 Phone
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">
                 DOB
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('role')}
               >
                 Role <SortIcon columnKey="role" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('joined')}
               >
                 Joined <SortIcon columnKey="joined" />
@@ -304,13 +304,13 @@ export default function AdminTable({
               
               {/* Activity */}
               <th 
-                className="px-3 py-2 text-center font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('streak')}
               >
                 Streak <SortIcon columnKey="streak" />
               </th>
               <th 
-                className="px-3 py-2 text-left font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300"
+                className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600"
                 onClick={() => handleSort('lastActivity')}
               >
                 Last Active <SortIcon columnKey="lastActivity" />
@@ -318,52 +318,52 @@ export default function AdminTable({
               
               {/* Overall Progress */}
               <th 
-                className="px-3 py-2 text-center font-semibold text-gray-700 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 bg-blue-50"
+                className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 cursor-pointer hover:bg-gray-200 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50"
                 onClick={() => handleSort('overall')}
               >
                 Overall % <SortIcon columnKey="overall" />
               </th>
               
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-blue-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-blue-50">
                 Total Items
               </th>
               
               {/* Content Breakdown */}
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">
                 Videos
               </th>
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">
                 Quizzes
               </th>
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600">
                 Documents
               </th>
               
               {/* All Sections Progress */}
               {sections.map(section => (
-                <th key={section.id} className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-purple-50">
+                <th key={section.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-purple-50">
                   {section.icon} {section.title}
                 </th>
               ))}
               
               {/* ALL Modules Progress */}
               {modules.map(module => (
-                <th key={module.id} className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-green-50">
+                <th key={module.id} className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-green-50">
                   {module.icon} {module.title}
                 </th>
               ))}
               
               {/* Additional Metadata Columns */}
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-yellow-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
                 Total Attempts
               </th>
-              <th className="px-3 py-2 text-center font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-yellow-50">
+              <th className="px-3 py-2 text-center font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
                 Avg Score
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-yellow-50">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
                 Account Created
               </th>
-              <th className="px-3 py-2 text-left font-semibold text-gray-700 whitespace-nowrap border-r border-gray-300 bg-yellow-50">
+              <th className="px-3 py-2 text-left font-semibold text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-300 dark:border-slate-600 bg-yellow-50">
                 Full Name
               </th>
             </tr>
@@ -385,36 +385,36 @@ export default function AdminTable({
                   onClick={() => router.push(`/admin/user/${user.id}`)}
                 >
                   {/* Basic Info */}
-                  <td className="px-3 py-2 font-medium text-gray-900 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 font-medium text-gray-900 dark:text-white whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {user.first_name && user.last_name ? `${user.first_name} ${user.last_name}` : user.full_name || '-'}
                   </td>
-                  <td className="px-3 py-2 text-gray-700 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {user.email}
                   </td>
-                  <td className="px-3 py-2 text-gray-600 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {user.phone || '-'}
                   </td>
-                  <td className="px-3 py-2 text-gray-600 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {user.date_of_birth ? formatDate(user.date_of_birth) : '-'}
                   </td>
-                  <td className="px-3 py-2 border-r border-gray-200">
+                  <td className="px-3 py-2 border-r border-gray-200 dark:border-slate-700">
                     <span className={`inline-block px-2 py-0.5 rounded text-xs font-medium border ${getRoleColor(user.role)}`}>
                       {getRoleLabel(user.role)}
                     </span>
                   </td>
-                  <td className="px-3 py-2 text-gray-600 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {formatDate(user.created_at)}
                   </td>
                   
                   {/* Activity */}
-                  <td className="px-3 py-2 text-center font-semibold border-r border-gray-200">
+                  <td className="px-3 py-2 text-center font-semibold border-r border-gray-200 dark:border-slate-700">
                     {user.current_streak > 0 ? (
                       <span className="text-orange-600">{user.current_streak}🔥</span>
                     ) : (
                       <span className="text-gray-400">-</span>
                     )}
                   </td>
-                  <td className="px-3 py-2 text-gray-600 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {formatDate(user.last_activity_date)}
                   </td>
                   
@@ -423,7 +423,7 @@ export default function AdminTable({
                     {user.overallProgress}%
                   </td>
                   
-                  <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-200">
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
                     <span className={user.videosCompleted + user.quizzesCompleted + user.documentsCompleted === totalContentItems ? 'text-green-700 font-semibold' : 'font-medium'}>
                       {user.videosCompleted + user.quizzesCompleted + user.documentsCompleted}
                     </span>
@@ -431,19 +431,19 @@ export default function AdminTable({
                   </td>
                   
                   {/* Content Breakdown */}
-                  <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-200">
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
                     <span className={user.videosCompleted === user.videosTotal ? 'text-green-700 font-semibold' : ''}>
                       {user.videosCompleted}
                     </span>
                     <span className="text-gray-400">/{user.videosTotal}</span>
                   </td>
-                  <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-200">
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
                     <span className={user.quizzesCompleted === user.quizzesTotal ? 'text-green-700 font-semibold' : ''}>
                       {user.quizzesCompleted}
                     </span>
                     <span className="text-gray-400">/{user.quizzesTotal}</span>
                   </td>
-                  <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-200">
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
                     <span className={user.documentsCompleted === user.documentsTotal ? 'text-green-700 font-semibold' : ''}>
                       {user.documentsCompleted}
                     </span>
@@ -471,13 +471,13 @@ export default function AdminTable({
                   })}
                   
                   {/* Additional Metadata */}
-                  <td className="px-3 py-2 text-center text-gray-700 border-r border-gray-200">
+                  <td className="px-3 py-2 text-center text-gray-700 dark:text-gray-300 border-r border-gray-200 dark:border-slate-700">
                     {totalAttempts}
                   </td>
                   <td className={`px-3 py-2 text-center font-medium border-r border-gray-200 ${getProgressColor(avgScore)}`}>
                     {avgScore > 0 ? `${avgScore}%` : '-'}
                   </td>
-                  <td className="px-3 py-2 text-gray-600 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-600 dark:text-gray-400 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {new Date(user.created_at).toLocaleString('en-US', { 
                       month: 'short', 
                       day: 'numeric', 
@@ -486,7 +486,7 @@ export default function AdminTable({
                       minute: '2-digit'
                     })}
                   </td>
-                  <td className="px-3 py-2 text-gray-700 whitespace-nowrap border-r border-gray-200">
+                  <td className="px-3 py-2 text-gray-700 dark:text-gray-300 whitespace-nowrap border-r border-gray-200 dark:border-slate-700">
                     {user.full_name || '-'}
                   </td>
                 </tr>

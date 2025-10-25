@@ -210,7 +210,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-[8px] flex items-center justify-center z-50 p-4 animate-[fadeIn_0.3s_ease-out]">
-      <div className="bg-white rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] w-full max-w-4xl max-h-[95vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
+      <div className="bg-white dark:bg-slate-800 rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] w-full max-w-4xl max-h-[95vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
         {/* Header */}
         <div className="bg-gradient-to-b from-[#f0f8ff] to-white px-8 py-6 border-b border-[#e0e0e0]">
           <div className="flex items-center justify-between">
@@ -241,7 +241,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
             <textarea
               value={displayQuestion.question_text || ''}
               onChange={(e) => updateEdit('question_text', e.target.value)}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg font-medium"
+              className="w-full p-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg font-medium"
               rows={3}
             />
           </div>
@@ -254,13 +254,13 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
               value={displayQuestion.image_url || ''}
               onChange={(e) => updateEdit('image_url', e.target.value || null)}
               placeholder="https://..."
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
             {displayQuestion.image_url && (
               <img 
                 src={displayQuestion.image_url} 
                 alt="Question" 
-                className="mt-3 max-h-64 rounded-lg border border-gray-200"
+                className="mt-3 max-h-64 rounded-lg border border-gray-200 dark:border-slate-700"
               />
             )}
           </div>
@@ -277,7 +277,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
                     onChange={() => updateEdit('correct_answer', key)}
                     className="w-5 h-5 text-green-600"
                   />
-                  <span className="font-bold text-gray-700 w-8">{key}:</span>
+                  <span className="font-bold text-gray-700 dark:text-gray-300 w-8">{key}:</span>
                   <input
                     type="text"
                     value={value}
@@ -317,7 +317,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
               placeholder="**Bold text**\n\n💡 **Remember it:** Use markdown formatting!"
             />
             {displayQuestion.explanation && (
-              <div className="mt-3 p-4 bg-gray-50 rounded-lg border border-gray-200">
+              <div className="mt-3 p-4 bg-gray-50 dark:bg-slate-900 rounded-lg border border-gray-200 dark:border-slate-700">
                 <p className="text-xs font-semibold text-gray-500 mb-2">PREVIEW:</p>
                 <div className="prose prose-sm max-w-none">
                   <ReactMarkdown>{displayQuestion.explanation}</ReactMarkdown>
@@ -328,20 +328,20 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
         </div>
 
         {/* Footer */}
-        <div className="border-t border-gray-200 px-6 py-4 bg-gray-50">
+        <div className="border-t border-gray-200 dark:border-slate-700 px-6 py-4 bg-gray-50 dark:bg-slate-900">
           <div className="flex items-center justify-between">
             <div className="flex gap-2">
               <button
                 onClick={prevQuestion}
                 disabled={currentQuestionIndex === 0}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg transition-colors font-medium"
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 disabled:text-gray-400 rounded-lg transition-colors font-medium"
               >
                 ← Previous
               </button>
               <button
                 onClick={nextQuestion}
                 disabled={currentQuestionIndex === questions.length - 1}
-                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 disabled:text-gray-400 rounded-lg transition-colors font-medium"
+                className="px-4 py-2 bg-gray-200 hover:bg-gray-300 disabled:bg-gray-100 dark:bg-slate-700 disabled:text-gray-400 rounded-lg transition-colors font-medium"
               >
                 Next →
               </button>
@@ -362,9 +362,9 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
       {/* Confirmation Modal */}
       {showConfirmModal && (
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[60]">
-          <div className="bg-white rounded-xl shadow-2xl p-6 max-w-md">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">⚠️ Confirm Changes</h3>
-            <p className="text-gray-700 mb-6">
+          <div className="bg-white dark:bg-slate-800 rounded-xl shadow-2xl p-6 max-w-md">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">⚠️ Confirm Changes</h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               Are you sure you want to save <strong>{Object.keys(edits).length}</strong> question(s) with changes?
               This will update both the database and JSON files.
             </p>
@@ -391,16 +391,16 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
       {/* Success Modal - TeslaMR Design System */}
       {showSuccessModal && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-[8px] flex items-center justify-center z-[60] animate-[fadeIn_0.3s_ease-out]">
-          <div className="bg-white rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] max-w-3xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
+          <div className="bg-white dark:bg-slate-800 rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] max-w-3xl w-full mx-4 max-h-[90vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]">
             {/* Header */}
-            <div className="bg-gradient-to-b from-[#d5f4e6] to-[#b8e5d2] px-8 py-6 border-b border-gray-200">
+            <div className="bg-gradient-to-b from-[#d5f4e6] to-[#b8e5d2] px-8 py-6 border-b border-gray-200 dark:border-slate-700">
               <div className="flex items-center gap-3">
                 <span className="text-5xl animate-[celebrate_0.6s_ease]">🎉</span>
                 <div>
-                  <h3 className="text-[28px] font-bold text-gray-900 leading-tight tracking-tight">
+                  <h3 className="text-[28px] font-bold text-gray-900 dark:text-white leading-tight tracking-tight">
                     Changes Saved Successfully!
                   </h3>
-                  <p className="text-[14px] text-gray-700 font-medium mt-1">
+                  <p className="text-[14px] text-gray-700 dark:text-gray-300 font-medium mt-1">
                     All updates have been applied to the database and JSON files
                   </p>
                 </div>
@@ -413,36 +413,36 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="bg-gradient-to-br from-[#f0f8ff] to-white border border-[#e0e0e0] rounded-[12px] p-6 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
                   <div className="text-[32px] font-bold text-[#0A84FF] tracking-tight">{saveResults.length}</div>
-                  <div className="text-[13px] text-gray-700 font-semibold mt-2 uppercase tracking-wide">Questions Updated</div>
+                  <div className="text-[13px] text-gray-700 dark:text-gray-300 font-semibold mt-2 uppercase tracking-wide">Questions Updated</div>
                 </div>
                 <div className="bg-gradient-to-br from-[#f0f8ff] to-white border border-[#e0e0e0] rounded-[12px] p-6 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
                   <div className="text-[32px] font-bold text-[#5856D6] tracking-tight">
                     {saveResults.filter(r => r.dbUpdated).length}
                   </div>
-                  <div className="text-[13px] text-gray-700 font-semibold mt-2 uppercase tracking-wide">Database Updates</div>
+                  <div className="text-[13px] text-gray-700 dark:text-gray-300 font-semibold mt-2 uppercase tracking-wide">Database Updates</div>
                 </div>
                 <div className="bg-gradient-to-br from-[#f0f8ff] to-white border border-[#e0e0e0] rounded-[12px] p-6 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
                   <div className="text-[32px] font-bold text-[#FF9500] tracking-tight">
                     {saveResults.filter(r => r.jsonUpdated).length}
                   </div>
-                  <div className="text-[13px] text-gray-700 font-semibold mt-2 uppercase tracking-wide">JSON File Updates</div>
+                  <div className="text-[13px] text-gray-700 dark:text-gray-300 font-semibold mt-2 uppercase tracking-wide">JSON File Updates</div>
                 </div>
               </div>
 
               {/* Details Section */}
-              <h4 className="text-[14px] font-semibold text-gray-600 uppercase tracking-wide mb-4">📋 Detailed Changes</h4>
+              <h4 className="text-[14px] font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-4">📋 Detailed Changes</h4>
               <div className="space-y-3">
                 {saveResults.map((result, idx) => (
                   <div 
                     key={idx} 
-                    className="border border-[#e0e0e0] rounded-[12px] p-5 bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300"
+                    className="border border-[#e0e0e0] rounded-[12px] p-5 bg-white dark:bg-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300"
                   >
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex-1">
                         <p className="font-semibold text-[#1a1a1a] text-[15px] mb-2">
-                          Question {idx + 1}: <span className="text-gray-600 font-medium">{result.questionText}</span>
+                          Question {idx + 1}: <span className="text-gray-600 dark:text-gray-400 font-medium">{result.questionText}</span>
                         </p>
-                        <code className="text-[11px] bg-[#f0f0f0] text-gray-700 px-2 py-1 rounded-[4px] font-semibold uppercase tracking-wide">
+                        <code className="text-[11px] bg-[#f0f0f0] text-gray-700 dark:text-gray-300 px-2 py-1 rounded-[4px] font-semibold uppercase tracking-wide">
                           ID: {result.questionId}
                         </code>
                       </div>
@@ -460,7 +460,7 @@ export default function AdminQuizPreview({ quiz, questions, hints, onClose }: Ad
                     </div>
 
                     <div className="mt-4 pt-4 border-t border-[#f0f0f0]">
-                      <p className="text-[11px] font-semibold text-gray-600 uppercase tracking-wide mb-2">Fields Changed:</p>
+                      <p className="text-[11px] font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wide mb-2">Fields Changed:</p>
                       <div className="flex flex-wrap gap-2">
                         {result.fieldsChanged.map((field, i) => (
                           <span 

@@ -130,7 +130,7 @@ export default function AdminQuizzesClient({
             const isExpanded = expandedQuizzes.has(quiz.slug);
             
             return (
-              <div key={quiz.id} className="bg-white rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#e0e0e0] overflow-hidden group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
+              <div key={quiz.id} className="bg-white dark:bg-slate-800 rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.04)] border border-[#e0e0e0] overflow-hidden group hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
                 {/* Quiz Header - Clickable */}
                 <div className="w-full bg-gradient-to-b from-[#f0f8ff] to-white px-6 py-5 border-b border-[#e0e0e0] hover:from-[#e8f4ff] hover:to-[#f8faff] transition-all duration-300 rounded-t-[12px]">
                   <div className="flex items-start justify-between">
@@ -190,7 +190,7 @@ export default function AdminQuizzesClient({
                       return (
                         <div 
                           key={q.id} 
-                          className="border border-[#e0e0e0] rounded-[12px] p-5 bg-white hover:border-[#0A84FF] hover:shadow-[0_2px_8px_rgba(10,132,255,0.1)] transition-all duration-300"
+                          className="border border-[#e0e0e0] rounded-[12px] p-5 bg-white dark:bg-slate-800 hover:border-[#0A84FF] hover:shadow-[0_2px_8px_rgba(10,132,255,0.1)] transition-all duration-300"
                         >
                           {/* Question Header */}
                           <div className="flex items-start gap-4 mb-4">
@@ -291,7 +291,7 @@ export default function AdminQuizzesClient({
         </div>
 
         {/* Summary Stats */}
-        <div className="mt-8 bg-white rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-[#e0e0e0] p-8 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
+        <div className="mt-8 bg-white dark:bg-slate-800 rounded-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-[#e0e0e0] p-8 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-all duration-300">
           <h3 className="text-[20px] font-bold text-[#1a1a1a] mb-6 tracking-tight">📊 Summary Statistics</h3>
           <div className="grid grid-cols-4 gap-6">
             <div className="text-center">
@@ -330,7 +330,7 @@ export default function AdminQuizzesClient({
             onClick={closeModal}
           >
             <div 
-              className="bg-white rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]"
+              className="bg-white dark:bg-slate-800 rounded-[16px] shadow-[0_12px_48px_rgba(0,0,0,0.3)] max-w-3xl w-full max-h-[90vh] overflow-hidden flex flex-col animate-[slideUp_0.4s_ease-out]"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}

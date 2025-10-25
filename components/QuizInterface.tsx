@@ -227,7 +227,7 @@ export default function QuizInterface({
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="text-4xl mb-4">⏳</div>
-          <p className="text-gray-600">Loading quiz...</p>
+          <p className="text-gray-600 dark:text-gray-400">Loading quiz...</p>
         </div>
       </div>
     );
@@ -238,7 +238,7 @@ export default function QuizInterface({
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="text-4xl mb-4">🎉</div>
-          <p className="text-gray-600">Redirecting to results...</p>
+          <p className="text-gray-600 dark:text-gray-400">Redirecting to results...</p>
         </div>
       </div>
     );
@@ -249,8 +249,8 @@ export default function QuizInterface({
       <main className="flex-1 p-4 md:p-8 bg-gradient-to-br from-blue-50 via-white to-purple-50">
         <div className="max-w-3xl mx-auto">
           {/* Progress Section */}
-          <div className="mb-6 p-4 bg-white rounded-xl border border-gray-200 shadow-sm">
-            <div className="flex items-center justify-between text-sm text-gray-600 font-semibold mb-2">
+          <div className="mb-6 p-4 bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 shadow-sm">
+            <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 font-semibold mb-2">
               <span>{progress} mastered</span>
               <span>{remaining} remaining</span>
             </div>
@@ -262,14 +262,14 @@ export default function QuizInterface({
             </div>
             <div className="flex items-center justify-between mt-3 text-xs">
               <div className="flex gap-4">
-                <span className="text-gray-600">
+                <span className="text-gray-600 dark:text-gray-400">
                   Correct: <strong className="text-[#34C759]">{correctCount}</strong>
                 </span>
-                <span className="text-gray-600">
+                <span className="text-gray-600 dark:text-gray-400">
                   Incorrect: <strong className="text-[#FF3B30]">{incorrectCount}</strong>
                 </span>
               </div>
-              <span className="text-gray-600">
+              <span className="text-gray-600 dark:text-gray-400">
                 Score: <strong className="text-[#1a1a1a]">
                   {correctCount + incorrectCount > 0 
                     ? Math.round((correctCount / (correctCount + incorrectCount)) * 100) 
@@ -290,7 +290,7 @@ export default function QuizInterface({
 
             {/* Question Image (if exists) */}
             {currentQuestion.image_url && (
-              <div className="mb-6 rounded-xl overflow-hidden border-2 border-gray-200 shadow-sm bg-gray-50">
+              <div className="mb-6 rounded-xl overflow-hidden border-2 border-gray-200 dark:border-slate-700 shadow-sm bg-gray-50 dark:bg-slate-900">
                 <img 
                   src={currentQuestion.image_url} 
                   alt="Question reference image"
@@ -355,14 +355,14 @@ export default function QuizInterface({
                           <h3 className="text-2xl font-bold text-[#34C759]">Correct!</h3>
                         </div>
                         {currentQuestion.explanation && (
-                          <div className="prose prose-sm max-w-none text-gray-800 mb-6">
+                          <div className="prose prose-sm max-w-none text-gray-800 dark:text-gray-200 mb-6">
                             <ReactMarkdown>
                               {currentQuestion.explanation.replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                           </div>
                         )}
                         {!currentQuestion.explanation && (
-                          <p className="text-base text-gray-800 mb-6">Great job! Moving to next question...</p>
+                          <p className="text-base text-gray-800 dark:text-gray-200 mb-6">Great job! Moving to next question...</p>
                         )}
                         <button
                           onClick={handleNext}
@@ -379,7 +379,7 @@ export default function QuizInterface({
                           <h3 className="text-2xl font-bold text-[#FF9500]">Not quite - try again!</h3>
                         </div>
                         {currentQuestion.hint ? (
-                          <div className="text-base text-gray-800 bg-white p-4 rounded-xl border-2 border-orange-300 mb-6">
+                          <div className="text-base text-gray-800 dark:text-gray-200 bg-white dark:bg-slate-800 p-4 rounded-xl border-2 border-orange-300 mb-6">
                             <strong className="text-[#FF9500] block mb-2">💡 Hint:</strong>
                             <div className="prose prose-sm max-w-none">
                               <ReactMarkdown>
@@ -388,7 +388,7 @@ export default function QuizInterface({
                             </div>
                           </div>
                         ) : (
-                          <p className="text-base text-gray-800 mb-6">
+                          <p className="text-base text-gray-800 dark:text-gray-200 mb-6">
                             Think about the meaning of the word parts. Take another look at the options.
                           </p>
                         )}
@@ -408,13 +408,13 @@ export default function QuizInterface({
                           </h3>
                         </div>
                         {currentQuestion.explanation && (
-                          <div className="prose prose-sm max-w-none text-gray-800 mb-4">
+                          <div className="prose prose-sm max-w-none text-gray-800 dark:text-gray-200 mb-4">
                             <ReactMarkdown>
                               {currentQuestion.explanation.replace(/\\n/g, '\n')}
                             </ReactMarkdown>
                           </div>
                         )}
-                        <p className="text-sm text-gray-600 mb-6 italic">This question will appear again later for review.</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 italic">This question will appear again later for review.</p>
                         <button
                           onClick={handleNext}
                           disabled={isSaving}
@@ -437,8 +437,8 @@ export default function QuizInterface({
       </main>
       
       {isSaving && (
-        <div className="fixed bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-lg border border-gray-200">
-          <span className="text-sm text-gray-600">Saving progress...</span>
+        <div className="fixed bottom-4 right-4 bg-white dark:bg-slate-800 px-4 py-2 rounded-lg shadow-lg border border-gray-200 dark:border-slate-700">
+          <span className="text-sm text-gray-600 dark:text-gray-400">Saving progress...</span>
         </div>
       )}
     </div>

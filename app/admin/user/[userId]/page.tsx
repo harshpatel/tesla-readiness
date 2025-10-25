@@ -84,7 +84,7 @@ export default async function UserDetailPage({ params }: UserDetailPageProps) {
     .eq('user_id', userId);
   
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-900">
       <Header 
         title="User Details" 
         showAuth={true} 
